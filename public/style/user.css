@@ -1,0 +1,72 @@
+/* user section start */
+.user_section {
+    background-image: url('../images/bg_images/user_bg.png');
+    background-position: top left;
+    background-repeat: no-repeat;
+    background-size: 275px auto;
+    background-color: #F2F2F2;
+    padding: 75px 0;
+}
+.user_section .user_aside {
+    padding: 20px 20px 15px;
+    background: #fff;
+}
+.user_section .user_aside h3 {
+    border-bottom: 1px solid #ccc;
+    line-height: 38px;
+    font-weight: bold;
+    margin: 0 0 15px;
+    padding-bottom: 9px;
+}
+.user_section .user_aside .nav-link.active {
+    background-color: #C71319;
+    color: #fff;
+}
+.user_section .user_aside .nav-link {
+    background: #EA232A;
+    border-radius: 4px;
+    color: #fff;
+    margin: 5px 0;
+}
+.user_section .user_aside .nav-link:hover:hover {background: #C71319;}
+.user_section .user_content .submit_btn,
+.user_section .user_aside .logout_btn {
+    display: inline-block;
+    background: #EA232A;
+    border-radius: 4px;
+    line-height: 38px;
+    font-size: 13px;
+    height: 38px;
+    color: #fff;
+    min-width: 125px;
+    padding: 0 15px;
+    text-align: center;
+    transition: all 0.2s;
+    text-transform: uppercase;
+}
+.user_section .user_aside .logout_btn {margin: 20px 0 10px;}
+.user_section .user_content .submit_btn:hover,
+.user_section .user_aside .logout_btn:hover {background: #C71319;}
+
+.user_section .user_content {
+    padding: 25px 20px 10px;
+    background: #fff;
+    width: 100%;
+}
+.user_section .user_content input[type=email],
+.user_section .user_content input[type=text],
+.user_section .user_content select {
+    border-color: #ddd;
+    line-height: 40px;
+    box-shadow: none;
+    border-radius: 0;
+    height: 40px;
+    color: #000;
+}
+.user_section .user_content input[type=email]:focus,
+.user_section .user_content input[type=text]:focus,
+.user_section .user_content select:focus {
+    border-color: rgba(0,153,118, 0.5);
+    box-shadow: none;
+}
+/* user section end */
