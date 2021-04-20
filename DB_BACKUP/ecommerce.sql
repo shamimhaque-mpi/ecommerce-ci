@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Apr 15, 2021 at 12:57 PM
+-- Generation Time: Apr 19, 2021 at 12:39 PM
 -- Server version: 10.4.6-MariaDB
 -- PHP Version: 7.3.9
 
@@ -572,7 +572,20 @@ INSERT INTO `access_info` (`user_id`, `login_period`, `logout_period`) VALUES
 (14, '2021-04-12 05:29:15', '0000-00-00 00:00:00'),
 (14, '2021-04-12 10:58:55', '0000-00-00 00:00:00'),
 (14, '2021-04-13 08:09:34', '0000-00-00 00:00:00'),
-(14, '2021-04-15 05:45:04', '0000-00-00 00:00:00');
+(14, '2021-04-15 05:45:04', '0000-00-00 00:00:00'),
+(14, '2021-04-17 05:52:18', '0000-00-00 00:00:00'),
+(14, '2021-04-18 05:56:20', '0000-00-00 00:00:00'),
+(14, '2021-04-18 07:53:27', '2021-04-18 08:24:38'),
+(14, '2021-04-18 07:58:23', '0000-00-00 00:00:00'),
+(13, '2021-04-18 08:24:42', '2021-04-18 11:31:13'),
+(14, '2021-04-18 11:31:21', '2021-04-18 11:31:37'),
+(13, '2021-04-18 11:31:42', '0000-00-00 00:00:00'),
+(14, '2021-04-19 05:30:25', '0000-00-00 00:00:00'),
+(13, '2021-04-19 06:39:13', '2021-04-19 06:39:31'),
+(13, '2021-04-19 06:39:42', '0000-00-00 00:00:00'),
+(13, '2021-04-19 10:13:12', '0000-00-00 00:00:00'),
+(14, '2021-04-19 11:29:32', '0000-00-00 00:00:00'),
+(13, '2021-04-19 12:37:44', '0000-00-00 00:00:00');
 
 -- --------------------------------------------------------
 
@@ -755,42 +768,6 @@ INSERT INTO `image_gallery` (`id`, `img_name`, `img_path`, `trash`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `messages`
---
-
-CREATE TABLE `messages` (
-  `id` int(10) UNSIGNED NOT NULL,
-  `messages_date` varchar(20) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `messages_name` varchar(250) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `messages_mobile` varchar(50) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `messages_text` longtext COLLATE utf8mb4_unicode_ci NOT NULL,
-  `messages_condition` varchar(20) COLLATE utf8mb4_unicode_ci NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
-
---
--- Dumping data for table `messages`
---
-
-INSERT INTO `messages` (`id`, `messages_date`, `messages_name`, `messages_mobile`, `messages_text`, `messages_condition`) VALUES
-(28, '2019-08-05', 'Mariochalt', '86225365333', 'Ciao!  bbgc.gov.bd \n \nWe present oneself \n \nSending your commercial proposal through the Contact us form which can be found on the sites in the Communication section. Feedback forms are filled in by our program and the captcha is solved. The profit of this method is that messages sent through feedback forms are whitelisted. This technique increases the probability that your message will be open. \n \nOur database contains more than 25 million sites around the world to which we can send your message. \n \nThe cost of one million messages 49 USD \n \nFREE TEST mailing of 50,000 messages to any country of your choice. \n \n \nThis message is automatically generated to use our contacts for communication. \n \n \n \nContact us. \nTelegram - @FeedbackFormEU \nSkype  FeedbackForm2019 \nEmail - FeedbackForm@make-success.com \nWhatsApp - +44 7598 509161', 'read'),
-(29, '2019-08-05', 'Williamded', '81625456864', 'Good day! \nI am reaching out to you based on a request from a private investor who is looking for a potential investment opportunity in your country. \n \nDetails of investment proposal will be sent out to you on reading back from you as we deem it necessary to seek for your consent prior to any formal exchange of material information relating to the Investment. \n \nI look forward to your earliest response via my private email address. \n \nRegards, \nGilbert Mboweni \nEmail: g.mboweni@alliedconsults.com \nD/ Tel:+44 7459 225716', 'unread'),
-(30, '2019-08-07', 'Robertmaync', '89744686129', 'We buy all crypto currencies at good rate, with reasonable commission between sellers and the mandates. \n \nContact us with the informations below if you are or have a potential seller. \n \nTel: +353 1 4378345 \nFax: +353 1 6865354 \nEmail: edwardm@lioncourtcrypto.com \n \nThank you, \nCrypto currencies Purchase Department, \nEdward Molina.', 'unread'),
-(31, '2019-08-12', 'http://waicontwatchhea.tk/ka9s', '87455983127', 'Descry is  an wonderful  alms conducive to win.  http://ruiperplancwa.tk/f517', 'unread'),
-(32, '2019-08-13', 'http://nendecetext.tk/4hyw', '88761835762', 'http://gehalsira.tk/rltso', 'unread'),
-(33, '2019-08-17', 'Austinmek', '89194839753', 'Dropped in website’s rankings? Try our new Slow Link building Service. \nWe will run a slow & steady link building campaign for 7 days and send you a report with 140 live Social posts \n \nMore info and more variations in posts: \nhttps://monkeydigital.co/product/daily-social-posting-service/ \n \nThanks and regards \nMike \nmonkeydigital.co@gmail.com', 'read'),
-(34, '2019-08-22', 'KennethHeani', '88395933239', 'Hey What we participate in here is , a kindoffer  http://kettthemafan.gq/on2vw', 'read'),
-(35, '2019-08-26', 'PaulaWat', '82924838313', 'Lost data? We can help! We can recover data from any device no matter what the problem. We have a partnership with Western Digital, Hitachi, and Seagate. Please visit our website to learn more: https://drivesaversdatarecovery.com Or read our great Yelp and Google reviews!', 'unread'),
-(36, '2019-08-26', 'Mauldonreaky', '84528491799', 'Hi there! You Need Leads, Sales, Conversions, Traffic for bbgc.gov.bd ? Will Findet... \nI WILL SEND 5 MILLION MESSAGES VIA WEBSITE CONTACT FORM Don\'t believe me? \nSince you\'re reading this message then you\'re living proof that contact form advertising works! \nWe can send your ad to people via their Website Contact Form. IF YOU ARE INTERESTED, \nContact us => https://www.fiverr.com/axyyko/get-sales-conversions-traffic-opt-in-for-your-business Regards, Mauldon', 'unread'),
-(37, '2019-08-26', 'Mauldonreaky', '84874284499', 'Hi there! You Need Leads, Sales, Conversions, Traffic for bbgc.gov.bd ? Will Findet... \nI WILL SEND 5 MILLION MESSAGES VIA WEBSITE CONTACT FORM Don\'t believe me? \nSince you\'re reading this message then you\'re living proof that contact form advertising works! \nWe can send your ad to people via their Website Contact Form. IF YOU ARE INTERESTED, \nContact us => https://www.fiverr.com/axyyko/get-sales-conversions-traffic-opt-in-for-your-business Regards, Mauldon', 'unread'),
-(38, '2019-08-26', 'Mauldonreaky', '89962351553', 'Hi there! You Need Leads, Sales, Conversions, Traffic for bbgc.gov.bd ? Will Findet... \nI WILL SEND 5 MILLION MESSAGES VIA WEBSITE CONTACT FORM Don\'t believe me? \nSince you\'re reading this message then you\'re living proof that contact form advertising works! \nWe can send your ad to people via their Website Contact Form. IF YOU ARE INTERESTED, \nContact us => https://www.fiverr.com/axyyko/get-sales-conversions-traffic-opt-in-for-your-business Regards, Mauldon', 'unread'),
-(39, '2019-08-27', 'Mauldonreaky', '81835295159', 'Hi there! You Need Leads, Sales, Conversions, Traffic for bbgc.gov.bd ? Will Findet... \nI WILL SEND 5 MILLION MESSAGES VIA WEBSITE CONTACT FORM Don\'t believe me? \nSince you\'re reading this message then you\'re living proof that contact form advertising works! \nWe can send your ad to people via their Website Contact Form. IF YOU ARE INTERESTED, \nContact us => https://www.fiverr.com/axyyko/get-sales-conversions-traffic-opt-in-for-your-business Regards, Mauldon', 'unread'),
-(40, '2019-08-27', 'Mauldonreaky', '85933455879', 'Hi there! You Need Leads, Sales, Conversions, Traffic for bbgc.gov.bd ? Will Findet... \nI WILL SEND 5 MILLION MESSAGES VIA WEBSITE CONTACT FORM Don\'t believe me? \nSince you\'re reading this message then you\'re living proof that contact form advertising works! \nWe can send your ad to people via their Website Contact Form. IF YOU ARE INTERESTED, \nContact us => https://www.fiverr.com/axyyko/get-sales-conversions-traffic-opt-in-for-your-business Regards, Mauldon', 'unread'),
-(41, '2019-08-27', 'Mauldonreaky', '85478946394', 'Hi there! You Need Leads, Sales, Conversions, Traffic for bbgc.gov.bd ? Will Findet... \nI WILL SEND 5 MILLION MESSAGES VIA WEBSITE CONTACT FORM Don\'t believe me? \nSince you\'re reading this message then you\'re living proof that contact form advertising works! \nWe can send your ad to people via their Website Contact Form. IF YOU ARE INTERESTED, \nContact us => https://www.fiverr.com/axyyko/get-sales-conversions-traffic-opt-in-for-your-business Regards, Mauldon', 'unread'),
-(42, '2019-10-31', 'Md. Mijanur Rahman', '01938925033', 'Name: Tahamina Akter\nRoll: 61\nID: 626\nAsk me to help you with the correct information about my father\'s name and headline and my date of birth.', 'unread');
-
--- --------------------------------------------------------
-
---
 -- Table structure for table `products`
 --
 
@@ -816,7 +793,8 @@ CREATE TABLE `products` (
 --
 
 INSERT INTO `products` (`id`, `title`, `brand_id`, `cat_id`, `sub_cat_id`, `price`, `min_qty`, `discount`, `warranty`, `feature_product`, `description`, `status`, `trash`, `date`) VALUES
-(1, 'What is Lorem Ipsum?', 1, 7, 3, '500.00', '1.00', '0.00', 'sdfsdf', 'no', 'dfsdfsdfsdfsdfsdfsdfsdfsdfsdf', 'available', 0, '2021-04-15');
+(1, 'What is Lorem Ipsum?', 1, 7, 3, '500.00', '1.00', '0.00', 'sdfsdf', 'no', 'dfsdfsdfsdfsdfsdfsdfsdfsdfsdf', 'available', 0, '2021-04-18'),
+(2, 'Product Title', 1, 6, 0, '6582.00', '1.00', '10.00', '1', 'yes', 'In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content. Lorem ipsum may be used as a placeholder before final copy is available.', 'available', 0, '2021-04-19');
 
 -- --------------------------------------------------------
 
@@ -835,8 +813,11 @@ CREATE TABLE `product_colors` (
 --
 
 INSERT INTO `product_colors` (`id`, `product_id`, `color_id`) VALUES
-(1, 1, 4),
-(2, 1, 3);
+(21, 1, 4),
+(22, 1, 3),
+(23, 2, 4),
+(24, 2, 3),
+(25, 2, 2);
 
 -- --------------------------------------------------------
 
@@ -858,7 +839,10 @@ CREATE TABLE `product_images` (
 --
 
 INSERT INTO `product_images` (`id`, `product_id`, `large`, `medium`, `small`, `type`) VALUES
-(1, 1, 'public/images/product/large/1618482038.webp', 'public/images/product/medium/1618482038.webp', 'public/images/product/small/1618482038.webp', 'feature_photo');
+(8, 1, 'public/images/product/large/1618719936.webp', 'public/images/product/medium/1618719936.webp', 'public/images/product/small/1618719936.webp', 'feature_photo'),
+(9, 1, 'public/images/product/large/1618719943.webp', 'public/images/product/medium/1618719944.webp', 'public/images/product/small/1618719944.webp', 'general_photo'),
+(10, 2, 'public/images/product/large/1618821064.webp', 'public/images/product/medium/1618821065.webp', 'public/images/product/small/1618821065.webp', 'feature_photo'),
+(11, 2, 'public/images/product/large/1618821065.webp', 'public/images/product/medium/1618821065.webp', 'public/images/product/small/1618821065.webp', 'general');
 
 -- --------------------------------------------------------
 
@@ -877,8 +861,9 @@ CREATE TABLE `product_sizes` (
 --
 
 INSERT INTO `product_sizes` (`id`, `product_id`, `size_id`) VALUES
-(1, 1, 4),
-(2, 1, 3);
+(21, 1, 4),
+(22, 1, 3),
+(23, 2, 4);
 
 -- --------------------------------------------------------
 
@@ -908,22 +893,61 @@ INSERT INTO `profiles` (`id`, `name`, `description`, `path`, `trash`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `recharge_sms`
+-- Table structure for table `sap_items`
 --
 
-CREATE TABLE `recharge_sms` (
-  `id` tinyint(3) UNSIGNED NOT NULL,
-  `date` date NOT NULL,
-  `amount` varchar(192) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `sms` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+CREATE TABLE `sap_items` (
+  `id` int(11) NOT NULL,
+  `product_id` int(11) NOT NULL,
+  `purchase_price` decimal(10,2) NOT NULL,
+  `sale_price` decimal(10,2) NOT NULL,
+  `quantity` decimal(10,2) NOT NULL,
+  `total` decimal(10,2) NOT NULL,
+  `sap_record_id` int(11) NOT NULL,
+  `date` date NOT NULL DEFAULT current_timestamp()
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Dumping data for table `recharge_sms`
+-- Dumping data for table `sap_items`
 --
 
-INSERT INTO `recharge_sms` (`id`, `date`, `amount`, `sms`) VALUES
-(1, '2019-10-20', '7500', '15000');
+INSERT INTO `sap_items` (`id`, `product_id`, `purchase_price`, `sale_price`, `quantity`, `total`, `sap_record_id`, `date`) VALUES
+(1, 1, '500.00', '500.00', '3.00', '1500.00', 1, '2021-04-18'),
+(3, 1, '500.00', '500.00', '1.00', '500.00', 3, '2021-04-19'),
+(7, 1, '500.00', '500.00', '1.00', '500.00', 2, '2021-04-19'),
+(8, 1, '500.00', '500.00', '1.00', '500.00', 4, '2021-04-19'),
+(10, 1, '500.00', '500.00', '1.00', '500.00', 5, '2021-04-19'),
+(11, 2, '6582.00', '6582.00', '1.00', '6582.00', 5, '2021-04-19');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `sap_record`
+--
+
+CREATE TABLE `sap_record` (
+  `id` int(11) NOT NULL,
+  `supplier_id` int(11) NOT NULL,
+  `supplier_name` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `discount` decimal(10,2) NOT NULL,
+  `paid` decimal(10,2) NOT NULL,
+  `sub_total` decimal(10,2) NOT NULL DEFAULT 0.00,
+  `grand_total` decimal(10,2) NOT NULL,
+  `total_qty` decimal(10,2) NOT NULL DEFAULT 0.00,
+  `date` date NOT NULL DEFAULT current_timestamp(),
+  `trash` int(1) NOT NULL DEFAULT 0
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `sap_record`
+--
+
+INSERT INTO `sap_record` (`id`, `supplier_id`, `supplier_name`, `discount`, `paid`, `sub_total`, `grand_total`, `total_qty`, `date`, `trash`) VALUES
+(1, 0, 'Cash Supplier', '10.00', '1350.00', '1500.00', '1350.00', '3.00', '2021-04-18', 1),
+(2, 1, NULL, '0.00', '50.00', '500.00', '500.00', '1.00', '2021-04-19', 0),
+(3, 1, NULL, '0.00', '50.00', '500.00', '500.00', '1.00', '2021-04-19', 1),
+(4, 0, NULL, '0.00', '500.00', '500.00', '500.00', '1.00', '2021-04-19', 0),
+(5, 0, 'Developer', '0.00', '7082.00', '7082.00', '7082.00', '2.00', '2021-04-19', 0);
 
 -- --------------------------------------------------------
 
@@ -1071,12 +1095,58 @@ CREATE TABLE `sms_record` (
   `id` int(11) UNSIGNED NOT NULL,
   `delivery_date` date NOT NULL,
   `delivery_time` time NOT NULL,
-  `mobile` varchar(20) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `message` mediumtext COLLATE utf8mb4_unicode_ci NOT NULL,
-  `total_characters` varchar(4) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `total_messages` varchar(2) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `delivery_report` mediumtext COLLATE utf8mb4_unicode_ci NOT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+  `mobile` varchar(20) COLLATE utf8_unicode_ci NOT NULL,
+  `message` mediumtext COLLATE utf8_unicode_ci NOT NULL,
+  `total_characters` varchar(4) COLLATE utf8_unicode_ci NOT NULL,
+  `total_messages` varchar(2) COLLATE utf8_unicode_ci NOT NULL,
+  `delivery_report` mediumtext COLLATE utf8_unicode_ci NOT NULL
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+--
+-- Dumping data for table `sms_record`
+--
+
+INSERT INTO `sms_record` (`id`, `delivery_date`, `delivery_time`, `mobile`, `message`, `total_characters`, `total_messages`, `delivery_report`) VALUES
+(1, '2020-11-21', '22:33:12', '01937476716', 'Hello its a test message.', '25', '1', '1'),
+(2, '2020-11-22', '03:10:49', '01983667657', 'dsfsdfsdf', '9', '1', '1'),
+(3, '2020-11-22', '03:11:54', '01983667657', 'sdfsdfsdfsdfদক্ষিণ বঙ্গ সমিতি ', '60', '1', '1'),
+(4, '2020-11-22', '03:35:15', '01912226436', 'সদস্য নং:000003, নাম: Anika Hammond, ঋণের পরিমান: 103.69টাকা, কিস্তি প্রদান: 1.06টাকা, সঞ্চয় প্রদান: 5টাকা, ঋণ স্থিতি: 102.63টাকা, সঞ্চয় স্থিতি: 17.00টাকা, শ্রদ্ধা: দক্ষিণ বঙ্গ।', '377', '3', '1'),
+(5, '2020-12-21', '03:43:47', '০১৯৩৭৪৭৬৭১৬', 'সদস্য নং:000010, নাম: মোস্তাফিজুর রহমান , ঋণের পরিমান: 23000টাকা, কিস্তি প্রদান: 500টাকা, সঞ্চয় প্রদান: 20টাকা, ঋণ স্থিতি: 22500.00টাকা, সঞ্চয় স্থিতি: 20.00টাকা, শ্রদ্ধা: দক্ষিণ বঙ্গ।', '415', '3', '1'),
+(6, '2020-12-21', '03:46:00', '০১৯৩৭৪৭৬৭১৬', 'সদস্য নং:000010, নাম: মোস্তাফিজুর রহমান , ঋণের পরিমান: 22500টাকা, কিস্তি প্রদান: 500টাকা, সঞ্চয় প্রদান: 20টাকা, ঋণ স্থিতি: 22000.00টাকা, সঞ্চয় স্থিতি: 40.00টাকা, শ্রদ্ধা: দক্ষিণ বঙ্গ।', '415', '3', '1'),
+(7, '2020-12-21', '03:47:36', '০১৯৩৭৪৭৬৭১৬', 'সদস্য নং:000010, নাম: মোস্তাফিজুর রহমান , ঋণের পরিমান: 22000টাকা, কিস্তি প্রদান: 500টাকা, সঞ্চয় প্রদান: 20টাকা, ঋণ স্থিতি: 21500.00টাকা, সঞ্চয় স্থিতি: 60.00টাকা, শ্রদ্ধা: দক্ষিণ বঙ্গ।', '415', '3', '1'),
+(8, '2020-12-22', '06:53:42', 'Ullam sit quis nulla', 'সদস্য নং:000015, নাম: Sydney Flowers, ঋণের পরিমান: 77.05টাকা, কিস্তি প্রদান: 1.68টাকা, সঞ্চয় প্রদান: 90টাকা, ঋণ স্থিতি: 75.37টাকা, সঞ্চয় স্থিতি: 90.00টাকা, শ্রদ্ধা: দক্ষিণ বঙ্গ।', '377', '3', '1'),
+(9, '2020-12-22', '06:53:44', 'Deserunt ea consequu', 'সদস্য নং:000018, নাম: Phyllis Mayer, ঋণের পরিমান: 0টাকা, কিস্তি প্রদান: 0টাকা, সঞ্চয় প্রদান: 100টাকা, ঋণ স্থিতি: 0.00টাকা, সঞ্চয় স্থিতি: 100.00টাকা, শ্রদ্ধা: দক্ষিণ বঙ্গ।', '370', '3', '1'),
+(10, '2020-12-23', '04:17:39', '০১৯৩৭৪৭৬৭১৬', 'সদস্য নং:000010, নাম: মোস্তাফিজুর রহমান , ঋণের পরিমান: 21500টাকা, কিস্তি প্রদান: 500টাকা, সঞ্চয় প্রদান: 20টাকা, ঋণ স্থিতি: 21000.00টাকা, সঞ্চয় স্থিতি: 80.00টাকা, শ্রদ্ধা: দক্ষিণ বঙ্গ।', '415', '3', '1'),
+(11, '2020-12-23', '04:17:40', 'Ullam sit quis nulla', 'সদস্য নং:000015, নাম: Sydney Flowers, ঋণের পরিমান: 75.37টাকা, কিস্তি প্রদান: 1.68টাকা, সঞ্চয় প্রদান: 90টাকা, ঋণ স্থিতি: 73.69টাকা, সঞ্চয় স্থিতি: 180.00টাকা, শ্রদ্ধা: দক্ষিণ বঙ্গ।', '378', '3', '1'),
+(12, '2020-12-23', '04:17:43', 'Deserunt ea consequu', 'সদস্য নং:000018, নাম: Phyllis Mayer, ঋণের পরিমান: 11000টাকা, কিস্তি প্রদান: 239.13টাকা, সঞ্চয় প্রদান: 150টাকা, ঋণ স্থিতি: 10760.87টাকা, সঞ্চয় স্থিতি: 250.00টাকা, শ্রদ্ধা: দক্ষিণ বঙ্গ।', '383', '3', '1'),
+(13, '2020-12-23', '04:17:45', 'Quo voluptate impedi', 'সদস্য নং:000020, নাম: Carolyn Strickland, ঋণের পরিমান: 0টাকা, কিস্তি প্রদান: 0টাকা, সঞ্চয় প্রদান: 50টাকা, ঋণ স্থিতি: 0.00টাকা, সঞ্চয় স্থিতি: 50.00টাকা, শ্রদ্ধা: দক্ষিণ বঙ্গ।', '373', '3', '1'),
+(14, '2020-12-23', '14:25:14', 'Ullam sit quis nulla', 'সদস্য নং:000015, নাম: Sydney Flowers, ঋণের পরিমান: 73.69টাকা, কিস্তি প্রদান: 1.68টাকা, সঞ্চয় প্রদান: 90টাকা, ঋণ স্থিতি: 72.01টাকা, সঞ্চয় স্থিতি: 270.00টাকা, শ্রদ্ধা: দক্ষিণ বঙ্গ।', '378', '3', '1'),
+(15, '2020-12-24', '00:39:06', 'Ipsum nisi dolor cu', 'সদস্য নং:000021, নাম: Orlando Ferguson, ঋণের পরিমান: 0টাকা, কিস্তি প্রদান: 0টাকা, সঞ্চয় প্রদান: 100টাকা, ঋণ স্থিতি: 0.00টাকা, সঞ্চয় স্থিতি: 100.00টাকা, শ্রদ্ধা: দক্ষিণ বঙ্গ।', '373', '3', '1'),
+(16, '2020-12-24', '01:56:42', 'Enim mollitia illum', 'সদস্য নং:000008, নাম: Quin Matthews, ঋণের পরিমান: 9.2টাকা, কিস্তি প্রদান: 0.2টাকা, সঞ্চয় প্রদান: 32টাকা, ঋণ স্থিতি: 9.00টাকা, সঞ্চয় স্থিতি: 32.00টাকা, শ্রদ্ধা: দক্ষিণ বঙ্গ।', '372', '3', '1'),
+(17, '2020-12-24', '01:56:44', 'Et sapiente sint si', 'সদস্য নং:000019, নাম: Brody Richardson, ঋণের পরিমান: 165000টাকা, কিস্তি প্রদান: 3586.96টাকা, সঞ্চয় প্রদান: 100টাকা, ঋণ স্থিতি: 161413.04টাকা, সঞ্চয় স্থিতি: 100.00টাকা, শ্রদ্ধা: দক্ষিণ বঙ্গ।', '389', '3', '1'),
+(18, '2020-12-24', '01:56:46', 'Et laudantium ut ea', 'সদস্য নং:000023, নাম: Rigel Mcgee, ঋণের পরিমান: 11500টাকা, কিস্তি প্রদান: 250টাকা, সঞ্চয় প্রদান: 1000টাকা, ঋণ স্থিতি: 11250.00টাকা, সঞ্চয় স্থিতি: 1000.00টাকা, শ্রদ্ধা: দক্ষিণ বঙ্গ।', '380', '3', '1');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `stock`
+--
+
+CREATE TABLE `stock` (
+  `id` int(11) NOT NULL,
+  `product_id` int(11) NOT NULL,
+  `sale_price` decimal(10,2) NOT NULL,
+  `purchase_price` decimal(10,2) NOT NULL,
+  `quantity` decimal(10,2) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `stock`
+--
+
+INSERT INTO `stock` (`id`, `product_id`, `sale_price`, `purchase_price`, `quantity`) VALUES
+(1, 1, '500.00', '500.00', '21.00'),
+(2, 2, '6582.00', '6582.00', '1.00');
 
 -- --------------------------------------------------------
 
@@ -1099,6 +1169,59 @@ INSERT INTO `subcategories` (`id`, `cat_id`, `subcategory`, `trash`) VALUES
 (1, 7, 'Test Sub-Category-', 1),
 (2, 7, 'Test Sub-Category-', 1),
 (3, 7, 'Carrots', 0);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `suppliers`
+--
+
+CREATE TABLE `suppliers` (
+  `id` int(11) NOT NULL,
+  `name` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `mobile` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `address` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `initial_balance` decimal(10,2) NOT NULL,
+  `type` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `date` date NOT NULL DEFAULT current_timestamp(),
+  `trash` int(1) NOT NULL DEFAULT 0
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `suppliers`
+--
+
+INSERT INTO `suppliers` (`id`, `name`, `mobile`, `address`, `initial_balance`, `type`, `date`, `trash`) VALUES
+(1, 'Abdullah Al Hasan', '01983667657', 'sfsfsdfsdfsdfsdf', '-9000.00', 'receivable', '2021-04-17', 0);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `supplier_transaction`
+--
+
+CREATE TABLE `supplier_transaction` (
+  `id` int(11) NOT NULL,
+  `supplier_id` int(11) DEFAULT NULL,
+  `amount` decimal(10,2) NOT NULL,
+  `trx_type` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT 'credit',
+  `supplier_type` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT 'cash',
+  `supplier_name` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `date` date NOT NULL DEFAULT current_timestamp(),
+  `sap_record_id` int(11) NOT NULL,
+  `trash` int(1) NOT NULL DEFAULT 0
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `supplier_transaction`
+--
+
+INSERT INTO `supplier_transaction` (`id`, `supplier_id`, `amount`, `trx_type`, `supplier_type`, `supplier_name`, `date`, `sap_record_id`, `trash`) VALUES
+(1, 0, '1350.00', 'paid', 'cash', 'Developer', '2021-04-18', 1, 0),
+(3, 1, '50.00', 'paid', 'party', '', '2021-04-19', 3, 1),
+(7, 1, '50.00', 'paid', 'party', '', '2021-04-19', 2, 0),
+(8, 0, '500.00', 'paid', 'cash', 'Developer', '2021-04-19', 4, 0),
+(10, 0, '7082.00', 'paid', 'cash', 'Developer', '2021-04-19', 5, 0);
 
 -- --------------------------------------------------------
 
@@ -1144,7 +1267,12 @@ INSERT INTO `system_action_menus` (`id`, `parent_id`, `dropdown_id`, `name`, `ty
 (106, 62, 120, 'Delete', 'danger', 'color/color/trash', 0, 'fa fa-trash-o', 1),
 (107, 61, 118, 'View', 'info', 'product/product/view', 0, 'fa fa-eye', 1),
 (108, 61, 118, 'Edit', 'warning', 'product/product/edit', 0, 'fa fa-pencil-square-o', 1),
-(109, 61, 118, 'Delete', 'danger', 'product/product/delete', 0, 'fa fa-trash-o', 1);
+(109, 61, 118, 'Delete', 'danger', 'product/product/trash', 0, 'fa fa-trash-o', 1),
+(110, 64, 124, 'Edit', 'warning', 'supplier/supplier/edit', 0, 'fa fa-pencil-square-o', 1),
+(111, 64, 124, 'Delete', 'danger', 'supplier/supplier/trash', 0, 'fa fa-trash-o', 1),
+(112, 65, 126, 'View', 'info', 'purchase/purchase/view', 0, 'fa fa-eye', 1),
+(113, 65, 126, 'Edit', 'warning', 'purchase/purchase/edit', 0, 'fa fa-pencil-square-o', 1),
+(114, 65, 126, 'Delete', 'danger', 'purchase/purchase/delete', 0, 'fa fa-trash-o', 1);
 
 -- --------------------------------------------------------
 
@@ -1172,16 +1300,18 @@ INSERT INTO `system_aside_menus` (`id`, `name`, `controller_path`, `selector`, `
 (21, 'Slider', '', 'slider', 'fa fa-photo', 1, 1, 0, 1),
 (22, 'Gallery', '', 'gallery', 'fa fa-image', 1, 1, 3, 0),
 (26, 'About Us', 'about_us/About_controller/add', 'about_us', 'fa fa-question', 0, 1, 6, 0),
-(34, 'Settings', '', 'setting', 'fa fa-cog', 1, 1, 8, 1),
-(35, 'Message', 'message/message/index', 'message', 'fa fa-commenting', 0, 1, 4, 0),
-(42, 'Privilege', 'system_privilege/privilegeController', 'privilege', 'fa fa-users', 0, 0, 7, 1),
-(50, 'SMS', 'sms/SmsManage', 'sms', 'fa fa-mail-reply', 0, 0, 13, 0),
-(58, 'Category', '', 'category', 'fa fa-sitemap', 1, 1, 2, 1),
-(59, 'Brand', '', 'brand', 'fa fa-file-text-o', 1, 1, 1, 1),
-(60, 'Sub-Category', '', 'subcategory', 'fa fa-cubes', 1, 1, 3, 1),
-(61, 'Product', '', 'product', 'fa fa-product-hunt', 1, 1, 6, 1),
-(62, 'Color', '', 'color', 'fa fa-print', 1, 1, 4, 1),
-(63, 'Size', '', 'size', 'fa fa-text-height', 1, 1, 5, 1);
+(34, 'Settings', '', 'setting', 'fa fa-cog', 1, 1, 12, 1),
+(42, 'Privilege', 'system_privilege/privilegeController', 'privilege', 'fa fa-users', 0, 0, 11, 1),
+(58, 'Category', '', 'category', 'fa fa-sitemap', 1, 1, 7, 1),
+(59, 'Brand', '', 'brand', 'fa fa-file-text-o', 1, 1, 6, 1),
+(60, 'Sub-Category', '', 'subcategory', 'fa fa-cubes', 1, 1, 8, 1),
+(61, 'Product', '', 'product', 'fa fa-product-hunt', 1, 1, 1, 1),
+(62, 'Color', '', 'color', 'fa fa-print', 1, 1, 9, 1),
+(63, 'Size', '', 'size', 'fa fa-text-height', 1, 1, 10, 1),
+(64, 'Supplier', '', 'supplier', 'fa fa-user', 1, 1, 4, 1),
+(65, 'Purchase', '', 'purchase', 'fa fa-shopping-cart', 1, 1, 2, 1),
+(66, 'SMS', '', 'sms', 'fa fa-paper-plane', 1, 1, 5, 1),
+(67, 'Stock', 'stock/stock', 'stock', 'fa fa-archive', 0, 0, 3, 1);
 
 -- --------------------------------------------------------
 
@@ -1211,19 +1341,26 @@ INSERT INTO `system_aside_menu_dropdowns` (`id`, `parent_id`, `name`, `selector`
 (52, 22, 'Video Gallery', 'Video', 'gallery/gallery_controller/video', 'fa fa-video-camera', 0, 1),
 (53, 22, 'Image Gallery', 'Image', 'gallery/gallery_controller/index', 'fa fa-picture-o', 1, 1),
 (81, 34, 'Header', 'header', 'setting/setting/header', 'fa fa-angle-right', 0, 1),
-(82, 34, 'Footer', 'setting', 'setting/setting/footer', 'fa fa-angle-right', 0, 1),
+(82, 34, 'Footer', 'setting', 'setting/setting/footer', 'fa fa-angle-right', 1, 1),
 (111, 58, 'Add', 'add', 'category/category/add', 'fa fa-angle-right', 0, 1),
-(112, 58, 'All', 'all', 'category/category', 'fa fa-angle-right', 0, 1),
+(112, 58, 'All', 'all', 'category/category', 'fa fa-angle-right', 1, 1),
 (113, 59, 'Add', 'add', 'brand/brand/add', 'fa fa-angle-right', 0, 1),
-(114, 59, 'All', 'all', 'brand/brand', 'fa fa-angle-right', 0, 1),
+(114, 59, 'All', 'all', 'brand/brand', 'fa fa-angle-right', 1, 1),
 (115, 60, 'Add', 'add', 'subcategory/subcategory/add', 'fa fa-angle-right', 0, 1),
-(116, 60, 'All', 'All', 'subcategory/subcategory', 'fa fa-angle-right', 0, 1),
+(116, 60, 'All', 'All', 'subcategory/subcategory', 'fa fa-angle-right', 1, 1),
 (117, 61, 'Add', 'add', 'product/product/add', 'fa fa-angle-right', 0, 1),
-(118, 61, 'All', 'all', 'product/product/', 'fa fa-angle-right', 0, 1),
+(118, 61, 'All', 'all', 'product/product/', 'fa fa-angle-right', 1, 1),
 (119, 62, 'Add', 'add', 'color/color/add', 'fa fa-angle-right', 0, 1),
-(120, 62, 'All', 'all', 'color/color/', 'fa fa-angle-right', 0, 1),
+(120, 62, 'All', 'all', 'color/color/', 'fa fa-angle-right', 1, 1),
 (121, 63, 'Add', 'add', 'size/size/add', 'fa fa-angle-right', 0, 1),
-(122, 63, 'All', 'all', 'size/size', 'fa fa-angle-right', 0, 1);
+(122, 63, 'All', 'all', 'size/size', 'fa fa-angle-right', 1, 1),
+(123, 64, 'Add', 'add', 'supplier/supplier/add', 'fa fa-angle-right', 0, 1),
+(124, 64, 'All', 'all', 'supplier/supplier', 'fa fa-angle-right', 1, 1),
+(125, 65, 'Add', 'add', 'purchase/purchase/add', 'fa fa-angle-right', 0, 1),
+(126, 65, 'All', 'all', 'purchase/purchase', 'fa fa-angle-right', 1, 1),
+(127, 66, 'Send SMS', 'send_sms', 'sms/Sms/send_sms', 'fa fa-angle-right', 2, 1),
+(128, 66, 'SMS Report', 'sms_report', 'sms/Sms/sms_report', 'fa fa-angle-right', 1, 1),
+(129, 66, 'Custom SMS', 'custom_sms', 'sms/Sms/custom_sms', 'fa fa-angle-right', 0, 1);
 
 -- --------------------------------------------------------
 
@@ -1246,7 +1383,7 @@ CREATE TABLE `system_privileges` (
 INSERT INTO `system_privileges` (`id`, `admin_id`, `aside_menu_id`, `aside_menu_dropdown_id`, `action_menu_id`) VALUES
 (13, 10, '[\"5\",\"4\",\"3\",\"1\"]', '[\"11\",\"10\",\"9\",\"8\",\"7\",\"6\",\"5\"]', '[\"6\",\"5\",\"4\",\"3\",\"2\",\"1\"]'),
 (14, 12, '[\"7\",\"6\",\"2\"]', '[\"15\",\"14\",\"13\",\"12\",\"1\"]', '[\"11\",\"10\",\"9\",\"14\",\"13\"]'),
-(15, 13, '[\"57\",\"56\",\"53\",\"52\",\"51\",\"50\",\"47\",\"46\",\"42\",\"37\",\"35\",\"34\",\"32\",\"29\",\"28\",\"26\",\"22\",\"21\"]', '[\"107\",\"106\",\"105\",\"104\",\"103\",\"102\",\"101\",\"100\",\"99\",\"98\",\"94\",\"93\",\"84\",\"83\",\"82\",\"81\",\"78\",\"77\",\"72\",\"71\",\"70\",\"69\",\"53\",\"52\",\"51\",\"50\",\"49\"]', '[\"91\",\"56\",\"55\",\"54\",\"53\",\"60\",\"59\",\"58\",\"57\"]');
+(15, 13, '[\"67\",\"66\",\"65\",\"64\",\"63\",\"62\",\"61\",\"60\",\"59\",\"58\",\"42\",\"34\",\"21\"]', '[\"129\",\"128\",\"127\",\"126\",\"125\",\"124\",\"123\",\"122\",\"121\",\"120\",\"119\",\"118\",\"117\",\"116\",\"115\",\"114\",\"113\",\"112\",\"111\",\"82\",\"81\",\"51\",\"50\",\"49\"]', '[\"114\",\"113\",\"112\",\"111\",\"110\",\"104\",\"103\",\"106\",\"105\",\"109\",\"108\",\"107\",\"102\",\"101\",\"100\",\"99\",\"98\",\"97\",\"60\",\"59\",\"58\",\"57\"]');
 
 -- --------------------------------------------------------
 
@@ -1281,9 +1418,9 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `opening`, `name`, `l_name`, `gender`, `birthday`, `maritial_status`, `position`, `about`, `website`, `facecbook`, `twitter`, `email`, `username`, `password`, `privilege`, `image`, `mobile`, `branch`) VALUES
-(13, '2019-12-09 01:59:36', 'Superadmin', '', '', '', '', '', '', '', '', '', 'developer@gmail.com', 'superadmin', 'f7a42d7e1f2512e5a7f4700fbf6c9df4', 'super', 'public/profiles/profile_16171675130.png', '01983667657', ''),
+(13, '2019-12-09 01:59:36', 'Superadmin', '', '', '', '', '', '', '', '', '', 'developer@gmail.com', 'superadmin', 'f7a42d7e1f2512e5a7f4700fbf6c9df4', 'super', 'public/profiles/profile_16187362230.png', '01983667657', ''),
 (14, '2019-12-09 01:59:36', 'President', '', '', '', '', '', '', '', '', '', '', 'president', '3f41a4eed1b5d78e1a588f31fc97b629', 'president', 'public/profiles/profile_16183071500.jpg', '', ''),
-(16, '2020-11-11 10:24:53', 'Test User', '', '', '', '', '', '', '', '', '', 'user@gmail.com', 'hellouser', '3b9cd1688a9dbca0bc53adac4d9d569b', 'user', 'public/profiles/profile_16171674980.png', '01839973100', '');
+(16, '2020-11-11 10:24:53', 'Test User', '', '', '', '', '', '', '', '', '', 'user@gmail.com', 'hellouser', '3b9cd1688a9dbca0bc53adac4d9d569b', 'user', 'public/profiles/profile_16187362140.png', '01839973100', '');
 
 -- --------------------------------------------------------
 
@@ -1359,12 +1496,6 @@ ALTER TABLE `image_gallery`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `messages`
---
-ALTER TABLE `messages`
-  ADD PRIMARY KEY (`id`);
-
---
 -- Indexes for table `products`
 --
 ALTER TABLE `products`
@@ -1395,9 +1526,15 @@ ALTER TABLE `profiles`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `recharge_sms`
+-- Indexes for table `sap_items`
 --
-ALTER TABLE `recharge_sms`
+ALTER TABLE `sap_items`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `sap_record`
+--
+ALTER TABLE `sap_record`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -1439,9 +1576,27 @@ ALTER TABLE `sms_record`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `stock`
+--
+ALTER TABLE `stock`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `subcategories`
 --
 ALTER TABLE `subcategories`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `suppliers`
+--
+ALTER TABLE `suppliers`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `supplier_transaction`
+--
+ALTER TABLE `supplier_transaction`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -1533,34 +1688,28 @@ ALTER TABLE `image_gallery`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=100;
 
 --
--- AUTO_INCREMENT for table `messages`
---
-ALTER TABLE `messages`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=43;
-
---
 -- AUTO_INCREMENT for table `products`
 --
 ALTER TABLE `products`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `product_colors`
 --
 ALTER TABLE `product_colors`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=26;
 
 --
 -- AUTO_INCREMENT for table `product_images`
 --
 ALTER TABLE `product_images`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 
 --
 -- AUTO_INCREMENT for table `product_sizes`
 --
 ALTER TABLE `product_sizes`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=24;
 
 --
 -- AUTO_INCREMENT for table `profiles`
@@ -1569,10 +1718,16 @@ ALTER TABLE `profiles`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
--- AUTO_INCREMENT for table `recharge_sms`
+-- AUTO_INCREMENT for table `sap_items`
 --
-ALTER TABLE `recharge_sms`
-  MODIFY `id` tinyint(3) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+ALTER TABLE `sap_items`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+
+--
+-- AUTO_INCREMENT for table `sap_record`
+--
+ALTER TABLE `sap_record`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT for table `site_meta`
@@ -1596,7 +1751,13 @@ ALTER TABLE `sliders`
 -- AUTO_INCREMENT for table `sms_record`
 --
 ALTER TABLE `sms_record`
-  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
+
+--
+-- AUTO_INCREMENT for table `stock`
+--
+ALTER TABLE `stock`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `subcategories`
@@ -1605,22 +1766,34 @@ ALTER TABLE `subcategories`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
+-- AUTO_INCREMENT for table `suppliers`
+--
+ALTER TABLE `suppliers`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
+-- AUTO_INCREMENT for table `supplier_transaction`
+--
+ALTER TABLE `supplier_transaction`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+
+--
 -- AUTO_INCREMENT for table `system_action_menus`
 --
 ALTER TABLE `system_action_menus`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=110;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=115;
 
 --
 -- AUTO_INCREMENT for table `system_aside_menus`
 --
 ALTER TABLE `system_aside_menus`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=64;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=68;
 
 --
 -- AUTO_INCREMENT for table `system_aside_menu_dropdowns`
 --
 ALTER TABLE `system_aside_menu_dropdowns`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=123;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=130;
 
 --
 -- AUTO_INCREMENT for table `system_privileges`

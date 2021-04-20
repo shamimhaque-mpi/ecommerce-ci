@@ -12,14 +12,14 @@
                     <tr>
                         <th width="50">SL</th>
                         <th>Name</th>
-                        <th width="120" class="none">Action</th>
+                        <th width="120" class="text-right">Action</th>
                     </tr>
-                   
+
                     <?php if(!empty($colors)){ foreach($colors as $key => $row){ ?>
                     <tr>
                         <td><?=(++$key)?></td>
                         <td><?=($row->color)?></td>
-                        <td class="none">
+                        <td class="text-right">
                             <?php
                                 if($action_menus){
                                     foreach($action_menus as $action_menu){

@@ -3,7 +3,7 @@
         <div class="panel panel-default">
             <div class="panel-heading panal-header">
                 <div class="panal-header-title pull-left">
-                    <h1>All Size</h1>
+                    <h1>All Supplier</h1>
                 </div>
             </div>
             <div class="panel-body">
@@ -12,14 +12,22 @@
                     <tr>
                         <th width="50">SL</th>
                         <th>Name</th>
-                        <th width="120" class="text-right">Action</th>
+                        <th>Mobile</th>
+                        <th>Address</th>
+                        <th>Initial Blnc</th>
+                        <th>Status</th>
+                        <th width="120" class="none">Action</th>
                     </tr>
-
-                    <?php if(!empty($sizes)){ foreach($sizes as $key => $row){ ?>
+                   
+                    <?php if(!empty($suppliers)){ foreach($suppliers as $key => $row){ ?>
                     <tr>
                         <td><?=(++$key)?></td>
-                        <td><?=($row->size)?></td>
-                        <td class="text-right">
+                        <td><?=($row->name)?></td>
+                        <td><?=($row->mobile)?></td>
+                        <td><?=($row->address)?></td>
+                        <td><?=abs($row->initial_balance)?></td>
+                        <td><?=ucfirst($row->type)?></td>
+                        <td class="none">
                             <?php
                                 if($action_menus){
                                     foreach($action_menus as $action_menu){
@@ -35,7 +43,7 @@
                     </tr>
                     <?php }}else { ?>
                     	<tr>
-                    		<th colspan="4" class="text-center">Nothing Found</th>
+                    		<th colspan="6" class="text-center">Nothing Found</th>
                     	</tr>
                     <?php } ?>
                 </table>

@@ -25,38 +25,36 @@
                 <?php $id = isset($slider[0]->id) ? $slider[0]->id : ''; ?>
                 <form action="<?php echo get_url("slider/slider_controller/edit_process/$id"); ?>" class="form-horizontal" method="post" enctype="multipart/form-data">
                     <div class="form-group">
-                        <label class="col-md-2 control-label">Slider Name <span class="req">*</span></label>
-                        <div class="col-md-5">
+                        <label class="col-md-2 control-label">Slider Title <span class="req">*</span></label>
+                        <div class="col-md-7">
                             <input type="text" name="name" value="<?php echo isset($slider[0]->name) ? $slider[0]->name : ''; ?>" placeholder="Enter Slider Name..." class="form-control" required>
                         </div>
                     </div>
 
                     <div class="form-group">
-                        <label class="col-md-2 control-label">Photos</label>
-                        <div class="col-md-5">
+                        <label class="col-md-2 control-label">Photo</label>
+                        <div class="col-md-7">
                             <input type="hidden" name="old_img" value="<?php echo isset($slider[0]->path) ? $slider[0]->path : ''; ?>" >
                             <input type="file" name="img" class="form-control">
                         </div>
                     </div>
-                    
+
                     <div class="form-group">
                         <label class="col-md-2 control-label">Is Offer <span class="req">*</span></label>
-                        <div class="col-md-5">
+                        <div class="col-md-7">
                             <input type="checkbox" name="is_offer" value="1" <?=($slider[0]->is_offer==1 ? 'checked' : ''); ?>>
                         </div>
                     </div>
 
                     <div class="row">
-                        <div class="col-md-7">
-                            <div class="pull-right">
-                                <input type="submit" value="Update" class="btn btn-primary">
-                            </div>
+                        <div class="col-md-9 text-right">
+                            <input type="submit" value="Update" class="btn btn-primary">
                         </div>
                     </div>
 
                     <div class="form-group">
                         <label class="col-md-2 control-label"></label>
-                        <div class="col-md-5">
+                        <div class="col-md-7">
                            <img src="<?php echo site_url($slider ? $slider[0]->path : '')?>" style="display:block; width:100px;" alt="">
                         </div>
                     </div>

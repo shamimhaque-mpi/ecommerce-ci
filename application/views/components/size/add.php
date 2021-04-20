@@ -11,13 +11,13 @@
                 <form action="" class="form-horizontal" method="post" enctype="multipart/form-data">
                     <div class="form-group">
                         <label class="col-md-2 control-label">Name <span class="req">*</span></label>
-                        <div class="col-md-5">
+                        <div class="col-md-7">
                             <input type="text" name="size" placeholder="Enter Size " class="form-control" required>
                         </div>
                     </div>
-                    
+
                     <div class="row">
-                        <div class="col-md-7">
+                        <div class="col-md-9">
                             <div class="pull-right">
                                 <input type="submit" value="Save" class="btn btn-primary">
                             </div>

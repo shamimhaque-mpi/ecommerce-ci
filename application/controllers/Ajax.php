@@ -21,6 +21,102 @@ class Ajax extends Admin_Controller {
                 echo json_encode($result);
             }
         }
+        else {
+            // get the incoming object
+            $content = file_get_contents("php://input");
+            // convart object to array
+            $receive = json_decode($content, true);
+
+            $where = [];
+            if(array_key_exists('where', $receive)){
+                $where = $receive['where'];
+            }
+
+            if(array_key_exists('table', $receive)){
+                $result = readTable($receive['table'], $where);
+                echo json_encode($result);
+            }
+
+        }
+
+    }
+
+    // Read Table
+    function delete(){
+        if($_POST){
+            if(!empty($_POST['table']) && $_POST['table']!=''){
+                $where = [];
+                if(!empty($_POST['where']))
+                    $where = json_decode($_POST['where'], true);
+
+                $result = remove($_POST['table'], $where);
+                echo json_encode($result);
+            }
+        }
+    }
+
+
+    // PRODUCT IMAGE DELETE
+    function imageDelete(){
+        if(!empty($_POST['id']) && $_POST['id']!=''){
+            $images = readTable('product_images', ['id'=>$_POST['id']]);
+            foreach ($images as $key => $row) {
+                if(file_exists($row->large))
+                    unlink($row->large);
+                if(file_exists($row->medium))
+                    unlink($row->medium);
+                if(file_exists($row->small))
+                    unlink($row->small);
+            }
+            echo remove('product_images', ['id'=>$_POST['id']]);
+        }
+    }
+
+    // Get Products
+    function getProducts(){
+        // get the incoming object
+        $content = file_get_contents("php://input");
+
+        // convart object to array
+        $receive = json_decode($content, true);
+
+        $where = [];
+        if(array_key_exists('where', $receive)){
+            $where = $receive['where'];
+        }
+        echo json_encode(getProducts($where)); 
+    }
+
+
+    // Get Supplier Info
+    function getSupplier(){
+        // get the incoming object
+        $content = file_get_contents("php://input");
+
+        // convart object to array
+        $receive = json_decode($content, true);
+
+        if(array_key_exists('supplier_id', $receive))
+        {
+            echo json_encode(getSupplierInfo($receive['supplier_id']));
+        }
+        
+    }
+
+
+    // Get Supplier Info
+    function purchaseInvoice(){
+        // get the incoming object
+        $content = file_get_contents("php://input");
+
+        // convart object to array
+        $receive = json_decode($content, true);
+
+        if(array_key_exists('sap_record_id', $receive))
+        {
+            echo json_encode(purchaseInvoice($receive['sap_record_id']));
+        }
+        
     }
 
 }

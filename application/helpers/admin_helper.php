@@ -192,6 +192,60 @@ if (!function_exists('get_join')) {
 			return false;
 		}	
     }
+}// get join all data
+if (!function_exists('get_left_join')) {
+    function get_left_join($tableFrom, $tableTo, $joinCond, $where = [], $select = null, $groupBy = null, $order_col = null, $order_by = 'ASC', $limit = null)
+    {
+        //get main CodeIgniter object
+        $ci =& get_instance();
+        
+        if(!empty($tableFrom) && !empty($tableTo) && !empty($joinCond)){
+
+            // get all query
+            if (!empty($select)) {
+                $ci->db->select($select);
+            }
+
+            $ci->db->from($tableFrom);
+
+            if (!empty($tableTo) && !empty($joinCond)) {
+                if (is_array($tableTo) && is_array($tableTo)) {
+                    foreach ($tableTo as $_key => $to_value) {
+                        $ci->db->join($to_value, $joinCond[$_key], 'left');
+                    }
+                } else {
+                    $ci->db->join($tableTo, $joinCond, 'left');
+                }
+            }
+
+            // get where
+            if (!empty($where)) {
+                $ci->db->where($where);
+            }
+
+            // get group by
+            if (!empty($groupBy)) {
+                $ci->db->group_by($groupBy);
+            }
+
+            // get order by
+            if (!empty($order_col) && !empty($order_by)) {
+                $ci->db->order_by($order_col, $order_by);
+            }
+
+            // get limit
+            if (!empty($limit)) {
+                $ci->db->limit($limit);
+            }
+
+            // get query
+            $query = $ci->db->get();
+            return $query->result();
+            
+        } else {
+            return false;
+        }   
+    }
 }
 
 

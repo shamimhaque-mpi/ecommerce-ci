@@ -1,9 +1,7 @@
 var app = angular.module("MainApp", ['angularUtils.directives.dirPagination', 'ngSanitize']);
 
-
-
 var url = window.location.origin+'/';
-if(window.location.host=='localhost'){
+if(window.location.host=='localhost' || (window.location.host.match('192.168')>-1)){
     var pathname = window.location.pathname;
     url += pathname.substr(1, pathname.indexOf('/', 1));
 }
@@ -85,4 +83,26 @@ window.makeFormData=(object)=>{
         }
     }
     return formdata;
+}
+
+
+window.read    = (x)=>document.querySelector(x);
+window.readAll = (x)=>document.querySelectorAll(x);
+
+
+
+
+
+var axiosRequest = {
+    post:function(url, data=null){return http(url, makeFormData(data))}
+}
+app.value('$axios', axiosRequest);
+async function http(url, data) {
+    var responsedata = null;
+    await axios.post(url, data)
+    .then(response=>{
+        responsedata = response
+    })
+    .catch(err=>console.log(err));
+    return responsedata;
 }

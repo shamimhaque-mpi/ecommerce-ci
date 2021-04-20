@@ -12,6 +12,6 @@
         $this->data['categories']   = readTable("categories", ['trash'=>0], ['orderBy'=>['id', 'DESC']]);
 
 
-        view('frontend.pages.index');
+        return view('frontend.pages.index');
     }
 }

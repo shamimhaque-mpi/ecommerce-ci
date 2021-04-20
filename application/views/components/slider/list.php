@@ -1,3 +1,12 @@
+<style>
+    .tb_img {width: 75px;}
+    .tb_img img {
+        transition: all .2s;
+        max-width: 60px;
+    }
+    .tb_img img:hover {transform: scale(1.5);}
+</style>
+
 <div class="container-fluid">
     <div class="row">
         <div class="panel panel-default">
@@ -11,17 +20,17 @@
                 <table class="table table-bordered">
                     <tr>
                         <th width="50">SL</th>
-                        <th>Name</th>
-                        <th>Img</th>
-                        <th width="120" class="none">Action</th>
+                        <th>Image</th>
+                        <th>Title</th>
+                        <th width="120" class="text-right">Action</th>
                     </tr>
-                   
+
                     <?php if($slider){ foreach($slider as $key => $value){ ?>
                     <tr>
                         <td><?php echo ++$key; ?></td>
+                        <td class="tb_img"><img src="<?=site_url($value->path)?>" alt=""></td>
                         <td><?php echo isset($value->name) ? $value->name : ''; ?></td>
-                        <td><?php echo isset($value->path) ? "<img height='60' src='".site_url($value->path)."' alt=''" : ''; ?></td>
-                        <td class="none">
+                        <td class="text-right">
                             <?php
                                 if($action_menus){
                                     foreach($action_menus as $action_menu){

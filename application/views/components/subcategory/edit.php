@@ -11,7 +11,7 @@
                 <form action="" class="form-horizontal" method="post" enctype="multipart/form-data">
                     <div class="form-group">
                         <label class="col-md-2 control-label">Category <span class="req">*</span></label>
-                        <div class="col-md-5">
+                        <div class="col-md-7">
                             <select name="cat_id" class="form-control selectpicker" data-live-search="true">
                                 <option value="" selected disabled>-- Select a Category -- </option>
                                 <?php if(!empty($categories)) foreach($categories as $key=>$row) { ?>
@@ -23,13 +23,13 @@
 
                     <div class="form-group">
                         <label class="col-md-2 control-label">Name <span class="req">*</span></label>
-                        <div class="col-md-5">
+                        <div class="col-md-7">
                             <input type="text" name="subcategory" value="<?=($subcategory->subcategory)?>" placeholder="Enter Sub-Category Name..." class="form-control" required>
                         </div>
                     </div>
-                    
+
                     <div class="row">
-                        <div class="col-md-7">
+                        <div class="col-md-9">
                             <div class="pull-right">
                                 <input type="submit" value="Save" class="btn btn-primary">
                             </div>

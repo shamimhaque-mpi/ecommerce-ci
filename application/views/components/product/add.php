@@ -67,7 +67,7 @@
                             <div class="form-group">
                                 <label class="control-label">Brand <span class="req">*</span></label>
                                 <select name="brand_id" class="form-control selectpicker" data-live-search="true" required>
-                                    <option value="" selected disabled> --Select A Brand -- </option>
+                                    <option value="" selected disabled>Select Brand</option>
                                     <?php if(!empty($brands)) foreach($brands as $row){ ?>
                                         <option value="<?=($row->id)?>"><?=($row->brand)?></option>
                                     <?php } ?>
@@ -79,7 +79,7 @@
                             <div class="form-group">
                                 <label class="control-label">Category <span class="req">*</span></label>
                                 <select name="cat_id" ng-model="cat_id" class="form-control selectpicker" data-live-search="true" required>
-                                    <option value="" selected disabled> --Select A Category -- </option>
+                                    <option value="" selected disabled>Select Category</option>
                                     <?php if(!empty($categories)) foreach($categories as $row){ ?>
                                         <option value="<?=($row->id)?>"><?=($row->category)?></option>
                                     <?php } ?>
@@ -91,7 +91,7 @@
                             <div class="form-group">
                                 <label class="control-label">Sub-Category <small>(<span id="total_cat">0</span>)</small><span class="req">*</span></label>
                                 <select name="sub_cat_id" class="form-control" id="sub_cat_id" data-live-search="true">
-                                    <option value="" selected disabled> --Select A Sub-Category -- </option>
+                                    <option value="" selected disabled>Select Sub-Category</option>
                                 </select>
                             </div>
                         </div>
@@ -100,7 +100,7 @@
                             <div class="form-group">
                                 <label class="control-label">Size <span class="req">*</span></label>
                                 <select name="size_id[]" class="form-control selectpicker" multiple data-live-search="true">
-                                    <option value="" disabled> --Select A Size -- </option>
+                                    <option value="" disabled>Select Size</option>
                                     <?php if(!empty($sizes)) foreach($sizes as $row){ ?>
                                         <option value="<?=($row->id)?>"><?=($row->size)?></option>
                                     <?php } ?>
@@ -112,7 +112,7 @@
                             <div class="form-group">
                                 <label class="control-label">Color <span class="req">*</span></label>
                                 <select name="color_id[]" class="form-control selectpicker" multiple data-live-search="true">
-                                    <option value="" disabled> --Select A Color -- </option>
+                                    <option value="" disabled>Select Color</option>
                                     <?php if(!empty($colors)) foreach($colors as $row){ ?>
                                         <option value="<?=($row->id)?>"><?=($row->color)?></option>
                                     <?php } ?>
@@ -123,14 +123,14 @@
                         <div class="col-md-4">
                             <div class="form-group">
                                 <label class="control-label">Price <span class="req">*</span></label>
-                                <input type="text" name="price" placeholder="Price" class="form-control" required>
+                                <input type="text" name="price" value="0.00" placeholder="Price" class="form-control" required>
                             </div>
                         </div>
 
                         <div class="col-md-4">
                             <div class="form-group">
                                 <label class="control-label">Min-Qty <span class="req">*</span></label>
-                                <input type="text" name="min_qty" placeholder="Min Sale Quantity" class="form-control" required>
+                                <input type="text" name="min_qty" value="1" placeholder="Min Sale Quantity" class="form-control" required>
                             </div>
                         </div>
 
@@ -143,14 +143,14 @@
 
                         <div class="col-md-4">
                             <div class="form-group">
-                                <label class="control-label">Warranty <span class="req">*</span></label>
-                                <input type="text" name="warranty" placeholder="Warranty" class="form-control" required>
+                                <label class="control-label">Warranty &nbsp;</label>
+                                <input type="text" name="warranty" placeholder="Warranty" class="form-control">
                             </div>
                         </div>
 
                         <div class="col-md-4">
                             <div class="form-group">
-                                <label class="control-label">Feature Product<span class="req">*</span></label>
+                                <label class="control-label">Feature Product <span class="req">*</span></label>
                                 <select name="feature_product" class="form-control selectpicker" data-live-search="true">
                                     <option value="yes">Yes</option>
                                     <option value="no">No</option>

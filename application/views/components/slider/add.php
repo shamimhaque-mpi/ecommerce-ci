@@ -10,31 +10,28 @@
                 <?php msg(); ?>
                 <form action="<?php echo get_url("slider/slider_controller/add_process"); ?>" class="form-horizontal" method="post" enctype="multipart/form-data">
                     <div class="form-group">
-                        <label class="col-md-2 control-label">Slider Name <span class="req">*</span></label>
-                        <div class="col-md-5">
+                        <label class="col-md-2 control-label">Slider Title <span class="req">*</span></label>
+                        <div class="col-md-7">
                             <input type="text" name="name" placeholder="Enter Slider Name..." class="form-control" required>
                         </div>
                     </div>
-                    
+
                     <div class="form-group">
-                        <label class="col-md-2 control-label">Photos <span class="req">*</span></label>
-                        <div class="col-md-5">
+                        <label class="col-md-2 control-label">Photo <span class="req">*</span></label>
+                        <div class="col-md-7">
                             <input type="file" name="img" class="form-control" required>
                         </div>
                     </div>
-                    
+
                     <div class="form-group">
                         <label class="col-md-2 control-label">Is Offer <span class="req">*</span></label>
-                        <div class="col-md-5">
+                        <div class="col-md-7">
                             <input type="checkbox" name="is_offer" value="1">
                         </div>
                     </div>
-                    
                     <div class="row">
-                        <div class="col-md-7">
-                            <div class="pull-right">
-                                <input type="submit" value="Save" class="btn btn-primary">
-                            </div>
+                        <div class="col-md-9 text-right">
+                            <input type="submit" value="Save" class="btn btn-primary">
                         </div>
                     </div>
                 </form>

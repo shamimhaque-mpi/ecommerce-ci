@@ -81,6 +81,7 @@ class Admin_Controller extends Lab_Controller {
         // Load helpers
         $this->load->model("membership_m");
         $this->load->helper("custom");
+        $this->load->helper("ecom");
         $this->load->helper("sms");
 
 
