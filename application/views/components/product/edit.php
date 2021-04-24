@@ -67,7 +67,7 @@
                             <div class="form-group">
                                 <label class="control-label">Brand <span class="req">*</span></label>
                                 <select name="brand_id" class="form-control selectpicker" data-live-search="true" required>
-                                    <option value="" selected disabled> --Select A Brand -- </option>
+                                    <option value="" selected disabled>Select Brand</option>
                                     <?php if(!empty($brands)) foreach($brands as $row){ ?>
                                         <option value="<?=($row->id)?>" <?=($edit->brand_id==$row->id?'selected':'')?>><?=($row->brand)?></option>
                                     <?php } ?>
@@ -79,7 +79,7 @@
                             <div class="form-group">
                                 <label class="control-label">Category <span class="req">*</span></label>
                                 <select name="cat_id" ng-model="cat_id" ng-init="cat_id='<?=($edit->cat_id)?>'" class="form-control selectpicker" data-live-search="true" required>
-                                    <option value="" selected disabled> --Select A Category -- </option>
+                                    <option value="" selected disabled>Select Category</option>
                                     <?php if(!empty($categories)) foreach($categories as $row){ ?>
                                         <option value="<?=($row->id)?>" <?=($edit->cat_id==$row->id?'selected':'')?>><?=($row->category)?></option>
                                     <?php } ?>
@@ -89,18 +89,18 @@
 
                         <div class="col-md-4">
                             <div class="form-group" ng-model="sub_cat_id" ng-init="sub_cat_id=<?=($edit->sub_cat_id)?>">
-                                <label class="control-label">Sub-Category <small>(<span id="total_cat">0</span>)</small><span class="req">*</span></label>
+                                <label class="control-label">Sub-Category <small>(<span id="total_cat">0</span>)</small></label>
                                 <select name="sub_cat_id" class="form-control" id="sub_cat_id" data-live-search="true">
-                                    <option value="" selected disabled> --Select A Sub-Category -- </option>
+                                    <option value="" selected disabled>Select Sub-Category</option>
                                 </select>
                             </div>
                         </div>
                         <?php $size_ids = getSizeIds($edit->id);?>
                         <div class="col-md-4">
                             <div class="form-group">
-                                <label class="control-label">Size <span class="req">*</span></label>
+                                <label class="control-label">Size</label>
                                 <select name="size_id[]" class="form-control selectpicker" multiple data-live-search="true">
-                                    <option value="" disabled> --Select A Size -- </option>
+                                    <option value="" disabled>Select Size</option>
                                     <?php if(!empty($sizes)) foreach($sizes as $row){ ?>
                                         <option value="<?=($row->id)?>" <?=(in_array($row->id, $size_ids)?'selected':'')?>><?=($row->size)?></option>
                                     <?php } ?>
@@ -110,9 +110,9 @@
                         <?php $color_ids = getColorIds($edit->id);?>
                         <div class="col-md-4">
                             <div class="form-group">
-                                <label class="control-label">Color <span class="req">*</span></label>
+                                <label class="control-label">Color</label>
                                 <select name="color_id[]" class="form-control selectpicker" multiple data-live-search="true">
-                                    <option value="" disabled> --Select A Color -- </option>
+                                    <option value="" disabled>Select Color</option>
                                     <?php if(!empty($colors)) foreach($colors as $row){ ?>
                                         <option value="<?=($row->id)?>" <?=(in_array($row->id, $color_ids)?'selected':'')?>><?=($row->color)?></option>
                                     <?php } ?>
@@ -136,22 +136,22 @@
 
                         <div class="col-md-4">
                             <div class="form-group">
-                                <label class="control-label">Discount(%) <span class="req">*</span></label>
+                                <label class="control-label">Discount(%)</label>
                                 <input type="text" name="discount" value="<?=($edit->discount)?>" value="0" placeholder="Discount(%)" class="form-control">
                             </div>
                         </div>
 
                         <div class="col-md-4">
                             <div class="form-group">
-                                <label class="control-label">Warranty <span class="req">*</span></label>
-                                <input type="text" name="warranty" value="<?=($edit->warranty)?>" placeholder="Warranty" class="form-control" required>
+                                <label class="control-label">Warranty</label>
+                                <input type="text" name="warranty" value="<?=($edit->warranty)?>" placeholder="Warranty" class="form-control">
                             </div>
                         </div>
 
                         <div class="col-md-4">
                             <div class="form-group">
                                 <label class="control-label">Feature Product<span class="req">*</span></label>
-                                <select name="feature_product" class="form-control selectpicker" data-live-search="true">
+                                <select name="feature_product" class="form-control selectpicker" data-live-search="true" required>
                                     <option value="yes" <?=($edit->feature_product=='yes'?'selected':'')?>>Yes</option>
                                     <option value="no" <?=($edit->feature_product=='no'?'selected':'')?>>No</option>
                                 </select>
@@ -161,7 +161,7 @@
                         <div class="col-md-4">
                             <div class="form-group">
                                 <label class="control-label">Status <span class="req">*</span></label>
-                                <select name="status" class="form-control selectpicker" data-live-search="true">
+                                <select name="status" class="form-control selectpicker" data-live-search="true" required>
                                     <option value="available" <?=($edit->status=='available'?'selected':'')?>>Available</option>
                                     <option value="not_available" <?=($edit->status=='not_available'?'selected':'')?>>Not Available</option>
                                 </select>
@@ -171,7 +171,7 @@
                         <div class="col-md-12">
                             <div class="form-group">
                                 <label class="control-label">Description <span class="req">*</span></label>
-                                <textarea name="description" class="form-control" rows="10"><?=($edit->description)?></textarea>
+                                <textarea name="description" class="form-control" rows="10" required><?=($edit->description)?></textarea>
                             </div>
                         </div>
                     </div>
@@ -217,11 +217,10 @@
                                 <span><?=filter($row->type)?></span>
                                 <div class="photo-action">
                                     <div class="btn-group">
-                                        <a 
-	                                        href="javascript:void(0)" 
-	                                        ng-click="deleteFn('<?=($row->id)?>', '<?=($row->type)?>')" 
+                                        <a
+	                                        href="javascript:void(0)"
+	                                        ng-click="deleteFn('<?=($row->id)?>', '<?=($row->type)?>')"
 	                                        class="btn btn-danger"
-	                                        onclick="this.closest('.set-photo-wrapper').remove()"
                                         >
 	                                        <i class="fa fa-trash"></i>
 	                                    </a>

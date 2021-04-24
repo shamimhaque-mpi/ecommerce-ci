@@ -72,7 +72,7 @@
             				<th width="80">P.Price</th>
             				<th width="80">S.Price</th>
             				<th width="80">Qty</th>
-            				<th width="60">Total</th>
+            				<th width="80">Total</th>
             				<th width="60">Action</th>
             			</tr>
             			<tr ng-repeat="item in cart">

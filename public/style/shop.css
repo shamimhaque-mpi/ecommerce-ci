@@ -1,0 +1,191 @@
+/* shop section start */
+.shop_section {
+    background: #F1F2F4;
+    padding: 25px 0;
+}
+.shop_section .product_aside {
+	padding-bottom: 5px;
+	background: #FFFFFF;
+    margin-bottom: 15px;
+}
+.shop_section .aside_title {
+    text-transform: uppercase;
+    padding: 18px 20px 15px;
+    background: #EA232A;
+    color: #fff;
+    white-space: nowrap;
+    overflow: hidden;
+    font-size: 20px;
+    text-overflow: ellipsis;
+}
+.shop_section .product_menu {
+    padding: 5px 20px;
+    max-height: 356px;
+    overflow: auto;
+}
+.shop_section .product_menu a {
+    text-transform: uppercase;
+    display: inline-block;
+    color: #0F0F0F;
+    margin: 6px 0;
+    width: 100%;
+    font-size: 15px;
+}
+.shop_section .product_menu li:first-child a {margin-top: 0;}
+.shop_section .product_menu a.active,
+.shop_section .product_menu a:hover {font-weight: 700;}
+
+.shop_section .product_heading {
+    margin-bottom: 20px;
+    background: #FFF;
+    padding: 25px;
+}
+.shop_section .breadcrumb_list {
+    display: flex;
+    margin: 0;
+}
+.shop_section .breadcrumb_list li {
+    text-transform: uppercase;
+    margin-right: 15px;
+    color: #001E32;
+}
+.shop_section .breadcrumb_list li a {
+    position: relative;
+    font-weight: bold;
+    color: #EA232A;
+}
+.shop_section .breadcrumb_list li a::after {
+    display: inline-block;
+    background: red;
+    height: 15px;
+    content: '';
+    width: 1px;
+    top: 3px;
+    right: -8px;
+    position: absolute;
+    transform: rotate(15deg);
+}
+
+.shop_section .product_grid {
+    grid-template-columns: repeat(auto-fill, minmax(210px, 1fr));
+    display: grid;
+    gap: 15px;
+}
+.shop_section .product_box {
+    transition: all .2s;
+    position: relative;
+    overflow: hidden;
+}
+.shop_section .product_box .stockout {
+    transform: rotate(-25deg);
+    position: absolute;
+    max-width: 75px;
+    z-index: 99;
+    top: 5px;
+    left: 4px;
+}
+.shop_section .product_box:hover {box-shadow: 0 20px 30px 0 rgba(0,0,0,0.05);}
+.shop_section .product_gallery {
+    background-image: url('../images/bg_images/placeholder.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 275px;
+    position: relative;
+    margin-bottom: 0;
+}
+.shop_section .product_gallery .cover {
+    display: inline-block;
+    transition: all .2s;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.0);
+}
+.shop_section .product_box:hover .product_gallery .cover {background: rgba(0, 0, 0, 0.3);}
+.shop_section .product_gallery .product_img {display: flex;}
+.shop_section .product_gallery img {
+    transition: all .3s;
+    object-fit: cover;
+    min-width: 100%;
+    height: 275px;
+    width: 100%;
+}
+.shop_section img.product_one {
+    transform: translate(0%);
+    z-index: 9;
+}
+.shop_section img.product_one {transform: translate(0%);}
+.shop_section img.product_two {transform: translate(-200%);}
+.shop_section .product_box:hover img.product_one {transform: translate(100%);}
+.shop_section .product_box:hover img.product_two {transform: translate(-100%);}
+.shop_section .product_gallery figcaption {
+    transform: translateX(calc(100% + 6px));
+    position: absolute;
+    width: 32px;
+    bottom: 4px;
+    right: 6px;
+    z-index: 99;
+}
+.shop_section .product_box:hover figcaption a:first-child {
+    transform: translateX(calc(-100% + -4px));
+    transition: all .18s;
+}
+.shop_section .product_box:hover figcaption a:nth-child(2) {
+    transform: translateX(calc(-100% + -4px));
+    transition: all .25s;
+}
+.shop_section .product_gallery figcaption a {
+    display: inline-block;
+    transition: all .2s;
+    text-align: center;
+    background: #FFF;
+    line-height: 36px;
+    height: 32px;
+    width: 32px;
+    margin-top: 4px;
+    color: #001E32;
+    font-size: 20px;
+}
+.shop_section .product_gallery figcaption a:hover {
+    background: #EA232A;
+    color: #FFF;
+}
+.shop_section .product_title {
+    background: #fff;
+    padding: 8px 0;
+}
+.shop_section .product_title h5 {
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    margin-top: 0;
+}
+.shop_section .product_title h5 a {
+    transition: all .2s;
+    font-weight: 600;
+    font-size: 17px;
+    color: #6d6d6d;
+}
+.shop_section .product_box:hover .product_title h5 a {color: #000;}
+.shop_section .product_title h4 {
+    letter-spacing: -1px;
+    font-weight: 600;
+    font-size: 16px;
+    color: #EA232A;
+    margin: 0;
+}
+.shop_section .product_title h4 del {
+    font-weight: 300;
+    margin-left: 6px;
+    font-size: 13px;
+    color: #aaaaaa;
+}
+@media screen and (max-width: 500px) {
+    .shop_section .product_grid {grid-template-columns: repeat(auto-fill, minmax(145px, 1fr));}
+    .shop_section .product_gallery img,
+    .shop_section .product_gallery {height: 200px;}
+}
+/* shop section end */

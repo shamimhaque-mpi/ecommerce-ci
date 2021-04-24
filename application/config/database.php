@@ -81,6 +81,11 @@ $db['default'] = array(
 	'password' => '',
 
 
+	/*'database' => 'masiepcr_aloonlinebd',
+	'username' => 'masiepcr_aloonlinebd',
+	'password' => 'YyJP-y@Nm.d&',*/
+
+
 	'dbdriver' => 'mysqli',
 	'dbprefix' => '',
 	'pconnect' => FALSE,

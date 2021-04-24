@@ -1,4 +1,5 @@
 var _d = (x)=>document.querySelector(x);
+
 var btn = _d('.category_nav .category_head a');
 if(btn){
     btn.onclick = (event)=>{

@@ -1,3 +1,6 @@
+<!-- include css -->
+<link rel="stylesheet" href="<?=site_url('public/style/home.css')?>">
+
 <!-- header section start -->
 <header class="header_section">
     <div class="container">
@@ -48,7 +51,7 @@
     <div class="container">
         <div class="owl-carousel categories_carousel">
             <?php if(!empty($categories)) foreach($categories as $key=>$row){ ?>
-            <a class="categories" href="#">
+            <a class="categories" href="<?=site_url('category')?>">
                 <img src="<?=site_url($row->img)?>" alt="">
                 <h5 class="title"><?=($row->category)?> <i class="icon ion-md-arrow-forward"></i></h5>
             </a>
@@ -61,365 +64,97 @@
 
 
 <!-- product section start -->
+<?php if(!empty($feature_products)){ ?>
 <section class="product_section">
     <div class="container">
         <div class="section_title">
             <h3>Featured Products</h3>
-            <a href="category.html" class="view_all">View All</a>
+            <?php if(count($feature_products)>5){ ?>
+            <a href="<?=site_url('category')?>" class="view_all">View All</a>
+            <?php } ?>
         </div>
         <div class="product_grid">
+            <?php
+                foreach($feature_products as $key=>$row){
+                    if(($key+1)!=6){
+            ?>
             <div class="product_box">
                 <figure class="product_gallery">
-                    <div class="product_img">
-                        <img class="product_one" src="<?=site_url('/public')?>/images/product/item-1.jpg" alt="">
-                        <img class="product_two" src="<?=site_url('/public')?>/images/product/item-1.jpg" alt="">
-                    </div>
-                    <a href="details.html" class="cover"></a>
-                    <figcaption>
-                        <a href="#"><i class="icon ion-ios-cart"></i></a>
-                        <a href="#"><i class="icon ion-md-heart-empty"></i></a>
-                    </figcaption>
+                    <?php if($row->general_photo){ ?>
+                        <div class="product_img">
+                            <img class="product_one" src="<?=site_url($row->feature_photo)?>" alt="">
+                            <img class="product_two" src="<?=site_url($row->general_photo)?>" alt="">
+                        </div>
+                    <?php } else { ?>
+                        <img src="<?=site_url($row->feature_photo)?>" alt="">
+                    <?php }?>
+
+                    <a href="<?=site_url("products/".base64_encode($row->id)."/".(str_replace(' ', '-', $row->title)))?>" class="cover"></a>
                 </figure>
+
                 <div class="product_title">
-                    <h5><a href="details.html">Product Name Or Title</a></h5>
-                    <h4>720 Tk <del>920.00 Tk</del></h4>
+                    <h5><a href="<?=site_url("products/".base64_encode($row->id)."/".(str_replace(' ', '-', $row->title)))?>"><?=($row->title)?></a></h5>
                 </div>
+
             </div>
-            <div class="product_box">
-                <figure class="product_gallery">
-                    <div class="product_img">
-                        <img class="product_one" src="<?=site_url('/public')?>/images/product/item-2.jpg" alt="">
-                        <img class="product_two" src="<?=site_url('/public')?>/images/product/item-3.jpg" alt="">
-                    </div>
-                    <a href="details.html" class="cover"></a>
-                    <figcaption>
-                        <a href="#"><i class="icon ion-ios-cart"></i></a>
-                        <a href="#"><i class="icon ion-md-heart-empty"></i></a>
-                    </figcaption>
-                </figure>
-                <div class="product_title">
-                    <h5><a href="details.html">Product Name Or Title</a></h5>
-                    <h4>720 Tk <del>920.00 Tk</del></h4>
-                </div>
-            </div>
-            <div class="product_box">
-                <figure class="product_gallery">
-                    <img src="<?=site_url('/public')?>/images/product/item-3.jpg" alt="">
-                    <a href="details.html" class="cover"></a>
-                    <figcaption>
-                        <a href="#"><i class="icon ion-ios-cart"></i></a>
-                        <a href="#"><i class="icon ion-md-heart-empty"></i></a>
-                    </figcaption>
-                </figure>
-                <div class="product_title">
-                    <h5><a href="details.html">Product Name Or Title</a></h5>
-                    <h4>720 Tk <del>920.00 Tk</del></h4>
-                </div>
-            </div>
-            <div class="product_box">
-                <figure class="product_gallery">
-                    <div class="product_img">
-                        <img class="product_one" src="<?=site_url('/public')?>/images/product/item-2.jpg" alt="">
-                        <img class="product_two" src="<?=site_url('/public')?>/images/product/item-3.jpg" alt="">
-                    </div>
-                    <a href="details.html" class="cover"></a>
-                    <figcaption>
-                        <a href="#"><i class="icon ion-ios-cart"></i></a>
-                        <a href="#"><i class="icon ion-md-heart-empty"></i></a>
-                    </figcaption>
-                </figure>
-                <div class="product_title">
-                    <h5><a href="details.html">Product Name Or Title</a></h5>
-                    <h4>720 Tk <del>920.00 Tk</del></h4>
-                </div>
-            </div>
-            <div class="product_box">
-                <figure class="product_gallery">
-                    <img src="<?=site_url('/public')?>/images/product/item-3.jpg" alt="">
-                    <a href="details.html" class="cover"></a>
-                    <figcaption>
-                        <a href="#"><i class="icon ion-ios-cart"></i></a>
-                        <a href="#"><i class="icon ion-md-heart-empty"></i></a>
-                    </figcaption>
-                </figure>
-                <div class="product_title">
-                    <h5><a href="details.html">Product Name Or Title</a></h5>
-                    <h4>720 Tk <del>920.00 Tk</del></h4>
-                </div>
-            </div>
+            <?php }} ?>
         </div>
     </div>
 </section>
+<?php } ?>
 <!-- product section end -->
 
 
 
 <!-- product section start -->
+<?php
+    if(!empty($category_wise)) foreach($category_wise as $row) {
+        $products = getProducts(['products.cat_id'=>$row->id, 'products.feature_product'=>'no'], ['limit'=>6]);
+        if(!empty($products)){
+?>
 <section class="product_section">
     <div class="container">
         <div class="section_title">
-            <h3>MerchExpo Products</h3>
-            <a href="category.html" class="view_all">View All</a>
+            <h3><?=($row->category)?></h3>
+            <?php if(count($products)>5){ ?>
+            <a href="<?=site_url('category')?>" class="view_all">View All</a>
+            <?php } ?>
         </div>
         <div class="product_grid">
+            <?php
+                foreach($products as $key=>$row){
+                    if(($key+1)!=6){
+            ?>
             <div class="product_box">
+                <?php if($row->quantity==0){ ?>
+                <img class="stockout" src="<?=site_url('public/images/logo/stockout.png')?>" alt="">
+                <?php }?>
                 <figure class="product_gallery">
-                    <div class="product_img">
-                        <img class="product_one" src="<?=site_url('public')?>/images/product/item-1.jpg" alt="">
-                        <img class="product_two" src="<?=site_url('public')?>/images/product/item-1.jpg" alt="">
-                    </div>
-                    <a href="details.html" class="cover"></a>
+                    <?php if($row->general_photo){ ?>
+                        <div class="product_img">
+                            <img class="product_one" src="<?=site_url($row->feature_photo)?>" alt="">
+                            <img class="product_two" src="<?=site_url($row->general_photo)?>" alt="">
+                        </div>
+                    <?php } else { ?>
+                        <img src="<?=site_url($row->feature_photo)?>" alt="">
+                    <?php }?>
+
+                    <a href="<?=site_url("products/".base64_encode($row->id)."/".(str_replace(' ', '-', $row->title)))?>" class="cover"></a>
+                    <?php if($row->quantity>0){ ?>
                     <figcaption>
                         <a href="#"><i class="icon ion-ios-cart"></i></a>
                         <a href="#"><i class="icon ion-md-heart-empty"></i></a>
                     </figcaption>
+                    <?php } ?>
                 </figure>
                 <div class="product_title">
-                    <h5><a href="details.html">Product Name Or Title</a></h5>
-                    <h4>720 Tk <del>920.00 Tk</del></h4>
+                    <h5><a href="<?=site_url("products/".base64_encode($row->id)."/".(str_replace(' ', '-', $row->title)))?>"><?=($row->title)?></a></h5>
+                    <h4><?=($row->sale_price)?> Tk <?=($row->discount > 0 ? "<del>{$row->discount} %</del>":'')?></h4>
                 </div>
             </div>
-            <div class="product_box">
-                <figure class="product_gallery">
-                    <div class="product_img">
-                        <img class="product_one" src="<?=site_url('public')?>/images/product/item-2.jpg" alt="">
-                        <img class="product_two" src="<?=site_url('public')?>/images/product/item-3.jpg" alt="">
-                    </div>
-                    <a href="details.html" class="cover"></a>
-                    <figcaption>
-                        <a href="#"><i class="icon ion-ios-cart"></i></a>
-                        <a href="#"><i class="icon ion-md-heart-empty"></i></a>
-                    </figcaption>
-                </figure>
-                <div class="product_title">
-                    <h5><a href="details.html">Product Name Or Title</a></h5>
-                    <h4>720 Tk <del>920.00 Tk</del></h4>
-                </div>
-            </div>
-            <div class="product_box">
-                <figure class="product_gallery">
-                    <img src="<?=site_url('/public')?>/images/product/item-3.jpg" alt="">
-                    <a href="details.html" class="cover"></a>
-                    <figcaption>
-                        <a href="#"><i class="icon ion-ios-cart"></i></a>
-                        <a href="#"><i class="icon ion-md-heart-empty"></i></a>
-                    </figcaption>
-                </figure>
-                <div class="product_title">
-                    <h5><a href="details.html">Product Name Or Title</a></h5>
-                    <h4>720 Tk <del>920.00 Tk</del></h4>
-                </div>
-            </div>
-            <div class="product_box">
-                <figure class="product_gallery">
-                    <div class="product_img">
-                        <img class="product_one" src="<?=site_url('public')?>/images/product/item-2.jpg" alt="">
-                        <img class="product_two" src="<?=site_url('public')?>/images/product/item-3.jpg" alt="">
-                    </div>
-                    <a href="details.html" class="cover"></a>
-                    <figcaption>
-                        <a href="#"><i class="icon ion-ios-cart"></i></a>
-                        <a href="#"><i class="icon ion-md-heart-empty"></i></a>
-                    </figcaption>
-                </figure>
-                <div class="product_title">
-                    <h5><a href="details.html">Product Name Or Title</a></h5>
-                    <h4>720 Tk <del>920.00 Tk</del></h4>
-                </div>
-            </div>
-            <div class="product_box">
-                <figure class="product_gallery">
-                    <img src="<?=site_url('/public')?>/images/product/item-3.jpg" alt="">
-                    <a href="details.html" class="cover"></a>
-                    <figcaption>
-                        <a href="#"><i class="icon ion-ios-cart"></i></a>
-                        <a href="#"><i class="icon ion-md-heart-empty"></i></a>
-                    </figcaption>
-                </figure>
-                <div class="product_title">
-                    <h5><a href="details.html">Product Name Or Title</a></h5>
-                    <h4>720 Tk <del>920.00 Tk</del></h4>
-                </div>
-            </div>
-            <div class="product_box">
-                <figure class="product_gallery">
-                    <img src="<?=site_url('/public')?>/images/product/item-4.jpg" alt="">
-                    <a href="details.html" class="cover"></a>
-                    <figcaption>
-                        <a href="#"><i class="icon ion-ios-cart"></i></a>
-                        <a href="#"><i class="icon ion-md-heart-empty"></i></a>
-                    </figcaption>
-                </figure>
-                <div class="product_title">
-                    <h5><a href="details.html">Product Name Or Title</a></h5>
-                    <h4>720 Tk <del>920.00 Tk</del></h4>
-                </div>
-            </div>
-            <div class="product_box">
-                <figure class="product_gallery">
-                    <img src="<?=site_url('/public')?>/images/product/item-5.jpg" alt="">
-                    <a href="details.html" class="cover"></a>
-                    <figcaption>
-                        <a href="#"><i class="icon ion-ios-cart"></i></a>
-                        <a href="#"><i class="icon ion-md-heart-empty"></i></a>
-                    </figcaption>
-                </figure>
-                <div class="product_title">
-                    <h5><a href="details.html">Product Name Or Title</a></h5>
-                    <h4>720 Tk <del>920.00 Tk</del></h4>
-                </div>
-            </div>
-            <div class="product_box">
-                <figure class="product_gallery">
-                    <img src="<?=site_url('/public')?>/images/product/item-6.jpg" alt="">
-                    <a href="details.html" class="cover"></a>
-                    <figcaption>
-                        <a href="#"><i class="icon ion-ios-cart"></i></a>
-                        <a href="#"><i class="icon ion-md-heart-empty"></i></a>
-                    </figcaption>
-                </figure>
-                <div class="product_title">
-                    <h5><a href="details.html">Product Name Or Title</a></h5>
-                    <h4>720 Tk <del>920.00 Tk</del></h4>
-                </div>
-            </div>
-            <div class="product_box">
-                <figure class="product_gallery">
-                    <img src="<?=site_url('/public')?>/images/product/item-7.jpg" alt="">
-                    <a href="details.html" class="cover"></a>
-                    <figcaption>
-                        <a href="#"><i class="icon ion-ios-cart"></i></a>
-                        <a href="#"><i class="icon ion-md-heart-empty"></i></a>
-                    </figcaption>
-                </figure>
-                <div class="product_title">
-                    <h5><a href="details.html">Product Name Or Title</a></h5>
-                    <h4>720 Tk <del>920.00 Tk</del></h4>
-                </div>
-            </div>
-            <div class="product_box">
-                <figure class="product_gallery">
-                    <img src="<?=site_url('/public')?>/images/product/item-8.jpg" alt="">
-                    <a href="details.html" class="cover"></a>
-                    <figcaption>
-                        <a href="#"><i class="icon ion-ios-cart"></i></a>
-                        <a href="#"><i class="icon ion-md-heart-empty"></i></a>
-                    </figcaption>
-                </figure>
-                <div class="product_title">
-                    <h5><a href="details.html">Product Name Or Title</a></h5>
-                    <h4>720 Tk <del>920.00 Tk</del></h4>
-                </div>
-            </div>
+            <?php }} ?>
         </div>
     </div>
 </section>
+<?php }} ?>
 <!-- product section end -->
-
-
-<!-- product section start -->
-<section class="product_section">
-    <div class="container">
-        <div class="section_title">
-            <h3>Popular right now</h3>
-            <a href="category.html" class="view_all">View All</a>
-        </div>
-        <div class="product_grid">
-            <div class="product_box">
-                <figure class="product_gallery">
-                    <div class="product_img">
-                        <img class="product_one" src="<?=site_url('/public')?>/images/product/item-1.jpg" alt="">
-                        <img class="product_two" src="<?=site_url('/public')?>/images/product/item-1.jpg" alt="">
-                    </div>
-                    <a href="details.html" class="cover"></a>
-                    <figcaption>
-                        <a href="#"><i class="icon ion-ios-cart"></i></a>
-                        <a href="#"><i class="icon ion-md-heart-empty"></i></a>
-                    </figcaption>
-                </figure>
-                <div class="product_title">
-                    <h5><a href="details.html">Product Name Or Title</a></h5>
-                    <h4>720 Tk <del>920.00 Tk</del></h4>
-                </div>
-            </div>
-            <div class="product_box">
-                <figure class="product_gallery">
-                    <img src="<?=site_url('/public')?>/images/product/item-4.jpg" alt="">
-                    <a href="details.html" class="cover"></a>
-                    <figcaption>
-                        <a href="#"><i class="icon ion-ios-cart"></i></a>
-                        <a href="#"><i class="icon ion-md-heart-empty"></i></a>
-                    </figcaption>
-                </figure>
-                <div class="product_title">
-                    <h5><a href="details.html">Product Name Or Title</a></h5>
-                    <h4>720 Tk <del>920.00 Tk</del></h4>
-                </div>
-            </div>
-            <div class="product_box">
-                <figure class="product_gallery">
-                    <img src="<?=site_url('/public')?>/images/product/item-6.jpg" alt="">
-                    <a href="details.html" class="cover"></a>
-                    <figcaption>
-                        <a href="#"><i class="icon ion-ios-cart"></i></a>
-                        <a href="#"><i class="icon ion-md-heart-empty"></i></a>
-                    </figcaption>
-                </figure>
-                <div class="product_title">
-                    <h5><a href="details.html">Product Name Or Title</a></h5>
-                    <h4>720 Tk <del>920.00 Tk</del></h4>
-                </div>
-            </div>
-            <div class="product_box">
-                <figure class="product_gallery">
-                    <img src="<?=site_url('/public')?>/images/product/item-7.jpg" alt="">
-                    <a href="details.html" class="cover"></a>
-                    <figcaption>
-                        <a href="#"><i class="icon ion-ios-cart"></i></a>
-                        <a href="#"><i class="icon ion-md-heart-empty"></i></a>
-                    </figcaption>
-                </figure>
-                <div class="product_title">
-                    <h5><a href="details.html">Product Name Or Title</a></h5>
-                    <h4>720 Tk <del>920.00 Tk</del></h4>
-                </div>
-            </div>
-            <div class="product_box">
-                <figure class="product_gallery">
-                    <img src="<?=site_url('/public')?>/images/product/item-8.jpg" alt="">
-                    <a href="details.html" class="cover"></a>
-                    <figcaption>
-                        <a href="#"><i class="icon ion-ios-cart"></i></a>
-                        <a href="#"><i class="icon ion-md-heart-empty"></i></a>
-                    </figcaption>
-                </figure>
-                <div class="product_title">
-                    <h5><a href="details.html">Product Name Or Title</a></h5>
-                    <h4>720 Tk <del>920.00 Tk</del></h4>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-<!-- product section end -->
-
-<!-- subscribe section start -->
-<section class="subscribe_section">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-6">
-                <div class="title">
-                    <img src="<?=site_url('/public')?>/images/bg_images/subscriber.png" alt="">
-                    <h4>Sign Up for newsletter for Offer and Updates</h4>
-                </div>
-            </div>
-            <div class="col-lg-6">
-                <form action="#" method="POST">
-                    <input type="text" class="form-control" placeholder="Enter Your Email">
-                    <button type="submit" class="btn">Subscribe</button>
-                </form>
-            </div>
-        </div>
-    </div>
-</section>
-<!-- subscribe section end -->

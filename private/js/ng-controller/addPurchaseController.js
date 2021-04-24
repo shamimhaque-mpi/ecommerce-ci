@@ -53,11 +53,12 @@ app.controller("addPurchaseController", ["$scope", "$http", "$log", "$axios", fu
 					url 	: url+'ajax/getProducts',
 					data    : {
 						where : {
-							product_id:$scope.product_id
+							'products.id':$scope.product_id
 						}
 					}
 				})
 				.success(response=>{
+					console.log(response);
 					if(response.length>0){
 						var item 			= response[0];
 						item.purchase_price = +item.price;

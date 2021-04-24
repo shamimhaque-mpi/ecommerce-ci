@@ -11,36 +11,7 @@ class Lab_Controller extends CI_Controller {
         $this->data['description'] = NULL;
         $this->load->helper("admin");
         $this->load->helper("io");
-
-
-        // theme settings start
-        // for more details contact with: Muhibbullah Ansary. Phone: 01770-989591
         
-        $theme_information = $this->db->get('settings');
-        
-        if($theme_information){
-            $theme_information = $theme_information->result()[0];
-            
-            $_social_media     = (!empty($theme_information) && isset($theme_information->social_media)) ? $theme_information->social_media : "";
-            $_social_media     = json_decode($_social_media);
-            
-            if(!empty($_social_media)){
-                foreach ($_social_media as $key => $value) {
-                    $this->data["lab_".str_replace("-", "_", $key)] = $value;
-                }
-            }
-
-            $this->data["lab_site_name"]   = (!empty($theme_information) && isset($theme_information->site_name)) ? $theme_information->site_name : "";
-            $this->data["lab_header_text"] = (!empty($theme_information) && isset($theme_information->header_text)) ? $theme_information->header_text : "";
-            $this->data["lab_footer_text"] = (!empty($theme_information) && isset($theme_information->footer_text)) ? $theme_information->footer_text : "";
-            $this->data["lab_header_logo"] = (!empty($theme_information) && isset($theme_information->header_logo_path)) ? $theme_information->header_logo_path : "";
-            $this->data["lab_footer_logo"] = (!empty($theme_information) && isset($theme_information->footer_logo_path)) ? $theme_information->footer_logo_path : "";
-            $this->data["lab_favicon"]     = (!empty($theme_information) && isset($theme_information->favicon)) ? $theme_information->favicon : "";
-            $this->data["lab_address"]     = (!empty($theme_information) && isset($theme_information->address)) ? $theme_information->address : "";
-            $this->data["lab_phone"]       = (!empty($theme_information) && isset($theme_information->phone)) ? $theme_information->phone : "";
-            $this->data["lab_email"]       = (!empty($theme_information) && isset($theme_information->email)) ? $theme_information->email : "";
-        }
-        // theme settings start
     }
 }
 
@@ -54,7 +25,8 @@ class UserController extends Lab_Controller {
         $this->load->helper("confirmation");
         $this->load->helper("custom");
         $this->load->helper("io");
-
+        $this->load->helper("ecom_front");
+        $this->load->model("User_m");
 
         // Header & Footer
         $header = readTable('header');
@@ -64,8 +36,47 @@ class UserController extends Lab_Controller {
         $this->data['footer'] = $footer ? $footer[0]: null;
         // End Header & Footer
 
+        // Authenticate Urls
+        $exception_uris = [
+            'login',
+            'registration'
+        ];
 
+        // CHECKING AUTHENTICATION URI
+        if(in_array(uri_string(), $exception_uris) == FALSE) {
+            if($this->User_m->isLogin() == FALSE) {
+                redirect('login');
+            }else {
+                $this->data['user_id']   = $this->session->userdata('user_id');
+                $this->data['image']     = $this->session->userdata('image');
+                $this->data['username']  = $this->session->userdata('username');
+                $this->data['name']      = $this->session->userdata('name');
+                $this->data['email']     = $this->session->userdata('email');
+                $this->data['mobile']    = $this->session->userdata('mobile');
+            }
+        }
     }
+}
+
+class Frontend_Controller extends Lab_Controller {
+    function __construct() {
+        parent::__construct();
+        // Set default meta title
+        $this->data['meta_title'] = 'Frontend meta title';
+        $this->load->helper("confirmation");
+        $this->load->helper("custom");
+        $this->load->helper("io");
+        $this->load->helper("ecom_front");
+        $this->load->model("membership_m");
+        // Header & Footer
+        $header = readTable('header');
+        $footer = readTable('footer');
+
+        $this->data['header'] = $header ? $header[0]: null;
+        $this->data['footer'] = $footer ? $footer[0]: null;
+        // End Header & Footer
+    }
+
 }
 
 
@@ -126,12 +137,6 @@ class Admin_Controller extends Lab_Controller {
             
             // privilege maintainance code end here------------------
         }
-        
-        
-        
-        
-        
-        
         
         
         // Login check

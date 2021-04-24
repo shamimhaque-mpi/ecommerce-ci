@@ -1,4 +1,4 @@
-app.controller("editProductFn", ["$scope", "$log", function ($scope, $log) 
+app.controller("editProductFn", ["$scope", "$log", "$window", function ($scope, $log, $window) 
 {
 	$scope.photos = [{
 		src 	: url+'public/images/thumbnail/photo.svg',
@@ -66,9 +66,13 @@ app.controller("editProductFn", ["$scope", "$log", function ($scope, $log)
 	$scope.deleteFn = function(id, type){
 		if(type=='feature_photo'){read('#feature_photo').setAttribute('required', 'required');}
 
+		var target = window.event.target.closest('.col-md-3');
+
 		axios.post(url+'ajax/imageDelete', makeFormData({id:id}))
 		.then(response=>{
-			console.log(response.data);
+			if(target){
+				target.remove();
+			}
 		})
 		.catch(err=>console.log(err));
 	}

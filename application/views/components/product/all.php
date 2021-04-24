@@ -71,7 +71,7 @@
                     ?>
                     <tr>
                         <td><?=(++$key)?></td>
-                        <td><img src="<?=site_url($row->small)?>" height="30"></td>
+                        <td><img src="<?=site_url($row->feature_photo)?>" height="30"></td>
                         <td><?=($row->title)?></td>
                         <td><?=($row->brand)?></td>
                         <td><?=($row->category)?></td>

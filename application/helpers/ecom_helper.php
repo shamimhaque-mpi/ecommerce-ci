@@ -51,12 +51,10 @@ function getProducts($where=[]){
             products.id,
             categories.category,
             subcategories.subcategory,
-            brands.brand
-
+            brands.brand,
+            (SELECT small FROM product_images WHERE product_id=products.id AND type='feature_photo' limit 1) AS feature_photo
         FROM 
             products
-        LEFT JOIN 
-            product_images ON products.id=product_images.product_id
         LEFT JOIN
             categories ON products.cat_id=categories.id
         LEFT JOIN
@@ -64,8 +62,6 @@ function getProducts($where=[]){
         LEFT JOIN
             brands ON products.brand_id=brands.id
         WHERE
-            product_images.type='feature_photo'
-        AND
             products.trash=0
         $condition
         GROUP BY 

@@ -90,6 +90,16 @@ if (!function_exists('load')) {
     }
 }
 
+// Print_r
+if (!function_exists('dd')) {
+    function dd($data)
+    {
+        echo "<pre>";
+        print_r($data);
+        echo "</pre>";
+    }
+}
+
 if(!function_exists('uploadFile')){
     function uploadFile($location=null, $tag_name=null, $file_name=null){
         if($location && $tag_name && isset($_FILES[$tag_name]) && $_FILES[$tag_name]['name']!=''){

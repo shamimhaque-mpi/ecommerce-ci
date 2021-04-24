@@ -1,7 +1,7 @@
 /* contact section start */
 .contact_section {
+    padding: 45px 0 30px;
     background: #fff;
-    padding: 75px 0;
 }
 .contact_section .contact_info .address,
 .contact_section .contact_info article {margin-bottom: 35px;}

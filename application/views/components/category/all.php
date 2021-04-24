@@ -13,7 +13,7 @@
                         <th width="50">SL</th>
                         <th width="70">Img</th>
                         <th>Name</th>
-                        <th width="120" class="none">Action</th>
+                        <th width="120" class="none text-right">Action</th>
                     </tr>
                    
                     <?php if(!empty($categories)){ foreach($categories as $key => $row){ ?>
@@ -21,7 +21,7 @@
                         <td><?=(++$key)?></td>
                         <td><img src="<?=site_url($row->img)?>" width="60" alt=""></td>
                         <td><?=($row->category)?></td>
-                        <td class="none">
+                        <td class="none text-right">
                             <?php
                                 if($action_menus){
                                     foreach($action_menus as $action_menu){

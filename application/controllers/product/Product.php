@@ -7,8 +7,6 @@
         $this->data['colors']     = readTable('colors', ['trash'=>0], ['orderBy'=>['id', 'DESC']]);
         $this->data['sizes']      = readTable('sizes', ['trash'=>0], ['orderBy'=>['id', 'DESC']]);
         $this->data['categories'] = readTable('categories', ['trash'=>0], ['orderBy'=>['id', 'DESC']]);
-
-
     }
 
     public function index(){
@@ -83,10 +81,10 @@
                         ];
                         $image = [
                             'product_id' => $product_id,
-                            'large'      => uploadToWebp($file, 'public/images/product/large/', time()+$key, 690, null, 80),
-                            'medium'     => uploadToWebp($file, 'public/images/product/medium/', time()+$key, 230, null, 80),
-                            'small'      => uploadToWebp($file, 'public/images/product/small/', time()+$key, 115, null, 80),
-                            'type'       => 'general'
+                            'large'      => uploadToWebp($file, 'public/images/product/large/', time()+($key+1), 690, null, 80),
+                            'medium'     => uploadToWebp($file, 'public/images/product/medium/', time()+($key+1), 230, null, 80),
+                            'small'      => uploadToWebp($file, 'public/images/product/small/', time()+($key+1), 115, null, 80),
+                            'type'       => 'general_photo'
                         ];
                         save('product_images', $image);
                     }

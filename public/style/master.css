@@ -206,6 +206,7 @@ body {padding-top: 176px;}
     width: 100%;
     display: flex;
     margin-right: 8px;
+    position: relative;
     border-radius: 2px;
 }
 .brand_content .search_form select.form-control {
@@ -228,6 +229,86 @@ body {padding-top: 176px;}
     color: #000;
 }
 .brand_content .search_form select.form-control:hover {background: #DADADA;}
+.brand_content .search_form .search_suggest {
+    box-shadow: 0 20px 30px 0 rgb(0 0 0 / 5%);
+    width: calc(100% - 159px);
+    position: absolute;
+    display: none;
+    z-index: 999;
+    left: 118px;
+    top: 37px;
+    overflow: auto;
+    padding: 0 12px;
+    background: #fff;
+    min-height: 80px;
+    max-height: 312px;
+}
+.brand_content .search_form .search_suggest.open {display: block;}
+.brand_content .search_form .search_product:last-child {border: none;}
+.brand_content .search_form .search_product {
+    border-bottom: 1px solid #efefef;
+    transition: all .2s;
+    display: flex;
+    padding: 8px 0;
+    min-height: 70px;
+    align-items: flex-start;
+}
+.brand_content .search_form .search_product:hover {background: #F1F2F4;}
+.brand_content .search_form .search_product img {max-width: 54px;}
+.brand_content .search_form .title {
+    padding: 0 12px;
+    width: 80%;
+    overflow: hidden;
+    padding-right: 10%;
+}
+.brand_content .search_form .title h5 {
+    margin-bottom: 5px;
+    font-size: 19px;
+    color: #EA232A;
+    width: 100%;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+.brand_content .search_form .title p {
+    white-space: nowrap;
+    font-size: 14px;
+    margin: 0;
+    width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.brand_content .search_form h6 {
+    white-space: nowrap;
+    margin: 0 10px;
+    font-size: 14px;
+}
+.brand_content .search_form .offer {
+    white-space: nowrap;
+    line-height: 18px;
+    margin: 0 10px;
+    color: #E9232A;
+    font-size: 14px;
+}
+.brand_content .search_form .price {
+    text-align: right;
+    min-width: 100px;
+}
+.brand_content .search_form .price h5 {
+    margin-bottom: 0;
+    color: #000;
+    font-size: 17px;
+}
+.brand_content .search_form .price del {
+    font-size: 13px;
+    color: #EA232A;
+}
+.brand_content .search_form .not_found {
+    text-align: center;
+    margin: 10px auto;
+    font-size: 19px;
+    color: #EA232A;
+}
 .brand_content .search_form input.form-control {
     line-height: 36px;
     box-shadow: none;
@@ -342,6 +423,9 @@ body {padding-top: 176px;}
         padding-right: .9rem;
         padding-left: .9rem;
     }
+}
+@media screen and (max-width: 1200px) {
+    .brand_content .search_form .search_suggest {display: none;}
 }
 @media screen and (max-width: 991px) {
     .navbar .navbar-collapse {padding: 15px;}

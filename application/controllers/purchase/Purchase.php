@@ -194,6 +194,8 @@
                     update('stock', $data, ['product_id'=>$_POST['product_id'][$key]]);
                 else 
                     save('stock', $data);
+                // Update Product Status
+                update('products', ['feature_product'=>'no'], ['id'=>$_POST['product_id'][$key]]);
             }
         }
 

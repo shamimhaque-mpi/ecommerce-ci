@@ -89,7 +89,7 @@
 
                         <div class="col-md-4">
                             <div class="form-group">
-                                <label class="control-label">Sub-Category <small>(<span id="total_cat">0</span>)</small><span class="req">*</span></label>
+                                <label class="control-label">Sub-Category <small>(<span id="total_cat">0</span>)</small></label>
                                 <select name="sub_cat_id" class="form-control" id="sub_cat_id" data-live-search="true">
                                     <option value="" selected disabled>Select Sub-Category</option>
                                 </select>
@@ -98,7 +98,7 @@
 
                         <div class="col-md-4">
                             <div class="form-group">
-                                <label class="control-label">Size <span class="req">*</span></label>
+                                <label class="control-label">Size</label>
                                 <select name="size_id[]" class="form-control selectpicker" multiple data-live-search="true">
                                     <option value="" disabled>Select Size</option>
                                     <?php if(!empty($sizes)) foreach($sizes as $row){ ?>
@@ -110,7 +110,7 @@
 
                         <div class="col-md-4">
                             <div class="form-group">
-                                <label class="control-label">Color <span class="req">*</span></label>
+                                <label class="control-label">Color</label>
                                 <select name="color_id[]" class="form-control selectpicker" multiple data-live-search="true">
                                     <option value="" disabled>Select Color</option>
                                     <?php if(!empty($colors)) foreach($colors as $row){ ?>
@@ -136,14 +136,14 @@
 
                         <div class="col-md-4">
                             <div class="form-group">
-                                <label class="control-label">Discount(%) <span class="req">*</span></label>
+                                <label class="control-label">Discount(%)</label>
                                 <input type="text" name="discount" value="0" placeholder="Discount(%)" class="form-control">
                             </div>
                         </div>
 
                         <div class="col-md-4">
                             <div class="form-group">
-                                <label class="control-label">Warranty &nbsp;</label>
+                                <label class="control-label">Warranty</label>
                                 <input type="text" name="warranty" placeholder="Warranty" class="form-control">
                             </div>
                         </div>
@@ -151,7 +151,7 @@
                         <div class="col-md-4">
                             <div class="form-group">
                                 <label class="control-label">Feature Product <span class="req">*</span></label>
-                                <select name="feature_product" class="form-control selectpicker" data-live-search="true">
+                                <select name="feature_product" class="form-control selectpicker" data-live-search="true" required>
                                     <option value="yes">Yes</option>
                                     <option value="no">No</option>
                                 </select>
@@ -161,7 +161,7 @@
                         <div class="col-md-4">
                             <div class="form-group">
                                 <label class="control-label">Status <span class="req">*</span></label>
-                                <select name="status" class="form-control selectpicker" data-live-search="true">
+                                <select name="status" class="form-control selectpicker" data-live-search="true" required>
                                     <option value="available">Available</option>
                                     <option value="not_available">Not Available</option>
                                 </select>
@@ -171,7 +171,7 @@
                         <div class="col-md-12">
                             <div class="form-group">
                                 <label class="control-label">Description <span class="req">*</span></label>
-                                <textarea name="description" class="form-control" rows="10"></textarea>
+                                <textarea name="description" class="form-control" rows="10" required></textarea>
                             </div>
                         </div>
                     </div>

@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Apr 19, 2021 at 12:39 PM
+-- Generation Time: Apr 24, 2021 at 12:41 PM
 -- Server version: 10.4.6-MariaDB
 -- PHP Version: 7.3.9
 
@@ -585,7 +585,11 @@ INSERT INTO `access_info` (`user_id`, `login_period`, `logout_period`) VALUES
 (13, '2021-04-19 06:39:42', '0000-00-00 00:00:00'),
 (13, '2021-04-19 10:13:12', '0000-00-00 00:00:00'),
 (14, '2021-04-19 11:29:32', '0000-00-00 00:00:00'),
-(13, '2021-04-19 12:37:44', '0000-00-00 00:00:00');
+(13, '2021-04-19 12:37:44', '0000-00-00 00:00:00'),
+(13, '2021-04-21 10:49:15', '0000-00-00 00:00:00'),
+(14, '2021-04-22 05:39:21', '0000-00-00 00:00:00'),
+(13, '2021-04-22 06:36:30', '0000-00-00 00:00:00'),
+(14, '2021-04-24 05:34:48', '0000-00-00 00:00:00');
 
 -- --------------------------------------------------------
 
@@ -681,7 +685,7 @@ CREATE TABLE `footer` (
 --
 
 INSERT INTO `footer` (`id`, `location`, `email`, `phone`, `fb_link`, `g_link`, `in_link`, `tw_link`, `youtube`, `trash`) VALUES
-(1, 'Main Road, Jhaudanga Bazar, Satkhira', 'akashelectronics@gmail.com', '01814-606401', 'https://www.facebook.com/', '', '', 'https://www.twitter.com', 'https://www.youtube.com', '');
+(1, 'Kanchijhuli Rd, Mymensingh Sadar', 'freelanceitlab@gmail.com', '01937-476716', 'https://www.facebook.com/', '', '', 'https://www.twitter.com', 'https://www.youtube.com', '');
 
 -- --------------------------------------------------------
 
@@ -793,8 +797,12 @@ CREATE TABLE `products` (
 --
 
 INSERT INTO `products` (`id`, `title`, `brand_id`, `cat_id`, `sub_cat_id`, `price`, `min_qty`, `discount`, `warranty`, `feature_product`, `description`, `status`, `trash`, `date`) VALUES
-(1, 'What is Lorem Ipsum?', 1, 7, 3, '500.00', '1.00', '0.00', 'sdfsdf', 'no', 'dfsdfsdfsdfsdfsdfsdfsdfsdfsdf', 'available', 0, '2021-04-18'),
-(2, 'Product Title', 1, 6, 0, '6582.00', '1.00', '10.00', '1', 'yes', 'In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content. Lorem ipsum may be used as a placeholder before final copy is available.', 'available', 0, '2021-04-19');
+(1, 'Product Title One', 1, 8, 0, '1230.00', '1.00', '120.00', '2', 'no', 'Morem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum', 'available', 0, '2021-04-22'),
+(2, 'Product Title Two', 1, 7, 3, '24154.00', '1.00', '3244.00', '55', 'yes', 'Psum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum', 'available', 0, '2021-04-22'),
+(3, 'Product Title Three', 1, 6, 0, '3256.00', '9.00', '2.00', '55', 'no', 'Type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum', 'available', 0, '2021-04-22'),
+(4, 'Product Title Four', 1, 4, 0, '750.00', '1.00', '78.00', '2', 'yes', 'Simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.', 'available', 0, '2021-04-22'),
+(5, 'Product Title Five', 1, 2, 0, '321.00', '1.00', '21.00', '2', 'yes', 'Text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.', 'available', 0, '2021-04-22'),
+(6, 'Product Title Six', 1, 3, 0, '145.00', '1.00', '5.00', '', 'yes', 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.', 'available', 0, '2021-04-22');
 
 -- --------------------------------------------------------
 
@@ -813,11 +821,20 @@ CREATE TABLE `product_colors` (
 --
 
 INSERT INTO `product_colors` (`id`, `product_id`, `color_id`) VALUES
-(21, 1, 4),
-(22, 1, 3),
-(23, 2, 4),
-(24, 2, 3),
-(25, 2, 2);
+(25, 5, 4),
+(26, 5, 3),
+(27, 5, 2),
+(28, 6, 4),
+(29, 6, 3),
+(30, 6, 2),
+(38, 1, 4),
+(43, 3, 4),
+(44, 3, 3),
+(45, 3, 2),
+(47, 4, 4),
+(48, 4, 3),
+(49, 4, 2),
+(56, 2, 3);
 
 -- --------------------------------------------------------
 
@@ -839,10 +856,18 @@ CREATE TABLE `product_images` (
 --
 
 INSERT INTO `product_images` (`id`, `product_id`, `large`, `medium`, `small`, `type`) VALUES
-(8, 1, 'public/images/product/large/1618719936.webp', 'public/images/product/medium/1618719936.webp', 'public/images/product/small/1618719936.webp', 'feature_photo'),
-(9, 1, 'public/images/product/large/1618719943.webp', 'public/images/product/medium/1618719944.webp', 'public/images/product/small/1618719944.webp', 'general_photo'),
-(10, 2, 'public/images/product/large/1618821064.webp', 'public/images/product/medium/1618821065.webp', 'public/images/product/small/1618821065.webp', 'feature_photo'),
-(11, 2, 'public/images/product/large/1618821065.webp', 'public/images/product/medium/1618821065.webp', 'public/images/product/small/1618821065.webp', 'general');
+(20, 4, 'public/images/product/large/1619078815.webp', 'public/images/product/medium/1619078815.webp', 'public/images/product/small/1619078815.webp', 'feature_photo'),
+(22, 5, 'public/images/product/large/1619078849.webp', 'public/images/product/medium/1619078850.webp', 'public/images/product/small/1619078850.webp', 'feature_photo'),
+(23, 5, 'public/images/product/large/1619078850.webp', 'public/images/product/medium/1619078850.webp', 'public/images/product/small/1619078850.webp', 'general_photo'),
+(24, 6, 'public/images/product/large/1619078984.webp', 'public/images/product/medium/1619078984.webp', 'public/images/product/small/1619078984.webp', 'feature_photo'),
+(27, 1, 'public/images/product/large/1619081898.webp', 'public/images/product/medium/1619081898.webp', 'public/images/product/small/1619081898.webp', 'general_photo'),
+(28, 1, 'public/images/product/large/1619081958.webp', 'public/images/product/medium/1619081958.webp', 'public/images/product/small/1619081958.webp', 'feature_photo'),
+(29, 3, 'public/images/product/large/1619082449.webp', 'public/images/product/medium/1619082449.webp', 'public/images/product/small/1619082449.webp', 'general_photo'),
+(30, 3, 'public/images/product/large/1619082489.webp', 'public/images/product/medium/1619082489.webp', 'public/images/product/small/1619082489.webp', 'feature_photo'),
+(33, 4, 'public/images/product/large/1619082985.webp', 'public/images/product/medium/1619082985.webp', 'public/images/product/small/1619082985.webp', 'general_photo'),
+(44, 2, 'public/images/product/large/1619083770.webp', 'public/images/product/medium/1619083770.webp', 'public/images/product/small/1619083770.webp', 'feature_photo'),
+(45, 2, 'public/images/product/large/1619083771.webp', 'public/images/product/medium/1619083771.webp', 'public/images/product/small/1619083771.webp', 'general_photo'),
+(46, 2, 'public/images/product/large/1619083772.webp', 'public/images/product/medium/1619083772.webp', 'public/images/product/small/1619083772.webp', 'general_photo');
 
 -- --------------------------------------------------------
 
@@ -861,9 +886,20 @@ CREATE TABLE `product_sizes` (
 --
 
 INSERT INTO `product_sizes` (`id`, `product_id`, `size_id`) VALUES
-(21, 1, 4),
-(22, 1, 3),
-(23, 2, 4);
+(25, 5, 4),
+(26, 5, 3),
+(27, 5, 2),
+(28, 6, 4),
+(29, 6, 3),
+(30, 6, 2),
+(38, 1, 4),
+(43, 3, 4),
+(44, 3, 3),
+(45, 3, 2),
+(47, 4, 4),
+(48, 4, 3),
+(49, 4, 2),
+(56, 2, 2);
 
 -- --------------------------------------------------------
 
@@ -912,12 +948,10 @@ CREATE TABLE `sap_items` (
 --
 
 INSERT INTO `sap_items` (`id`, `product_id`, `purchase_price`, `sale_price`, `quantity`, `total`, `sap_record_id`, `date`) VALUES
-(1, 1, '500.00', '500.00', '3.00', '1500.00', 1, '2021-04-18'),
-(3, 1, '500.00', '500.00', '1.00', '500.00', 3, '2021-04-19'),
-(7, 1, '500.00', '500.00', '1.00', '500.00', 2, '2021-04-19'),
-(8, 1, '500.00', '500.00', '1.00', '500.00', 4, '2021-04-19'),
-(10, 1, '500.00', '500.00', '1.00', '500.00', 5, '2021-04-19'),
-(11, 2, '6582.00', '6582.00', '1.00', '6582.00', 5, '2021-04-19');
+(1, 1, '1230.00', '1230.00', '2.00', '2460.00', 1, '2021-04-22'),
+(2, 3, '3256.00', '3256.00', '1.00', '3256.00', 2, '2021-04-24'),
+(3, 3, '3256.00', '3256.00', '1.00', '3256.00', 3, '2021-04-24'),
+(4, 3, '3256.00', '3256.00', '1.00', '3256.00', 4, '2021-04-24');
 
 -- --------------------------------------------------------
 
@@ -943,11 +977,10 @@ CREATE TABLE `sap_record` (
 --
 
 INSERT INTO `sap_record` (`id`, `supplier_id`, `supplier_name`, `discount`, `paid`, `sub_total`, `grand_total`, `total_qty`, `date`, `trash`) VALUES
-(1, 0, 'Cash Supplier', '10.00', '1350.00', '1500.00', '1350.00', '3.00', '2021-04-18', 1),
-(2, 1, NULL, '0.00', '50.00', '500.00', '500.00', '1.00', '2021-04-19', 0),
-(3, 1, NULL, '0.00', '50.00', '500.00', '500.00', '1.00', '2021-04-19', 1),
-(4, 0, NULL, '0.00', '500.00', '500.00', '500.00', '1.00', '2021-04-19', 0),
-(5, 0, 'Developer', '0.00', '7082.00', '7082.00', '7082.00', '2.00', '2021-04-19', 0);
+(1, 0, 'Developer', '0.00', '2460.00', '2460.00', '2460.00', '2.00', '2021-04-22', 0),
+(2, 0, 'Developer', '0.00', '3256.00', '3256.00', '3256.00', '1.00', '2021-04-24', 0),
+(3, 0, 'Developer', '0.00', '3256.00', '3256.00', '3256.00', '1.00', '2021-04-24', 0),
+(4, 0, 'Developer', '0.00', '3256.00', '3256.00', '3256.00', '1.00', '2021-04-24', 0);
 
 -- --------------------------------------------------------
 
@@ -1145,8 +1178,8 @@ CREATE TABLE `stock` (
 --
 
 INSERT INTO `stock` (`id`, `product_id`, `sale_price`, `purchase_price`, `quantity`) VALUES
-(1, 1, '500.00', '500.00', '21.00'),
-(2, 2, '6582.00', '6582.00', '1.00');
+(1, 1, '1230.00', '1230.00', '2.00'),
+(2, 3, '3256.00', '3256.00', '3.00');
 
 -- --------------------------------------------------------
 
@@ -1169,6 +1202,37 @@ INSERT INTO `subcategories` (`id`, `cat_id`, `subcategory`, `trash`) VALUES
 (1, 7, 'Test Sub-Category-', 1),
 (2, 7, 'Test Sub-Category-', 1),
 (3, 7, 'Carrots', 0);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `subscribers`
+--
+
+CREATE TABLE `subscribers` (
+  `id` int(11) UNSIGNED NOT NULL,
+  `name` varchar(100) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `gender` varchar(10) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `birthday` varchar(20) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `about` mediumtext COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `website` varchar(100) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `facecbook` varchar(100) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `twitter` varchar(100) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `email` varchar(100) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `username` varchar(100) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `password` varchar(128) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `image` varchar(100) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `mobile` varchar(15) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `status` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT 'active'
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `subscribers`
+--
+
+INSERT INTO `subscribers` (`id`, `name`, `gender`, `birthday`, `about`, `website`, `facecbook`, `twitter`, `email`, `username`, `password`, `image`, `mobile`, `status`) VALUES
+(1, 'Developer', NULL, NULL, NULL, NULL, NULL, NULL, 'developer@gmail.com', '01983667657', '6d9c29d93f59a451881750f35cb18dc1', NULL, '01983667657', 'active'),
+(2, 'Aminur Islam', NULL, NULL, NULL, NULL, NULL, NULL, 'khetlal20land@gmail.com', '01910217482', '6d9c29d93f59a451881750f35cb18dc1', NULL, '01910217482', 'active');
 
 -- --------------------------------------------------------
 
@@ -1221,7 +1285,11 @@ INSERT INTO `supplier_transaction` (`id`, `supplier_id`, `amount`, `trx_type`, `
 (3, 1, '50.00', 'paid', 'party', '', '2021-04-19', 3, 1),
 (7, 1, '50.00', 'paid', 'party', '', '2021-04-19', 2, 0),
 (8, 0, '500.00', 'paid', 'cash', 'Developer', '2021-04-19', 4, 0),
-(10, 0, '7082.00', 'paid', 'cash', 'Developer', '2021-04-19', 5, 0);
+(10, 0, '7082.00', 'paid', 'cash', 'Developer', '2021-04-19', 5, 0),
+(11, 0, '2460.00', 'paid', 'cash', 'Developer', '2021-04-22', 1, 0),
+(12, 0, '3256.00', 'paid', 'cash', 'Developer', '2021-04-24', 2, 0),
+(13, 0, '3256.00', 'paid', 'cash', 'Developer', '2021-04-24', 3, 0),
+(14, 0, '3256.00', 'paid', 'cash', 'Developer', '2021-04-24', 4, 0);
 
 -- --------------------------------------------------------
 
@@ -1588,6 +1656,12 @@ ALTER TABLE `subcategories`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `subscribers`
+--
+ALTER TABLE `subscribers`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `suppliers`
 --
 ALTER TABLE `suppliers`
@@ -1691,25 +1765,25 @@ ALTER TABLE `image_gallery`
 -- AUTO_INCREMENT for table `products`
 --
 ALTER TABLE `products`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT for table `product_colors`
 --
 ALTER TABLE `product_colors`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=26;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=57;
 
 --
 -- AUTO_INCREMENT for table `product_images`
 --
 ALTER TABLE `product_images`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=47;
 
 --
 -- AUTO_INCREMENT for table `product_sizes`
 --
 ALTER TABLE `product_sizes`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=24;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=57;
 
 --
 -- AUTO_INCREMENT for table `profiles`
@@ -1721,13 +1795,13 @@ ALTER TABLE `profiles`
 -- AUTO_INCREMENT for table `sap_items`
 --
 ALTER TABLE `sap_items`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT for table `sap_record`
 --
 ALTER TABLE `sap_record`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT for table `site_meta`
@@ -1766,6 +1840,12 @@ ALTER TABLE `subcategories`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
+-- AUTO_INCREMENT for table `subscribers`
+--
+ALTER TABLE `subscribers`
+  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+
+--
 -- AUTO_INCREMENT for table `suppliers`
 --
 ALTER TABLE `suppliers`
@@ -1775,7 +1855,7 @@ ALTER TABLE `suppliers`
 -- AUTO_INCREMENT for table `supplier_transaction`
 --
 ALTER TABLE `supplier_transaction`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
 
 --
 -- AUTO_INCREMENT for table `system_action_menus`

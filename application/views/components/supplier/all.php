@@ -16,7 +16,7 @@
                         <th>Address</th>
                         <th>Initial Blnc</th>
                         <th>Status</th>
-                        <th width="120" class="none">Action</th>
+                        <th width="120" class="none text-right">Action</th>
                     </tr>
                    
                     <?php if(!empty($suppliers)){ foreach($suppliers as $key => $row){ ?>
@@ -27,7 +27,7 @@
                         <td><?=($row->address)?></td>
                         <td><?=abs($row->initial_balance)?></td>
                         <td><?=ucfirst($row->type)?></td>
-                        <td class="none">
+                        <td class="none text-right">
                             <?php
                                 if($action_menus){
                                     foreach($action_menus as $action_menu){

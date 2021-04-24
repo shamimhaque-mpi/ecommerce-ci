@@ -1,4 +1,26 @@
-<!-- footer section strar -->
+	<!-- subscribe section start -->
+	<section class="subscribe_section">
+	    <div class="container">
+	        <div class="row">
+	            <div class="col-lg-6">
+	                <div class="title">
+	                    <img src="<?=site_url('/public')?>/images/bg_images/subscriber.png" alt="">
+	                    <h4>Sign Up for newsletter for Offer and Updates</h4>
+	                </div>
+	            </div>
+	            <div class="col-lg-6">
+	                <form action="#" method="POST">
+	                    <input type="text" class="form-control" placeholder="Enter Your Email">
+	                    <button type="submit" class="btn">Subscribe</button>
+	                </form>
+	            </div>
+	        </div>
+	    </div>
+	</section>
+	<!-- subscribe section end -->
+
+
+	<!-- footer section strar -->
 	<footer class="footer_section">
 	    <div class="container">
 	        <div class="row">
@@ -81,8 +103,12 @@
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"></script>
 	<!-- owl carousel -->
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+	<!-- niceScroll js -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.nicescroll/3.7.6/jquery.nicescroll.min.js"></script>
 	<!-- include js -->
+	<script src="<?=site_url('public/js/searching.js')?>"></script>
 	<script src="<?=site_url('public/js/app.js')?>"></script>
+
 	<script>
 	    /* categories carousel js */
 	    $('.categories_carousel').owlCarousel({
@@ -101,6 +127,12 @@
 	            576:{items:2},
 	            0:{items:2}
 	         }
+	    });
+	    /* nicescroll plugin */
+	    $(".shop_section .product_menu, .search_suggest").niceScroll({
+	        cursorcolor: 'rgba(20,20,20,0.3)',
+	        cursorwidth: '10px',
+	        cursorborderradius: '0px'
 	    });
 	</script>
 </body>

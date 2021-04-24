@@ -58,15 +58,16 @@ class Ajax extends Admin_Controller {
 
     // PRODUCT IMAGE DELETE
     function imageDelete(){
+
         if(!empty($_POST['id']) && $_POST['id']!=''){
             $images = readTable('product_images', ['id'=>$_POST['id']]);
-            foreach ($images as $key => $row) {
-                if(file_exists($row->large))
-                    unlink($row->large);
-                if(file_exists($row->medium))
-                    unlink($row->medium);
-                if(file_exists($row->small))
-                    unlink($row->small);
+            if($images){
+                if(file_exists($images[0]->large))
+                    unlink($images[0]->large);
+                if(file_exists($images[0]->medium))
+                    unlink($images[0]->medium);
+                if(file_exists($images[0]->small))
+                    unlink($images[0]->small);
             }
             echo remove('product_images', ['id'=>$_POST['id']]);
         }
