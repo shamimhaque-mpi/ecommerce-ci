@@ -113,6 +113,9 @@
                 if($value!='' && $key=='key'){
                     $condition .= " AND products.title LIKE '%".$value."%'";
                 }
+                else {
+                    $condition .= " AND {$key}={$value}";
+                }
             }
 
             if($condition){

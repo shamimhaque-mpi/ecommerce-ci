@@ -34,10 +34,12 @@
                     </a>
 
                     <div class="user_path">
+                        <?php if(!user()){ ?>
                         <div class="acces_log">
                             <a href="<?=site_url('login')?>"><i class="icon ion-md-person"></i> <span>Sign In</span></a>
                             <a href="<?=site_url('registration')?>"><i class="icon ion-md-person-add"></i> <span>Register</span></a>
                         </div>
+                        <?php } else if(user()) {?>
                         <div class="dropdown">
                             <div class="user_menu" data-toggle="dropdown">
                                 <i class="icon ion-md-contact"></i>
@@ -46,9 +48,10 @@
                                 <li><a href="<?=site_url('user-panel/dashboard')?>"><i class="icon ion-ios-speedometer"></i> Dashboard</a></li>
                                 <li><a href="<?=site_url('user-panel/profile')?>"><i class="icon ion-md-person-add"></i> Profile</a></li>
                                 <li><a href="<?=site_url('user-panel/settings')?>"><i class="icon ion-md-cog"></i> Settings</a></li>
-                                <li><a href=""><i class="icon ion-md-log-out"></i> Logout</a></li>
+                                <li><a href="<?=site_url('logout')?>"><i class="icon ion-md-log-out"></i> Logout</a></li>
                             </ul>
                         </div>
+                        <?php }?>
                     </div>
                 </div>
             </div>
@@ -65,10 +68,15 @@
                     </a>
                     <div class="collect_side">
                         <form action="#" method="post" class="search_form">
-                            <select class="form-control" name="select_category">
-                                <option value="" disabled selected>All Brand</option>
-                                <option value="">Select Product</option>
-                                <option value="">Select Product</option>
+                            <select class="form-control" id="search_field_brand" name="select_category">
+                                <option value="" disabled selected>Brand</option>
+                                <?php
+                                    $brans = readTable('brands', ['trash'=>0]);
+                                    if($brans) foreach ($brans as $key => $row) { 
+                                ?>
+                                    <option value="<?=($row->id)?>"><?=($row->brand)?></option>
+                                    
+                                <?php }  ?>
                             </select>
                             <input type="text" name="search" class="form-control" autocomplete="off" placeholder="Search Here...">
                             <div class="search_suggest" id="search_suggest">

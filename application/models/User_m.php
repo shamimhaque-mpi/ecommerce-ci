@@ -15,11 +15,11 @@ class User_m extends Lab_Model {
         $developer = config_item('developer');
 
         $where = [
-            'username' => input_data('username'),
+            'username' => input_data('mobile'),
             'password' => $this->hash(input_data('password'))
         ];
         
-		$userInfo = read('subscribers', $where);
+		$userInfo = readTable('subscribers', $where);
         
         if(!empty($userInfo)) {
             // log in user
@@ -35,7 +35,6 @@ class User_m extends Lab_Model {
             );
 
             $this->session->set_userdata($data);
-
             // store access info
             $info = array(
                 'user_id'       => $userInfo[0]->id,
@@ -52,6 +51,7 @@ class User_m extends Lab_Model {
             'user_id'       =>$this->session->userdata('user_id'),
             'login_period'  => $this->session->userdata('login_period')
         );
+
         $data = array('logout_period' => date('Y-m-d H:i:s a'));
         update("access_info", $data, $where);
         $this->session->sess_destroy();

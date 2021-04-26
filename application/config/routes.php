@@ -17,9 +17,13 @@ $route['products/(:any)/(:any)']= "Frontend/HomeController/details/$1/$2";
 
 // User Authentication
 $route['login']   			    = "Frontend/auth/AuthController/login";
+$route['logout']   			    = "Frontend/auth/AuthController/logout";
+$route['forgot']   			    = "Frontend/auth/AuthController/forgot";
 $route['registration']   		= "Frontend/auth/AuthController/registration";
 
 
 $route['user-panel/dashboard']  = "Frontend/Upanel/UpanelController";
+$route['user-panel/profile']  = "Frontend/Upanel/UpanelController/profile";
+$route['user-panel/settings']  = "Frontend/Upanel/UpanelController/settings";
 
 $route['404_override'] = '';

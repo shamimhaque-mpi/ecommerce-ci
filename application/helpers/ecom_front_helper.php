@@ -113,6 +113,19 @@ if (!function_exists('toBase64')) {
     }
 }
 
+function user(){
+    $CI = & get_instance();
+
+    if($CI->session->userdata('subscriber'))
+    {
+        return (Object)$CI->session->userdata;
+    }
+    else{
+        return false;
+    }
+    
+}
+
 
 
 

@@ -77,8 +77,8 @@
             <span>৳ 260</span>
         </div>
         <div class="order">
-            <a href="view_cart.html">View cart</a>
-            <a href="checkout.html">Checkout</a>
+            <a href="<?=site_url('view_cart')?>">View cart</a>
+            <a href="<?=site_url('checkout')?>">Checkout</a>
         </div>
     </div>
 </div>

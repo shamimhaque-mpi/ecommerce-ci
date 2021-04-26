@@ -238,10 +238,10 @@ body {padding-top: 176px;}
     left: 118px;
     top: 37px;
     overflow: auto;
-    padding: 0 12px;
     background: #fff;
     min-height: 80px;
     max-height: 312px;
+    padding: 7px 15px;
 }
 .brand_content .search_form .search_suggest.open {display: block;}
 .brand_content .search_form .search_product:last-child {border: none;}
@@ -304,10 +304,17 @@ body {padding-top: 176px;}
     color: #EA232A;
 }
 .brand_content .search_form .not_found {
-    text-align: center;
-    margin: 10px auto;
+    height: calc(100% - 16px);
+    position: absolute;
     font-size: 19px;
     color: #EA232A;
+    width: 100%;
+    left: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
 }
 .brand_content .search_form input.form-control {
     line-height: 36px;
@@ -425,7 +432,7 @@ body {padding-top: 176px;}
     }
 }
 @media screen and (max-width: 1200px) {
-    .brand_content .search_form .search_suggest {display: none;}
+    .brand_content .search_form .search_suggest {display: none !important;}
 }
 @media screen and (max-width: 991px) {
     .navbar .navbar-collapse {padding: 15px;}
