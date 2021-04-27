@@ -94,6 +94,7 @@
 	        <p>Developed by : <a href="http://www.freelanceitlab.com/" target="_blank">Freelanceitlab</a></p>
 	    </div>
 	</footer>
+	<script type="module" src="<?=site_url('application/views/frontend/vue/app.js')?>"></script>
 	<!-- footer section end -->
 
 
@@ -105,10 +106,12 @@
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
 	<!-- niceScroll js -->
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.nicescroll/3.7.6/jquery.nicescroll.min.js"></script>
+	<!-- zoom images -->
+	<script src="<?=site_url('public/vendors/elevatezoom/js/jquery.ez-plus.js')?>"></script>
+	<script src="<?=site_url('public/vendors/elevatezoom/js/web.js')?>"></script>
 	<!-- include js -->
 	<script src="<?=site_url('public/js/searching.js')?>"></script>
 	<script src="<?=site_url('public/js/app.js')?>"></script>
-
 	<script>
 	    /* categories carousel js */
 	    $('.categories_carousel').owlCarousel({
@@ -133,6 +136,23 @@
 	        cursorcolor: 'rgba(20,20,20,0.3)',
 	        cursorwidth: '10px',
 	        cursorborderradius: '0px'
+	    });
+
+		/* tabs product */
+	    $('.tabs_product').owlCarousel({
+	        autoplay:true,
+	        loop:true,
+	        nav:false,
+	        dots:false,
+	        autoplayTimeout:5000,
+	        margin: 5,
+	        responsive:{
+	            1200:{items:4},
+	            991:{items:3},
+	            768:{items:3},
+	            576:{items:3},
+	            0:{items:3}
+	        }
 	    });
 	</script>
 </body>

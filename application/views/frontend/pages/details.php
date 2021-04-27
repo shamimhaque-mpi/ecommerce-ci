@@ -182,7 +182,7 @@
                         <img src="<?=site_url('public/images/product/item-1.jpg')?>" alt="">
                         <div class="items-content">
                             <h5>Product title name</h5>
-                            <small>Price 00,00 Tk</small>
+                            <small>720 Tk <del>930.00 Tk</del></small>
                         </div>
                         <a href="<?=site_url('details')?>" class="items-cover"></a>
                     </div>
@@ -190,7 +190,7 @@
                         <img src="<?=site_url('public/images/product/item-2.jpg')?>" alt="">
                         <div class="items-content">
                             <h5>Product title name</h5>
-                            <small>Price 00,00 Tk</small>
+                            <small>720 Tk <del>930.00 Tk</del></small>
                         </div>
                         <a href="<?=site_url('details')?>" class="items-cover"></a>
                     </div>
@@ -198,7 +198,7 @@
                         <img src="<?=site_url('public/images/product/item-3.jpg')?>" alt="">
                         <div class="items-content">
                             <h5>Product title name</h5>
-                            <small>Price 00,00 Tk</small>
+                            <small>720 Tk <del>930.00 Tk</del></small>
                         </div>
                         <a href="<?=site_url('details')?>" class="items-cover"></a>
                     </div>
@@ -214,7 +214,7 @@
                         <img src="<?=site_url('public/images/product/item-1.jpg')?>" alt="">
                         <div class="items-content">
                             <h5>Product title name</h5>
-                            <small>Price 00,00 Tk</small>
+                            <small>720 Tk <del>930.00 Tk</del></small>
                         </div>
                         <a href="<?=site_url('details')?>" class="items-cover"></a>
                     </div>
@@ -222,7 +222,7 @@
                         <img src="<?=site_url('public/images/product/item-4.jpg')?>" alt="">
                         <div class="items-content">
                             <h5>Product title name</h5>
-                            <small>Price 00,00 Tk</small>
+                            <small>720 Tk <del>930.00 Tk</del></small>
                         </div>
                         <a href="<?=site_url('details')?>" class="items-cover"></a>
                     </div>
@@ -230,7 +230,7 @@
                         <img src="<?=site_url('public/images/product/item-5.jpg')?>" alt="">
                         <div class="items-content">
                             <h5>Product title name</h5>
-                            <small>Price 00,00 Tk</small>
+                            <small>720 Tk <del>930.00 Tk</del></small>
                         </div>
                         <a href="<?=site_url('details')?>" class="items-cover"></a>
                     </div>

@@ -12,15 +12,18 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
     <!-- bootstrap css -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css">
+    <!-- zoom images -->
+    <link rel="stylesheet" href="<?=site_url('public/vendors/elevatezoom/css/jquery.ez-plus.css')?>">
     <!-- include css -->
     <link rel="stylesheet" href="<?=site_url('public/style/master.css')?>">
     <!-- Helper -->
     <script src="<?=site_url('public/js/helper.js')?>"></script>
     <!-- Axios -->
     <script src="<?=site_url('node_modules/axios/dist/axios.js')?>"></script>
+    <script src="<?=site_url('node_modules/vue/dist/vue.js')?>"></script>
 </head>
 <body>
-    <section class="nav_section">
+    <section class="nav_section" id="app">
     <!-- top nav start -->
         <nav class="top_nav">
             <div class="container">
@@ -72,15 +75,15 @@
                                 <option value="" disabled selected>Brand</option>
                                 <?php
                                     $brans = readTable('brands', ['trash'=>0]);
-                                    if($brans) foreach ($brans as $key => $row) { 
+                                    if($brans) foreach ($brans as $key => $row) {
                                 ?>
                                     <option value="<?=($row->id)?>"><?=($row->brand)?></option>
-                                    
+
                                 <?php }  ?>
                             </select>
                             <input type="text" name="search" class="form-control" autocomplete="off" placeholder="Search Here...">
                             <div class="search_suggest" id="search_suggest">
-                                
+
                             </div>
                             <button type="submit" name="button" class="btn">
                                 <i class="icon ion-md-search"></i>

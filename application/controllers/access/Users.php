@@ -4,7 +4,8 @@ class Users extends Admin_Controller {
     function __construct() {
         parent::__construct();
         $settings = read('header');
-        $this->data['meta_title'] = ($settings ? $settings[0]->web_title : 'Login');
+        $this->data['meta_title']  = ($settings ? $settings[0]->web_title : 'Login');
+        $this->data['lab_favicon'] = '';
     }
 
     public function login() {

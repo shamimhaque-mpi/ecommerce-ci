@@ -61,6 +61,8 @@
      * *********************
     */
     public function registration() {
+        $this->data['title'] = 'Registration';
+
         if($_POST){
             $data = $_POST;
             $data['username'] = $_POST['mobile'];

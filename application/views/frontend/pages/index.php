@@ -88,7 +88,6 @@
                     <?php } else { ?>
                         <img src="<?=site_url($row->feature_photo)?>" alt="">
                     <?php }?>
-
                     <a href="<?=site_url("products/".base64_encode($row->id)."/".(str_replace(' ', '-', $row->title)))?>" class="cover"></a>
                 </figure>
 
@@ -149,7 +148,9 @@
                 </figure>
                 <div class="product_title">
                     <h5><a href="<?=site_url("products/".base64_encode($row->id)."/".(str_replace(' ', '-', $row->title)))?>"><?=($row->title)?></a></h5>
-                    <h4><?=($row->sale_price)?> Tk <?=($row->discount > 0 ? "<del>{$row->discount} %</del>":'')?></h4>
+                    <?php if($row->sale_price){ ?>
+                    <h4><?=($row->sale_price)?> Tk <?=($row->discount > 0 ? "<del>{$row->discount} Tk</del>":'')?></h4>
+                    <?php } ?>
                 </div>
             </div>
             <?php }} ?>

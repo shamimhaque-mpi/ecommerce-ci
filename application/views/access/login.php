@@ -36,8 +36,8 @@
 		<section class="container-fluid form-container col-xs-12">
 			<div class="row form-wrapper">
 				<?php
-				$attr = array('class'=>'login-form form-horizontal');
-				echo form_open('access/users/login',$attr);
+					$attr = array('class'=>'login-form form-horizontal');
+					echo form_open('access/users/login',$attr);
 				?>
 				<div class="form-border">
 					<div class="lock-border">

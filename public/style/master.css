@@ -131,13 +131,13 @@ body {padding-top: 176px;}
 }
 .top_nav .user_path .dropdown-menu {
     box-shadow: 0 2px 8px 0 #001e32;
+    left: inherit !important;
     background: #001E32;
     top: 0 !important;
     border-radius: 0;
     min-width: 100%;
     padding: 5px 0;
-    left: inherit !important;
-    width: 160px;
+    width: 200px;
     right: 0 !important;
 }
 .top_nav .user_path .dropdown-menu::after {
@@ -152,8 +152,8 @@ body {padding-top: 176px;}
 }
 .top_nav .user_path .dropdown-menu.show {transform: translate3d(0, 35px, 0px) !important;}
 .top_nav .user_path .dropdown-menu li {
-    line-height: 32px;
-    height: 32px;
+    line-height: 36px;
+    height: 36px;
 }
 .top_nav .user_path .dropdown-menu li a {
     border-bottom: 1px solid #717171;

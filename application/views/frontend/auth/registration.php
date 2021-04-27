@@ -13,7 +13,7 @@
                 </div>
                 <div class="col-md-7 pl-0">
                     <div class="form_div">
-                        <h2>Create account</h2>
+                        <h2>Create an Account</h2>
                         <form action="" method="POST" id="form">
                             <div class="form-group">
                                 <input type="text" name="name" placeholder="Full name" id="full_name" class="form-control" required>
@@ -22,10 +22,6 @@
                             <div class="form-group">
                                 <input type="text" name="mobile" placeholder="Phone number" id="mobile" class="form-control" required>
                                 <label for="mobile">Phone number</label>
-                            </div>
-                            <div class="form-group">
-                                <input type="email" name="email" placeholder="Email" id="email" class="form-control" required>
-                                <label for="email">Email</label>
                             </div>
                             <div class="form-group">
                                 <input type="password" name="password" placeholder="Password" id="password" class="form-control" required>
