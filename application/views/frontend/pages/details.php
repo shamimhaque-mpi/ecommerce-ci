@@ -41,17 +41,30 @@
                                     <span class="size">M</span>
                                     <span class="size">L</span>
                                 </div>
-                                <div class="size_box">
+                                <div class="color_box">
                                     <h6>Color:</h6>
-                                    <span class="size">
-                                        <img src="<?=site_url('public/images/product/item-4.jpg')?>" alt="">
-                                    </span>
-                                    <span class="size active">
-                                        <img src="<?=site_url('public/images/product/item-5.jpg')?>" alt="">
-                                    </span>
-                                    <span class="size">
-                                        <img src="<?=site_url('public/images/product/item-2.jpg')?>" alt="">
-                                    </span>
+                                    <ul class="color_list">
+                                        <li class="black">
+                                            <span></span>
+                                            <input type="radio" name="color">
+                                        </li>
+                                        <li class="red">
+                                            <span></span>
+                                            <input type="radio" name="color">
+                                        </li>
+                                        <li class="green">
+                                            <span></span>
+                                            <input type="radio" name="color">
+                                        </li>
+                                        <li class="blue">
+                                            <span></span>
+                                            <input type="radio" name="color">
+                                        </li>
+                                        <li class="maroon">
+                                            <span></span>
+                                            <input type="radio" name="color" checked>
+                                        </li>
+                                    </ul>
                                 </div>
 
                                 <div class="quantity">

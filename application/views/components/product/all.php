@@ -63,12 +63,7 @@
                         <th width="160" class="text-right">Action</th>
                     </tr>
 
-                    <?php
-                    	$total_discount = $total_price = 0;
-                    	if(!empty($products)){ foreach($products as $key => $row){
-                    		$total_discount += $row->discount;
-                    		$total_price += $row->price;
-                    ?>
+                    <?php if(!empty($products)){ foreach($products as $key => $row){ ?>
                     <tr>
                         <td><?=(++$key)?></td>
                         <td><img src="<?=site_url($row->feature_photo)?>" height="30"></td>
@@ -94,17 +89,7 @@
                             <?php }}}} ?>
                         </td>
                     </tr>
-                    <?php }?>
-                    <tr>
-                    	<th colspan="6" class="text-right">Total</th>
-                    	<td class="text-right"><?=number_format($total_discount)?></td>
-                    	<td class="text-right"><?=number_format($total_price)?></td>
-                    	<td></td>
-                    	<td></td>
-                    	<td></td>
-                    </tr>
-
-	                <?php } else { ?>
+                    <?php }} else { ?>
                     	<tr>
                     		<th colspan="11" class="text-center">Nothing Found</th>
                     	</tr>

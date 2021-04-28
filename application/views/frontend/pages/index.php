@@ -45,7 +45,6 @@
 <!-- header section end -->
 
 
-
 <!-- categories section start -->
 <section class="categories_section">
     <div class="container">
@@ -60,7 +59,6 @@
     </div>
 </section>
 <!-- categories section end -->
-
 
 
 <!-- product section start -->
@@ -141,15 +139,29 @@
                     <a href="<?=site_url("products/".base64_encode($row->id)."/".(str_replace(' ', '-', $row->title)))?>" class="cover"></a>
                     <?php if($row->quantity>0){ ?>
                     <figcaption>
-                        <a href="#"><i class="icon ion-ios-cart"></i></a>
-                        <a href="#"><i class="icon ion-md-heart-empty"></i></a>
+                        <add-to-cart
+                            product_id="<?=($row->id)?>"
+                        ></add-to-cart>
+                        <add-to-wish-list
+                            product_id="<?=($row->id)?>"
+                        ></add-to-wish-list>
                     </figcaption>
                     <?php } ?>
                 </figure>
                 <div class="product_title">
                     <h5><a href="<?=site_url("products/".base64_encode($row->id)."/".(str_replace(' ', '-', $row->title)))?>"><?=($row->title)?></a></h5>
                     <?php if($row->sale_price){ ?>
-                    <h4><?=($row->sale_price)?> Tk <?=($row->discount > 0 ? "<del>{$row->discount} Tk</del>":'')?></h4>
+                    <div class="footer_price">
+                        <h4><?=($row->sale_price)?> Tk <?=($row->discount > 0 ? "<del>{$row->discount} Tk</del>":'')?></h4>
+
+                        <div class="raring">
+                            <i class="icon ion-md-star"></i>
+                            <i class="icon ion-md-star"></i>
+                            <i class="icon ion-md-star"></i>
+                            <i class="icon ion-md-star-half"></i>
+                            <i class="icon ion-md-star-outline"></i>
+                        </div>
+                    </div>
                     <?php } ?>
                 </div>
             </div>

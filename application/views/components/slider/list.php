@@ -1,10 +1,34 @@
 <style>
-    .tb_img {width: 75px;}
-    .tb_img img {
-        transition: all .2s;
-        max-width: 60px;
+    .img_grid {
+        margin-right: -10px;
+        margin-left: -10px;
     }
-    .tb_img img:hover {transform: scale(1.5);}
+    .img_grid > .col,
+    .img_grid > [class*=col-] {
+        padding-right: 10px;
+        padding-left: 10px;
+    }
+    .img_box {
+        border: 2px solid #eee;
+        position: relative;
+        height: 220px;
+        overflow: hidden;
+        margin-bottom: 15px;
+    }
+    .img_box img {
+        object-fit: cover;
+        height: 100%;
+        width: 100%;
+    }
+    .img_box .img_cover {
+        position: absolute;
+        text-align: right;
+        padding: 8px;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
 </style>
 
 <div class="container-fluid">
@@ -17,35 +41,27 @@
             </div>
             <div class="panel-body">
                 <?php msg(); ?>
-                <table class="table table-bordered">
-                    <tr>
-                        <th width="50">SL</th>
-                        <th>Image</th>
-                        <th>Title</th>
-                        <th width="120" class="text-right">Action</th>
-                    </tr>
-
+                <div class="row img_grid">
                     <?php if($slider){ foreach($slider as $key => $value){ ?>
-                    <tr>
-                        <td><?php echo ++$key; ?></td>
-                        <td class="tb_img"><img src="<?=site_url($value->path)?>" alt=""></td>
-                        <td><?php echo isset($value->name) ? $value->name : ''; ?></td>
-                        <td class="text-right">
-                            <?php
-                                if($action_menus){
+                    <div class="col-lg-3 col-sm-4 col-xs-6">
+                        <div class="img_box">
+                            <img src="<?=site_url($value->path)?>" alt="">
+                            <div class="img_cover">
+                                <?php if($action_menus){
                                     foreach($action_menus as $action_menu){
                                         if($user_data['privilege']=='president' xor (!empty($aside_action_menu_array) && in_array($action_menu->id,$aside_action_menu_array) && $user_data['privilege']!=='president')){
-                                        // -----------------------------------------------------------
                                         if(strtolower($action_menu->name) == "delete" ){?>
                                             <a class="btn btn-<?php echo $action_menu->type;?>" onclick="return confirm('Are your sure to proccess this action ?')"  href="<?php echo get_url($action_menu->controller_path."/".$value->id); ?>"><i class="<?php echo $action_menu->icon;?>" aria-hidden="true"></i></a>
                                         <?php }else{ ?>
                                             <a class="btn btn-<?php echo $action_menu->type;?>"  href="<?php echo get_url($action_menu->controller_path."/".$value->id) ;?>"><i class="<?php echo $action_menu->icon;?>" aria-hidden="true"></i></a>
-                                        <!---------------------------------------->
-                            <?php }}}} ?>
-                        </td>
-                    </tr>
+                                       <?php }}
+                                    }
+                                } ?>
+                            </div>
+                        </div>
+                    </div>
                     <?php }} ?>
-                </table>
+                </div>
             </div>
             <div class="panel-footer">&nbsp;</div>
         </div>

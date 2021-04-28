@@ -1,5 +1,4 @@
 <?php
-
 class Ajax extends Admin_Controller {
 
     function __construct() {
@@ -109,7 +108,6 @@ class Ajax extends Admin_Controller {
     function purchaseInvoice(){
         // get the incoming object
         $content = file_get_contents("php://input");
-
         // convart object to array
         $receive = json_decode($content, true);
 

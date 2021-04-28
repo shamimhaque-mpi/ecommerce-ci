@@ -1,25 +1,37 @@
 
-/**
- * First we will load all of this project's JavaScript dependencies which
- * includes Vue and other libraries. It is a great starting point when
- * building robust, powerful web applications using Vue and Laravel.
- */
+window.makeFormData=(object)=>{
+    var formdata = new FormData();
+    if(typeof object == 'object'){
+        for(const key in object){
+            if(typeof object[key] == 'object'){
+                formdata.append(key, JSON.stringify(object[key]));                
+            }else{
+                formdata.append(key, object[key]);                
+            }
+        }
+    }
+    return formdata;
+}
 
+import Vue    from "./module/vue.js";
+import store  from "./store.js";
 
-window.Vue = require('vue');
+// Modules
+import CollectList  from './components/CollectList.js';
+import AddToCart    from './components/AddToCart.js';
+import AddToWshList from './components/AddToWshList.js';
+import ShoppingCart from './components/ShoppingCart.js';
 
-// Vue.component('user-login', require('./components/Frontend/User/Login.vue').default);
-
-
-// import { store } from './store';
+// Components Registration
+Vue.component('collect-list', CollectList);
+Vue.component('add-to-cart', AddToCart);
+Vue.component('add-to-wish-list', AddToWshList);
+Vue.component('shopping-cart', ShoppingCart);
 
 const app = new Vue({
     el: '#app',
-    data : {
-        cartSectionStyle: '',
-        layout_2: '',
-
-    },
+    data  : {},
+    store : store,
     mounted(){
          
     },
@@ -28,8 +40,67 @@ const app = new Vue({
     },
     methods:{
 
-    },
-    components:{
-
     }
 });
+
+
+(()=>{
+    var _d = (x)=>document.querySelector(x);
+        var btn = _d('.category_nav .category_head a');
+        if(btn){
+            btn.onclick = (event)=>{
+                var wrapper = _d('.category_nav .category_list');
+                if(wrapper.classList.contains('active')){
+                    wrapper.classList.remove('active');
+                    _d('.category_nav .category_head a').classList.remove('active')
+                }
+                else{
+                    wrapper.classList.add('active');
+                    _d('.category_nav .category_head a').classList.add('active')
+                }
+            }
+        }
+
+        /* purchase card */
+        // cartBtn
+        // purchase_cart.active
+        var cart_btn        = _d('.cartBtn a');
+        var purchase_cart   = _d('.purchase_cart')
+        var close_bar       = _d('.close_bar')
+        if(cart_btn && close_bar){
+            cart_btn.onclick =()=>{
+                if(purchase_cart.classList.contains('active')){
+                    purchase_cart.classList.remove('active');
+                }
+                else{
+                    purchase_cart.classList.add('active');
+                }
+            }
+            close_bar.onclick =()=>{
+                purchase_cart.classList.remove('active');
+            }
+        }
+
+        // Action and Execute when Focus in the window
+        window.onclick = (event)=>{
+            if(!event.target.closest('.category_nav')){
+                _d('.category_nav .category_list').classList.remove('active');
+                _d('.category_nav .category_head a').classList.remove('active')
+            }
+            if(!event.target.closest('.purchase_cart') && !event.target.closest('.cartBtn')){
+                    purchase_cart.classList.remove('active');
+            }
+        }
+
+        /* fixed nav bar in jquery */
+        $(window).scroll(function() {
+            if($(this).scrollTop() > 75) {
+                $('.top_nav .top_content').addClass('active');
+                $('.purchase_cart').addClass('scroll_height');
+            } else {
+                $('.top_nav .top_content').removeClass('active');
+                $('.purchase_cart').removeClass('scroll_height');
+            };
+        });
+
+})()

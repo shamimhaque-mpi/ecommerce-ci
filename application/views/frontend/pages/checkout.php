@@ -39,7 +39,8 @@
                             <div class="col-sm-12">
                                 <label class="form-label">Address</label>
                                 <div class="form-group">
-                                    <input type="text" name="name" class="form-control">
+                                    <!-- <input type="text" name="name" class="form-control"> -->
+                                    <textarea class="form-control" id="co_address" name="w3review" rows="3"></textarea>
                                 </div>
                             </div>
                         </div>

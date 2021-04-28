@@ -26,7 +26,7 @@
 
         if($_POST){
         	$data 		 = $_POST;
-    		$data['img'] = uploadFile('public/images/categories/', 'img');
+    		$data['img'] = uploadToWebp($_FILES['img'], 'public/images/categories/', time(), 270, null, 80);
     		save('categories', $data);
     		set_msg('success', 'Category Successfully Saved');
     		redirect_back();
@@ -48,7 +48,7 @@
         
         if($_POST){
         	$data = $_POST;
-    		$path = uploadFile('public/images/categories/', 'img');
+    		$path = uploadToWebp($_FILES['img'], 'public/images/categories/', time(), 270, null, 80);
             if($path){
                 $data['img'] = $path;
                 if($_POST['old_file']!='' && file_exists($_POST['old_file'])){

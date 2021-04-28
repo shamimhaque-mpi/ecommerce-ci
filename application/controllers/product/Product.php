@@ -64,7 +64,7 @@
                 $image = [
                     'product_id' => $product_id,
                     'large'      => uploadToWebp($_FILES['feature_photo'], 'public/images/product/large/', time(), 690, null, 80),
-                    'medium'     => uploadToWebp($_FILES['feature_photo'], 'public/images/product/medium/', time(), 230, null, 80),
+                    'medium'     => uploadToWebp($_FILES['feature_photo'], 'public/images/product/medium/', time(), 270, null, 80),
                     'small'      => uploadToWebp($_FILES['feature_photo'], 'public/images/product/small/', time(), 115, null, 80),
                     'type'       => 'feature_photo'
                 ];
@@ -82,7 +82,7 @@
                         $image = [
                             'product_id' => $product_id,
                             'large'      => uploadToWebp($file, 'public/images/product/large/', time()+($key+1), 690, null, 80),
-                            'medium'     => uploadToWebp($file, 'public/images/product/medium/', time()+($key+1), 230, null, 80),
+                            'medium'     => uploadToWebp($file, 'public/images/product/medium/', time()+($key+1), 270, null, 80),
                             'small'      => uploadToWebp($file, 'public/images/product/small/', time()+($key+1), 115, null, 80),
                             'type'       => 'general_photo'
                         ];
@@ -164,7 +164,7 @@
                 $image = [
                     'product_id' => $product_id,
                     'large'      => uploadToWebp($_FILES['feature_photo'], 'public/images/product/large/', time(), 690, null, 80),
-                    'medium'     => uploadToWebp($_FILES['feature_photo'], 'public/images/product/medium/', time(), 230, null, 80),
+                    'medium'     => uploadToWebp($_FILES['feature_photo'], 'public/images/product/medium/', time(), 270, null, 80),
                     'small'      => uploadToWebp($_FILES['feature_photo'], 'public/images/product/small/', time(), 115, null, 80),
                     'type'       => 'feature_photo'
                 ];
@@ -182,7 +182,7 @@
                         $image = [
                             'product_id' => $product_id,
                             'large'      => uploadToWebp($file, 'public/images/product/large/', time()+$key, 690, null, 80),
-                            'medium'     => uploadToWebp($file, 'public/images/product/medium/', time()+$key, 230, null, 80),
+                            'medium'     => uploadToWebp($file, 'public/images/product/medium/', time()+$key, 270, null, 80),
                             'small'      => uploadToWebp($file, 'public/images/product/small/', time()+$key, 115, null, 80),
                             'type'       => 'general_photo'
                         ];

@@ -17,11 +17,19 @@
     height: 40px;
     color: #000;
 }
+#co_address {
+    border-color: #ddd;
+    line-height: 40px;
+    box-shadow: none;
+    border-radius: 0;
+    color: #000;
+}
 .checkout_section .checkout_form input[type=email]:focus,
 .checkout_section .checkout_form input[type=text]:focus,
-.checkout_section .checkout_form select:focus {
+.checkout_section .checkout_form select:focus,
+#co_address:focus {
     border-color: rgba(234,35,42, 0.5);
-    box-shadow: none;
+    box-shadow: none !important;
 }
 
 

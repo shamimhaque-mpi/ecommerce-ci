@@ -1,14 +1,11 @@
 var read = (x)=>document.querySelector(x);
 (()=>{
-
-
-var not_found = `<h4 class="not_found">Nothing Found !</h4>`;
-
+window.addEventListener('load', ()=>{
+	var not_found = `<h4 class="not_found">Nothing Found !</h4>`;
 	var search_field_brand  = read("#search_field_brand");
 
 	var wrapper    = read('#search_suggest');
 	var search     = read("input[name='search']");
-
 	if(wrapper && search){
 		search.addEventListener('focus', ()=>{
 			wrapper.classList.add('open');
@@ -36,8 +33,6 @@ var not_found = `<h4 class="not_found">Nothing Found !</h4>`;
 
 	var timeout = null;
 	function searchProduct(){
-
-			console.log(search.value);
 		if(search.value!=''){
 			if(timeout){clearTimeout(timeout);}
 			timeout=setTimeout(()=>{
@@ -86,5 +81,6 @@ var not_found = `<h4 class="not_found">Nothing Found !</h4>`;
 		`;
 		return text;
 	}
-
+	
+});
 })()

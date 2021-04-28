@@ -16,14 +16,16 @@
     <link rel="stylesheet" href="<?=site_url('public/vendors/elevatezoom/css/jquery.ez-plus.css')?>">
     <!-- include css -->
     <link rel="stylesheet" href="<?=site_url('public/style/master.css')?>">
+    <!-- axios -->
+    <script src="<?=site_url('node_modules/axios/dist/axios.js')?>"></script>
+    <!-- vuex -->
+    <script src="<?=site_url('node_modules/vuex/dist/vuex.js')?>"></script>
     <!-- Helper -->
     <script src="<?=site_url('public/js/helper.js')?>"></script>
-    <!-- Axios -->
-    <script src="<?=site_url('node_modules/axios/dist/axios.js')?>"></script>
-    <script src="<?=site_url('node_modules/vue/dist/vue.js')?>"></script>
 </head>
 <body>
-    <section class="nav_section" id="app">
+    <div id="app">
+    <section class="nav_section">
     <!-- top nav start -->
         <nav class="top_nav">
             <div class="container">
@@ -90,19 +92,11 @@
                             </button>
                         </form>
 
-                        <ul class="collect_list">
-                            <li class="android">
-                                <a href="#"><i class="icon ion-logo-android"></i></a>
-                            </li>
-                            <li class="cartBtn">
-                                <a href="#"><i class="icon ion-ios-cart"></i></a>
-                                <span>0</span>
-                            </li>
-                            <li>
-                                <a href="#"><i class="icon ion-md-heart"></i></a>
-                                <span>12</span>
-                            </li>
-                        </ul>
+                        <collect-list
+                            is_login="<?php echo (user()?true:false)?>"
+                            url="<?=base_url('/');?>"
+                        ></collect-list>
+
                     </div>
                 </div>
             </div>

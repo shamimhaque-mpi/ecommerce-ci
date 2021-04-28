@@ -1,4 +1,8 @@
 <script type="text/javaScript" src="<?php echo site_url('private/js/ng-controller/addProductFn.js'); ?>"></script>
+<script src="https://cdn.tiny.cloud/1/ohrhjnbxfnzq31qqc63hguxqeyqtsxjc702o47biov63et3q/tinymce/5/tinymce.min.js" referrerpolicy="origin"></script>
+
+
+
 <style>
 .feature_photo {
     width: 236px;
@@ -171,7 +175,10 @@
                         <div class="col-md-12">
                             <div class="form-group">
                                 <label class="control-label">Description <span class="req">*</span></label>
-                                <textarea name="description" class="form-control" rows="10" required></textarea>
+                                <!-- <textarea name="description" class="form-control" rows="10" required></textarea> -->
+                                <form method="post">
+                                    <textarea id="mytextarea">Hello, World!</textarea>
+                                </form>
                             </div>
                         </div>
                     </div>
@@ -219,3 +226,10 @@
         </div>
     </div>
 </div>
+
+
+    <script>
+      tinymce.init({
+        selector: '#mytextarea'
+      });
+    </script>

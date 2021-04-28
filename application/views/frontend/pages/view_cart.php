@@ -5,60 +5,61 @@
 <section class="viewCart_section">
     <div class="container">
         <div class="row">
-            <!-- similar product -->
+            <!-- suggest product -->
             <div class="col-lg-3 d-lg-block d-none">
                 <div class="suggest_product">
                    <div class="title">
                        <h5>Best Sale product</h5>
                    </div>
                     <div class="items">
-                        <img src="images/product/item-1.jpg" alt="">
+                        <img src="<?=site_url('public/images/product/item-1.jpg')?>" alt="">
                         <div class="items-content">
                             <h5>Product title name</h5>
-                            <small>Price 00,00 Tk</small>
+                            <small>720 Tk <del>930.00 Tk</del></small>
                         </div>
                         <a href="<?=site_url('details')?>" class="items-cover"></a>
                     </div>
                     <div class="items">
-                        <img src="images/product/item-2.jpg" alt="">
+                        <img src="<?=site_url('public/images/product/item-2.jpg')?>" alt="">
                         <div class="items-content">
                             <h5>Product title name</h5>
-                            <small>Price 00,00 Tk</small>
+                            <small>720 Tk <del>930.00 Tk</del></small>
                         </div>
                         <a href="<?=site_url('details')?>" class="items-cover"></a>
                     </div>
                     <div class="items">
-                        <img src="images/product/item-3.jpg" alt="">
+                        <img src="<?=site_url('public/images/product/item-3.jpg')?>" alt="">
                         <div class="items-content">
                             <h5>Product title name</h5>
-                            <small>Price 00,00 Tk</small>
+                            <small>720 Tk <del>930.00 Tk</del></small>
                         </div>
                         <a href="<?=site_url('details')?>" class="items-cover"></a>
                     </div>
                     <div class="items">
-                        <img src="images/product/item-2.jpg" alt="">
+                        <img src="<?=site_url('public/images/product/item-2.jpg')?>" alt="">
                         <div class="items-content">
                             <h5>Product title name</h5>
-                            <small>Price 00,00 Tk</small>
+                            <small>720 Tk <del>930.00 Tk</del></small>
                         </div>
                         <a href="<?=site_url('details')?>" class="items-cover"></a>
                     </div>
                     <div class="items">
-                        <img src="images/product/item-3.jpg" alt="">
+                        <img src="<?=site_url('public/images/product/item-3.jpg')?>" alt="">
                         <div class="items-content">
                             <h5>Product title name</h5>
-                            <small>Price 00,00 Tk</small>
+                            <small>720 Tk <del>930.00 Tk</del></small>
                         </div>
                         <a href="<?=site_url('details')?>" class="items-cover"></a>
                     </div>
                 </div>
             </div>
+
             <!-- product menu -->
             <div class="col-lg-6">
                 <div class="product_menu">
-                    <img src="images/product/item-1.jpg" class="img-fluid" alt="">
+                    <img src="<?=site_url('public/images/product/item-1.jpg')?>" alt="">
                     <div class="product_title">
-                        <h6>Product Name Or Title</h6>
+                        <h6><a href="">Product Name Or Title</a></h6>
                         <p>1 X Omnis dicam mentitum</p>
                         <p>720 Tk</p>
                         <p>Size: S</p>
@@ -66,7 +67,11 @@
                     </div>
                     <div class="product_sum">
                         <div class="action">
-                            <input type="number" class="form-control" value="1" min="0">
+                            <div class="qty_form">
+                                <button onclick="qty.value=(qty.value>0?qty.value-=1:qty.value)"><i class="icon ion-md-remove"></i></button>
+                                <input type="text" id="qty" value="1" min="0">
+                                <button onclick="qty.value = +qty.value+1"><i class="icon ion-md-add"></i></button>
+                            </div>
                             <a href="" class="delete">
                                 <i class="icon ion-md-trash"></i>
                             </a>
@@ -75,7 +80,7 @@
                     </div>
                 </div>
                 <div class="product_menu">
-                    <img src="images/product/item-1.jpg" class="img-fluid" alt="">
+                    <img src="<?=site_url('public/images/product/item-1.jpg')?>" alt="">
                     <div class="product_title">
                         <h6>Product Name Or Title</h6>
                         <p>1 X Omnis dicam mentitum</p>

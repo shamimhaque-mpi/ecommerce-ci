@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Apr 24, 2021 at 12:41 PM
+-- Generation Time: Apr 28, 2021 at 12:47 PM
 -- Server version: 10.4.6-MariaDB
 -- PHP Version: 7.3.9
 
@@ -589,7 +589,44 @@ INSERT INTO `access_info` (`user_id`, `login_period`, `logout_period`) VALUES
 (13, '2021-04-21 10:49:15', '0000-00-00 00:00:00'),
 (14, '2021-04-22 05:39:21', '0000-00-00 00:00:00'),
 (13, '2021-04-22 06:36:30', '0000-00-00 00:00:00'),
-(14, '2021-04-24 05:34:48', '0000-00-00 00:00:00');
+(14, '2021-04-24 05:34:48', '0000-00-00 00:00:00'),
+(14, '2021-04-25 05:58:50', '0000-00-00 00:00:00'),
+(13, '2021-04-25 08:05:32', '0000-00-00 00:00:00'),
+(1, '2021-04-26 06:20:01', '2021-04-26 06:27:26'),
+(1, '2021-04-26 06:30:43', '2021-04-26 06:30:58'),
+(1, '2021-04-26 06:31:12', '2021-04-26 06:31:50'),
+(1, '2021-04-26 06:31:58', '2021-04-26 06:44:30'),
+(1, '2021-04-26 06:45:32', '2021-04-26 06:47:57'),
+(1, '2021-04-26 06:48:29', '2021-04-26 06:59:16'),
+(1, '2021-04-26 06:48:29', '2021-04-26 06:59:16'),
+(1, '2021-04-26 06:59:25', '2021-04-26 07:05:45'),
+(1, '2021-04-26 07:06:00', '2021-04-26 07:07:52'),
+(13, '2021-04-26 07:07:09', '0000-00-00 00:00:00'),
+(14, '2021-04-26 07:08:07', '0000-00-00 00:00:00'),
+(1, '2021-04-26 08:24:19', '2021-04-26 08:28:01'),
+(14, '2021-04-26 10:40:33', '2021-04-26 10:40:36'),
+(13, '2021-04-26 10:47:26', '2021-04-26 11:44:08'),
+(13, '2021-04-26 10:48:58', '0000-00-00 00:00:00'),
+(14, '2021-04-26 11:44:12', '0000-00-00 00:00:00'),
+(2, '2021-04-26 13:06:51', '2021-04-26 13:12:04'),
+(2, '2021-04-26 13:12:16', '0000-00-00 00:00:00'),
+(14, '2021-04-27 05:33:17', '0000-00-00 00:00:00'),
+(13, '2021-04-27 05:40:42', '2021-04-27 07:29:46'),
+(13, '2021-04-27 07:29:54', '0000-00-00 00:00:00'),
+(3, '2021-04-27 07:49:12', '2021-04-27 08:02:45'),
+(3, '2021-04-27 08:06:09', '0000-00-00 00:00:00'),
+(13, '2021-04-27 08:12:54', '2021-04-27 08:13:25'),
+(14, '2021-04-27 08:13:43', '0000-00-00 00:00:00'),
+(1, '2021-04-27 10:17:50', '2021-04-27 12:16:33'),
+(1, '2021-04-27 12:16:44', '2021-04-27 12:40:24'),
+(4, '2021-04-27 12:17:20', '2021-04-27 12:42:12'),
+(14, '2021-04-28 05:55:34', '0000-00-00 00:00:00'),
+(1, '2021-04-28 06:21:43', '2021-04-28 06:21:50'),
+(13, '2021-04-28 06:40:19', '2021-04-28 08:27:15'),
+(1, '2021-04-28 06:59:36', '2021-04-28 06:59:39'),
+(14, '2021-04-28 08:27:20', '2021-04-28 08:35:59'),
+(13, '2021-04-28 08:36:02', '0000-00-00 00:00:00'),
+(1, '2021-04-28 08:55:28', '2021-04-28 08:55:35');
 
 -- --------------------------------------------------------
 
@@ -630,13 +667,13 @@ CREATE TABLE `categories` (
 
 INSERT INTO `categories` (`id`, `category`, `img`, `position`, `trash`) VALUES
 (1, 'Food', 'public/images/categories/1618209257.webp', 0, 1),
-(2, 'Food', 'public/images/categories/1618219650.webp', 0, 0),
-(3, 'Mobile', 'public/images/categories/1618220082.png', 0, 0),
-(4, 'Computer', 'public/images/categories/1618220088.png', 0, 0),
-(5, 'Car', 'public/images/categories/1618220092.png', 0, 0),
-(6, 'Cloth', 'public/images/categories/1618220108.jpg', 0, 0),
-(7, 'Vegetable', 'public/images/categories/1618220113.webp', 0, 0),
-(8, 'Instruments', 'public/images/categories/1618220119.jpg', 0, 0),
+(2, 'Food', 'public/images/categories/1619582173.webp', 0, 0),
+(3, 'Mobile', 'public/images/categories/1619582261.webp', 0, 0),
+(4, 'Computer', 'public/images/categories/1619500920.png', 0, 0),
+(5, 'Car', 'public/images/categories/1619500984.png', 0, 0),
+(6, 'Cloth', 'public/images/categories/1619501174.png', 0, 0),
+(7, 'Vegetable', 'public/images/categories/1619501197.png', 0, 0),
+(8, 'Instruments', 'public/images/categories/1619501250.jpg', 0, 0),
 (9, 'Mobile', '', 0, 1);
 
 -- --------------------------------------------------------
@@ -742,7 +779,7 @@ CREATE TABLE `header` (
 --
 
 INSERT INTO `header` (`id`, `web_title`, `web_logo`, `fev_icon`, `food_menu`, `trash`) VALUES
-(1, 'Demo-Ecommerce', 'backend/images/header/gallery16180968230.png', 'backend/images/header/gallery16180510210.png', 'backend/images/header/gallery16102633590.pdf', 0);
+(1, 'Demo-Ecommerce', 'backend/images/header/gallery16180968230.png', 'backend/images/header/gallery16193307510.png', 'backend/images/header/gallery16102633590.pdf', 0);
 
 -- --------------------------------------------------------
 
@@ -797,12 +834,59 @@ CREATE TABLE `products` (
 --
 
 INSERT INTO `products` (`id`, `title`, `brand_id`, `cat_id`, `sub_cat_id`, `price`, `min_qty`, `discount`, `warranty`, `feature_product`, `description`, `status`, `trash`, `date`) VALUES
-(1, 'Product Title One', 1, 8, 0, '1230.00', '1.00', '120.00', '2', 'no', 'Morem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum', 'available', 0, '2021-04-22'),
-(2, 'Product Title Two', 1, 7, 3, '24154.00', '1.00', '3244.00', '55', 'yes', 'Psum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum', 'available', 0, '2021-04-22'),
-(3, 'Product Title Three', 1, 6, 0, '3256.00', '9.00', '2.00', '55', 'no', 'Type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum', 'available', 0, '2021-04-22'),
+(1, 'Product Title One', 1, 6, 0, '1230.00', '1.00', '120.00', '2', 'no', 'Morem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum', 'available', 0, '2021-04-27'),
+(2, 'Product Title Two', 1, 7, 3, '24154.00', '1.00', '3244.00', '55', 'yes', 'Psum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum', 'available', 0, '2021-04-25'),
+(3, 'Product Title Three', 1, 6, 0, '3256.00', '9.00', '2.00', '55', 'no', 'Type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum', 'available', 0, '2021-04-25'),
 (4, 'Product Title Four', 1, 4, 0, '750.00', '1.00', '78.00', '2', 'yes', 'Simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.', 'available', 0, '2021-04-22'),
 (5, 'Product Title Five', 1, 2, 0, '321.00', '1.00', '21.00', '2', 'yes', 'Text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.', 'available', 0, '2021-04-22'),
-(6, 'Product Title Six', 1, 3, 0, '145.00', '1.00', '5.00', '', 'yes', 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.', 'available', 0, '2021-04-22');
+(6, 'Product Title Six', 1, 3, 0, '145.00', '1.00', '5.00', '', 'yes', 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.', 'available', 0, '2021-04-22'),
+(7, 'sdfsdfsdf', 1, 8, 0, '1000.00', '1.00', '10.00', '', 'no', 'sdfsdfsdfasf', 'available', 0, '2021-04-26'),
+(8, 'Atumpan', 1, 8, 0, '2100.00', '1.00', '0.00', '', 'no', 'A type of African talking drum. Played in pairs, these drums provide the bass part in Adowa dance ensembles. These drums are also found in Fontomfrom ensembles. The atumpan is played either with one\'s bare hands or L-shaped sticks.', 'available', 0, '2021-04-26'),
+(9, 'Autoharp', 1, 8, 0, '22220.00', '1.00', '20.00', '', 'no', 'AutoharpAutoharpAutoharpAutoharpAutoharpAutoharpAutoharpAutoharpAutoharpAutoharpAutoharpAutoharpAutoharpAutoharpAutoharpAutoharpAutoharpAutoharpAutoharpAutoharpAutoharp', 'available', 0, '2021-04-26'),
+(10, 'Bagpipe', 1, 8, 0, '1500.00', '1.00', '6.00', '', 'no', 'BagpipeBagpipeBagpipeBagpipeBagpipeBagpipeBagpipeBagpipeBagpipeBagpipeBagpipeBagpipe', 'available', 0, '2021-04-27'),
+(11, 'One eggplant', 1, 7, 0, '60.00', '1.00', '0.00', '', 'no', 'One eggplantOne eggplantOne eggplantOne eggplantOne eggplantOne eggplantOne eggplantOne eggplantOne eggplantOne eggplantOne eggplantOne eggplant', 'available', 0, '2021-04-26'),
+(12, 'Poster Biennale', 1, 7, 3, '80.00', '1.00', '5.00', '', 'no', 'Poster BiennalePoster BiennalePoster BiennalePoster BiennalePoster BiennalePoster BiennalePoster BiennalePoster BiennalePoster BiennalePoster BiennalePoster Biennale', 'available', 0, '2021-04-27'),
+(13, 'New Exclusive Hot Kurti For Stylish', 1, 6, 3, '1400.00', '1.00', '2.00', '', 'no', 'Shalwar Kameez, also spelled salwar kameez or shalwar kameez, is a traditional outfit originating in the subcontinent. It is a generic term used to describe different styles of dress. The shalwar kameez can be worn by women. The shalwar and the kameez are two garments which are combined to form the shalwar kameez.', 'available', 0, '2021-04-27'),
+(14, 'Indian Weightless Georgette Salwar Kameez', 1, 6, 0, '1800.00', '1.00', '5.00', '', 'no', 'Shalwar kameez also spelled or kameez is a traditional outfit originating in the Indian subcontinent. The apparel comprises a headscarf, (long shirt) And Shalwar (baggy trousers) when worn by women and Kameez and Shalwar when worn by men. The term covers different styles according to the region where the outfit is worn. Styles include Anarkali, Punjabi, Afghani, and Balochi. In origin, the Shalwar and Kameez are two separate garments that have been combined to form the outfit. May the women more powerful under the influence of e-commerce! ‘Ultra Fashion’- A new project of Daraz to ensure the economical and social advancement for women. We are the actual powerhouse of e-commerce. We are not fictional characters, we are real-life ‘Wonder Women’! Observing the active participation and direct contribution pattern of the women i', 'available', 0, '2021-04-27'),
+(15, 'Stainless Steel Multi-function Vegetable Double Peeler Cutter Julienne', 1, 7, 0, '200.00', '1.00', '8.00', '', 'no', 'Product details of Stainless Steel Multi-function Vegetable Double Peeler Cutter Julienne Peeler Potato Carrot Grater Kitchen Tool\r\n100% brand new and high quality\r\nMade from high duty stainless steel material, it is rustproof.\r\nComfortable handle with hanging hook\r\nEasy to clean\r\nDishwasher safe', 'available', 0, '2021-04-27'),
+(16, 'Vegetables Slicer Cutting Aid Holder Guide Slicing Cutter Safe For Kitchen Work', 1, 7, 0, '300.00', '1.00', '4.00', '', 'no', 'Product details of Vegetables Slicer Cutting Aid Holder Guide Slicing Cutter Safe For Kitchen Work\r\nKeeps onions,Tomato and other Vegetable stable and creates even slices everytime.\r\nEasy hold handle allows for firm grip.\r\nGreat for anyone with poor grip.\r\nKeeps onions stable and creates even slices everytime.', 'available', 0, '2021-04-27'),
+(17, 'TOYOTA PREMIO Year: 2017', 1, 5, 0, '2500000.00', '1.00', '5.00', '', 'no', 'For more details about this product, please dial 09610002345 to get assistance from our expert agents.\r\n1. Customer can visit physical store to have look & feel the actual product (Car) by setting an appointment through Daraz. For setting an appointment please call at 09610002345. \r\n\r\n2. The Registration Process of the Car will be handled by concerned show room/dealer and Customer can collect the relevant registration documents from the concerned show room/dealer. \r\n\r\n3. For after sales service Customer needs to communicate with Daraz. Thereafter, Daraz will communicate with the concerned show room/dealer, and arrange the required sales services accordingly. \r\n\r\n4. For any query or assistance please communicate Daraz at 09610002345.\r\n\r\n5. Customer will receive one year’s free servicing facilities excluding the cost of parts, oil, lubricants etc. \r\n\r\n6. Once purchased, the Product (Car) cannot be returned, changed or exchanged. \r\n\r\n7. Delivery of the Car shall be taken by the Customer from the show room/dealer.', 'available', 0, '2021-04-27'),
+(18, 'Toyota Axio Hybrid 2016', 1, 5, 0, '1.00', '1.00', '10.00', '', 'no', 'For any query or assistance please communicate Daraz at 09610002345.\r\n1. Customer can visit physical store to have look & feel the actual product (Car) by setting an appointment through Daraz. For setting an appointment please call at 09610002345.\r\n2. The Registration Process of the Car will be handled by concerned show room/dealer and Customer can collect the relevant registration documents from the concerned show room/dealer.\r\n3. For after sales service Customer needs to communicate with Daraz. Thereafter, Daraz will communicate with the concerned show room/dealer, and arrange the required sales services accordingly.\r\n4. For any query or assistance please communicate Daraz at 09610002345.\r\n5. Customer will receive one year’s free servicing facilities excluding the cost of parts, oil, lubricants etc.\r\n6. Once purchased, the Product (Car) cannot be returned, changed or exchanged.\r\n7. Delivery of the Car shall be taken by the Customer from the show room/dealer.', 'available', 0, '2021-04-27'),
+(19, 'Toyota Premio 2014 FL', 1, 5, 0, '2.00', '1.00', '2.00', '', 'no', '1.  Customer can visit physical store to have look & feel the actual product (Car) by setting an appointment through Daraz. For setting an appointment please call at 09610002345.\r\n\r\n2.  The Registration Process of the Car will be handled by concerned show room/dealer and Customer can collect the relevant registration documents from the concerned show room/dealer.\r\n\r\n3.  For after sales service Customer needs to communicate with Daraz. Thereafter, Daraz will communicate with the concerned show room/dealer, and arrange the required sales services accordingly.\r\n\r\n4.  For any query or assistance please communicate Daraz at 09610002345.\r\n\r\n5.  Customer will receive one year’s free servicing facilities excluding the cost of parts, oil, lubricants etc.\r\n\r\n6.  Once purchased, the Product (Car) cannot be returned, changed or exchanged.\r\n\r\n7.  Delivery of the Car shall be taken by the Customer from the show room/dealer.\r\n\r\nToyota Premio 2014 FL', 'available', 0, '2021-04-27'),
+(20, 'Toyota Noah 2015 Black', 1, 5, 0, '2.00', '1.00', '12.00', '', 'no', 'For any query or assistance please communicate Daraz at 09610002345.\r\n1. Customer can visit physical store to have look & feel the actual product (Car) by setting an appointment through Daraz. For setting an appointment please call at 09610002345.\r\n2. The Registration Process of the Car will be handled by concerned show room/dealer and Customer can collect the relevant registration documents from the concerned show room/dealer.\r\n3. For after sales service Customer needs to communicate with Daraz. Thereafter, Daraz will communicate with the concerned show room/dealer, and arrange the required sales services accordingly.\r\n4. For any query or assistance please communicate Daraz at 09610002345.\r\n5. Customer will receive one year’s free servicing facilities excluding the cost of parts, oil, lubricants etc.\r\n6. Once purchased, the Product (Car) cannot be returned, changed or exchanged.\r\n7. Delivery of the Car shall be taken by the Customer from the show room/dealer.', 'available', 0, '2021-04-27'),
+(21, 'Intel Dual Core RAM 4GB HDD 500GB Monitor 17 inch Intel HD Graphics Built-in for Gaming PC Windows 7 64 Bit Best Desktop Computer in low price', 1, 4, 0, '10.00', '1.00', '2.00', '2', 'no', 'Product details of Intel Dual Core RAM 4GB HDD 500GB Monitor 17 inch Intel HD Graphics Built-in for Gaming PC Windows 7 64 Bit Best Desktop Computer in low price\r\nIntel Dual Core RAM 4GB HDD 500GB Monitor 17 inch Intel HD Graphics Built-in for PC Windows 7 64 Bit Best Desktop Computer in low price\r\nIntel Dual Core RAM 4GB HDD 500GB Monitor 17 inch Intel HD Graphics Built-in for', 'available', 0, '2021-04-27'),
+(22, 'Full Set PC Core-i5-2nd Genaration-8GB DDR3 Ram-500GB HDD-19', 1, 5, 0, '27000.00', '1.00', '3.00', '', 'yes', 'Product details of Full Set PC Core-i5-2nd Genaration-8GB DDR3 Ram-500GB HDD-19\" Monitor-Keyboard-Mouse All Complete\r\nProcessor: Intel Core i5-2320 (2nd Generation) GHz 3.0 GHz, RAM: 8GB DDR3, Hard Disk: 500GB, Mainboard :H61 Intel Chipset, Casing : GIGASONIC / OVO / EROCK / CIRCLE / STAR SONIC / DBM (Casing can be different from the given pictures) , Monitor : 19\" Gigasonic or any china brand, USB Keyboard, USB Mouse, Complete PC', 'available', 0, '2021-04-27'),
+(23, 'Square LED Digital Sports Watch, Waterproof LED Wrist Watch(null)', 1, 3, 0, '3600.00', '1.00', '2.00', '', 'no', 'Product details of Square LED Digital Sports Watch, Waterproof LED Wrist Watch(null)\r\nInformal style watch,\r\nperfect to wear with daily clothes.\r\nExquisitely crafted watch,\r\ngood in workmanship.\r\nStreamlined design gives the piece a fashionable look.\r\nPersonality, exquisite workmanship\r\nTrendy, sophisticated texture\r\nSimple smooth design, stylish atmosphere', 'available', 0, '2021-04-27'),
+(24, '40M5 Meters Ranging Tape Measure Surface Pythagorean Smart Steel Ruler Infrared Multi-Function Measuring Instrumen', 1, 8, 0, '450.00', '1.00', '3.00', '', 'no', '▲Multi-function measurement mode-with multiple measurement modes such as single, continuous, distance, area, volume and Pythagoras. You can also set standards and correct accuracy.\r\n▲Two-in-one tape measure-The tape measure combines 131 Ft ruler and 5M tape measure. Simultaneous measurement can verify the accuracy of the. Long press the \"→\" button for 2s to freely switch the unit between M / In / Ft; support the use of the front reference point and end reference point functions for distance self-calibration.\r\n▲Convenient USB charging-Tooltoo\'s measurement is a universal USB charging. Built-in 180mAh lithium battery, it takes about 4 hours to fully charge. It can be used 3000 times per full charge. (Note: Use a voltage within 5V to charge, for example: PC USB port)\r\n▲ precision- measurement range: 40m/131ft, measurement accuracy: +/- 3mm, level: 2 (1mW or less), level: 2 (1mW or less), frequency: 650nm, measuring range of tape measure : 5m, waterproof and dustproof: ip54, body size: 8.5 x 4.3 x 7.5cm, actual weight: 280g.', 'available', 0, '2021-04-27'),
+(25, 'Wood Soprano Basswood Ukulele Uke Hawaii Guitar Musical Instrumen Bag Tuner -', 1, 8, 0, '4200.00', '1.00', '2.00', '', 'no', 'Features:\r\n-Perfect for beginners, students, and music lovers.\r\n-Reasonably priced, entry-level acoustic guitar.\r\n-Meticulously crafted the traditional style.\r\n-Give you a nice mellow tone with a slower response.\r\n-Ideal for beginners to find their way around the instrument.\r\n-Come included with a guitar pick and an extra set of strings.\r\n-The wood top, back and sides keep the guitar lightweight and inexpensive while not sacrificing tone.\r\n-Meticulously crafted the traditional style, this guitar gives you a nice mellow tone with a slower response and thus is ideal for beginners to find their way around the instrument.\r\n', 'available', 0, '2021-04-27'),
+(26, 'Vegetable Chopper Handy Quick Cutter for Kitchen, 3 Blade Stainless Steel, Pull String, Green (350ml And 900ml)', 1, 7, 0, '300.00', '1.00', '0.00', '', 'no', 'Product details of Vegetable Chopper Handy Quick Cutter for Kitchen, 3 Blade Stainless Steel, Pull String, Green (350ml And 900ml)\r\nShadaMon Store\r\nSturdy 3-blade design made from Stainless Steel\r\nUnique string function to chop vegetables and fruits with ease\r\nNo electricity required\r\nEasy to use - easy to detach', 'available', 0, '2021-04-27'),
+(27, 'Fruit Slicer Apple Pear Cutter Stainless Steel Knife Corers Remover Vegetable Melon Chopper Peerler Divided Kitchen Tools', 1, 7, 0, '750.00', '1.00', '4.00', '', 'no', 'Product details of Fruit Slicer Apple Pear Cutter Stainless Steel Knife Corers Remover Vegetable Melon Chopper Peerler Divided Kitchen Tools\r\nSharp blades.\r\nLightweight, easy to carry.\r\nSimple and compact design, easy to clean.\r\nSafe and health, suit to apple, pear, and other fruits.\r\nEasily to core and cut apples/pears/etc into 8 average pieces.\r\nThe corer slicer fruit knife cores and slices the apple into sections in one swift movement.\r\nMaking it perfect for making fruit salads or for creating bite-sized chunks for the kids.', 'available', 0, '2021-04-27'),
+(28, 'Joypuri Unstitched Skin Print Ari Work Cotton Three Piece Fashionable, Stylish and Comfortable, Salwar Kameez For/ Women', 1, 6, 0, '2500.00', '1.00', '18.00', '', 'no', 'Kameez, also spelled Salwar kameez or shalwar qameez, is a traditional outfit originating in the subcontinent. It is a generic term used to describe different styles of dress. The Salwar Kameez can be worn by women. The Salwar and the kameez are two garments which are combined to form the Salwar kameez.This Product is made of good qualities fabrics. It is one of the most popular wears for dif- ferent festivals and weddings occasion. Women look very gorgeous in colorful dress, and so they love to wear and have a luxurious and colorful dress for different social and cultural functions. It will keep you looking and feeling good all day long', 'available', 0, '2021-04-27'),
+(29, 'Toshor Silk block print Sharee with blouj piece and high Quality Rich Fabrics,Exclusive Fashionable, Stylish Comfortable white colour sharee for Women.', 1, 6, 0, '4500.00', '1.00', '30.00', '', 'no', 'Saree is a very common dress in this subcontinental area like Bangladesh. This saree is made of Half Silk fabrics and also including colourfull tessel. It is also extremely versatile as it can be successfully incorporated into any look. It is one of the most popular wears for different festivals and weddings occasion. Women look very gorgeous in colorful saree, and so they love to wear and have luxurious and colorful saree for different social and cultural functions. It will keep you looking and feeling good all day long. The young lady to an elderly person every woman is fascinated about saree just because of our culture.  Sarees for women are crafted from Georgette.\r\n\r\nThe seller,\r\nJamuna Boutiques, offers a wide selection of products from renowned brands in Bangladesh with a promise of fast, safe and easy online shopping experience through Daraz. The seller comes closer to the huge customers on this leading online shopping platform of all over Bangladesh and serving to the greater extent of achieving higher customer satisfaction. The brands working with Daraz are not only serving top class products but also are dedicated to acquiring brand loyalty.', 'available', 0, '2021-04-27'),
+(30, 'Nussan Juke 2015', 1, 5, 0, '2.00', '1.00', '1.00', '', 'no', 'Product details of Nussan Juke 2015\r\nBrand: Nissan\r\nModel: Juke\r\nYear: 2015\r\nColor: Wine red\r\nSpecifications of Nussan Juke 2015\r\nBrandNissanSKU171244245_BD-1107158282', 'available', 0, '2021-04-27'),
+(31, 'Nussan Juke 2015', 1, 5, 0, '2.00', '1.00', '1.00', '', 'no', 'Product details of Nussan Juke 2015\r\nBrand: Nissan\r\nModel: Juke\r\nYear: 2015\r\nColor: Wine red\r\nSpecifications of Nussan Juke 2015\r\nBrandNissanSKU171244245_BD-1107158282', 'available', 1, '2021-04-27'),
+(32, 'Nussan Juke 2015', 1, 5, 0, '2.00', '1.00', '1.00', '', 'no', 'Product details of Nussan Juke 2015\r\nBrand: Nissan\r\nModel: Juke\r\nYear: 2015\r\nColor: Wine red\r\nSpecifications of Nussan Juke 2015\r\nBrandNissanSKU171244245_BD-1107158282', 'available', 1, '2021-04-27'),
+(33, 'Toyota Aqua 2014 (TRD Body Kit)', 1, 5, 0, '1.00', '1.00', '0.00', '', 'no', 'For any query or assistance please communicate Daraz at 09610002345.\r\n1.  Customer can visit physical store to have look & feel the actual product (Car) by setting an appointment through Daraz. For setting an appointment please call at 09610002345.\r\n\r\n2.  The Registration Process of the Car will be handled by concerned show room/dealer and Customer can collect the relevant registration documents from the concerned show room/dealer.\r\n\r\n3.  For after sales service Customer needs to communicate with Daraz. Thereafter, Daraz will communicate with the concerned show room/dealer, and arrange the required sales services accordingly.\r\n\r\n4.  For any query or assistance please communicate Daraz at 09610002345.\r\n\r\n5.  Customer will receive one year’s free servicing facilities excluding the cost of parts, oil, lubricants etc.\r\n\r\n6.  Once purchased, the Product (Car) cannot be returned, changed or exchanged.\r\n\r\n7.  Delivery of the Car shall be taken by the Customer from the show room/dealer.', 'available', 0, '2021-04-27'),
+(34, 'Walton Laptop Tamarind ZX3701A, 7th Gen Intel Core i3-7020U 2.30GHz, 512GB SATAIII M.2 2280 SSD , 4GB DDR4 RAM, 14 inch HD Display.', 1, 4, 0, '38000.00', '1.00', '8.00', '', 'no', 'Product details of Walton Laptop Tamarind ZX3701A, 7th Gen Intel Core i3-7020U 2.30GHz, 512GB SATAIII M.2 2280 SSD , 4GB DDR4 RAM, 14 inch HD Display.\r\n35.56cm (14.0\") HD Matte LED backlit display\r\nIntel® Core™ i3-7020U 2.30GHz\r\n7thGeneration processor\r\n512GB SATAIII M.2 2280 SSD\r\n4GB DDR4 RAM\r\n802.11ac WLAN + BT 4.2\r\nGenuine Windows 10\r\nBattery Backup: Up to 6 Hours\r\nUp to 2 years warranty', 'available', 0, '2021-04-27'),
+(35, 'Walton Walpad 10.5\'\' IPS Display, 4GB LPDDR4 RAM, 7000mah Battery with Flip Cover', 1, 4, 0, '28000.00', '1.00', '0.00', '', 'no', 'Product details of Walton Walpad 10.5\'\' IPS Display, 4GB LPDDR4 RAM, 7000mah Battery with Flip Cover\r\n10.5\'\' FHD IPS Display\r\n7000mah Battery\r\n4GB LPDDR4 RAM\r\nHelio P60 Gaming Processor\r\nAndroid 10\r\n', 'available', 0, '2021-04-27'),
+(36, 'Walton Ultra Slim Border Less WD238V02 23.8” Full HD 1920x1080 at 75HZ Desktop Monitor with Built in Speaker.', 1, 4, 0, '12.00', '1.00', '1.00', '', 'no', 'Product details of Walton Ultra Slim Border Less WD238V02 23.8” Full HD 1920x1080 at 75HZ Desktop Monitor with Built in Speaker.\r\n23.8” LED Backlight Display\r\nUltra Slim Design\r\nMAX Resolution 1920 ×1080 at 75Hz\r\nWide Viewing Angle\r\nContrast Ratio 3000: 1\r\nConnectivity: HDMI,VGA\r\nBuilt-in Speaker', 'available', 0, '2021-04-27'),
+(37, 'HP 22fw 21.5 IPS Full HD LED Monitor (White)', 1, 4, 0, '1400.00', '1.00', '4.00', '', 'no', 'Product details of HP 22fw 21.5 IPS Full HD LED Monitor (White)\r\nModel: HP 22fw\r\nResolution: 1920 x 1080 @ 60Hz\r\nResponse Time: 5ms\r\nViewing Angle:178° (V)/178°(H)\r\nBrightness:300 cd/m²', 'available', 0, '2021-04-27'),
+(38, 'Gigabyte Aorus 5 Mb I7-10750H 2.6 To 5.0Ghz (6C, 12T) 10Th Gen, 16Gb Ram, 512Gb Pcie, 4Gb Ddr6 1650Ti Graphics, 15.6 Fhd 144Hz Gaming Laptop', 1, 4, 0, '126.00', '1.00', '2.00', '', 'no', 'Product details of Gigabyte Aorus 5 Mb I7-10750H 2.6 To 5.0Ghz (6C, 12T) 10Th Gen, 16Gb Ram, 512Gb Pcie, 4Gb Ddr6 1650Ti Graphics, 15.6 Fhd 144Hz Gaming Laptop\r\n10th Gen Intel® Core™ i7Processor H-Series i7-10750H 2.6to 5.0GHz (6Core, 12Thread)\r\nNVIDIA® GeForce GTX 1650Ti 4GB DDR6\r\n15.6 Inch Thin Bezel FHD 144Hz display\r\n(8X2)=16GB DDR4 2666MHz RAM (2 slots, Max 64GB)\r\n512GB M.2 NVMe PCIe SSD\r\nBacklit Keyboard\r\n2 Years International Warranty\r\nMade In Taiwan', 'available', 0, '2021-04-27'),
+(39, 'Samsung Galaxy A20S Tempered Glass Protector 6D/9D/11D Black-Transparent', 1, 3, 0, '16000.00', '1.00', '2.00', '', 'no', 'Product details of Samsung Galaxy A20S Tempered Glass Protector 6D/9D/11D Black-Transparent\r\nMaterials: Tempered Glass\r\n(1) Name: Tempered Glass\r\n(2) Protection: The Screen Of Cellphone\r\n(3) Feature: Anti-Scratch, Screen Protector, Anti-oil，waterproof，HD\r\n(4) 100% High quality and New\r\n(5) Easy to install or remove\r\n(6) Designed to fit your device perfectly\r\n1.Glass ONLY, Other Accessories not included.\r\n2.The real color of the item may be slightly different from the pictures shown on website caused by many factors such as brightness of your monitor and light brightness.', 'available', 0, '2021-04-27'),
+(40, 'Usb Type C Cable 1 Pack (3Ft) Nylon Braided Usb A To Usb C Charger Cable Fast Charg Cord For Samsung Galaxy 8 S8 Plus, Lg G5 G6 V30, Htc 10, Nexus 5X/6P-Blue', 1, 3, 0, '450.00', '1.00', '6.00', '', 'yes', 'Product details of Usb Type C Cable 1 Pack (3Ft) Nylon Braided Usb A To Usb C Charger Cable Fast Charg Cord For Samsung Galaxy 8 S8 Plus, Lg G5 G6 V30, Htc 10, Nexus 5X/6P-Blue\r\nUSB CERTIFIED FAST DATA-SYNC & CHARG (USB 2.0): Supports safe high-speed charg (5V/3.0A) and fast data transfer. *Not compatible with iPhone or cro-USB!\r\nDURABLE & TANGLE-FREE DESIGN: Features an ultra-durable nylon-braided jacket with a bend lifespan of 10000+ and seamlessly molded joints.\r\nREVERSIBLE CONNECTOR: Keeps up with t latest trend of USB interface. This user-friendly design allows you to plug into all your USB Type-C compatible devices without worrying about t orienon of t port.\r\nSAFE & RELIABLE: Manufactured in accordance with USB Type-C specifications version 1.1. Solid 23AWG wire core is ho within preum alunum housing for safe and reliable charg up to 3A. Standard 56kΩ ll-up resistor contained.\r\nMaterial: Nylon\r\nT cable is guaranteed to work with t Phone\r\n2 in 1 functionality Data Sync / Charger Cable\r\nUSB 2.0 Compatible,mermaid style\r\nCable Length : 1 M\r\nColors: Blue\r\nPackage Content: 1 X Type C Cable\r\nOnly t above package content, otr products are not included.\r\n: Light and different displays may cause t color of t item in t picture a little different from t thing. T measuret allowed error is +/- 1-3cm.\r\nUSB CERTIFIED FAST DATA-SYNC & CHARG (USB 2.0): Supports safe high-speed charg (5V/3.0A) and fast data transfer. *Not compatible with iPhone or cro-USB!\r\nDURABLE & TANGLE-FREE DESIGN: Features an ultra-durable nylon-braided jacket with a bend lifespan of 10000+ and seamlessly molded joints.\r\nREVERSIBLE CONNECTOR: Keeps up with t latest trend of USB interface. This user-friendly design allows you to plug into all your USB Type-C compatible devices without worrying about t orienon of t port.\r\nSAFE & RELIABLE: Manufactured in accordance with USB Type-C specifications version 1.1. Solid 23AWG wire core is ho within preum alunum housing for safe and reliable charg up to 3A. Standard 56kΩ ll-up resistor contained.\r\nMaterial: Nylon\r\nT cable is guaranteed to work with t Phone\r\n2 in 1 functionality Data Sync / Charger Cable\r\nUSB 2.0 Compatible,mermaid style\r\nCable Length : 1 M', 'available', 0, '2021-04-27'),
+(41, 'Tempered Glass for Sony Xperia XZS Gorilla 2.5D-Transparent', 1, 3, 0, '26500.00', '1.00', '4.00', '', 'no', 'Product details of Tempered Glass for Sony Xperia XZS Gorilla 2.5D-Transparent\r\nHigh-quality material,Touch Sensitive\r\nLightweight And Ultra-thin，Easy To Carry\r\nProtection: The Screen Of Cellphone\r\n100%Brand New\r\nUltra-thin& Rounded Edges\r\n1.Glass ONLY, Other Accessories not included.\r\n2.The real color of the item may be slightly different from the pictures shown on website caused by many factors such as brightness of your monitor and light brightness.\r\nSpecifications of Tempered Glass for Sony Xperia XZS Gorilla 2.5D-Transparent', 'available', 0, '2021-04-27'),
+(42, 'Liquid Silicone Phone Case For New Apple iPhone 7/8 Apple iPhone 7/8 Soft Mobile Back Cover', 1, 3, 0, '48000.00', '1.00', '2.00', '', 'no', 'Product details of Liquid Silicone Phone Case For New Apple iPhone 7/8 Apple iPhone 7/8 Soft Mobile Back Cover\r\nVibrant Color Border for naturally enhanced\r\npersonalized appearance\r\nMade of Nano chemical materials\r\nEnvironmentally friendly material\r\nUltra-thin and easy for operation\r\nHigh-precision machine molding\r\nExplosion-proof and shock-proof\r\nPressure-resistant and anti-scratch function\r\nProtects your device perfectly\r\n0.3mm, precious cuts for your screen, speakers, sensors and other ports\r\nTough and scratch-resistant yet flexible\r\nHD ultra-clear with high sensitivity and comfortable touch feeling\r\nSpecifications of Liquid Silicone Phone Case For New Apple iPhone 7/8 Apple iPhone 7/8 Soft Mobile Back Cover\r\nBrandClick Gadgets', 'available', 0, '2021-04-27'),
+(43, 'Space Full Clear Shockproof Acrylic Case For iPhone 12 11 Pro XS Max Mini XR X 6 6S 7 8 Plus SE 2020 Transparent Anti-Knock', 1, 3, 0, '120000.00', '1.00', '3.00', '', 'no', 'Product details of Space Full Clear Shockproof Acrylic Case For iPhone 12 11 Pro XS Max Mini XR X 6 6S 7 8 Plus SE 2020 Transparent Anti-Knock\r\nSpace Full Clear Shockproof Acrylic Case For iPhone 12 11 Pro XS Max Mini XR X 6 6S 7 8 Plus SE 2020 Transparent Anti-Knock', 'available', 0, '2021-04-27'),
+(44, 'Luxury Brand Clear Case For Apple iPhone 11 Pro Max 12 Mini XR iPhone11 Transparent Shockproof Hybrid Cover Accessories', 1, 3, 0, '95000.00', '1.00', '1.00', '', 'no', 'Product details of Luxury Brand Clear Case For Apple iPhone 11 Pro Max 12 Mini XR iPhone11 Transparent Shockproof Hybrid Cover Accessories\r\nOriginal Luxury Brand Clear Case For Apple iPhone 11 Pro Max 12 Mini XR iPhone11 Transparent Shockproof Hybrid Cover Accessories\r\nOriginal Luxury Brand Clear Case For Apple iPhone 11 Pro Max 12 Mini XR iPhone11 Transparent Shockproof Hybrid Cover Accessories\r\nFor iPhone 11 Pro Max: Perfect Compatible with iPhone 11 Pro Max case\r\nFor iPhone 11 Pro Max slim cases: Made of premium soft tpu bumper+ hard pc back material offer fingerprints and extra protection from sudden dropping and scratch resistant .\r\nFor iPhone 11 Pro Max cases: Easy access to all buttons, controls and ports without having to remove your phone.Fits snugly over the buttons, curves of your device.\r\nFor iPhone 11 Pro Max case: Crystal clear case reveals and enhances the original phone design and colors.\r\nFor 11 Pro Max case: Raised edges ensure protection for the screen and camera.', 'available', 0, '2021-04-27'),
+(45, 'BlackBerry phones', 1, 3, 0, '94000.00', '1.00', '2.00', '', 'yes', 'My old BlackBerry 6220, complete with a track wheel and dorky holster, was built like a tank. I dropped it. I flung it in anger. When I was bored, I tried juggling it (and I\'m a terrible juggler). It still kept ticking', 'available', 0, '2021-04-27'),
+(46, 'Pizza Cutter - Silver - Big Size', 1, 2, 0, '230.00', '1.00', '4.00', '', 'no', 'Product details of Pizza Cutter - Silver - Big Size\r\nProduct Type: Pizza Cutter\r\nColor: Silver\r\nMain Material: Stainless Steel\r\nGood quality product\r\nEasy to use\r\nEasy to carry', 'available', 0, '2021-04-27'),
+(47, 'Cookie Cutter 12 Pieces', 1, 2, 0, '120.00', '1.00', '3.00', '', 'no', 'Product details of Cookie Cutter 12 Pieces\r\nMade in China\r\nProduct Type: Cookie Cutter\r\nColor: Silver\r\nMain Material: Stainless Steel\r\nMetal cutters for cookies, biscuits or any type of sugar craft\r\nCould be used as drawing templates\r\nIdeal for making cakes, biscuit, cookies, chocolate, jelly, pie, etc\r\nThese patterns can arouse your children’s appetite easily\r\nUse and clean easily', 'available', 0, '2021-04-27'),
+(48, 'Ramadan Quarter Chicken Fries', 1, 2, 0, '399.00', '1.00', '4.00', '', 'no', 'Get a Perfect Solo meal for iftar. Pair up your Rizo Rice (with gravy) with a juicy Quarter Chicken, regular Fries & 200ML bottle of Slice', 'available', 0, '2021-04-27'),
+(49, 'Ramadan Family Meal', 1, 2, 0, '1299.00', '1.00', '3.00', '', 'no', 'A meal for your whole family. Enjoy 8pcs Hot & Crispy, 8pcs Hot Wings, 1 Large Fries & 4 200ML Slice only @Tk.1299', 'available', 0, '2021-04-27'),
+(50, 'Ramadan Zinger Meal', 1, 2, 0, '429.00', '1.00', '2.00', '', 'no', 'Break your fast with a classic Zinger, 1 Hot & Crispy Chicken, 2 Hot Wings & a 200ML Bottle of Slice.', 'available', 0, '2021-04-27'),
+(51, 'Smoky Red Rice Bowl', 1, 2, 0, '289.00', '1.00', '1.00', '', 'no', 'It’s sweet & spice, with everything nice! Rice & gravy with a side of our special Smoky Red.', 'available', 0, '2021-04-27'),
+(52, 'Rizo Rice', 1, 2, 0, '99.00', '1.00', '1.00', '', 'no', 'Perfectly cooked KFC signature rice to fill your hunger !\r\n\r\n', 'available', 0, '2021-04-27'),
+(53, 'gravy', 1, 2, 0, '40.00', '1.00', '1.00', '', 'no', 'Make your meal more delicious by adding some gravy!\r\n\r\n', 'available', 0, '2021-04-27');
 
 -- --------------------------------------------------------
 
@@ -827,14 +911,40 @@ INSERT INTO `product_colors` (`id`, `product_id`, `color_id`) VALUES
 (28, 6, 4),
 (29, 6, 3),
 (30, 6, 2),
-(38, 1, 4),
-(43, 3, 4),
-(44, 3, 3),
-(45, 3, 2),
 (47, 4, 4),
 (48, 4, 3),
 (49, 4, 2),
-(56, 2, 3);
+(57, 2, 3),
+(61, 3, 4),
+(62, 3, 3),
+(63, 3, 2),
+(65, 8, 4),
+(66, 7, 4),
+(67, 9, 4),
+(68, 9, 3),
+(69, 9, 2),
+(71, 11, 3),
+(75, 14, 4),
+(76, 14, 3),
+(77, 14, 2),
+(78, 1, 4),
+(79, 13, 4),
+(80, 13, 3),
+(81, 13, 2),
+(82, 17, 2),
+(83, 19, 2),
+(84, 20, 2),
+(86, 10, 2),
+(87, 23, 3),
+(88, 24, 4),
+(89, 28, 4),
+(90, 28, 3),
+(91, 28, 2),
+(92, 30, 2),
+(93, 31, 2),
+(94, 32, 2),
+(95, 39, 4),
+(96, 39, 3);
 
 -- --------------------------------------------------------
 
@@ -862,12 +972,102 @@ INSERT INTO `product_images` (`id`, `product_id`, `large`, `medium`, `small`, `t
 (24, 6, 'public/images/product/large/1619078984.webp', 'public/images/product/medium/1619078984.webp', 'public/images/product/small/1619078984.webp', 'feature_photo'),
 (27, 1, 'public/images/product/large/1619081898.webp', 'public/images/product/medium/1619081898.webp', 'public/images/product/small/1619081898.webp', 'general_photo'),
 (28, 1, 'public/images/product/large/1619081958.webp', 'public/images/product/medium/1619081958.webp', 'public/images/product/small/1619081958.webp', 'feature_photo'),
-(29, 3, 'public/images/product/large/1619082449.webp', 'public/images/product/medium/1619082449.webp', 'public/images/product/small/1619082449.webp', 'general_photo'),
-(30, 3, 'public/images/product/large/1619082489.webp', 'public/images/product/medium/1619082489.webp', 'public/images/product/small/1619082489.webp', 'feature_photo'),
 (33, 4, 'public/images/product/large/1619082985.webp', 'public/images/product/medium/1619082985.webp', 'public/images/product/small/1619082985.webp', 'general_photo'),
-(44, 2, 'public/images/product/large/1619083770.webp', 'public/images/product/medium/1619083770.webp', 'public/images/product/small/1619083770.webp', 'feature_photo'),
-(45, 2, 'public/images/product/large/1619083771.webp', 'public/images/product/medium/1619083771.webp', 'public/images/product/small/1619083771.webp', 'general_photo'),
-(46, 2, 'public/images/product/large/1619083772.webp', 'public/images/product/medium/1619083772.webp', 'public/images/product/small/1619083772.webp', 'general_photo');
+(47, 2, 'public/images/product/large/1619331387.webp', 'public/images/product/medium/1619331387.webp', 'public/images/product/small/1619331387.webp', 'feature_photo'),
+(48, 2, 'public/images/product/large/1619331387.webp', 'public/images/product/medium/1619331387.webp', 'public/images/product/small/1619331387.webp', 'general_photo'),
+(51, 3, 'public/images/product/large/1619331453.webp', 'public/images/product/medium/1619331453.webp', 'public/images/product/small/1619331453.webp', 'feature_photo'),
+(52, 3, 'public/images/product/large/1619331453.webp', 'public/images/product/medium/1619331454.webp', 'public/images/product/small/1619331454.webp', 'general_photo'),
+(53, 7, 'public/images/product/large/1619432283.webp', 'public/images/product/medium/1619432283.webp', 'public/images/product/small/1619432283.webp', 'feature_photo'),
+(54, 7, 'public/images/product/large/1619432284.webp', 'public/images/product/medium/1619432285.webp', 'public/images/product/small/1619432285.webp', 'general_photo'),
+(55, 8, 'public/images/product/large/1619432435.webp', 'public/images/product/medium/1619432435.webp', 'public/images/product/small/1619432435.webp', 'feature_photo'),
+(56, 8, 'public/images/product/large/1619432437.webp', 'public/images/product/medium/1619432437.webp', 'public/images/product/small/1619432437.webp', 'general_photo'),
+(57, 9, 'public/images/product/large/1619432657.webp', 'public/images/product/medium/1619432657.webp', 'public/images/product/small/1619432657.webp', 'feature_photo'),
+(58, 9, 'public/images/product/large/1619432658.webp', 'public/images/product/medium/1619432658.webp', 'public/images/product/small/1619432658.webp', 'general_photo'),
+(59, 10, 'public/images/product/large/1619432690.webp', 'public/images/product/medium/1619432690.webp', 'public/images/product/small/1619432690.webp', 'feature_photo'),
+(60, 10, 'public/images/product/large/1619432691.webp', 'public/images/product/medium/1619432691.webp', 'public/images/product/small/1619432691.webp', 'general_photo'),
+(61, 11, 'public/images/product/large/1619432774.webp', 'public/images/product/medium/1619432774.webp', 'public/images/product/small/1619432774.webp', 'feature_photo'),
+(62, 11, 'public/images/product/large/1619432775.webp', 'public/images/product/medium/1619432775.webp', 'public/images/product/small/1619432775.webp', 'general_photo'),
+(63, 12, 'public/images/product/large/1619432855.webp', 'public/images/product/medium/1619432855.webp', 'public/images/product/small/1619432855.webp', 'feature_photo'),
+(64, 12, 'public/images/product/large/1619432856.webp', 'public/images/product/medium/1619432856.webp', 'public/images/product/small/1619432856.webp', 'general_photo'),
+(65, 13, 'public/images/product/large/1619495038.webp', 'public/images/product/medium/1619495038.webp', 'public/images/product/small/1619495038.webp', 'feature_photo'),
+(66, 13, 'public/images/product/large/1619495039.webp', 'public/images/product/medium/1619495039.webp', 'public/images/product/small/1619495039.webp', 'general_photo'),
+(67, 14, 'public/images/product/large/1619495135.webp', 'public/images/product/medium/1619495135.webp', 'public/images/product/small/1619495135.webp', 'feature_photo'),
+(68, 14, 'public/images/product/large/1619495136.webp', 'public/images/product/medium/1619495136.webp', 'public/images/product/small/1619495136.webp', 'general_photo'),
+(69, 15, 'public/images/product/large/1619495271.webp', 'public/images/product/medium/1619495271.webp', 'public/images/product/small/1619495271.webp', 'feature_photo'),
+(70, 15, 'public/images/product/large/1619495272.webp', 'public/images/product/medium/1619495272.webp', 'public/images/product/small/1619495272.webp', 'general_photo'),
+(71, 16, 'public/images/product/large/1619495351.webp', 'public/images/product/medium/1619495351.webp', 'public/images/product/small/1619495351.webp', 'feature_photo'),
+(72, 16, 'public/images/product/large/1619495352.webp', 'public/images/product/medium/1619495352.webp', 'public/images/product/small/1619495352.webp', 'general_photo'),
+(73, 17, 'public/images/product/large/1619495634.webp', 'public/images/product/medium/1619495634.webp', 'public/images/product/small/1619495634.webp', 'feature_photo'),
+(74, 17, 'public/images/product/large/1619495635.webp', 'public/images/product/medium/1619495635.webp', 'public/images/product/small/1619495636.webp', 'general_photo'),
+(75, 18, 'public/images/product/large/1619495689.webp', 'public/images/product/medium/1619495689.webp', 'public/images/product/small/1619495689.webp', 'feature_photo'),
+(76, 18, 'public/images/product/large/1619495690.webp', 'public/images/product/medium/1619495690.webp', 'public/images/product/small/1619495690.webp', 'general_photo'),
+(77, 19, 'public/images/product/large/1619495811.webp', 'public/images/product/medium/1619495811.webp', 'public/images/product/small/1619495811.webp', 'feature_photo'),
+(78, 19, 'public/images/product/large/1619495812.webp', 'public/images/product/medium/1619495812.webp', 'public/images/product/small/1619495812.webp', 'general_photo'),
+(79, 20, 'public/images/product/large/1619495864.webp', 'public/images/product/medium/1619495864.webp', 'public/images/product/small/1619495864.webp', 'feature_photo'),
+(80, 20, 'public/images/product/large/1619495865.webp', 'public/images/product/medium/1619495865.webp', 'public/images/product/small/1619495865.webp', 'general_photo'),
+(81, 21, 'public/images/product/large/1619496408.webp', 'public/images/product/medium/1619496408.webp', 'public/images/product/small/1619496408.webp', 'feature_photo'),
+(82, 21, 'public/images/product/large/1619496409.webp', 'public/images/product/medium/1619496409.webp', 'public/images/product/small/1619496409.webp', 'general_photo'),
+(83, 22, 'public/images/product/large/1619496534.webp', 'public/images/product/medium/1619496534.webp', 'public/images/product/small/1619496534.webp', 'feature_photo'),
+(84, 22, 'public/images/product/large/1619496535.webp', 'public/images/product/medium/1619496536.webp', 'public/images/product/small/1619496536.webp', 'general_photo'),
+(85, 23, 'public/images/product/large/1619496614.webp', 'public/images/product/medium/1619496614.webp', 'public/images/product/small/1619496614.webp', 'feature_photo'),
+(86, 23, 'public/images/product/large/1619496615.webp', 'public/images/product/medium/1619496615.webp', 'public/images/product/small/1619496615.webp', 'general_photo'),
+(87, 24, 'public/images/product/large/1619496759.webp', 'public/images/product/medium/1619496760.webp', 'public/images/product/small/1619496760.webp', 'feature_photo'),
+(88, 24, 'public/images/product/large/1619496761.webp', 'public/images/product/medium/1619496761.webp', 'public/images/product/small/1619496761.webp', 'general_photo'),
+(89, 25, 'public/images/product/large/1619496820.webp', 'public/images/product/medium/1619496820.webp', 'public/images/product/small/1619496820.webp', 'feature_photo'),
+(90, 25, 'public/images/product/large/1619496821.webp', 'public/images/product/medium/1619496822.webp', 'public/images/product/small/1619496822.webp', 'general_photo'),
+(91, 26, 'public/images/product/large/1619497074.webp', 'public/images/product/medium/1619497074.webp', 'public/images/product/small/1619497074.webp', 'feature_photo'),
+(92, 26, 'public/images/product/large/1619497075.webp', 'public/images/product/medium/1619497075.webp', 'public/images/product/small/1619497075.webp', 'general_photo'),
+(93, 27, 'public/images/product/large/1619497126.webp', 'public/images/product/medium/1619497126.webp', 'public/images/product/small/1619497126.webp', 'feature_photo'),
+(94, 27, 'public/images/product/large/1619497127.webp', 'public/images/product/medium/1619497127.webp', 'public/images/product/small/1619497127.webp', 'general_photo'),
+(95, 28, 'public/images/product/large/1619497201.webp', 'public/images/product/medium/1619497201.webp', 'public/images/product/small/1619497201.webp', 'feature_photo'),
+(96, 28, 'public/images/product/large/1619497202.webp', 'public/images/product/medium/1619497202.webp', 'public/images/product/small/1619497202.webp', 'general_photo'),
+(97, 29, 'public/images/product/large/1619497268.webp', 'public/images/product/medium/1619497268.webp', 'public/images/product/small/1619497268.webp', 'feature_photo'),
+(98, 29, 'public/images/product/large/1619497269.webp', 'public/images/product/medium/1619497269.webp', 'public/images/product/small/1619497269.webp', 'general_photo'),
+(99, 30, 'public/images/product/large/1619497364.webp', 'public/images/product/medium/1619497365.webp', 'public/images/product/small/1619497365.webp', 'feature_photo'),
+(100, 31, 'public/images/product/large/1619497419.webp', 'public/images/product/medium/1619497420.webp', 'public/images/product/small/1619497420.webp', 'feature_photo'),
+(101, 32, 'public/images/product/large/1619497539.webp', 'public/images/product/medium/1619497539.webp', 'public/images/product/small/1619497539.webp', 'feature_photo'),
+(102, 33, 'public/images/product/large/1619497825.webp', 'public/images/product/medium/1619497825.webp', 'public/images/product/small/1619497825.webp', 'feature_photo'),
+(103, 33, 'public/images/product/large/1619497826.webp', 'public/images/product/medium/1619497826.webp', 'public/images/product/small/1619497826.webp', 'general_photo'),
+(104, 34, 'public/images/product/large/1619498324.webp', 'public/images/product/medium/1619498324.webp', 'public/images/product/small/1619498325.webp', 'feature_photo'),
+(105, 34, 'public/images/product/large/1619498326.webp', 'public/images/product/medium/1619498326.webp', 'public/images/product/small/1619498326.webp', 'general_photo'),
+(106, 35, 'public/images/product/large/1619498395.webp', 'public/images/product/medium/1619498395.webp', 'public/images/product/small/1619498396.webp', 'feature_photo'),
+(107, 35, 'public/images/product/large/1619498397.webp', 'public/images/product/medium/1619498397.webp', 'public/images/product/small/1619498397.webp', 'general_photo'),
+(108, 36, 'public/images/product/large/1619498874.webp', 'public/images/product/medium/1619498875.webp', 'public/images/product/small/1619498875.webp', 'feature_photo'),
+(109, 36, 'public/images/product/large/1619498876.webp', 'public/images/product/medium/1619498876.webp', 'public/images/product/small/1619498876.webp', 'general_photo'),
+(110, 37, 'public/images/product/large/1619499010.webp', 'public/images/product/medium/1619499010.webp', 'public/images/product/small/1619499010.webp', 'feature_photo'),
+(111, 37, 'public/images/product/large/1619499011.webp', 'public/images/product/medium/1619499011.webp', 'public/images/product/small/1619499012.webp', 'general_photo'),
+(112, 38, 'public/images/product/large/1619499117.webp', 'public/images/product/medium/1619499117.webp', 'public/images/product/small/1619499117.webp', 'feature_photo'),
+(113, 38, 'public/images/product/large/1619499118.webp', 'public/images/product/medium/1619499118.webp', 'public/images/product/small/1619499118.webp', 'general_photo'),
+(114, 39, 'public/images/product/large/1619499316.webp', 'public/images/product/medium/1619499316.webp', 'public/images/product/small/1619499317.webp', 'feature_photo'),
+(115, 39, 'public/images/product/large/1619499318.webp', 'public/images/product/medium/1619499318.webp', 'public/images/product/small/1619499318.webp', 'general_photo'),
+(116, 40, 'public/images/product/large/1619499443.webp', 'public/images/product/medium/1619499443.webp', 'public/images/product/small/1619499443.webp', 'feature_photo'),
+(117, 40, 'public/images/product/large/1619499444.webp', 'public/images/product/medium/1619499444.webp', 'public/images/product/small/1619499444.webp', 'general_photo'),
+(118, 41, 'public/images/product/large/1619499521.webp', 'public/images/product/medium/1619499521.webp', 'public/images/product/small/1619499521.webp', 'feature_photo'),
+(119, 41, 'public/images/product/large/1619499522.webp', 'public/images/product/medium/1619499522.webp', 'public/images/product/small/1619499522.webp', 'general_photo'),
+(120, 42, 'public/images/product/large/1619499602.webp', 'public/images/product/medium/1619499603.webp', 'public/images/product/small/1619499603.webp', 'feature_photo'),
+(121, 42, 'public/images/product/large/1619499604.webp', 'public/images/product/medium/1619499604.webp', 'public/images/product/small/1619499604.webp', 'general_photo'),
+(122, 43, 'public/images/product/large/1619499682.webp', 'public/images/product/medium/1619499682.webp', 'public/images/product/small/1619499682.webp', 'feature_photo'),
+(123, 43, 'public/images/product/large/1619499683.webp', 'public/images/product/medium/1619499684.webp', 'public/images/product/small/1619499684.webp', 'general_photo'),
+(124, 44, 'public/images/product/large/1619499738.webp', 'public/images/product/medium/1619499739.webp', 'public/images/product/small/1619499739.webp', 'feature_photo'),
+(125, 44, 'public/images/product/large/1619499740.webp', 'public/images/product/medium/1619499740.webp', 'public/images/product/small/1619499740.webp', 'general_photo'),
+(126, 45, 'public/images/product/large/1619499905.webp', 'public/images/product/medium/1619499905.webp', 'public/images/product/small/1619499905.webp', 'feature_photo'),
+(127, 45, 'public/images/product/large/1619499906.webp', 'public/images/product/medium/1619499906.webp', 'public/images/product/small/1619499906.webp', 'general_photo'),
+(128, 46, 'public/images/product/large/1619499994.webp', 'public/images/product/medium/1619499994.webp', 'public/images/product/small/1619499994.webp', 'feature_photo'),
+(129, 46, 'public/images/product/large/1619499995.webp', 'public/images/product/medium/1619499995.webp', 'public/images/product/small/1619499995.webp', 'general_photo'),
+(130, 47, 'public/images/product/large/1619500028.webp', 'public/images/product/medium/1619500028.webp', 'public/images/product/small/1619500028.webp', 'feature_photo'),
+(131, 47, 'public/images/product/large/1619500029.webp', 'public/images/product/medium/1619500030.webp', 'public/images/product/small/1619500030.webp', 'general_photo'),
+(132, 48, 'public/images/product/large/1619500399.webp', 'public/images/product/medium/1619500399.webp', 'public/images/product/small/1619500399.webp', 'feature_photo'),
+(133, 48, 'public/images/product/large/1619500400.webp', 'public/images/product/medium/1619500400.webp', 'public/images/product/small/1619500400.webp', 'general_photo'),
+(134, 49, 'public/images/product/large/1619500442.webp', 'public/images/product/medium/1619500442.webp', 'public/images/product/small/1619500442.webp', 'feature_photo'),
+(135, 49, 'public/images/product/large/1619500443.webp', 'public/images/product/medium/1619500443.webp', 'public/images/product/small/1619500443.webp', 'general_photo'),
+(136, 50, 'public/images/product/large/1619500492.webp', 'public/images/product/medium/1619500492.webp', 'public/images/product/small/1619500492.webp', 'feature_photo'),
+(137, 50, 'public/images/product/large/1619500493.webp', 'public/images/product/medium/1619500493.webp', 'public/images/product/small/1619500493.webp', 'general_photo'),
+(138, 51, 'public/images/product/large/1619500565.webp', 'public/images/product/medium/1619500565.webp', 'public/images/product/small/1619500565.webp', 'feature_photo'),
+(139, 51, 'public/images/product/large/1619500566.webp', 'public/images/product/medium/1619500566.webp', 'public/images/product/small/1619500566.webp', 'general_photo'),
+(140, 52, 'public/images/product/large/1619500606.webp', 'public/images/product/medium/1619500606.webp', 'public/images/product/small/1619500606.webp', 'feature_photo'),
+(141, 52, 'public/images/product/large/1619500607.webp', 'public/images/product/medium/1619500607.webp', 'public/images/product/small/1619500607.webp', 'general_photo'),
+(142, 53, 'public/images/product/large/1619500647.webp', 'public/images/product/medium/1619500647.webp', 'public/images/product/small/1619500647.webp', 'feature_photo'),
+(143, 53, 'public/images/product/large/1619500648.webp', 'public/images/product/medium/1619500648.webp', 'public/images/product/small/1619500648.webp', 'general_photo');
 
 -- --------------------------------------------------------
 
@@ -892,14 +1092,29 @@ INSERT INTO `product_sizes` (`id`, `product_id`, `size_id`) VALUES
 (28, 6, 4),
 (29, 6, 3),
 (30, 6, 2),
-(38, 1, 4),
-(43, 3, 4),
-(44, 3, 3),
-(45, 3, 2),
 (47, 4, 4),
 (48, 4, 3),
 (49, 4, 2),
-(56, 2, 2);
+(57, 2, 2),
+(61, 3, 4),
+(62, 3, 3),
+(63, 3, 2),
+(65, 8, 3),
+(66, 7, 4),
+(67, 9, 2),
+(69, 11, 3),
+(73, 14, 4),
+(74, 14, 3),
+(75, 14, 2),
+(76, 1, 4),
+(77, 13, 4),
+(78, 13, 3),
+(79, 13, 2),
+(81, 10, 3),
+(82, 24, 2),
+(83, 28, 4),
+(84, 28, 3),
+(85, 28, 2);
 
 -- --------------------------------------------------------
 
@@ -951,7 +1166,8 @@ INSERT INTO `sap_items` (`id`, `product_id`, `purchase_price`, `sale_price`, `qu
 (1, 1, '1230.00', '1230.00', '2.00', '2460.00', 1, '2021-04-22'),
 (2, 3, '3256.00', '3256.00', '1.00', '3256.00', 2, '2021-04-24'),
 (3, 3, '3256.00', '3256.00', '1.00', '3256.00', 3, '2021-04-24'),
-(4, 3, '3256.00', '3256.00', '1.00', '3256.00', 4, '2021-04-24');
+(4, 3, '3256.00', '3256.00', '1.00', '3256.00', 4, '2021-04-24'),
+(5, 23, '3600.00', '4000.00', '10.00', '40000.00', 5, '2021-04-27');
 
 -- --------------------------------------------------------
 
@@ -980,7 +1196,8 @@ INSERT INTO `sap_record` (`id`, `supplier_id`, `supplier_name`, `discount`, `pai
 (1, 0, 'Developer', '0.00', '2460.00', '2460.00', '2460.00', '2.00', '2021-04-22', 0),
 (2, 0, 'Developer', '0.00', '3256.00', '3256.00', '3256.00', '1.00', '2021-04-24', 0),
 (3, 0, 'Developer', '0.00', '3256.00', '3256.00', '3256.00', '1.00', '2021-04-24', 0),
-(4, 0, 'Developer', '0.00', '3256.00', '3256.00', '3256.00', '1.00', '2021-04-24', 0);
+(4, 0, 'Developer', '0.00', '3256.00', '3256.00', '3256.00', '1.00', '2021-04-24', 0),
+(5, 0, 'Abdullah al Hasan', '0.00', '40000.00', '40000.00', '40000.00', '10.00', '2021-04-27', 0);
 
 -- --------------------------------------------------------
 
@@ -1107,13 +1324,11 @@ CREATE TABLE `sliders` (
 --
 
 INSERT INTO `sliders` (`id`, `name`, `path`, `position`, `is_offer`, `status`) VALUES
-(16, 'welcome to our service center', 'backend/images/slider/gallery16128643080.jpg', 0, 0, 0),
 (17, 'welcome to akash electronics', 'backend/images/slider/gallery16171648680.jpg', 0, 0, 0),
 (20, 'welcome to akash electronics', 'backend/images/slider/gallery16171648970.jpg', 0, 1, 0),
 (21, 'mobile-phone', 'backend/images/slider/gallery16181983910.jpg', 0, 0, 1),
 (22, 'beautiful women', 'backend/images/slider/gallery16181984170.jpg', 0, 0, 1),
 (23, 'beautiful women', 'backend/images/slider/gallery16181984240.jpg', 0, 0, 1),
-(24, 'patient', 'public/images/slider/gallery16182031560.jpg', 0, 1, 0),
 (25, 'offer', 'public/images/slider/gallery16182031100.jpg', 0, 1, 1),
 (26, 'offer', 'public/images/slider/gallery16182031240.jpg', 0, 1, 1),
 (27, 'offer', 'public/images/slider/gallery16182031330.jpg', 0, 1, 1);
@@ -1179,7 +1394,8 @@ CREATE TABLE `stock` (
 
 INSERT INTO `stock` (`id`, `product_id`, `sale_price`, `purchase_price`, `quantity`) VALUES
 (1, 1, '1230.00', '1230.00', '2.00'),
-(2, 3, '3256.00', '3256.00', '3.00');
+(2, 3, '3256.00', '3256.00', '3.00'),
+(3, 23, '4000.00', '3600.00', '10.00');
 
 -- --------------------------------------------------------
 
@@ -1231,8 +1447,10 @@ CREATE TABLE `subscribers` (
 --
 
 INSERT INTO `subscribers` (`id`, `name`, `gender`, `birthday`, `about`, `website`, `facecbook`, `twitter`, `email`, `username`, `password`, `image`, `mobile`, `status`) VALUES
-(1, 'Developer', NULL, NULL, NULL, NULL, NULL, NULL, 'developer@gmail.com', '01983667657', '6d9c29d93f59a451881750f35cb18dc1', NULL, '01983667657', 'active'),
-(2, 'Aminur Islam', NULL, NULL, NULL, NULL, NULL, NULL, 'khetlal20land@gmail.com', '01910217482', '6d9c29d93f59a451881750f35cb18dc1', NULL, '01910217482', 'active');
+(1, 'Developer', NULL, NULL, NULL, NULL, NULL, NULL, 'developer@gmail.com', '01983667657', '6d9c29d93f59a451881750f35cb18dc1', NULL, '01983667657', 'deactive'),
+(2, 'Aminur Islam', NULL, NULL, NULL, NULL, NULL, NULL, 'khetlal20land@gmail.com', '01910217482', '6d9c29d93f59a451881750f35cb18dc1', NULL, '01910217482', 'deactive'),
+(3, 'Abdulaha Islam', NULL, NULL, NULL, NULL, NULL, NULL, NULL, '01715246330', '6d9c29d93f59a451881750f35cb18dc1', NULL, '01715246330', 'active'),
+(4, 'Jolene Tate', NULL, NULL, NULL, NULL, NULL, NULL, NULL, '01969552552', '6d9c29d93f59a451881750f35cb18dc1', NULL, '01969552552', 'active');
 
 -- --------------------------------------------------------
 
@@ -1289,7 +1507,8 @@ INSERT INTO `supplier_transaction` (`id`, `supplier_id`, `amount`, `trx_type`, `
 (11, 0, '2460.00', 'paid', 'cash', 'Developer', '2021-04-22', 1, 0),
 (12, 0, '3256.00', 'paid', 'cash', 'Developer', '2021-04-24', 2, 0),
 (13, 0, '3256.00', 'paid', 'cash', 'Developer', '2021-04-24', 3, 0),
-(14, 0, '3256.00', 'paid', 'cash', 'Developer', '2021-04-24', 4, 0);
+(14, 0, '3256.00', 'paid', 'cash', 'Developer', '2021-04-24', 4, 0),
+(15, 0, '40000.00', 'paid', 'cash', 'Abdullah al Hasan', '2021-04-27', 5, 0);
 
 -- --------------------------------------------------------
 
@@ -1340,7 +1559,8 @@ INSERT INTO `system_action_menus` (`id`, `parent_id`, `dropdown_id`, `name`, `ty
 (111, 64, 124, 'Delete', 'danger', 'supplier/supplier/trash', 0, 'fa fa-trash-o', 1),
 (112, 65, 126, 'View', 'info', 'purchase/purchase/view', 0, 'fa fa-eye', 1),
 (113, 65, 126, 'Edit', 'warning', 'purchase/purchase/edit', 0, 'fa fa-pencil-square-o', 1),
-(114, 65, 126, 'Delete', 'danger', 'purchase/purchase/delete', 0, 'fa fa-trash-o', 1);
+(114, 65, 126, 'Delete', 'danger', 'purchase/purchase/delete', 0, 'fa fa-trash-o', 1),
+(115, 68, 0, 'Deactive', 'danger', 'subscriber/user/deactive', 0, 'fa fa-minus-square-o', 1);
 
 -- --------------------------------------------------------
 
@@ -1379,7 +1599,9 @@ INSERT INTO `system_aside_menus` (`id`, `name`, `controller_path`, `selector`, `
 (64, 'Supplier', '', 'supplier', 'fa fa-user', 1, 1, 4, 1),
 (65, 'Purchase', '', 'purchase', 'fa fa-shopping-cart', 1, 1, 2, 1),
 (66, 'SMS', '', 'sms', 'fa fa-paper-plane', 1, 1, 5, 1),
-(67, 'Stock', 'stock/stock', 'stock', 'fa fa-archive', 0, 0, 3, 1);
+(67, 'Stock', 'stock/stock', 'stock', 'fa fa-archive', 0, 0, 3, 1),
+(68, 'User', 'subscriber/user', 'user_menu', 'fa fa-users', 0, 0, 0, 1),
+(69, 'Pages', 'pages/pages', 'pages', 'fa fa-file', 0, 1, 0, 1);
 
 -- --------------------------------------------------------
 
@@ -1410,22 +1632,22 @@ INSERT INTO `system_aside_menu_dropdowns` (`id`, `parent_id`, `name`, `selector`
 (53, 22, 'Image Gallery', 'Image', 'gallery/gallery_controller/index', 'fa fa-picture-o', 1, 1),
 (81, 34, 'Header', 'header', 'setting/setting/header', 'fa fa-angle-right', 0, 1),
 (82, 34, 'Footer', 'setting', 'setting/setting/footer', 'fa fa-angle-right', 1, 1),
-(111, 58, 'Add', 'add', 'category/category/add', 'fa fa-angle-right', 0, 1),
-(112, 58, 'All', 'all', 'category/category', 'fa fa-angle-right', 1, 1),
-(113, 59, 'Add', 'add', 'brand/brand/add', 'fa fa-angle-right', 0, 1),
-(114, 59, 'All', 'all', 'brand/brand', 'fa fa-angle-right', 1, 1),
-(115, 60, 'Add', 'add', 'subcategory/subcategory/add', 'fa fa-angle-right', 0, 1),
-(116, 60, 'All', 'All', 'subcategory/subcategory', 'fa fa-angle-right', 1, 1),
-(117, 61, 'Add', 'add', 'product/product/add', 'fa fa-angle-right', 0, 1),
-(118, 61, 'All', 'all', 'product/product/', 'fa fa-angle-right', 1, 1),
-(119, 62, 'Add', 'add', 'color/color/add', 'fa fa-angle-right', 0, 1),
-(120, 62, 'All', 'all', 'color/color/', 'fa fa-angle-right', 1, 1),
-(121, 63, 'Add', 'add', 'size/size/add', 'fa fa-angle-right', 0, 1),
-(122, 63, 'All', 'all', 'size/size', 'fa fa-angle-right', 1, 1),
-(123, 64, 'Add', 'add', 'supplier/supplier/add', 'fa fa-angle-right', 0, 1),
-(124, 64, 'All', 'all', 'supplier/supplier', 'fa fa-angle-right', 1, 1),
-(125, 65, 'Add', 'add', 'purchase/purchase/add', 'fa fa-angle-right', 0, 1),
-(126, 65, 'All', 'all', 'purchase/purchase', 'fa fa-angle-right', 1, 1),
+(111, 58, 'Add Category', 'add', 'category/category/add', 'fa fa-angle-right', 0, 1),
+(112, 58, 'All Category', 'all', 'category/category', 'fa fa-angle-right', 1, 1),
+(113, 59, 'Add Brand', 'add', 'brand/brand/add', 'fa fa-angle-right', 0, 1),
+(114, 59, 'All Brand', 'all', 'brand/brand', 'fa fa-angle-right', 1, 1),
+(115, 60, 'Add Sub-Category', 'add', 'subcategory/subcategory/add', 'fa fa-angle-right', 0, 1),
+(116, 60, 'All Sub-Category', 'All', 'subcategory/subcategory', 'fa fa-angle-right', 1, 1),
+(117, 61, 'Add Product', 'add', 'product/product/add', 'fa fa-angle-right', 0, 1),
+(118, 61, 'All Products', 'all', 'product/product/', 'fa fa-angle-right', 1, 1),
+(119, 62, 'Add Color', 'add', 'color/color/add', 'fa fa-angle-right', 0, 1),
+(120, 62, 'All Color', 'all', 'color/color/', 'fa fa-angle-right', 1, 1),
+(121, 63, 'Add Size', 'add', 'size/size/add', 'fa fa-angle-right', 0, 1),
+(122, 63, 'All Size', 'all', 'size/size', 'fa fa-angle-right', 1, 1),
+(123, 64, 'Add Supplier', 'add', 'supplier/supplier/add', 'fa fa-angle-right', 0, 1),
+(124, 64, 'All Supplier', 'all', 'supplier/supplier', 'fa fa-angle-right', 1, 1),
+(125, 65, 'Add Purchase', 'add', 'purchase/purchase/add', 'fa fa-angle-right', 0, 1),
+(126, 65, 'All Purchase', 'all', 'purchase/purchase', 'fa fa-angle-right', 1, 1),
 (127, 66, 'Send SMS', 'send_sms', 'sms/Sms/send_sms', 'fa fa-angle-right', 2, 1),
 (128, 66, 'SMS Report', 'sms_report', 'sms/Sms/sms_report', 'fa fa-angle-right', 1, 1),
 (129, 66, 'Custom SMS', 'custom_sms', 'sms/Sms/custom_sms', 'fa fa-angle-right', 0, 1);
@@ -1451,7 +1673,7 @@ CREATE TABLE `system_privileges` (
 INSERT INTO `system_privileges` (`id`, `admin_id`, `aside_menu_id`, `aside_menu_dropdown_id`, `action_menu_id`) VALUES
 (13, 10, '[\"5\",\"4\",\"3\",\"1\"]', '[\"11\",\"10\",\"9\",\"8\",\"7\",\"6\",\"5\"]', '[\"6\",\"5\",\"4\",\"3\",\"2\",\"1\"]'),
 (14, 12, '[\"7\",\"6\",\"2\"]', '[\"15\",\"14\",\"13\",\"12\",\"1\"]', '[\"11\",\"10\",\"9\",\"14\",\"13\"]'),
-(15, 13, '[\"67\",\"66\",\"65\",\"64\",\"63\",\"62\",\"61\",\"60\",\"59\",\"58\",\"42\",\"34\",\"21\"]', '[\"129\",\"128\",\"127\",\"126\",\"125\",\"124\",\"123\",\"122\",\"121\",\"120\",\"119\",\"118\",\"117\",\"116\",\"115\",\"114\",\"113\",\"112\",\"111\",\"82\",\"81\",\"51\",\"50\",\"49\"]', '[\"114\",\"113\",\"112\",\"111\",\"110\",\"104\",\"103\",\"106\",\"105\",\"109\",\"108\",\"107\",\"102\",\"101\",\"100\",\"99\",\"98\",\"97\",\"60\",\"59\",\"58\",\"57\"]');
+(15, 13, '[\"69\",\"68\",\"67\",\"66\",\"65\",\"64\",\"63\",\"62\",\"61\",\"60\",\"59\",\"58\",\"42\",\"34\",\"21\"]', '[\"129\",\"128\",\"127\",\"126\",\"125\",\"124\",\"123\",\"122\",\"121\",\"120\",\"119\",\"118\",\"117\",\"116\",\"115\",\"114\",\"113\",\"112\",\"111\",\"82\",\"81\",\"51\",\"50\",\"49\"]', '[\"114\",\"113\",\"112\",\"111\",\"110\",\"104\",\"103\",\"106\",\"105\",\"109\",\"108\",\"107\",\"102\",\"101\",\"100\",\"99\",\"98\",\"97\",\"60\",\"59\",\"58\",\"57\"]');
 
 -- --------------------------------------------------------
 
@@ -1765,25 +1987,25 @@ ALTER TABLE `image_gallery`
 -- AUTO_INCREMENT for table `products`
 --
 ALTER TABLE `products`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=54;
 
 --
 -- AUTO_INCREMENT for table `product_colors`
 --
 ALTER TABLE `product_colors`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=57;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=97;
 
 --
 -- AUTO_INCREMENT for table `product_images`
 --
 ALTER TABLE `product_images`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=47;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=144;
 
 --
 -- AUTO_INCREMENT for table `product_sizes`
 --
 ALTER TABLE `product_sizes`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=57;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=86;
 
 --
 -- AUTO_INCREMENT for table `profiles`
@@ -1795,13 +2017,13 @@ ALTER TABLE `profiles`
 -- AUTO_INCREMENT for table `sap_items`
 --
 ALTER TABLE `sap_items`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT for table `sap_record`
 --
 ALTER TABLE `sap_record`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT for table `site_meta`
@@ -1831,7 +2053,7 @@ ALTER TABLE `sms_record`
 -- AUTO_INCREMENT for table `stock`
 --
 ALTER TABLE `stock`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `subcategories`
@@ -1843,7 +2065,7 @@ ALTER TABLE `subcategories`
 -- AUTO_INCREMENT for table `subscribers`
 --
 ALTER TABLE `subscribers`
-  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT for table `suppliers`
@@ -1855,19 +2077,19 @@ ALTER TABLE `suppliers`
 -- AUTO_INCREMENT for table `supplier_transaction`
 --
 ALTER TABLE `supplier_transaction`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
 
 --
 -- AUTO_INCREMENT for table `system_action_menus`
 --
 ALTER TABLE `system_action_menus`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=115;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=116;
 
 --
 -- AUTO_INCREMENT for table `system_aside_menus`
 --
 ALTER TABLE `system_aside_menus`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=68;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=70;
 
 --
 -- AUTO_INCREMENT for table `system_aside_menu_dropdowns`

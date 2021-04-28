@@ -1,11 +1,12 @@
-import Vuex from 'vuex';
-import Vue from 'vue';
+import Vue  from "./module/vue.js";
 
 Vue.use(Vuex);
 
-export const store = new Vuex.Store({
+const store = new Vuex.Store({
     state: {
-        url : '',
+        url  	  : '',
+        isLogin   : false,
+        cart 	  : []
     },
     getters: {
 
@@ -14,3 +15,5 @@ export const store = new Vuex.Store({
 
     }
 });
+
+export default store;
