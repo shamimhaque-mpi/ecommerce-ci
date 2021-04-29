@@ -56,8 +56,21 @@
     }
 
     /* Details Page Controller */
-    public function details() {
+    public function details($btoa) {
         $this->data['title'] = "Details";
+
+        $product_id = base64_decode($btoa);
+        $product    = getProducts(['products.id'=>$product_id]);
+        //
+        $this->data['product'] = $product = ($product ? $product[0] : false);
+        /*
+         * ***********************
+         *  Featch Similar 
+         *  Products
+         * *****************
+        */
+        $where_semilar = ($product ? ['products.cat_id'=>$product->cat_id]:[]);
+        $this->data['similar_products'] = getProducts($where_semilar, ['limit'=>4]);
 
         return view('frontend.pages.details');
     }

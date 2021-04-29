@@ -49,6 +49,7 @@
                             <div class="user_menu" data-toggle="dropdown">
                                 <i class="icon ion-md-contact"></i>
                             </div>
+                            <span class="user_name"><?=(user()->name)?></span>
                             <ul class="dropdown-menu">
                                 <li><a href="<?=site_url('user-panel/dashboard')?>"><i class="icon ion-ios-speedometer"></i> Dashboard</a></li>
                                 <li><a href="<?=site_url('user-panel/profile')?>"><i class="icon ion-md-person-add"></i> Profile</a></li>
@@ -92,11 +93,9 @@
                             </button>
                         </form>
 
-                        <collect-list
-                            is_login="<?php echo (user()?true:false)?>"
-                            url="<?=base_url('/');?>"
-                        ></collect-list>
-
+                        <collect-list is_login="<?php echo (user()?true:false)?>"
+                            url="<?=base_url('/');?>">
+                        </collect-list>
                     </div>
                 </div>
             </div>

@@ -19,7 +19,7 @@ export default {
 		            <img :src="url+item.image" alt="">
 		            <div class="name_title">
 		                <h5>{{item.title}}</h5>
-		                <p>{{item.price}} Tk</p>
+		                <p>{{price(item.price, item.discount)}} Tk</p>
 		            </div>
 		            <button class="purchase_close" @click.prevent="remove(item.code)">
 		                <i class="icon ion-ios-close"></i>
@@ -34,7 +34,7 @@ export default {
 		        </div>
 		        <div class="order">
 		            <a :href="url+'view_cart'">View cart</a>
-		            <a :href="url+'checkout'">Checkout</a>
+		            <a :href="url+'checkout'" @click.prevent="checkout()">Checkout</a>
 		        </div>
 		    </div>
 		</div>
@@ -72,6 +72,15 @@ export default {
 				this.$store.state.cart = response.data;
 			}})
 			.catch(err=>console.log(err));
+		},
+		price:function(price, discount=0){
+			return parseFloat(price - ((price/100)*discount)).toFixed(2);
+		},
+		checkout:function(){
+			if(this.$store.state.isLogin==1)
+				window.location.href=this.url+'checkout';
+			else 
+				window.location.href=this.url+'login';
 		}
 	},
 	computed:{
@@ -85,9 +94,10 @@ export default {
 		subtotal:function(){
 			var subtotal = 0;
 			Object.values(this.$store.state.cart).forEach(item=>{
-				subtotal += (item.price * item.quantity);
+				var less = (item.price/100)*item.discount;
+				subtotal += ((item.price-less) * item.quantity);
 			});
-			return subtotal;
+			return parseFloat(subtotal).toFixed(2);
 		}
 	}
 }

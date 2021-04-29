@@ -174,11 +174,16 @@
 
                         <div class="col-md-12">
                             <div class="form-group">
-                                <label class="control-label">Description <span class="req">*</span></label>
+                                <label class="control-label">Short Description <span class="req">*</span></label>
+                                <textarea name="short_description" class="form-control" rows="10" required></textarea>
+                            </div>
+                        </div>
+
+                        <div class="col-md-12">
+                            <div class="form-group">
+                                <label class="control-label">Explain <span class="req">*</span></label>
                                 <!-- <textarea name="description" class="form-control" rows="10" required></textarea> -->
-                                <form method="post">
-                                    <textarea id="mytextarea">Hello, World!</textarea>
-                                </form>
+                                <textarea id="mytextarea" name="description"></textarea>
                             </div>
                         </div>
                     </div>
@@ -228,8 +233,9 @@
 </div>
 
 
-    <script>
-      tinymce.init({
-        selector: '#mytextarea'
-      });
-    </script>
+<script>
+  tinymce.init({
+    selector: '#mytextarea',
+    height : "480"
+  });
+</script>

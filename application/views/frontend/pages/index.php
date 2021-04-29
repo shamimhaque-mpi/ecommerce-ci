@@ -45,6 +45,7 @@
 <!-- header section end -->
 
 
+
 <!-- categories section start -->
 <section class="categories_section">
     <div class="container">
@@ -61,7 +62,8 @@
 <!-- categories section end -->
 
 
-<!-- product section start -->
+
+<!-- featured product start -->
 <?php if(!empty($feature_products)){ ?>
 <section class="product_section">
     <div class="container">
@@ -88,26 +90,23 @@
                     <?php }?>
                     <a href="<?=site_url("products/".base64_encode($row->id)."/".(str_replace(' ', '-', $row->title)))?>" class="cover"></a>
                 </figure>
-
                 <div class="product_title">
                     <h5><a href="<?=site_url("products/".base64_encode($row->id)."/".(str_replace(' ', '-', $row->title)))?>"><?=($row->title)?></a></h5>
                 </div>
-
             </div>
             <?php }} ?>
         </div>
     </div>
 </section>
 <?php } ?>
-<!-- product section end -->
+<!-- featured product end -->
 
 
 
 <!-- product section start -->
-<?php
-    if(!empty($category_wise)) foreach($category_wise as $row) {
-        $products = getProducts(['products.cat_id'=>$row->id, 'products.feature_product'=>'no'], ['limit'=>6]);
-        if(!empty($products)){
+<?php if(!empty($category_wise)) foreach($category_wise as $row) {
+    $products = getProducts(['products.cat_id'=>$row->id, 'products.feature_product'=>'no'], ['limit'=>6]);
+    if(!empty($products)){
 ?>
 <section class="product_section">
     <div class="container">
@@ -118,9 +117,8 @@
             <?php } ?>
         </div>
         <div class="product_grid">
-            <?php
-                foreach($products as $key=>$row){
-                    if(($key+1)!=6){
+            <?php foreach($products as $key=>$row){
+                if(($key+1)!=6){
             ?>
             <div class="product_box">
                 <?php if($row->quantity==0){ ?>
@@ -152,8 +150,11 @@
                     <h5><a href="<?=site_url("products/".base64_encode($row->id)."/".(str_replace(' ', '-', $row->title)))?>"><?=($row->title)?></a></h5>
                     <?php if($row->sale_price){ ?>
                     <div class="footer_price">
-                        <h4><?=($row->sale_price)?> Tk <?=($row->discount > 0 ? "<del>{$row->discount} Tk</del>":'')?></h4>
-
+                        <h4>
+                            <?php if($row->sale_price){ if($row->discount > 0){ ?>
+                                ৳<?=($row->sale_price - (($row->sale_price/100)*$row->discount))?><del>৳<?=($row->sale_price)?></del>
+                            <?php } else{ echo "৳".$row->sale_price; } } ?>
+                        </h4>
                         <div class="raring">
                             <i class="icon ion-md-star"></i>
                             <i class="icon ion-md-star"></i>

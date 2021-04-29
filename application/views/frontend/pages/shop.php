@@ -6,6 +6,28 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-3 col-md-4">
+                <!-- price filter -->
+                <div class="product_aside">
+                    <h4 class="aside_title">Filter By Price</h4>
+                    <div class="price_filter">
+                        <div class="range_box">
+                            <input value="10" min="0" max="100" step="1" type="range">
+                            <input value="80" min="0" max="100" step="1" type="range">
+                        </div>
+                        <div class="price_value">
+                            <div class="form_price">
+                                <span>From:</span>
+                                <input type="number" value="10" min="0" max="100" readonly> Tk
+                            </div>
+                            <div class="to_price">
+                                <span>To:</span>
+                                <input type="number" value="80" min="0" max="100" readonly> Tk
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- product aside -->
                 <div class="product_aside">
                     <h4 class="aside_title">Filter By Category</h4>
                     <div class="product_menu">
@@ -18,6 +40,52 @@
                             <?php } ?>
                         </ul>
                     </div>
+                </div>
+
+                <!-- rating filter -->
+                <div class="product_aside">
+                    <h4 class="aside_title">Filter By Rating</h4>
+                    <ul class="rating_value">
+                        <li><a href="#">
+                            <i class="icon ion-md-star"></i>
+                            <i class="icon ion-md-star"></i>
+                            <i class="icon ion-md-star"></i>
+                            <i class="icon ion-md-star"></i>
+                            <i class="icon ion-md-star"></i>
+                        </a></li>
+                        <li><a href="#">
+                            <i class="icon ion-md-star"></i>
+                            <i class="icon ion-md-star"></i>
+                            <i class="icon ion-md-star"></i>
+                            <i class="icon ion-md-star"></i>
+                            <i class="icon ion-md-star-outline"></i>
+                            <span>And Up</span>
+                        </a></li>
+                        <li><a href="#">
+                            <i class="icon ion-md-star"></i>
+                            <i class="icon ion-md-star"></i>
+                            <i class="icon ion-md-star"></i>
+                            <i class="icon ion-md-star-outline"></i>
+                            <i class="icon ion-md-star-outline"></i>
+                            <span>And Up</span>
+                        </a></li>
+                        <li><a href="#">
+                            <i class="icon ion-md-star"></i>
+                            <i class="icon ion-md-star"></i>
+                            <i class="icon ion-md-star-outline"></i>
+                            <i class="icon ion-md-star-outline"></i>
+                            <i class="icon ion-md-star-outline"></i>
+                            <span>And Up</span>
+                        </a></li>
+                        <li><a href="#">
+                            <i class="icon ion-md-star"></i>
+                            <i class="icon ion-md-star-outline"></i>
+                            <i class="icon ion-md-star-outline"></i>
+                            <i class="icon ion-md-star-outline"></i>
+                            <i class="icon ion-md-star-outline"></i>
+                            <span>And Up</span>
+                        </a></li>
+                    </ul>
                 </div>
             </div>
             <div class="col-lg-9 col-md-8">
@@ -59,7 +127,16 @@
 
                         <div class="product_title">
                             <h5><a href="<?=site_url("products/".base64_encode($row->id)."/".(str_replace(' ', '-', $row->title)))?>"><?=($row->title)?></a></h5>
-                            <h4><?=($row->sale_price)?> Tk <?=($row->discount > 0 ? "<del>{$row->discount} Tk</del>":'')?></h4>
+                            <div class="footer_price">
+                                <h4><?=($row->sale_price)?> Tk <?=($row->discount > 0 ? "<del>{$row->discount} Tk</del>":'')?></h4>
+                                <div class="raring">
+                                    <i class="icon ion-md-star"></i>
+                                    <i class="icon ion-md-star"></i>
+                                    <i class="icon ion-md-star"></i>
+                                    <i class="icon ion-md-star-half"></i>
+                                    <i class="icon ion-md-star-outline"></i>
+                                </div>
+                            </div>
                         </div>
                     </div>
                     <?php }} ?>

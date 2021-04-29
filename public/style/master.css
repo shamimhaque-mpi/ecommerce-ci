@@ -123,11 +123,20 @@ body {padding-top: 176px;}
     font-size: 19px;
     color: #EA232A;
     display: flex;
-    border-radius: 50%;
-    text-align: center;
     height: 30px;
     width: 30px;
     margin-left: 12px;
+    text-align: center;
+    border-radius: 50%;
+    position: relative;
+}
+.top_nav .user_path .user_name {
+    transform: translate(-100%);
+    position: absolute;
+    left: 6px;
+    top: 2px;
+    color: #fff;
+    white-space: nowrap;
 }
 .top_nav .user_path .dropdown-menu {
     box-shadow: 0 2px 8px 0 #001e32;
@@ -218,7 +227,7 @@ body {padding-top: 176px;}
     max-width: 119px;
     padding: 0 6px;
     border-radius: 0;
-    font-size: 15px;
+    font-size: 16px;
     cursor: pointer;
     background: #F3F3F3;
     transition: all .2s;

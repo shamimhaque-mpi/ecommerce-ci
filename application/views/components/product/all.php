@@ -56,7 +56,7 @@
                         <th>Brand</th>
                         <th>Category</th>
                         <th>Min-QTY</th>
-                        <th>Discount</th>
+                        <th>Discount(%)</th>
                         <th>Price</th>
                         <th>F. Product</th>
                         <th>Status</th>

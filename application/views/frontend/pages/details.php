@@ -6,34 +6,34 @@
     <div class="container">
         <div class="row">
             <div class="col-xl-9 col-lg-8">
+                <?php 
+                    if($product){ 
+                        $images = getImages($product->id);
+                ?>
                 <div class="product_div">
                     <div class="row">
                         <div class="col-md-6">
                             <div class="product_images">
-                                <img id="img_01" src="<?=site_url('public/images/product/item-1.jpg')?>" data-zoom-image="<?=site_url('public/images/product/item-1.jpg')?>" alt="">
+                                <img id="img_01" src="<?=site_url(str_replace('medium', 'large', $product->feature_photo))?>" data-zoom-image="<?=site_url(str_replace('medium', 'large', $product->feature_photo))?>" alt="">
                             </div>
 
                             <div class="owl-carousel tabs_product" id="gal1">
-                                <a href="#" data-update="" data-image="<?=site_url('public/images/product/item-1.jpg')?>" data-zoom-image="<?=site_url('public/images/product/item-1.jpg')?>">
-                                    <img src="<?=site_url('public/images/product/item-1.jpg')?>" alt="">
+                                <?php if($images) foreach($images as $img){ ?>
+                                <a href="#" data-update="" data-image="<?=site_url($img->large)?>" data-zoom-image="<?=site_url($img->large)?>">
+                                    <img src="<?=site_url($img->small)?>" alt="">
                                 </a>
-                                <a href="#" data-update="" data-image="<?=site_url('public/images/product/item-2.jpg')?>" data-zoom-image="<?=site_url('public/images/product/item-2.jpg')?>">
-                                    <img src="<?=site_url('public/images/product/item-2.jpg')?>" alt="">
-                                </a>
-                                <a href="#" data-update="" data-image="<?=site_url('public/images/product/item-3.jpg')?>" data-zoom-image="<?=site_url('public/images/product/item-3.jpg')?>">
-                                    <img src="<?=site_url('public/images/product/item-3.jpg')?>" alt="">
-                                </a>
-                                <a href="#" data-update="" data-image="<?=site_url('public/images/product/item-4.jpg')?>" data-zoom-image="<?=site_url('public/images/product/item-4.jpg')?>">
-                                    <img src="<?=site_url('public/images/product/item-4.jpg')?>" alt="">
-                                </a>
+                                <?php } ?>
                             </div>
                         </div>
                         <div class="col-md-6">
                             <div class="product_details">
-                                <h4>Product Title Name</h4>
-                                <h5 class="price"><del>৳24,900</del>৳14,900</h5>
-                                <p>Want it by Tomorrow ? Order within the next 23 hrs 9 mins to get it delivered on 16 May before 8:00PM, by
-                                    choosing "FastPick" at checkout.</p>
+                                <h4><?=($product->title)?></h4>
+                                <h5 class="price">
+                                    <?php if($product->sale_price){ if($product->discount > 0){ ?>
+                                        <del>৳<?=($product->sale_price)?></del>৳<?=($product->sale_price - (($product->sale_price/100)*$product->discount))?>
+                                    <?php } else{ echo "৳".$product->sale_price; } } ?>
+                                </h5>
+                                <p><?=($product->short_description)?></p>
 
                                 <div class="size_box">
                                     <h6>Size:</h6>
@@ -84,91 +84,69 @@
                         </div>
                     </div>
                 </div>
-
                 <div class="product_feature">
                     <h3>Product Details Title</h3>
-                    <p>Perferendis corrupti doloribus, qui asperiores ea veniam, earum ut possimus sequi! Sapiente, consectetur. Doloremque minus animi consequatur ea esse tempora et magnam voluptatem deserunt expedita vero modi iusto, odio qui nesciunt minima ad quidem incidunt, harum dolores voluptates accusantium ducimus voluptas reprehenderit? Ipsum debitis qui sint perferendis.</p>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque, quo itaque blanditiis aspernatur consequuntur quidem nihil!</p>
-                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Possimus distinctio quia delectus, reiciendis itaque ex repellat pariatur, nulla aspernatur animi aut inventore quis necessitatibus fugit fugiat excepturi vitae perferendis! Fugiat.</p>
+                    <?=($product->description)?>
                 </div>
-
+                <?php } if($similar_products){ ?>
                 <div class="similar_product">
                     <div class="section_title">
                         <h3>Similar Products</h3>
                     </div>
                     <div class="row smproduct_grid">
+                        <?php foreach($similar_products as $key=>$row){ ?>
                         <div class="col-xl-3 col-lg-4 col-md-4 col-6">
                             <div class="product_box">
+                                <?php if($row->quantity==0){ ?>
+                                <img class="stockout" src="<?=site_url('public/images/logo/stockout.png')?>" alt="">
+                                <?php }?>
                                 <figure class="product_gallery">
-                                    <div class="product_img">
-                                        <img class="product_one" src="<?=site_url('public/images/product/item-1.jpg')?>" alt="">
-                                        <img class="product_two" src="<?=site_url('public/images/product/item-1.jpg')?>" alt="">
+                                    <?php if($row->general_photo){ ?>
+                                        <div class="product_img">
+                                            <img class="product_one" src="<?=site_url($row->feature_photo)?>" alt="">
+                                            <img class="product_two" src="<?=site_url($row->general_photo)?>" alt="">
+                                        </div>
+                                    <?php } else { ?>
+                                        <img src="<?=site_url($row->feature_photo)?>" alt="">
+                                    <?php }?>
+
+                                    <a href="<?=site_url("products/".base64_encode($row->id)."/".(str_replace(' ', '-', $row->title)))?>" class="cover"></a>
+                                    <?php if($row->quantity>0){ ?>
+                                    <figcaption>
+                                        <add-to-cart
+                                            product_id="<?=($row->id)?>"
+                                        ></add-to-cart>
+                                        <add-to-wish-list
+                                            product_id="<?=($row->id)?>"
+                                        ></add-to-wish-list>
+                                    </figcaption>
+                                    <?php } ?>
+                                </figure>
+                                <div class="product_title">
+                                    <h5><a href="<?=site_url("products/".base64_encode($row->id)."/".(str_replace(' ', '-', $row->title)))?>"><?=($row->title)?></a></h5>
+                                    <?php if($row->sale_price){ ?>
+                                    <div class="footer_price">
+                                        <h4>
+                                            <?php if($row->sale_price){ if($row->discount > 0){ ?>
+                                                ৳<?=($row->sale_price - (($row->sale_price/100)*$row->discount))?><del>৳<?=($row->sale_price)?></del>
+                                            <?php } else{ echo "৳".$row->sale_price; } } ?>    
+                                        </h4>
+                                        <div class="raring">
+                                            <i class="icon ion-md-star"></i>
+                                            <i class="icon ion-md-star"></i>
+                                            <i class="icon ion-md-star"></i>
+                                            <i class="icon ion-md-star-half"></i>
+                                            <i class="icon ion-md-star-outline"></i>
+                                        </div>
                                     </div>
-                                    <a href="<?=site_url('details')?>" class="cover"></a>
-                                    <figcaption>
-                                        <a href="#"><i class="icon ion-ios-cart"></i></a>
-                                        <a href="#"><i class="icon ion-md-heart-empty"></i></a>
-                                    </figcaption>
-                                </figure>
-                                <div class="product_title">
-                                    <h5><a href="<?=site_url('details')?>">Product Name Or Title</a></h5>
-                                    <h4>720 Tk <del>920.00 Tk</del></h4>
+                                    <?php } ?>
                                 </div>
                             </div>
                         </div>
-                        <div class="col-xl-3 col-lg-4 col-md-4 col-6">
-                            <div class="product_box">
-                                <figure class="product_gallery">
-                                    <div class="product_img">
-                                        <img class="product_one" src="<?=site_url('public/images/product/item-1.jpg')?>" alt="">
-                                        <img class="product_two" src="<?=site_url('public/images/product/item-1.jpg')?>" alt="">
-                                    </div>
-                                    <a href="<?=site_url('details')?>" class="cover"></a>
-                                    <figcaption>
-                                        <a href="#"><i class="icon ion-ios-cart"></i></a>
-                                        <a href="#"><i class="icon ion-md-heart-empty"></i></a>
-                                    </figcaption>
-                                </figure>
-                                <div class="product_title">
-                                    <h5><a href="<?=site_url('details')?>">Product Name Or Title</a></h5>
-                                    <h4>720 Tk <del>920.00 Tk</del></h4>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-xl-3 col-lg-4 col-md-4 col-6">
-                            <div class="product_box">
-                                <figure class="product_gallery">
-                                    <img src="<?=site_url('public/images/product/item-3.jpg')?>" alt="">
-                                    <a href="<?=site_url('details')?>" class="cover"></a>
-                                    <figcaption>
-                                        <a href="#"><i class="icon ion-ios-cart"></i></a>
-                                        <a href="#"><i class="icon ion-md-heart-empty"></i></a>
-                                    </figcaption>
-                                </figure>
-                                <div class="product_title">
-                                    <h5><a href="<?=site_url('details')?>">Product Name Or Title</a></h5>
-                                    <h4>720 Tk <del>920.00 Tk</del></h4>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-xl-3 col-lg-4 col-md-4 col-6">
-                            <div class="product_box">
-                                <figure class="product_gallery">
-                                    <img src="<?=site_url('public/images/product/item-3.jpg')?>" alt="">
-                                    <a href="<?=site_url('details')?>" class="cover"></a>
-                                    <figcaption>
-                                        <a href="#"><i class="icon ion-ios-cart"></i></a>
-                                        <a href="#"><i class="icon ion-md-heart-empty"></i></a>
-                                    </figcaption>
-                                </figure>
-                                <div class="product_title">
-                                    <h5><a href="<?=site_url('details')?>">Product Name Or Title</a></h5>
-                                    <h4>720 Tk <del>920.00 Tk</del></h4>
-                                </div>
-                            </div>
-                        </div>
+                        <?php } ?>
                     </div>
                 </div>
+                <?php } ?>
             </div>
 
 

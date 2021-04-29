@@ -7,7 +7,7 @@
         <div class="row">
             <div class="col-md-4">
                 <div class="user_aside">
-                    <h3>Shamim Houqe</h3>
+                    <h3><?=(user()->name)?></h3>
                     <ul class="user_menu">
                         <li><a href="<?=site_url('user-panel/dashboard')?>" class="nav-link">Dashboard</a></li>
                         <li><a href="<?=site_url('user-panel/settings')?>" class="nav-link">Settings</a></li>

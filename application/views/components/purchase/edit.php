@@ -27,6 +27,9 @@
 		display: inline-block;
 		min-width: 70px;
 	}
+    .custom-border {
+        border-left: 1px solid #dddddd;
+    }
 </style>
 <div class="panel panel-default">
     <div class="panel-heading panal-header">
@@ -95,7 +98,7 @@
                         </tr>
             		</table>
             	</div>
-                <div class="col-md-3">
+                <div class="col-md-3 custom-border">
                     <div class="supplier_info">
                         <ul ng-show="supplier">
                             <li><strong>Name</strong>: {{supplier.name}}</li>

@@ -43,8 +43,6 @@ function getProducts($where=[]){
 	foreach ($where as $key => $value) {
 		$condition .= " AND {$key}='{$value}'";
 	}
-
-
 	return $ci->db->query("
         SELECT 
             *,
@@ -52,6 +50,9 @@ function getProducts($where=[]){
             categories.category,
             subcategories.subcategory,
             brands.brand,
+            stock.sale_price,
+            stock.purchase_price,
+            stock.quantity,
             (SELECT small FROM product_images WHERE product_id=products.id AND type='feature_photo' limit 1) AS feature_photo
         FROM 
             products
@@ -61,6 +62,8 @@ function getProducts($where=[]){
             subcategories ON products.sub_cat_id=subcategories.id
         LEFT JOIN
             brands ON products.brand_id=brands.id
+        LEFT JOIN 
+            stock ON stock.product_id = products.id
         WHERE
             products.trash=0
         $condition

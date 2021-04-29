@@ -21,26 +21,20 @@ import CollectList  from './components/CollectList.js';
 import AddToCart    from './components/AddToCart.js';
 import AddToWshList from './components/AddToWshList.js';
 import ShoppingCart from './components/ShoppingCart.js';
+import ViewCart     from './components/ViewCart.js';
+import Checkout     from './components/Checkout.js';
 
 // Components Registration
 Vue.component('collect-list', CollectList);
 Vue.component('add-to-cart', AddToCart);
 Vue.component('add-to-wish-list', AddToWshList);
 Vue.component('shopping-cart', ShoppingCart);
+Vue.component('view-cart', ViewCart);
+Vue.component('checkout', Checkout);
 
 const app = new Vue({
     el: '#app',
-    data  : {},
-    store : store,
-    mounted(){
-         
-    },
-    computed:{
-    	
-    },
-    methods:{
-
-    }
+    store : store
 });
 
 

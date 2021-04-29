@@ -20,7 +20,16 @@
                 </figure>
                 <div class="product_title">
                     <h5><a href="<?=site_url('details')?>">Product Name Or Title</a></h5>
-                    <h4>720 Tk <del>920.00 Tk</del></h4>
+                    <div class="footer_price">
+                        <h4>720 Tk <del>920.00 Tk</del></h4>
+                        <div class="raring">
+                            <i class="icon ion-md-star"></i>
+                            <i class="icon ion-md-star"></i>
+                            <i class="icon ion-md-star"></i>
+                            <i class="icon ion-md-star-half"></i>
+                            <i class="icon ion-md-star-outline"></i>
+                        </div>
+                    </div>
                 </div>
             </div>
             <?php } ?>

@@ -170,8 +170,16 @@
 
                         <div class="col-md-12">
                             <div class="form-group">
-                                <label class="control-label">Description <span class="req">*</span></label>
-                                <textarea name="description" class="form-control" rows="10" required><?=($edit->description)?></textarea>
+                                <label class="control-label">Short Description <span class="req">*</span></label>
+                                <textarea name="short_description" class="form-control" rows="10"><?=($edit->short_description)?></textarea>
+                            </div>
+                        </div>
+
+                        <div class="col-md-12">
+                            <div class="form-group">
+                                <label class="control-label">Explain <span class="req">*</span></label>
+                                <!-- <textarea name="description" class="form-control" rows="10" required><?=($edit->description)?></textarea> -->
+                                <textarea id="mytextarea" name="description"><?=($edit->description)?></textarea>
                             </div>
                         </div>
                     </div>
@@ -244,3 +252,9 @@
         </div>
     </div>
 </div>
+<script>
+  tinymce.init({
+    selector: '#mytextarea',
+    height : "480"
+  });
+</script>
