@@ -27,7 +27,7 @@
 
             <div class="col-md-8">
                 <div class="request_form">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                    <!-- <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p> -->
                     <h2>Reach out to us</h2>
                     <form action="#" method="post">
                         <div class="form-row">

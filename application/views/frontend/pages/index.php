@@ -89,6 +89,11 @@
                         <img src="<?=site_url($row->feature_photo)?>" alt="">
                     <?php }?>
                     <a href="<?=site_url("products/".base64_encode($row->id)."/".(str_replace(' ', '-', $row->title)))?>" class="cover"></a>
+                    <figcaption>
+                        <add-to-wish-list
+                            product_id="<?=($row->id)?>"
+                        ></add-to-wish-list>
+                    </figcaption>
                 </figure>
                 <div class="product_title">
                     <h5><a href="<?=site_url("products/".base64_encode($row->id)."/".(str_replace(' ', '-', $row->title)))?>"><?=($row->title)?></a></h5>
@@ -121,7 +126,7 @@
                 if(($key+1)!=6){
             ?>
             <div class="product_box">
-                <?php if($row->quantity==0){ ?>
+                <?php if($row->quantity <= 0){ ?>
                 <img class="stockout" src="<?=site_url('public/images/logo/stockout.png')?>" alt="">
                 <?php }?>
                 <figure class="product_gallery">
@@ -135,16 +140,16 @@
                     <?php }?>
 
                     <a href="<?=site_url("products/".base64_encode($row->id)."/".(str_replace(' ', '-', $row->title)))?>" class="cover"></a>
-                    <?php if($row->quantity>0){ ?>
                     <figcaption>
+                        <?php if($row->quantity>0){ ?>
                         <add-to-cart
                             product_id="<?=($row->id)?>"
                         ></add-to-cart>
+                        <?php } ?>
                         <add-to-wish-list
                             product_id="<?=($row->id)?>"
                         ></add-to-wish-list>
                     </figcaption>
-                    <?php } ?>
                 </figure>
                 <div class="product_title">
                     <h5><a href="<?=site_url("products/".base64_encode($row->id)."/".(str_replace(' ', '-', $row->title)))?>"><?=($row->title)?></a></h5>

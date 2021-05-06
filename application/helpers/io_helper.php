@@ -3,7 +3,7 @@
 // Save Data In The Table
 if (!function_exists('save')) {
     function save($table, $data=[]){
-        $ci =& get_instance();
+        $ci = & get_instance();
         if (!empty($table) && !empty($data)) {
             $ci->db->insert($table, $data);
             return $ci->db->insert_id();

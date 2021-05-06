@@ -17,12 +17,13 @@ import Vue    from "./module/vue.js";
 import store  from "./store.js";
 
 // Modules
-import CollectList  from './components/CollectList.js';
-import AddToCart    from './components/AddToCart.js';
-import AddToWshList from './components/AddToWshList.js';
-import ShoppingCart from './components/ShoppingCart.js';
-import ViewCart     from './components/ViewCart.js';
-import Checkout     from './components/Checkout.js';
+import CollectList    from './components/CollectList.js';
+import AddToCart      from './components/AddToCart.js';
+import AddToWshList   from './components/AddToWshList.js';
+import ShoppingCart   from './components/ShoppingCart.js';
+import ViewCart       from './components/ViewCart.js';
+import Checkout       from './components/Checkout.js';
+import ProductDetails from './components/ProductDetails.js';
 
 // Components Registration
 Vue.component('collect-list', CollectList);
@@ -31,6 +32,7 @@ Vue.component('add-to-wish-list', AddToWshList);
 Vue.component('shopping-cart', ShoppingCart);
 Vue.component('view-cart', ViewCart);
 Vue.component('checkout', Checkout);
+Vue.component('product-details', ProductDetails);
 
 const app = new Vue({
     el: '#app',

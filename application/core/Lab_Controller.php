@@ -47,7 +47,7 @@ class UserController extends Lab_Controller {
             if($this->User_m->isLogin() == FALSE) {
                 redirect('login');
             }else {
-                $this->data['user_id']   = $this->session->userdata('user_id');
+                $this->data['user_id']   = $this->session->userdata('subscriber_id');
                 $this->data['image']     = $this->session->userdata('image');
                 $this->data['username']  = $this->session->userdata('username');
                 $this->data['name']      = $this->session->userdata('name');

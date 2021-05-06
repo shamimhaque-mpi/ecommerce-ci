@@ -6,8 +6,8 @@
     <div class="container">
         <div class="row">
             <div class="col-xl-9 col-lg-8">
-                <?php 
-                    if($product){ 
+                <?php
+                    if($product){
                         $images = getImages($product->id);
                 ?>
                 <div class="product_div">
@@ -35,59 +35,19 @@
                                 </h5>
                                 <p><?=($product->short_description)?></p>
 
-                                <div class="size_box">
-                                    <h6>Size:</h6>
-                                    <span class="size active">S</span>
-                                    <span class="size">M</span>
-                                    <span class="size">L</span>
-                                </div>
-                                <div class="color_box">
-                                    <h6>Color:</h6>
-                                    <ul class="color_list">
-                                        <li class="black">
-                                            <span></span>
-                                            <input type="radio" name="color">
-                                        </li>
-                                        <li class="red">
-                                            <span></span>
-                                            <input type="radio" name="color">
-                                        </li>
-                                        <li class="green">
-                                            <span></span>
-                                            <input type="radio" name="color">
-                                        </li>
-                                        <li class="blue">
-                                            <span></span>
-                                            <input type="radio" name="color">
-                                        </li>
-                                        <li class="maroon">
-                                            <span></span>
-                                            <input type="radio" name="color" checked>
-                                        </li>
-                                    </ul>
-                                </div>
-
-                                <div class="quantity">
-                                    <h6>Quantity</h6>
-                                    <div class="qty_form">
-                                        <button onclick="qty.value=(qty.value>0?qty.value-=1:qty.value)"><i class="icon ion-md-remove"></i></button>
-                                        <input type="text" id="qty" value="1" min="0">
-                                        <button onclick="qty.value = +qty.value+1"><i class="icon ion-md-add"></i></button>
-                                    </div>
-                                </div>
-
-                                <div class="submit-btn">
-                                    <a href="">Add to cart</a>
-                                    <a href="">Buy Now</a>
-                                </div>
+                                <product-details
+                                    product_id="<?=($product->id)?>"
+                                ></product-details>
                             </div>
                         </div>
                     </div>
                 </div>
+
                 <div class="product_feature">
                     <h3>Product Details Title</h3>
                     <?=($product->description)?>
                 </div>
+
                 <?php } if($similar_products){ ?>
                 <div class="similar_product">
                     <div class="section_title">
@@ -97,7 +57,7 @@
                         <?php foreach($similar_products as $key=>$row){ ?>
                         <div class="col-xl-3 col-lg-4 col-md-4 col-6">
                             <div class="product_box">
-                                <?php if($row->quantity==0){ ?>
+                                <?php if($row->quantity <= 0){ ?>
                                 <img class="stockout" src="<?=site_url('public/images/logo/stockout.png')?>" alt="">
                                 <?php }?>
                                 <figure class="product_gallery">
@@ -111,16 +71,17 @@
                                     <?php }?>
 
                                     <a href="<?=site_url("products/".base64_encode($row->id)."/".(str_replace(' ', '-', $row->title)))?>" class="cover"></a>
-                                    <?php if($row->quantity>0){ ?>
+                                    
                                     <figcaption>
+                                        <?php if($row->quantity>0){ ?>
                                         <add-to-cart
                                             product_id="<?=($row->id)?>"
                                         ></add-to-cart>
+                                        <?php } ?>
                                         <add-to-wish-list
                                             product_id="<?=($row->id)?>"
                                         ></add-to-wish-list>
                                     </figcaption>
-                                    <?php } ?>
                                 </figure>
                                 <div class="product_title">
                                     <h5><a href="<?=site_url("products/".base64_encode($row->id)."/".(str_replace(' ', '-', $row->title)))?>"><?=($row->title)?></a></h5>
@@ -129,7 +90,7 @@
                                         <h4>
                                             <?php if($row->sale_price){ if($row->discount > 0){ ?>
                                                 ৳<?=($row->sale_price - (($row->sale_price/100)*$row->discount))?><del>৳<?=($row->sale_price)?></del>
-                                            <?php } else{ echo "৳".$row->sale_price; } } ?>    
+                                            <?php } else{ echo "৳".$row->sale_price; } } ?>
                                         </h4>
                                         <div class="raring">
                                             <i class="icon ion-md-star"></i>

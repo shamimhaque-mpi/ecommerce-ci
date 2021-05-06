@@ -106,13 +106,18 @@
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
 	<!-- niceScroll js -->
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.nicescroll/3.7.6/jquery.nicescroll.min.js"></script>
+	<!-- bootstrap-select -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.14/dist/js/bootstrap-select.min.js"></script>
 	<!-- zoom images -->
 	<script src="<?=site_url('public/vendors/elevatezoom/js/jquery.ez-plus.js')?>"></script>
 	<script src="<?=site_url('public/vendors/elevatezoom/js/web.js')?>"></script>
 	<!-- include js -->
 	<script src="<?=site_url('public/js/searching.js')?>"></script>
-	
 	<script type="module" src="<?=site_url('application/views/frontend/vue/app.js')?>"></script>
+
+	<!-- price fange js -->
+	<!-- <script src="<?=site_url('public/vendors/pricerange/pricerange-script.js')?>"></script> -->
+
 
 	<script>
 		$(document).ready(()=>{
@@ -160,56 +165,4 @@
 		});
 	</script>
 
-
-
-
-<script>
-    
-(function() {
-
-  window.addEventListener('load', ()=>{
-	  var parent = document.querySelector(".range-slider");
-	  if(!parent) return;
-
-	  var
-	    rangeS = parent.querySelectorAll("input[type=range]"),
-	    numberS = parent.querySelectorAll("input[type=number]");
-
-	  rangeS.forEach(function(el) {
-	    el.oninput = function() {
-	      var slide1 = parseFloat(rangeS[0].value),
-	            slide2 = parseFloat(rangeS[1].value);
-
-	      if (slide1 > slide2) {
-	                [slide1, slide2] = [slide2, slide1];
-	        // var tmp = slide2;
-	        // slide2 = slide1;
-	        // slide1 = tmp;
-	      }
-
-	      numberS[0].value = slide1;
-	      numberS[1].value = slide2;
-	    }
-	  });
-
-	  numberS.forEach(function(el) {
-	    el.oninput = function() {
-	            var number1 = parseFloat(numberS[0].value),
-	                    number2 = parseFloat(numberS[1].value);
-	            
-	      if (number1 > number2) {
-	        var tmp = number1;
-	        numberS[0].value = number2;
-	        numberS[1].value = tmp;
-	      }
-
-	      rangeS[0].value = number1;
-	      rangeS[1].value = number2;
-
-	    }
-	  });
-  });
-
-})();
-</script>
 </body>

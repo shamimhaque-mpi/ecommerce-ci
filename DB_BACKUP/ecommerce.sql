@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Apr 28, 2021 at 12:47 PM
+-- Generation Time: May 06, 2021 at 01:10 PM
 -- Server version: 10.4.6-MariaDB
 -- PHP Version: 7.3.9
 
@@ -626,7 +626,57 @@ INSERT INTO `access_info` (`user_id`, `login_period`, `logout_period`) VALUES
 (1, '2021-04-28 06:59:36', '2021-04-28 06:59:39'),
 (14, '2021-04-28 08:27:20', '2021-04-28 08:35:59'),
 (13, '2021-04-28 08:36:02', '0000-00-00 00:00:00'),
-(1, '2021-04-28 08:55:28', '2021-04-28 08:55:35');
+(1, '2021-04-28 08:55:28', '2021-04-28 08:55:35'),
+(13, '2021-04-29 05:43:14', '2021-04-29 05:43:22'),
+(13, '2021-04-29 05:43:27', '0000-00-00 00:00:00'),
+(13, '2021-04-29 05:46:45', '2021-04-29 06:41:03'),
+(14, '2021-04-29 06:41:09', '0000-00-00 00:00:00'),
+(14, '2021-04-29 07:02:02', '0000-00-00 00:00:00'),
+(1, '2021-04-29 08:23:53', '2021-04-29 08:23:56'),
+(3, '2021-04-29 08:24:37', '0000-00-00 00:00:00'),
+(2, '2021-04-29 08:24:44', '2021-04-29 09:54:47'),
+(14, '2021-04-29 09:01:29', '0000-00-00 00:00:00'),
+(13, '2021-04-29 09:06:15', '0000-00-00 00:00:00'),
+(1, '2021-04-29 09:15:34', '2021-04-29 09:15:43'),
+(13, '2021-04-29 10:12:14', '0000-00-00 00:00:00'),
+(1, '2021-04-29 10:32:14', '2021-04-29 10:43:23'),
+(2, '2021-04-29 10:39:00', '2021-04-29 10:56:17'),
+(1, '2021-04-29 10:43:49', '2021-04-29 10:44:36'),
+(1, '2021-04-29 10:45:06', '0000-00-00 00:00:00'),
+(14, '2021-04-29 10:46:53', '0000-00-00 00:00:00'),
+(13, '2021-04-29 10:56:22', '0000-00-00 00:00:00'),
+(1, '2021-04-29 12:52:58', '0000-00-00 00:00:00'),
+(13, '2021-05-02 05:27:51', '0000-00-00 00:00:00'),
+(1, '2021-05-02 05:28:46', '0000-00-00 00:00:00'),
+(2, '2021-05-02 09:17:11', '0000-00-00 00:00:00'),
+(3, '2021-05-03 07:36:01', '0000-00-00 00:00:00'),
+(1, '2021-05-03 09:49:44', '0000-00-00 00:00:00'),
+(13, '2021-05-03 10:26:09', '0000-00-00 00:00:00'),
+(1, '2021-05-04 07:03:51', '0000-00-00 00:00:00'),
+(2, '2021-05-04 07:32:32', '0000-00-00 00:00:00'),
+(14, '2021-05-04 08:38:05', '2021-05-04 10:09:14'),
+(3, '2021-05-04 09:11:53', '0000-00-00 00:00:00'),
+(1, '2021-05-04 10:09:44', '0000-00-00 00:00:00'),
+(14, '2021-05-04 10:14:20', '0000-00-00 00:00:00'),
+(3, '2021-05-04 12:17:58', '0000-00-00 00:00:00'),
+(1, '2021-05-05 05:43:36', '0000-00-00 00:00:00'),
+(14, '2021-05-05 06:51:59', '0000-00-00 00:00:00'),
+(13, '2021-05-05 09:51:50', '2021-05-05 09:52:00'),
+(14, '2021-05-05 09:52:20', '0000-00-00 00:00:00'),
+(3, '2021-05-05 09:56:02', '0000-00-00 00:00:00'),
+(2, '2021-05-05 11:38:59', '0000-00-00 00:00:00'),
+(14, '2021-05-05 11:53:58', '0000-00-00 00:00:00'),
+(1, '2021-05-05 12:27:21', '0000-00-00 00:00:00'),
+(14, '2021-05-05 12:28:29', '0000-00-00 00:00:00'),
+(14, '2021-05-05 12:29:30', '0000-00-00 00:00:00'),
+(3, '2021-05-05 12:31:47', '0000-00-00 00:00:00'),
+(3, '2021-05-05 12:32:01', '0000-00-00 00:00:00'),
+(1, '2021-05-06 05:35:14', '0000-00-00 00:00:00'),
+(14, '2021-05-06 05:40:56', '2021-05-06 10:49:38'),
+(3, '2021-05-06 06:59:07', '0000-00-00 00:00:00'),
+(14, '2021-05-06 06:59:54', '0000-00-00 00:00:00'),
+(1, '2021-05-06 10:50:40', '0000-00-00 00:00:00'),
+(2, '2021-05-06 10:58:25', '0000-00-00 00:00:00');
 
 -- --------------------------------------------------------
 
@@ -667,13 +717,13 @@ CREATE TABLE `categories` (
 
 INSERT INTO `categories` (`id`, `category`, `img`, `position`, `trash`) VALUES
 (1, 'Food', 'public/images/categories/1618209257.webp', 0, 1),
-(2, 'Food', 'public/images/categories/1619582173.webp', 0, 0),
+(2, 'Food', 'public/images/categories/1620285633.webp', 0, 0),
 (3, 'Mobile', 'public/images/categories/1619582261.webp', 0, 0),
-(4, 'Computer', 'public/images/categories/1619500920.png', 0, 0),
-(5, 'Car', 'public/images/categories/1619500984.png', 0, 0),
-(6, 'Cloth', 'public/images/categories/1619501174.png', 0, 0),
-(7, 'Vegetable', 'public/images/categories/1619501197.png', 0, 0),
-(8, 'Instruments', 'public/images/categories/1619501250.jpg', 0, 0),
+(4, 'Computer', 'public/images/categories/1620285666.webp', 0, 0),
+(5, 'Car', 'public/images/categories/1620285670.webp', 0, 0),
+(6, 'Cloth', 'public/images/categories/1620285674.webp', 0, 0),
+(7, 'Vegetable', 'public/images/categories/1620285679.webp', 0, 0),
+(8, 'Instruments', 'public/images/categories/1620285684.webp', 0, 0),
 (9, 'Mobile', '', 0, 1);
 
 -- --------------------------------------------------------
@@ -697,6 +747,93 @@ INSERT INTO `colors` (`id`, `color`, `trash`) VALUES
 (2, 'Red', 0),
 (3, 'Green', 0),
 (4, 'Yellow', 0);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `districts`
+--
+
+CREATE TABLE `districts` (
+  `id` int(10) UNSIGNED NOT NULL,
+  `name` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `country` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `shipping_cost` double(8,2) DEFAULT NULL,
+  `status` tinyint(3) UNSIGNED NOT NULL DEFAULT 1,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci ROW_FORMAT=DYNAMIC;
+
+--
+-- Dumping data for table `districts`
+--
+
+INSERT INTO `districts` (`id`, `name`, `country`, `shipping_cost`, `status`, `created_at`, `updated_at`) VALUES
+(1, 'Dhaka', 'Bangladesh', 0.00, 1, '2019-04-05 06:00:00', '2019-04-05 06:00:00'),
+(2, 'Faridpur', 'Bangladesh', 0.00, 1, '2019-04-05 06:00:00', '2019-04-05 06:00:00'),
+(3, 'Gazipur', 'Bangladesh', 0.00, 1, '2019-04-05 06:00:00', '2019-04-05 06:00:00'),
+(4, 'Gopalganj', 'Bangladesh', 0.00, 1, '2019-04-05 06:00:00', '2019-04-05 06:00:00'),
+(5, 'Jamalpur', 'Bangladesh', 0.00, 1, '2019-04-05 06:00:00', '2019-04-05 06:00:00'),
+(6, 'Kishoreganj', 'Bangladesh', 0.00, 1, '2019-04-05 06:00:00', '2019-04-05 06:00:00'),
+(7, 'Madaripur', 'Bangladesh', 0.00, 1, '2019-04-05 06:00:00', '2019-04-05 06:00:00'),
+(8, 'Manikganj', 'Bangladesh', 0.00, 1, '2019-04-05 06:00:00', '2019-04-05 06:00:00'),
+(9, 'Munshiganj', 'Bangladesh', 0.00, 1, '2019-04-05 06:00:00', '2019-04-05 06:00:00'),
+(10, 'Mymensingh', 'Bangladesh', 100.00, 1, '2019-04-05 06:00:00', '2020-11-02 04:22:52'),
+(11, 'Narayanganj', 'Bangladesh', 0.00, 1, '2019-04-05 06:00:00', '2019-04-05 06:00:00'),
+(12, 'Narsingdi', 'Bangladesh', 0.00, 1, '2019-04-05 06:00:00', '2019-04-05 06:00:00'),
+(13, 'Netrokona', 'Bangladesh', 0.00, 1, '2019-04-05 06:00:00', '2019-04-05 06:00:00'),
+(14, 'Rajbari', 'Bangladesh', 0.00, 1, '2019-04-05 06:00:00', '2019-04-05 06:00:00'),
+(15, 'Shariatpur', 'Bangladesh', 0.00, 1, '2019-04-05 06:00:00', '2019-04-05 06:00:00'),
+(16, 'Sherpur', 'Bangladesh', 0.00, 1, '2019-04-05 06:00:00', '2019-04-05 06:00:00'),
+(17, 'Tangail', 'Bangladesh', 0.00, 1, '2019-04-05 06:00:00', '2019-04-05 06:00:00'),
+(18, 'Bogra', 'Bangladesh', 0.00, 1, '2019-04-05 06:00:00', '2019-04-05 06:00:00'),
+(19, 'Joypurhat', 'Bangladesh', 0.00, 1, '2019-04-05 06:00:00', '2019-04-05 06:00:00'),
+(20, 'Naogaon', 'Bangladesh', 0.00, 1, '2019-04-05 06:00:00', '2019-04-05 06:00:00'),
+(21, 'Natore', 'Bangladesh', 0.00, 1, '2019-04-05 06:00:00', '2019-04-05 06:00:00'),
+(22, 'Nawabganj', 'Bangladesh', 0.00, 1, '2019-04-05 06:00:00', '2019-04-05 06:00:00'),
+(23, 'Pabna', 'Bangladesh', 0.00, 1, '2019-04-05 06:00:00', '2019-04-05 06:00:00'),
+(24, 'Rajshahi', 'Bangladesh', 0.00, 1, '2019-04-05 06:00:00', '2019-04-05 06:00:00'),
+(25, 'Sirajgonj', 'Bangladesh', 0.00, 1, '2019-04-05 06:00:00', '2019-04-05 06:00:00'),
+(26, 'Dinajpur', 'Bangladesh', 0.00, 1, '2019-04-05 06:00:00', '2019-04-05 06:00:00'),
+(27, 'Gaibandha', 'Bangladesh', 0.00, 1, '2019-04-05 06:00:00', '2019-04-05 06:00:00'),
+(28, 'Kurigram', 'Bangladesh', 0.00, 1, '2019-04-05 06:00:00', '2019-04-05 06:00:00'),
+(29, 'Lalmonirhat', 'Bangladesh', 0.00, 1, '2019-04-05 06:00:00', '2019-04-05 06:00:00'),
+(30, 'Nilphamari', 'Bangladesh', 0.00, 1, '2019-04-05 06:00:00', '2019-04-05 06:00:00'),
+(31, 'Panchagarh', 'Bangladesh', 0.00, 1, '2019-04-05 06:00:00', '2019-04-05 06:00:00'),
+(32, 'Rangpur', 'Bangladesh', 0.00, 1, '2019-04-05 06:00:00', '2019-04-05 06:00:00'),
+(33, 'Thakurgaon', 'Bangladesh', 0.00, 1, '2019-04-05 06:00:00', '2019-04-05 06:00:00'),
+(34, 'Barguna', 'Bangladesh', 100.00, 1, '2019-04-05 06:00:00', '2020-11-01 04:26:42'),
+(35, 'Barisal', 'Bangladesh', 0.00, 1, '2019-04-05 06:00:00', '2019-04-05 06:00:00'),
+(36, 'Bhola', 'Bangladesh', 0.00, 1, '2019-04-05 06:00:00', '2019-04-05 06:00:00'),
+(37, 'Jhalokati', 'Bangladesh', 0.00, 1, '2019-04-05 06:00:00', '2019-04-05 06:00:00'),
+(38, 'Patuakhali', 'Bangladesh', 0.00, 1, '2019-04-05 06:00:00', '2019-04-05 06:00:00'),
+(39, 'Pirojpur', 'Bangladesh', 0.00, 1, '2019-04-05 06:00:00', '2019-04-05 06:00:00'),
+(40, 'Bandarban', 'Bangladesh', 0.00, 1, '2019-04-05 06:00:00', '2019-04-05 06:00:00'),
+(41, 'Brahmanbaria', 'Bangladesh', 0.00, 1, '2019-04-05 06:00:00', '2019-04-05 06:00:00'),
+(42, 'Chandpur', 'Bangladesh', 0.00, 1, '2019-04-05 06:00:00', '2019-04-05 06:00:00'),
+(43, 'Chittagong', 'Bangladesh', 0.00, 1, '2019-04-05 06:00:00', '2019-04-05 06:00:00'),
+(44, 'Comilla', 'Bangladesh', 0.00, 1, '2019-04-05 06:00:00', '2019-04-05 06:00:00'),
+(45, 'Coxs Bazar', 'Bangladesh', 0.00, 1, '2019-04-05 06:00:00', '2019-04-05 06:00:00'),
+(46, 'Feni', 'Bangladesh', 0.00, 1, '2019-04-05 06:00:00', '2019-04-05 06:00:00'),
+(47, 'Khagrachari', 'Bangladesh', 0.00, 1, '2019-04-05 06:00:00', '2019-04-05 06:00:00'),
+(48, 'Lakshmipur', 'Bangladesh', 0.00, 1, '2019-04-05 06:00:00', '2019-04-05 06:00:00'),
+(49, 'Noakhali', 'Bangladesh', 0.00, 1, '2019-04-05 06:00:00', '2019-04-05 06:00:00'),
+(50, 'Rangamati', 'Bangladesh', 0.00, 1, '2019-04-05 06:00:00', '2019-04-05 06:00:00'),
+(51, 'Habiganj', 'Bangladesh', 0.00, 1, '2019-04-05 06:00:00', '2019-04-05 06:00:00'),
+(52, 'Maulvibazar', 'Bangladesh', 0.00, 1, '2019-04-05 06:00:00', '2019-04-05 06:00:00'),
+(53, 'Sunamganj', 'Bangladesh', 0.00, 1, '2019-04-05 06:00:00', '2019-04-05 06:00:00'),
+(54, 'Sylhet', 'Bangladesh', 0.00, 1, '2019-04-05 06:00:00', '2019-04-05 06:00:00'),
+(55, 'Bagerhat', 'Bangladesh', 22.00, 1, '2019-04-05 06:00:00', '2019-04-09 22:30:00'),
+(56, 'Chuadanga', 'Bangladesh', 0.00, 1, '2019-04-05 06:00:00', '2019-04-05 06:00:00'),
+(57, 'Jessore', 'Bangladesh', 0.00, 1, '2019-04-05 06:00:00', '2019-04-05 06:00:00'),
+(58, 'Jhenaidah', 'Bangladesh', 0.00, 1, '2019-04-05 06:00:00', '2019-04-05 06:00:00'),
+(59, 'Khulna', 'Bangladesh', 0.00, 1, '2019-04-05 06:00:00', '2019-04-05 06:00:00'),
+(60, 'Kushtia', 'Bangladesh', 0.00, 1, '2019-04-05 06:00:00', '2019-04-05 06:00:00'),
+(61, 'Magura', 'Bangladesh', 0.00, 1, '2019-04-05 06:00:00', '2019-04-05 06:00:00'),
+(62, 'Meherpur', 'Bangladesh', 0.00, 1, '2019-04-05 06:00:00', '2019-04-05 06:00:00'),
+(63, 'Narail', 'Bangladesh', 0.00, 1, '2019-04-05 06:00:00', '2019-04-05 06:00:00'),
+(64, 'Satkhira', 'Bangladesh', 0.00, 1, '2019-04-05 06:00:00', '2019-04-09 10:49:04'),
+(66, 'q', 'Bangladesh', 1212.00, 0, '2019-04-09 22:23:13', '2020-11-05 20:22:19');
 
 -- --------------------------------------------------------
 
@@ -779,7 +916,7 @@ CREATE TABLE `header` (
 --
 
 INSERT INTO `header` (`id`, `web_title`, `web_logo`, `fev_icon`, `food_menu`, `trash`) VALUES
-(1, 'Demo-Ecommerce', 'backend/images/header/gallery16180968230.png', 'backend/images/header/gallery16193307510.png', 'backend/images/header/gallery16102633590.pdf', 0);
+(1, 'Demo-Ecommerce', 'backend/images/header/gallery16180968230.png', 'backend/images/header/gallery16196680390.png', 'backend/images/header/gallery16102633590.pdf', 0);
 
 -- --------------------------------------------------------
 
@@ -809,6 +946,104 @@ INSERT INTO `image_gallery` (`id`, `img_name`, `img_path`, `trash`) VALUES
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `orders`
+--
+
+CREATE TABLE `orders` (
+  `id` int(11) NOT NULL,
+  `code` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `user_id` int(11) NOT NULL,
+  `name` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `mobile` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `address` text COLLATE utf8mb4_unicode_ci NOT NULL,
+  `district_id` int(11) NOT NULL,
+  `upazilla_id` int(11) NOT NULL,
+  `shipping_cost` decimal(10,2) NOT NULL,
+  `method_id` int(11) NOT NULL,
+  `trx_method` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `trx_no` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `trx_code` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `trx_amount` decimal(10,2) NOT NULL,
+  `date` date NOT NULL,
+  `status` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT 'pending'
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `orders`
+--
+
+INSERT INTO `orders` (`id`, `code`, `user_id`, `name`, `mobile`, `address`, `district_id`, `upazilla_id`, `shipping_cost`, `method_id`, `trx_method`, `trx_no`, `trx_code`, `trx_amount`, `date`, `status`) VALUES
+(1, '2861480', 1, 'Developer', '01983667657', 'Mymensingh, Sadar', 10, 74, '75.00', 2, '', '', '', '0.00', '2021-05-05', 'pending'),
+(2, '2342053', 3, 'Abdulaha Islam', '01715246330', 'aasdas', 10, 74, '75.00', 1, '', '01715246333', 'dfvdkho1654651', '100.00', '2021-05-05', 'pending'),
+(3, '2460523', 2, 'Aminur Islam', '01910217482', 'dfdssdfd', 2, 7, '75.00', 1, '', 'asdf', 'safd', '0.00', '2021-05-05', 'pending'),
+(4, '2732101', 2, 'Aminur Islam', '01910217482', '3216', 11, 78, '75.00', 1, '', '548941', '6541615', '500.00', '2021-05-05', 'pending'),
+(5, '9359706', 2, 'Aminur Islam', '01910217482', 'nmbvcxh', 9, 62, '75.00', 2, '', '', '', '0.00', '2021-05-05', 'pending'),
+(6, '3721324', 3, 'Abdulaha Islam', '01715246330', '1', 12, 85, '75.00', 2, '', '', '', '0.00', '2021-05-05', 'pending'),
+(7, '7149256', 1, 'Developer', '01983667657', 'Mymensingh, Sadar', 10, 74, '75.00', 2, 'Cash On Delivery', '', '', '0.00', '2021-05-06', 'pending');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `order_items`
+--
+
+CREATE TABLE `order_items` (
+  `id` int(11) NOT NULL,
+  `title` text COLLATE utf8mb4_unicode_ci NOT NULL,
+  `size_id` int(11) DEFAULT NULL,
+  `size` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `quantity` decimal(10,2) NOT NULL,
+  `product_id` int(11) NOT NULL,
+  `price` decimal(10,2) NOT NULL,
+  `min_qty` decimal(10,2) NOT NULL,
+  `is_size` int(11) DEFAULT NULL,
+  `is_color` int(11) DEFAULT NULL,
+  `image` text COLLATE utf8mb4_unicode_ci NOT NULL,
+  `discount` decimal(10,2) NOT NULL,
+  `color_id` int(11) DEFAULT NULL,
+  `color` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `order_id` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `order_items`
+--
+
+INSERT INTO `order_items` (`id`, `title`, `size_id`, `size`, `quantity`, `product_id`, `price`, `min_qty`, `is_size`, `is_color`, `image`, `discount`, `color_id`, `color`, `order_id`) VALUES
+(1, 'Product Title One', NULL, '', '1.00', 1, '1230.00', '1.00', 1, 1, 'public/images/product/small/1619081958.webp', '67.00', NULL, '', 1),
+(2, 'Product Title One', NULL, '', '1.00', 1, '1230.00', '1.00', 1, 1, 'public/images/product/small/1619081958.webp', '67.00', NULL, '', 2),
+(3, 'Product Title Three', NULL, '', '9.00', 3, '3256.00', '9.00', 1, 1, 'public/images/product/small/1619331453.webp', '2.00', NULL, '', 3),
+(4, 'Product Title One', NULL, '', '1.00', 1, '1230.00', '1.00', 1, 1, 'public/images/product/small/1619081958.webp', '67.00', NULL, '', 4),
+(5, 'Product Title One', NULL, '', '1.00', 1, '1230.00', '1.00', 1, 1, 'public/images/product/small/1619081958.webp', '67.00', NULL, '', 5),
+(6, 'Product Title One', NULL, '', '1.00', 1, '1230.00', '1.00', 1, 1, 'public/images/product/small/1619081958.webp', '67.00', NULL, '', 6),
+(7, 'Product Title One', NULL, '', '1.00', 1, '1230.00', '1.00', 1, 1, 'public/images/product/small/1619081958.webp', '67.00', NULL, '', 7);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `payment_method`
+--
+
+CREATE TABLE `payment_method` (
+  `id` int(11) NOT NULL,
+  `method` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `number` int(20) DEFAULT NULL,
+  `type` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `img` text COLLATE utf8mb4_unicode_ci NOT NULL,
+  `trash` int(1) NOT NULL DEFAULT 0
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `payment_method`
+--
+
+INSERT INTO `payment_method` (`id`, `method`, `number`, `type`, `img`, `trash`) VALUES
+(1, 'Bkash', 1983667657, 'Personal', '', 0),
+(2, 'Cash On Delivery', NULL, '', '', 0);
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `products`
 --
 
@@ -824,6 +1059,7 @@ CREATE TABLE `products` (
   `warranty` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
   `feature_product` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
   `description` longtext COLLATE utf8mb4_unicode_ci NOT NULL,
+  `short_description` text COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `status` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
   `trash` int(1) NOT NULL DEFAULT 0,
   `date` date NOT NULL DEFAULT current_timestamp()
@@ -833,60 +1069,62 @@ CREATE TABLE `products` (
 -- Dumping data for table `products`
 --
 
-INSERT INTO `products` (`id`, `title`, `brand_id`, `cat_id`, `sub_cat_id`, `price`, `min_qty`, `discount`, `warranty`, `feature_product`, `description`, `status`, `trash`, `date`) VALUES
-(1, 'Product Title One', 1, 6, 0, '1230.00', '1.00', '120.00', '2', 'no', 'Morem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum', 'available', 0, '2021-04-27'),
-(2, 'Product Title Two', 1, 7, 3, '24154.00', '1.00', '3244.00', '55', 'yes', 'Psum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum', 'available', 0, '2021-04-25'),
-(3, 'Product Title Three', 1, 6, 0, '3256.00', '9.00', '2.00', '55', 'no', 'Type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum', 'available', 0, '2021-04-25'),
-(4, 'Product Title Four', 1, 4, 0, '750.00', '1.00', '78.00', '2', 'yes', 'Simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.', 'available', 0, '2021-04-22'),
-(5, 'Product Title Five', 1, 2, 0, '321.00', '1.00', '21.00', '2', 'yes', 'Text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.', 'available', 0, '2021-04-22'),
-(6, 'Product Title Six', 1, 3, 0, '145.00', '1.00', '5.00', '', 'yes', 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.', 'available', 0, '2021-04-22'),
-(7, 'sdfsdfsdf', 1, 8, 0, '1000.00', '1.00', '10.00', '', 'no', 'sdfsdfsdfasf', 'available', 0, '2021-04-26'),
-(8, 'Atumpan', 1, 8, 0, '2100.00', '1.00', '0.00', '', 'no', 'A type of African talking drum. Played in pairs, these drums provide the bass part in Adowa dance ensembles. These drums are also found in Fontomfrom ensembles. The atumpan is played either with one\'s bare hands or L-shaped sticks.', 'available', 0, '2021-04-26'),
-(9, 'Autoharp', 1, 8, 0, '22220.00', '1.00', '20.00', '', 'no', 'AutoharpAutoharpAutoharpAutoharpAutoharpAutoharpAutoharpAutoharpAutoharpAutoharpAutoharpAutoharpAutoharpAutoharpAutoharpAutoharpAutoharpAutoharpAutoharpAutoharpAutoharp', 'available', 0, '2021-04-26'),
-(10, 'Bagpipe', 1, 8, 0, '1500.00', '1.00', '6.00', '', 'no', 'BagpipeBagpipeBagpipeBagpipeBagpipeBagpipeBagpipeBagpipeBagpipeBagpipeBagpipeBagpipe', 'available', 0, '2021-04-27'),
-(11, 'One eggplant', 1, 7, 0, '60.00', '1.00', '0.00', '', 'no', 'One eggplantOne eggplantOne eggplantOne eggplantOne eggplantOne eggplantOne eggplantOne eggplantOne eggplantOne eggplantOne eggplantOne eggplant', 'available', 0, '2021-04-26'),
-(12, 'Poster Biennale', 1, 7, 3, '80.00', '1.00', '5.00', '', 'no', 'Poster BiennalePoster BiennalePoster BiennalePoster BiennalePoster BiennalePoster BiennalePoster BiennalePoster BiennalePoster BiennalePoster BiennalePoster Biennale', 'available', 0, '2021-04-27'),
-(13, 'New Exclusive Hot Kurti For Stylish', 1, 6, 3, '1400.00', '1.00', '2.00', '', 'no', 'Shalwar Kameez, also spelled salwar kameez or shalwar kameez, is a traditional outfit originating in the subcontinent. It is a generic term used to describe different styles of dress. The shalwar kameez can be worn by women. The shalwar and the kameez are two garments which are combined to form the shalwar kameez.', 'available', 0, '2021-04-27'),
-(14, 'Indian Weightless Georgette Salwar Kameez', 1, 6, 0, '1800.00', '1.00', '5.00', '', 'no', 'Shalwar kameez also spelled or kameez is a traditional outfit originating in the Indian subcontinent. The apparel comprises a headscarf, (long shirt) And Shalwar (baggy trousers) when worn by women and Kameez and Shalwar when worn by men. The term covers different styles according to the region where the outfit is worn. Styles include Anarkali, Punjabi, Afghani, and Balochi. In origin, the Shalwar and Kameez are two separate garments that have been combined to form the outfit. May the women more powerful under the influence of e-commerce! ‘Ultra Fashion’- A new project of Daraz to ensure the economical and social advancement for women. We are the actual powerhouse of e-commerce. We are not fictional characters, we are real-life ‘Wonder Women’! Observing the active participation and direct contribution pattern of the women i', 'available', 0, '2021-04-27'),
-(15, 'Stainless Steel Multi-function Vegetable Double Peeler Cutter Julienne', 1, 7, 0, '200.00', '1.00', '8.00', '', 'no', 'Product details of Stainless Steel Multi-function Vegetable Double Peeler Cutter Julienne Peeler Potato Carrot Grater Kitchen Tool\r\n100% brand new and high quality\r\nMade from high duty stainless steel material, it is rustproof.\r\nComfortable handle with hanging hook\r\nEasy to clean\r\nDishwasher safe', 'available', 0, '2021-04-27'),
-(16, 'Vegetables Slicer Cutting Aid Holder Guide Slicing Cutter Safe For Kitchen Work', 1, 7, 0, '300.00', '1.00', '4.00', '', 'no', 'Product details of Vegetables Slicer Cutting Aid Holder Guide Slicing Cutter Safe For Kitchen Work\r\nKeeps onions,Tomato and other Vegetable stable and creates even slices everytime.\r\nEasy hold handle allows for firm grip.\r\nGreat for anyone with poor grip.\r\nKeeps onions stable and creates even slices everytime.', 'available', 0, '2021-04-27'),
-(17, 'TOYOTA PREMIO Year: 2017', 1, 5, 0, '2500000.00', '1.00', '5.00', '', 'no', 'For more details about this product, please dial 09610002345 to get assistance from our expert agents.\r\n1. Customer can visit physical store to have look & feel the actual product (Car) by setting an appointment through Daraz. For setting an appointment please call at 09610002345. \r\n\r\n2. The Registration Process of the Car will be handled by concerned show room/dealer and Customer can collect the relevant registration documents from the concerned show room/dealer. \r\n\r\n3. For after sales service Customer needs to communicate with Daraz. Thereafter, Daraz will communicate with the concerned show room/dealer, and arrange the required sales services accordingly. \r\n\r\n4. For any query or assistance please communicate Daraz at 09610002345.\r\n\r\n5. Customer will receive one year’s free servicing facilities excluding the cost of parts, oil, lubricants etc. \r\n\r\n6. Once purchased, the Product (Car) cannot be returned, changed or exchanged. \r\n\r\n7. Delivery of the Car shall be taken by the Customer from the show room/dealer.', 'available', 0, '2021-04-27'),
-(18, 'Toyota Axio Hybrid 2016', 1, 5, 0, '1.00', '1.00', '10.00', '', 'no', 'For any query or assistance please communicate Daraz at 09610002345.\r\n1. Customer can visit physical store to have look & feel the actual product (Car) by setting an appointment through Daraz. For setting an appointment please call at 09610002345.\r\n2. The Registration Process of the Car will be handled by concerned show room/dealer and Customer can collect the relevant registration documents from the concerned show room/dealer.\r\n3. For after sales service Customer needs to communicate with Daraz. Thereafter, Daraz will communicate with the concerned show room/dealer, and arrange the required sales services accordingly.\r\n4. For any query or assistance please communicate Daraz at 09610002345.\r\n5. Customer will receive one year’s free servicing facilities excluding the cost of parts, oil, lubricants etc.\r\n6. Once purchased, the Product (Car) cannot be returned, changed or exchanged.\r\n7. Delivery of the Car shall be taken by the Customer from the show room/dealer.', 'available', 0, '2021-04-27'),
-(19, 'Toyota Premio 2014 FL', 1, 5, 0, '2.00', '1.00', '2.00', '', 'no', '1.  Customer can visit physical store to have look & feel the actual product (Car) by setting an appointment through Daraz. For setting an appointment please call at 09610002345.\r\n\r\n2.  The Registration Process of the Car will be handled by concerned show room/dealer and Customer can collect the relevant registration documents from the concerned show room/dealer.\r\n\r\n3.  For after sales service Customer needs to communicate with Daraz. Thereafter, Daraz will communicate with the concerned show room/dealer, and arrange the required sales services accordingly.\r\n\r\n4.  For any query or assistance please communicate Daraz at 09610002345.\r\n\r\n5.  Customer will receive one year’s free servicing facilities excluding the cost of parts, oil, lubricants etc.\r\n\r\n6.  Once purchased, the Product (Car) cannot be returned, changed or exchanged.\r\n\r\n7.  Delivery of the Car shall be taken by the Customer from the show room/dealer.\r\n\r\nToyota Premio 2014 FL', 'available', 0, '2021-04-27'),
-(20, 'Toyota Noah 2015 Black', 1, 5, 0, '2.00', '1.00', '12.00', '', 'no', 'For any query or assistance please communicate Daraz at 09610002345.\r\n1. Customer can visit physical store to have look & feel the actual product (Car) by setting an appointment through Daraz. For setting an appointment please call at 09610002345.\r\n2. The Registration Process of the Car will be handled by concerned show room/dealer and Customer can collect the relevant registration documents from the concerned show room/dealer.\r\n3. For after sales service Customer needs to communicate with Daraz. Thereafter, Daraz will communicate with the concerned show room/dealer, and arrange the required sales services accordingly.\r\n4. For any query or assistance please communicate Daraz at 09610002345.\r\n5. Customer will receive one year’s free servicing facilities excluding the cost of parts, oil, lubricants etc.\r\n6. Once purchased, the Product (Car) cannot be returned, changed or exchanged.\r\n7. Delivery of the Car shall be taken by the Customer from the show room/dealer.', 'available', 0, '2021-04-27'),
-(21, 'Intel Dual Core RAM 4GB HDD 500GB Monitor 17 inch Intel HD Graphics Built-in for Gaming PC Windows 7 64 Bit Best Desktop Computer in low price', 1, 4, 0, '10.00', '1.00', '2.00', '2', 'no', 'Product details of Intel Dual Core RAM 4GB HDD 500GB Monitor 17 inch Intel HD Graphics Built-in for Gaming PC Windows 7 64 Bit Best Desktop Computer in low price\r\nIntel Dual Core RAM 4GB HDD 500GB Monitor 17 inch Intel HD Graphics Built-in for PC Windows 7 64 Bit Best Desktop Computer in low price\r\nIntel Dual Core RAM 4GB HDD 500GB Monitor 17 inch Intel HD Graphics Built-in for', 'available', 0, '2021-04-27'),
-(22, 'Full Set PC Core-i5-2nd Genaration-8GB DDR3 Ram-500GB HDD-19', 1, 5, 0, '27000.00', '1.00', '3.00', '', 'yes', 'Product details of Full Set PC Core-i5-2nd Genaration-8GB DDR3 Ram-500GB HDD-19\" Monitor-Keyboard-Mouse All Complete\r\nProcessor: Intel Core i5-2320 (2nd Generation) GHz 3.0 GHz, RAM: 8GB DDR3, Hard Disk: 500GB, Mainboard :H61 Intel Chipset, Casing : GIGASONIC / OVO / EROCK / CIRCLE / STAR SONIC / DBM (Casing can be different from the given pictures) , Monitor : 19\" Gigasonic or any china brand, USB Keyboard, USB Mouse, Complete PC', 'available', 0, '2021-04-27'),
-(23, 'Square LED Digital Sports Watch, Waterproof LED Wrist Watch(null)', 1, 3, 0, '3600.00', '1.00', '2.00', '', 'no', 'Product details of Square LED Digital Sports Watch, Waterproof LED Wrist Watch(null)\r\nInformal style watch,\r\nperfect to wear with daily clothes.\r\nExquisitely crafted watch,\r\ngood in workmanship.\r\nStreamlined design gives the piece a fashionable look.\r\nPersonality, exquisite workmanship\r\nTrendy, sophisticated texture\r\nSimple smooth design, stylish atmosphere', 'available', 0, '2021-04-27'),
-(24, '40M5 Meters Ranging Tape Measure Surface Pythagorean Smart Steel Ruler Infrared Multi-Function Measuring Instrumen', 1, 8, 0, '450.00', '1.00', '3.00', '', 'no', '▲Multi-function measurement mode-with multiple measurement modes such as single, continuous, distance, area, volume and Pythagoras. You can also set standards and correct accuracy.\r\n▲Two-in-one tape measure-The tape measure combines 131 Ft ruler and 5M tape measure. Simultaneous measurement can verify the accuracy of the. Long press the \"→\" button for 2s to freely switch the unit between M / In / Ft; support the use of the front reference point and end reference point functions for distance self-calibration.\r\n▲Convenient USB charging-Tooltoo\'s measurement is a universal USB charging. Built-in 180mAh lithium battery, it takes about 4 hours to fully charge. It can be used 3000 times per full charge. (Note: Use a voltage within 5V to charge, for example: PC USB port)\r\n▲ precision- measurement range: 40m/131ft, measurement accuracy: +/- 3mm, level: 2 (1mW or less), level: 2 (1mW or less), frequency: 650nm, measuring range of tape measure : 5m, waterproof and dustproof: ip54, body size: 8.5 x 4.3 x 7.5cm, actual weight: 280g.', 'available', 0, '2021-04-27'),
-(25, 'Wood Soprano Basswood Ukulele Uke Hawaii Guitar Musical Instrumen Bag Tuner -', 1, 8, 0, '4200.00', '1.00', '2.00', '', 'no', 'Features:\r\n-Perfect for beginners, students, and music lovers.\r\n-Reasonably priced, entry-level acoustic guitar.\r\n-Meticulously crafted the traditional style.\r\n-Give you a nice mellow tone with a slower response.\r\n-Ideal for beginners to find their way around the instrument.\r\n-Come included with a guitar pick and an extra set of strings.\r\n-The wood top, back and sides keep the guitar lightweight and inexpensive while not sacrificing tone.\r\n-Meticulously crafted the traditional style, this guitar gives you a nice mellow tone with a slower response and thus is ideal for beginners to find their way around the instrument.\r\n', 'available', 0, '2021-04-27'),
-(26, 'Vegetable Chopper Handy Quick Cutter for Kitchen, 3 Blade Stainless Steel, Pull String, Green (350ml And 900ml)', 1, 7, 0, '300.00', '1.00', '0.00', '', 'no', 'Product details of Vegetable Chopper Handy Quick Cutter for Kitchen, 3 Blade Stainless Steel, Pull String, Green (350ml And 900ml)\r\nShadaMon Store\r\nSturdy 3-blade design made from Stainless Steel\r\nUnique string function to chop vegetables and fruits with ease\r\nNo electricity required\r\nEasy to use - easy to detach', 'available', 0, '2021-04-27'),
-(27, 'Fruit Slicer Apple Pear Cutter Stainless Steel Knife Corers Remover Vegetable Melon Chopper Peerler Divided Kitchen Tools', 1, 7, 0, '750.00', '1.00', '4.00', '', 'no', 'Product details of Fruit Slicer Apple Pear Cutter Stainless Steel Knife Corers Remover Vegetable Melon Chopper Peerler Divided Kitchen Tools\r\nSharp blades.\r\nLightweight, easy to carry.\r\nSimple and compact design, easy to clean.\r\nSafe and health, suit to apple, pear, and other fruits.\r\nEasily to core and cut apples/pears/etc into 8 average pieces.\r\nThe corer slicer fruit knife cores and slices the apple into sections in one swift movement.\r\nMaking it perfect for making fruit salads or for creating bite-sized chunks for the kids.', 'available', 0, '2021-04-27'),
-(28, 'Joypuri Unstitched Skin Print Ari Work Cotton Three Piece Fashionable, Stylish and Comfortable, Salwar Kameez For/ Women', 1, 6, 0, '2500.00', '1.00', '18.00', '', 'no', 'Kameez, also spelled Salwar kameez or shalwar qameez, is a traditional outfit originating in the subcontinent. It is a generic term used to describe different styles of dress. The Salwar Kameez can be worn by women. The Salwar and the kameez are two garments which are combined to form the Salwar kameez.This Product is made of good qualities fabrics. It is one of the most popular wears for dif- ferent festivals and weddings occasion. Women look very gorgeous in colorful dress, and so they love to wear and have a luxurious and colorful dress for different social and cultural functions. It will keep you looking and feeling good all day long', 'available', 0, '2021-04-27'),
-(29, 'Toshor Silk block print Sharee with blouj piece and high Quality Rich Fabrics,Exclusive Fashionable, Stylish Comfortable white colour sharee for Women.', 1, 6, 0, '4500.00', '1.00', '30.00', '', 'no', 'Saree is a very common dress in this subcontinental area like Bangladesh. This saree is made of Half Silk fabrics and also including colourfull tessel. It is also extremely versatile as it can be successfully incorporated into any look. It is one of the most popular wears for different festivals and weddings occasion. Women look very gorgeous in colorful saree, and so they love to wear and have luxurious and colorful saree for different social and cultural functions. It will keep you looking and feeling good all day long. The young lady to an elderly person every woman is fascinated about saree just because of our culture.  Sarees for women are crafted from Georgette.\r\n\r\nThe seller,\r\nJamuna Boutiques, offers a wide selection of products from renowned brands in Bangladesh with a promise of fast, safe and easy online shopping experience through Daraz. The seller comes closer to the huge customers on this leading online shopping platform of all over Bangladesh and serving to the greater extent of achieving higher customer satisfaction. The brands working with Daraz are not only serving top class products but also are dedicated to acquiring brand loyalty.', 'available', 0, '2021-04-27'),
-(30, 'Nussan Juke 2015', 1, 5, 0, '2.00', '1.00', '1.00', '', 'no', 'Product details of Nussan Juke 2015\r\nBrand: Nissan\r\nModel: Juke\r\nYear: 2015\r\nColor: Wine red\r\nSpecifications of Nussan Juke 2015\r\nBrandNissanSKU171244245_BD-1107158282', 'available', 0, '2021-04-27'),
-(31, 'Nussan Juke 2015', 1, 5, 0, '2.00', '1.00', '1.00', '', 'no', 'Product details of Nussan Juke 2015\r\nBrand: Nissan\r\nModel: Juke\r\nYear: 2015\r\nColor: Wine red\r\nSpecifications of Nussan Juke 2015\r\nBrandNissanSKU171244245_BD-1107158282', 'available', 1, '2021-04-27'),
-(32, 'Nussan Juke 2015', 1, 5, 0, '2.00', '1.00', '1.00', '', 'no', 'Product details of Nussan Juke 2015\r\nBrand: Nissan\r\nModel: Juke\r\nYear: 2015\r\nColor: Wine red\r\nSpecifications of Nussan Juke 2015\r\nBrandNissanSKU171244245_BD-1107158282', 'available', 1, '2021-04-27'),
-(33, 'Toyota Aqua 2014 (TRD Body Kit)', 1, 5, 0, '1.00', '1.00', '0.00', '', 'no', 'For any query or assistance please communicate Daraz at 09610002345.\r\n1.  Customer can visit physical store to have look & feel the actual product (Car) by setting an appointment through Daraz. For setting an appointment please call at 09610002345.\r\n\r\n2.  The Registration Process of the Car will be handled by concerned show room/dealer and Customer can collect the relevant registration documents from the concerned show room/dealer.\r\n\r\n3.  For after sales service Customer needs to communicate with Daraz. Thereafter, Daraz will communicate with the concerned show room/dealer, and arrange the required sales services accordingly.\r\n\r\n4.  For any query or assistance please communicate Daraz at 09610002345.\r\n\r\n5.  Customer will receive one year’s free servicing facilities excluding the cost of parts, oil, lubricants etc.\r\n\r\n6.  Once purchased, the Product (Car) cannot be returned, changed or exchanged.\r\n\r\n7.  Delivery of the Car shall be taken by the Customer from the show room/dealer.', 'available', 0, '2021-04-27'),
-(34, 'Walton Laptop Tamarind ZX3701A, 7th Gen Intel Core i3-7020U 2.30GHz, 512GB SATAIII M.2 2280 SSD , 4GB DDR4 RAM, 14 inch HD Display.', 1, 4, 0, '38000.00', '1.00', '8.00', '', 'no', 'Product details of Walton Laptop Tamarind ZX3701A, 7th Gen Intel Core i3-7020U 2.30GHz, 512GB SATAIII M.2 2280 SSD , 4GB DDR4 RAM, 14 inch HD Display.\r\n35.56cm (14.0\") HD Matte LED backlit display\r\nIntel® Core™ i3-7020U 2.30GHz\r\n7thGeneration processor\r\n512GB SATAIII M.2 2280 SSD\r\n4GB DDR4 RAM\r\n802.11ac WLAN + BT 4.2\r\nGenuine Windows 10\r\nBattery Backup: Up to 6 Hours\r\nUp to 2 years warranty', 'available', 0, '2021-04-27'),
-(35, 'Walton Walpad 10.5\'\' IPS Display, 4GB LPDDR4 RAM, 7000mah Battery with Flip Cover', 1, 4, 0, '28000.00', '1.00', '0.00', '', 'no', 'Product details of Walton Walpad 10.5\'\' IPS Display, 4GB LPDDR4 RAM, 7000mah Battery with Flip Cover\r\n10.5\'\' FHD IPS Display\r\n7000mah Battery\r\n4GB LPDDR4 RAM\r\nHelio P60 Gaming Processor\r\nAndroid 10\r\n', 'available', 0, '2021-04-27'),
-(36, 'Walton Ultra Slim Border Less WD238V02 23.8” Full HD 1920x1080 at 75HZ Desktop Monitor with Built in Speaker.', 1, 4, 0, '12.00', '1.00', '1.00', '', 'no', 'Product details of Walton Ultra Slim Border Less WD238V02 23.8” Full HD 1920x1080 at 75HZ Desktop Monitor with Built in Speaker.\r\n23.8” LED Backlight Display\r\nUltra Slim Design\r\nMAX Resolution 1920 ×1080 at 75Hz\r\nWide Viewing Angle\r\nContrast Ratio 3000: 1\r\nConnectivity: HDMI,VGA\r\nBuilt-in Speaker', 'available', 0, '2021-04-27'),
-(37, 'HP 22fw 21.5 IPS Full HD LED Monitor (White)', 1, 4, 0, '1400.00', '1.00', '4.00', '', 'no', 'Product details of HP 22fw 21.5 IPS Full HD LED Monitor (White)\r\nModel: HP 22fw\r\nResolution: 1920 x 1080 @ 60Hz\r\nResponse Time: 5ms\r\nViewing Angle:178° (V)/178°(H)\r\nBrightness:300 cd/m²', 'available', 0, '2021-04-27'),
-(38, 'Gigabyte Aorus 5 Mb I7-10750H 2.6 To 5.0Ghz (6C, 12T) 10Th Gen, 16Gb Ram, 512Gb Pcie, 4Gb Ddr6 1650Ti Graphics, 15.6 Fhd 144Hz Gaming Laptop', 1, 4, 0, '126.00', '1.00', '2.00', '', 'no', 'Product details of Gigabyte Aorus 5 Mb I7-10750H 2.6 To 5.0Ghz (6C, 12T) 10Th Gen, 16Gb Ram, 512Gb Pcie, 4Gb Ddr6 1650Ti Graphics, 15.6 Fhd 144Hz Gaming Laptop\r\n10th Gen Intel® Core™ i7Processor H-Series i7-10750H 2.6to 5.0GHz (6Core, 12Thread)\r\nNVIDIA® GeForce GTX 1650Ti 4GB DDR6\r\n15.6 Inch Thin Bezel FHD 144Hz display\r\n(8X2)=16GB DDR4 2666MHz RAM (2 slots, Max 64GB)\r\n512GB M.2 NVMe PCIe SSD\r\nBacklit Keyboard\r\n2 Years International Warranty\r\nMade In Taiwan', 'available', 0, '2021-04-27'),
-(39, 'Samsung Galaxy A20S Tempered Glass Protector 6D/9D/11D Black-Transparent', 1, 3, 0, '16000.00', '1.00', '2.00', '', 'no', 'Product details of Samsung Galaxy A20S Tempered Glass Protector 6D/9D/11D Black-Transparent\r\nMaterials: Tempered Glass\r\n(1) Name: Tempered Glass\r\n(2) Protection: The Screen Of Cellphone\r\n(3) Feature: Anti-Scratch, Screen Protector, Anti-oil，waterproof，HD\r\n(4) 100% High quality and New\r\n(5) Easy to install or remove\r\n(6) Designed to fit your device perfectly\r\n1.Glass ONLY, Other Accessories not included.\r\n2.The real color of the item may be slightly different from the pictures shown on website caused by many factors such as brightness of your monitor and light brightness.', 'available', 0, '2021-04-27'),
-(40, 'Usb Type C Cable 1 Pack (3Ft) Nylon Braided Usb A To Usb C Charger Cable Fast Charg Cord For Samsung Galaxy 8 S8 Plus, Lg G5 G6 V30, Htc 10, Nexus 5X/6P-Blue', 1, 3, 0, '450.00', '1.00', '6.00', '', 'yes', 'Product details of Usb Type C Cable 1 Pack (3Ft) Nylon Braided Usb A To Usb C Charger Cable Fast Charg Cord For Samsung Galaxy 8 S8 Plus, Lg G5 G6 V30, Htc 10, Nexus 5X/6P-Blue\r\nUSB CERTIFIED FAST DATA-SYNC & CHARG (USB 2.0): Supports safe high-speed charg (5V/3.0A) and fast data transfer. *Not compatible with iPhone or cro-USB!\r\nDURABLE & TANGLE-FREE DESIGN: Features an ultra-durable nylon-braided jacket with a bend lifespan of 10000+ and seamlessly molded joints.\r\nREVERSIBLE CONNECTOR: Keeps up with t latest trend of USB interface. This user-friendly design allows you to plug into all your USB Type-C compatible devices without worrying about t orienon of t port.\r\nSAFE & RELIABLE: Manufactured in accordance with USB Type-C specifications version 1.1. Solid 23AWG wire core is ho within preum alunum housing for safe and reliable charg up to 3A. Standard 56kΩ ll-up resistor contained.\r\nMaterial: Nylon\r\nT cable is guaranteed to work with t Phone\r\n2 in 1 functionality Data Sync / Charger Cable\r\nUSB 2.0 Compatible,mermaid style\r\nCable Length : 1 M\r\nColors: Blue\r\nPackage Content: 1 X Type C Cable\r\nOnly t above package content, otr products are not included.\r\n: Light and different displays may cause t color of t item in t picture a little different from t thing. T measuret allowed error is +/- 1-3cm.\r\nUSB CERTIFIED FAST DATA-SYNC & CHARG (USB 2.0): Supports safe high-speed charg (5V/3.0A) and fast data transfer. *Not compatible with iPhone or cro-USB!\r\nDURABLE & TANGLE-FREE DESIGN: Features an ultra-durable nylon-braided jacket with a bend lifespan of 10000+ and seamlessly molded joints.\r\nREVERSIBLE CONNECTOR: Keeps up with t latest trend of USB interface. This user-friendly design allows you to plug into all your USB Type-C compatible devices without worrying about t orienon of t port.\r\nSAFE & RELIABLE: Manufactured in accordance with USB Type-C specifications version 1.1. Solid 23AWG wire core is ho within preum alunum housing for safe and reliable charg up to 3A. Standard 56kΩ ll-up resistor contained.\r\nMaterial: Nylon\r\nT cable is guaranteed to work with t Phone\r\n2 in 1 functionality Data Sync / Charger Cable\r\nUSB 2.0 Compatible,mermaid style\r\nCable Length : 1 M', 'available', 0, '2021-04-27'),
-(41, 'Tempered Glass for Sony Xperia XZS Gorilla 2.5D-Transparent', 1, 3, 0, '26500.00', '1.00', '4.00', '', 'no', 'Product details of Tempered Glass for Sony Xperia XZS Gorilla 2.5D-Transparent\r\nHigh-quality material,Touch Sensitive\r\nLightweight And Ultra-thin，Easy To Carry\r\nProtection: The Screen Of Cellphone\r\n100%Brand New\r\nUltra-thin& Rounded Edges\r\n1.Glass ONLY, Other Accessories not included.\r\n2.The real color of the item may be slightly different from the pictures shown on website caused by many factors such as brightness of your monitor and light brightness.\r\nSpecifications of Tempered Glass for Sony Xperia XZS Gorilla 2.5D-Transparent', 'available', 0, '2021-04-27'),
-(42, 'Liquid Silicone Phone Case For New Apple iPhone 7/8 Apple iPhone 7/8 Soft Mobile Back Cover', 1, 3, 0, '48000.00', '1.00', '2.00', '', 'no', 'Product details of Liquid Silicone Phone Case For New Apple iPhone 7/8 Apple iPhone 7/8 Soft Mobile Back Cover\r\nVibrant Color Border for naturally enhanced\r\npersonalized appearance\r\nMade of Nano chemical materials\r\nEnvironmentally friendly material\r\nUltra-thin and easy for operation\r\nHigh-precision machine molding\r\nExplosion-proof and shock-proof\r\nPressure-resistant and anti-scratch function\r\nProtects your device perfectly\r\n0.3mm, precious cuts for your screen, speakers, sensors and other ports\r\nTough and scratch-resistant yet flexible\r\nHD ultra-clear with high sensitivity and comfortable touch feeling\r\nSpecifications of Liquid Silicone Phone Case For New Apple iPhone 7/8 Apple iPhone 7/8 Soft Mobile Back Cover\r\nBrandClick Gadgets', 'available', 0, '2021-04-27'),
-(43, 'Space Full Clear Shockproof Acrylic Case For iPhone 12 11 Pro XS Max Mini XR X 6 6S 7 8 Plus SE 2020 Transparent Anti-Knock', 1, 3, 0, '120000.00', '1.00', '3.00', '', 'no', 'Product details of Space Full Clear Shockproof Acrylic Case For iPhone 12 11 Pro XS Max Mini XR X 6 6S 7 8 Plus SE 2020 Transparent Anti-Knock\r\nSpace Full Clear Shockproof Acrylic Case For iPhone 12 11 Pro XS Max Mini XR X 6 6S 7 8 Plus SE 2020 Transparent Anti-Knock', 'available', 0, '2021-04-27'),
-(44, 'Luxury Brand Clear Case For Apple iPhone 11 Pro Max 12 Mini XR iPhone11 Transparent Shockproof Hybrid Cover Accessories', 1, 3, 0, '95000.00', '1.00', '1.00', '', 'no', 'Product details of Luxury Brand Clear Case For Apple iPhone 11 Pro Max 12 Mini XR iPhone11 Transparent Shockproof Hybrid Cover Accessories\r\nOriginal Luxury Brand Clear Case For Apple iPhone 11 Pro Max 12 Mini XR iPhone11 Transparent Shockproof Hybrid Cover Accessories\r\nOriginal Luxury Brand Clear Case For Apple iPhone 11 Pro Max 12 Mini XR iPhone11 Transparent Shockproof Hybrid Cover Accessories\r\nFor iPhone 11 Pro Max: Perfect Compatible with iPhone 11 Pro Max case\r\nFor iPhone 11 Pro Max slim cases: Made of premium soft tpu bumper+ hard pc back material offer fingerprints and extra protection from sudden dropping and scratch resistant .\r\nFor iPhone 11 Pro Max cases: Easy access to all buttons, controls and ports without having to remove your phone.Fits snugly over the buttons, curves of your device.\r\nFor iPhone 11 Pro Max case: Crystal clear case reveals and enhances the original phone design and colors.\r\nFor 11 Pro Max case: Raised edges ensure protection for the screen and camera.', 'available', 0, '2021-04-27'),
-(45, 'BlackBerry phones', 1, 3, 0, '94000.00', '1.00', '2.00', '', 'yes', 'My old BlackBerry 6220, complete with a track wheel and dorky holster, was built like a tank. I dropped it. I flung it in anger. When I was bored, I tried juggling it (and I\'m a terrible juggler). It still kept ticking', 'available', 0, '2021-04-27'),
-(46, 'Pizza Cutter - Silver - Big Size', 1, 2, 0, '230.00', '1.00', '4.00', '', 'no', 'Product details of Pizza Cutter - Silver - Big Size\r\nProduct Type: Pizza Cutter\r\nColor: Silver\r\nMain Material: Stainless Steel\r\nGood quality product\r\nEasy to use\r\nEasy to carry', 'available', 0, '2021-04-27'),
-(47, 'Cookie Cutter 12 Pieces', 1, 2, 0, '120.00', '1.00', '3.00', '', 'no', 'Product details of Cookie Cutter 12 Pieces\r\nMade in China\r\nProduct Type: Cookie Cutter\r\nColor: Silver\r\nMain Material: Stainless Steel\r\nMetal cutters for cookies, biscuits or any type of sugar craft\r\nCould be used as drawing templates\r\nIdeal for making cakes, biscuit, cookies, chocolate, jelly, pie, etc\r\nThese patterns can arouse your children’s appetite easily\r\nUse and clean easily', 'available', 0, '2021-04-27'),
-(48, 'Ramadan Quarter Chicken Fries', 1, 2, 0, '399.00', '1.00', '4.00', '', 'no', 'Get a Perfect Solo meal for iftar. Pair up your Rizo Rice (with gravy) with a juicy Quarter Chicken, regular Fries & 200ML bottle of Slice', 'available', 0, '2021-04-27'),
-(49, 'Ramadan Family Meal', 1, 2, 0, '1299.00', '1.00', '3.00', '', 'no', 'A meal for your whole family. Enjoy 8pcs Hot & Crispy, 8pcs Hot Wings, 1 Large Fries & 4 200ML Slice only @Tk.1299', 'available', 0, '2021-04-27'),
-(50, 'Ramadan Zinger Meal', 1, 2, 0, '429.00', '1.00', '2.00', '', 'no', 'Break your fast with a classic Zinger, 1 Hot & Crispy Chicken, 2 Hot Wings & a 200ML Bottle of Slice.', 'available', 0, '2021-04-27'),
-(51, 'Smoky Red Rice Bowl', 1, 2, 0, '289.00', '1.00', '1.00', '', 'no', 'It’s sweet & spice, with everything nice! Rice & gravy with a side of our special Smoky Red.', 'available', 0, '2021-04-27'),
-(52, 'Rizo Rice', 1, 2, 0, '99.00', '1.00', '1.00', '', 'no', 'Perfectly cooked KFC signature rice to fill your hunger !\r\n\r\n', 'available', 0, '2021-04-27'),
-(53, 'gravy', 1, 2, 0, '40.00', '1.00', '1.00', '', 'no', 'Make your meal more delicious by adding some gravy!\r\n\r\n', 'available', 0, '2021-04-27');
+INSERT INTO `products` (`id`, `title`, `brand_id`, `cat_id`, `sub_cat_id`, `price`, `min_qty`, `discount`, `warranty`, `feature_product`, `description`, `short_description`, `status`, `trash`, `date`) VALUES
+(1, 'Product Title One', 1, 6, 0, '1230.00', '1.00', '67.00', '2', 'no', '<div id=\"lipsum\">\r\n<p>&nbsp;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent faucibus erat id orci suscipit, ut lacinia nunc venenatis. Proin pharetra ac nunc sit amet sollicitudin. Maecenas accumsan vulputate turpis sodales suscipit. Phasellus laoreet posuere tempus. Sed eget est quis arcu elementum lobortis. Ut non egestas arcu. Nunc vitae arcu eget risus semper faucibus. Praesent sed massa volutpat quam imperdiet ultrices at quis lacus. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quis cursus libero. Aliquam erat volutpat. Curabitur vel lorem non magna hendrerit pretium et non lorem. Integer ut odio purus. Sed non mi tincidunt, porta nulla volutpat, malesuada erat.</p>\r\n<p>Fusce consectetur imperdiet risus nec auctor. Donec iaculis diam non laoreet elementum. Ut elementum, nibh vel ultricies hendrerit, sapien libero feugiat velit, ac consectetur eros tellus a massa. Nullam sed sem at urna pretium blandit in imperdiet leo. Sed in ligula tristique, accumsan orci in, sodales massa. Integer nec hendrerit felis. Phasellus tortor mauris, fringilla ac dolor lacinia, accumsan malesuada quam. Donec sed libero interdum, ullamcorper urna eget, cursus lorem. Nulla pretium, nibh at ornare iaculis, justo ipsum porta magna, a sodales enim massa dignissim sem. Phasellus ipsum nulla, consectetur sed ante et, suscipit gravida magna. Donec ac ante tempus, aliquet libero ut, gravida ligula. Phasellus sed quam varius, scelerisque mi et, imperdiet mauris. Vivamus a mattis massa, bibendum suscipit ligula. Phasellus placerat sapien vitae orci tristique iaculis. Sed varius turpis ut porttitor hendrerit. Nunc non varius enim.</p>\r\n<p>Donec non arcu nec nisl consequat convallis. Nam libero lectus, consequat at sem eu, vehicula rhoncus odio. Phasellus dolor dolor, convallis eu dictum sed, sodales id orci. Vestibulum quis lorem auctor, porta libero in, suscipit erat. Etiam sollicitudin, dui non consectetur pellentesque, tortor metus venenatis leo, id varius eros lorem ac arcu. Nam mollis placerat odio eget scelerisque. Quisque ac tristique elit.&nbsp;</p>\r\n</div>', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ultricies augue nulla, non venenatis diam interdum id. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. In sit amet erat viverra, posuere. ', 'available', 0, '2021-04-29'),
+(2, 'Product Title Two', 1, 7, 3, '24154.00', '1.00', '24.00', '55', 'yes', '<div id=\"lipsum\">\r\n<p>&nbsp;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent faucibus erat id orci suscipit, ut lacinia nunc venenatis. Proin pharetra ac nunc sit amet sollicitudin. Maecenas accumsan vulputate turpis sodales suscipit. Phasellus laoreet posuere tempus. Sed eget est quis arcu elementum lobortis. Ut non egestas arcu. Nunc vitae arcu eget risus semper faucibus. Praesent sed massa volutpat quam imperdiet ultrices at quis lacus. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quis cursus libero. Aliquam erat volutpat. Curabitur vel lorem non magna hendrerit pretium et non lorem. Integer ut odio purus. Sed non mi tincidunt, porta nulla volutpat, malesuada erat.</p>\r\n<p>Fusce consectetur imperdiet risus nec auctor. Donec iaculis diam non laoreet elementum. Ut elementum, nibh vel ultricies hendrerit, sapien libero feugiat velit, ac consectetur eros tellus a massa. Nullam sed sem at urna pretium blandit in imperdiet leo. Sed in ligula tristique, accumsan orci in, sodales massa. Integer nec hendrerit felis. Phasellus tortor mauris, fringilla ac dolor lacinia, accumsan malesuada quam. Donec sed libero interdum, ullamcorper urna eget, cursus lorem. Nulla pretium, nibh at ornare iaculis, justo ipsum porta magna, a sodales enim massa dignissim sem. Phasellus ipsum nulla, consectetur sed ante et, suscipit gravida magna. Donec ac ante tempus, aliquet libero ut, gravida ligula. Phasellus sed quam varius, scelerisque mi et, imperdiet mauris. Vivamus a mattis massa, bibendum suscipit ligula. Phasellus placerat sapien vitae orci tristique iaculis. Sed varius turpis ut porttitor hendrerit. Nunc non varius enim.</p>\r\n<p>Donec non arcu nec nisl consequat convallis. Nam libero lectus, consequat at sem eu, vehicula rhoncus odio. Phasellus dolor dolor, convallis eu dictum sed, sodales id orci. Vestibulum quis lorem auctor, porta libero in, suscipit erat. Etiam sollicitudin, dui non consectetur pellentesque, tortor metus venenatis leo, id varius eros lorem ac arcu. Nam mollis placerat odio eget scelerisque. Quisque ac tristique elit.&nbsp;</p>\r\n</div>', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ultricies augue nulla, non venenatis diam interdum id. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. In sit amet erat viverra, posuere. ', 'available', 0, '2021-04-29'),
+(3, 'Product Title Three', 1, 6, 0, '3256.00', '9.00', '2.00', '55', 'no', '<div id=\"lipsum\">\r\n<p>&nbsp;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent faucibus erat id orci suscipit, ut lacinia nunc venenatis. Proin pharetra ac nunc sit amet sollicitudin. Maecenas accumsan vulputate turpis sodales suscipit. Phasellus laoreet posuere tempus. Sed eget est quis arcu elementum lobortis. Ut non egestas arcu. Nunc vitae arcu eget risus semper faucibus. Praesent sed massa volutpat quam imperdiet ultrices at quis lacus. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quis cursus libero. Aliquam erat volutpat. Curabitur vel lorem non magna hendrerit pretium et non lorem. Integer ut odio purus. Sed non mi tincidunt, porta nulla volutpat, malesuada erat.</p>\r\n<p>Fusce consectetur imperdiet risus nec auctor. Donec iaculis diam non laoreet elementum. Ut elementum, nibh vel ultricies hendrerit, sapien libero feugiat velit, ac consectetur eros tellus a massa. Nullam sed sem at urna pretium blandit in imperdiet leo. Sed in ligula tristique, accumsan orci in, sodales massa. Integer nec hendrerit felis. Phasellus tortor mauris, fringilla ac dolor lacinia, accumsan malesuada quam. Donec sed libero interdum, ullamcorper urna eget, cursus lorem. Nulla pretium, nibh at ornare iaculis, justo ipsum porta magna, a sodales enim massa dignissim sem. Phasellus ipsum nulla, consectetur sed ante et, suscipit gravida magna. Donec ac ante tempus, aliquet libero ut, gravida ligula. Phasellus sed quam varius, scelerisque mi et, imperdiet mauris. Vivamus a mattis massa, bibendum suscipit ligula. Phasellus placerat sapien vitae orci tristique iaculis. Sed varius turpis ut porttitor hendrerit. Nunc non varius enim.</p>\r\n<p>Donec non arcu nec nisl consequat convallis. Nam libero lectus, consequat at sem eu, vehicula rhoncus odio. Phasellus dolor dolor, convallis eu dictum sed, sodales id orci. Vestibulum quis lorem auctor, porta libero in, suscipit erat. Etiam sollicitudin, dui non consectetur pellentesque, tortor metus venenatis leo, id varius eros lorem ac arcu. Nam mollis placerat odio eget scelerisque. Quisque ac tristique elit.&nbsp;</p>\r\n</div>', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ultricies augue nulla, non venenatis diam interdum id. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. In sit amet erat viverra, posuere. ', 'available', 0, '2021-04-29'),
+(4, 'Product Title Four', 1, 4, 0, '750.00', '1.00', '78.00', '2', 'yes', '<div id=\"lipsum\">\r\n<p>&nbsp;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent faucibus erat id orci suscipit, ut lacinia nunc venenatis. Proin pharetra ac nunc sit amet sollicitudin. Maecenas accumsan vulputate turpis sodales suscipit. Phasellus laoreet posuere tempus. Sed eget est quis arcu elementum lobortis. Ut non egestas arcu. Nunc vitae arcu eget risus semper faucibus. Praesent sed massa volutpat quam imperdiet ultrices at quis lacus. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quis cursus libero. Aliquam erat volutpat. Curabitur vel lorem non magna hendrerit pretium et non lorem. Integer ut odio purus. Sed non mi tincidunt, porta nulla volutpat, malesuada erat.</p>\r\n<p>Fusce consectetur imperdiet risus nec auctor. Donec iaculis diam non laoreet elementum. Ut elementum, nibh vel ultricies hendrerit, sapien libero feugiat velit, ac consectetur eros tellus a massa. Nullam sed sem at urna pretium blandit in imperdiet leo. Sed in ligula tristique, accumsan orci in, sodales massa. Integer nec hendrerit felis. Phasellus tortor mauris, fringilla ac dolor lacinia, accumsan malesuada quam. Donec sed libero interdum, ullamcorper urna eget, cursus lorem. Nulla pretium, nibh at ornare iaculis, justo ipsum porta magna, a sodales enim massa dignissim sem. Phasellus ipsum nulla, consectetur sed ante et, suscipit gravida magna. Donec ac ante tempus, aliquet libero ut, gravida ligula. Phasellus sed quam varius, scelerisque mi et, imperdiet mauris. Vivamus a mattis massa, bibendum suscipit ligula. Phasellus placerat sapien vitae orci tristique iaculis. Sed varius turpis ut porttitor hendrerit. Nunc non varius enim.</p>\r\n<p>Donec non arcu nec nisl consequat convallis. Nam libero lectus, consequat at sem eu, vehicula rhoncus odio. Phasellus dolor dolor, convallis eu dictum sed, sodales id orci. Vestibulum quis lorem auctor, porta libero in, suscipit erat. Etiam sollicitudin, dui non consectetur pellentesque, tortor metus venenatis leo, id varius eros lorem ac arcu. Nam mollis placerat odio eget scelerisque. Quisque ac tristique elit.&nbsp;</p>\r\n</div>', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ultricies augue nulla, non venenatis diam interdum id. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. In sit amet erat viverra, posuere. ', 'available', 0, '2021-04-29'),
+(5, 'Product Title Five', 1, 2, 0, '321.00', '1.00', '21.00', '2', 'yes', '<div id=\"lipsum\">\r\n<p>&nbsp;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent faucibus erat id orci suscipit, ut lacinia nunc venenatis. Proin pharetra ac nunc sit amet sollicitudin. Maecenas accumsan vulputate turpis sodales suscipit. Phasellus laoreet posuere tempus. Sed eget est quis arcu elementum lobortis. Ut non egestas arcu. Nunc vitae arcu eget risus semper faucibus. Praesent sed massa volutpat quam imperdiet ultrices at quis lacus. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quis cursus libero. Aliquam erat volutpat. Curabitur vel lorem non magna hendrerit pretium et non lorem. Integer ut odio purus. Sed non mi tincidunt, porta nulla volutpat, malesuada erat.</p>\r\n<p>Fusce consectetur imperdiet risus nec auctor. Donec iaculis diam non laoreet elementum. Ut elementum, nibh vel ultricies hendrerit, sapien libero feugiat velit, ac consectetur eros tellus a massa. Nullam sed sem at urna pretium blandit in imperdiet leo. Sed in ligula tristique, accumsan orci in, sodales massa. Integer nec hendrerit felis. Phasellus tortor mauris, fringilla ac dolor lacinia, accumsan malesuada quam. Donec sed libero interdum, ullamcorper urna eget, cursus lorem. Nulla pretium, nibh at ornare iaculis, justo ipsum porta magna, a sodales enim massa dignissim sem. Phasellus ipsum nulla, consectetur sed ante et, suscipit gravida magna. Donec ac ante tempus, aliquet libero ut, gravida ligula. Phasellus sed quam varius, scelerisque mi et, imperdiet mauris. Vivamus a mattis massa, bibendum suscipit ligula. Phasellus placerat sapien vitae orci tristique iaculis. Sed varius turpis ut porttitor hendrerit. Nunc non varius enim.</p>\r\n<p>Donec non arcu nec nisl consequat convallis. Nam libero lectus, consequat at sem eu, vehicula rhoncus odio. Phasellus dolor dolor, convallis eu dictum sed, sodales id orci. Vestibulum quis lorem auctor, porta libero in, suscipit erat. Etiam sollicitudin, dui non consectetur pellentesque, tortor metus venenatis leo, id varius eros lorem ac arcu. Nam mollis placerat odio eget scelerisque. Quisque ac tristique elit.&nbsp;</p>\r\n</div>', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ultricies augue nulla, non venenatis diam interdum id. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. In sit amet erat viverra, posuere. ', 'available', 0, '2021-04-29'),
+(6, 'Product Title Six', 1, 3, 0, '145.00', '1.00', '5.00', '', 'yes', '<div id=\"lipsum\">\r\n<p>&nbsp;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent faucibus erat id orci suscipit, ut lacinia nunc venenatis. Proin pharetra ac nunc sit amet sollicitudin. Maecenas accumsan vulputate turpis sodales suscipit. Phasellus laoreet posuere tempus. Sed eget est quis arcu elementum lobortis. Ut non egestas arcu. Nunc vitae arcu eget risus semper faucibus. Praesent sed massa volutpat quam imperdiet ultrices at quis lacus. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quis cursus libero. Aliquam erat volutpat. Curabitur vel lorem non magna hendrerit pretium et non lorem. Integer ut odio purus. Sed non mi tincidunt, porta nulla volutpat, malesuada erat.</p>\r\n<p>Fusce consectetur imperdiet risus nec auctor. Donec iaculis diam non laoreet elementum. Ut elementum, nibh vel ultricies hendrerit, sapien libero feugiat velit, ac consectetur eros tellus a massa. Nullam sed sem at urna pretium blandit in imperdiet leo. Sed in ligula tristique, accumsan orci in, sodales massa. Integer nec hendrerit felis. Phasellus tortor mauris, fringilla ac dolor lacinia, accumsan malesuada quam. Donec sed libero interdum, ullamcorper urna eget, cursus lorem. Nulla pretium, nibh at ornare iaculis, justo ipsum porta magna, a sodales enim massa dignissim sem. Phasellus ipsum nulla, consectetur sed ante et, suscipit gravida magna. Donec ac ante tempus, aliquet libero ut, gravida ligula. Phasellus sed quam varius, scelerisque mi et, imperdiet mauris. Vivamus a mattis massa, bibendum suscipit ligula. Phasellus placerat sapien vitae orci tristique iaculis. Sed varius turpis ut porttitor hendrerit. Nunc non varius enim.</p>\r\n<p>Donec non arcu nec nisl consequat convallis. Nam libero lectus, consequat at sem eu, vehicula rhoncus odio. Phasellus dolor dolor, convallis eu dictum sed, sodales id orci. Vestibulum quis lorem auctor, porta libero in, suscipit erat. Etiam sollicitudin, dui non consectetur pellentesque, tortor metus venenatis leo, id varius eros lorem ac arcu. Nam mollis placerat odio eget scelerisque. Quisque ac tristique elit.&nbsp;</p>\r\n</div>', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ultricies augue nulla, non venenatis diam interdum id. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. In sit amet erat viverra, posuere. ', 'available', 0, '2021-04-29'),
+(7, 'sdfsdfsdf', 1, 8, 0, '1000.00', '1.00', '10.00', '', 'no', '<div id=\"lipsum\">\r\n<p>&nbsp;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent faucibus erat id orci suscipit, ut lacinia nunc venenatis. Proin pharetra ac nunc sit amet sollicitudin. Maecenas accumsan vulputate turpis sodales suscipit. Phasellus laoreet posuere tempus. Sed eget est quis arcu elementum lobortis. Ut non egestas arcu. Nunc vitae arcu eget risus semper faucibus. Praesent sed massa volutpat quam imperdiet ultrices at quis lacus. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quis cursus libero. Aliquam erat volutpat. Curabitur vel lorem non magna hendrerit pretium et non lorem. Integer ut odio purus. Sed non mi tincidunt, porta nulla volutpat, malesuada erat.</p>\r\n<p>Fusce consectetur imperdiet risus nec auctor. Donec iaculis diam non laoreet elementum. Ut elementum, nibh vel ultricies hendrerit, sapien libero feugiat velit, ac consectetur eros tellus a massa. Nullam sed sem at urna pretium blandit in imperdiet leo. Sed in ligula tristique, accumsan orci in, sodales massa. Integer nec hendrerit felis. Phasellus tortor mauris, fringilla ac dolor lacinia, accumsan malesuada quam. Donec sed libero interdum, ullamcorper urna eget, cursus lorem. Nulla pretium, nibh at ornare iaculis, justo ipsum porta magna, a sodales enim massa dignissim sem. Phasellus ipsum nulla, consectetur sed ante et, suscipit gravida magna. Donec ac ante tempus, aliquet libero ut, gravida ligula. Phasellus sed quam varius, scelerisque mi et, imperdiet mauris. Vivamus a mattis massa, bibendum suscipit ligula. Phasellus placerat sapien vitae orci tristique iaculis. Sed varius turpis ut porttitor hendrerit. Nunc non varius enim.</p>\r\n<p>Donec non arcu nec nisl consequat convallis. Nam libero lectus, consequat at sem eu, vehicula rhoncus odio. Phasellus dolor dolor, convallis eu dictum sed, sodales id orci. Vestibulum quis lorem auctor, porta libero in, suscipit erat. Etiam sollicitudin, dui non consectetur pellentesque, tortor metus venenatis leo, id varius eros lorem ac arcu. Nam mollis placerat odio eget scelerisque. Quisque ac tristique elit.&nbsp;</p>\r\n</div>', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ultricies augue nulla, non venenatis diam interdum id. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. In sit amet erat viverra, posuere. ', 'available', 0, '2021-04-29'),
+(8, 'Atumpan', 1, 8, 0, '2100.00', '1.00', '0.00', '', 'no', '<div id=\"lipsum\">\r\n<p>&nbsp;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent faucibus erat id orci suscipit, ut lacinia nunc venenatis. Proin pharetra ac nunc sit amet sollicitudin. Maecenas accumsan vulputate turpis sodales suscipit. Phasellus laoreet posuere tempus. Sed eget est quis arcu elementum lobortis. Ut non egestas arcu. Nunc vitae arcu eget risus semper faucibus. Praesent sed massa volutpat quam imperdiet ultrices at quis lacus. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quis cursus libero. Aliquam erat volutpat. Curabitur vel lorem non magna hendrerit pretium et non lorem. Integer ut odio purus. Sed non mi tincidunt, porta nulla volutpat, malesuada erat.</p>\r\n<p>Fusce consectetur imperdiet risus nec auctor. Donec iaculis diam non laoreet elementum. Ut elementum, nibh vel ultricies hendrerit, sapien libero feugiat velit, ac consectetur eros tellus a massa. Nullam sed sem at urna pretium blandit in imperdiet leo. Sed in ligula tristique, accumsan orci in, sodales massa. Integer nec hendrerit felis. Phasellus tortor mauris, fringilla ac dolor lacinia, accumsan malesuada quam. Donec sed libero interdum, ullamcorper urna eget, cursus lorem. Nulla pretium, nibh at ornare iaculis, justo ipsum porta magna, a sodales enim massa dignissim sem. Phasellus ipsum nulla, consectetur sed ante et, suscipit gravida magna. Donec ac ante tempus, aliquet libero ut, gravida ligula. Phasellus sed quam varius, scelerisque mi et, imperdiet mauris. Vivamus a mattis massa, bibendum suscipit ligula. Phasellus placerat sapien vitae orci tristique iaculis. Sed varius turpis ut porttitor hendrerit. Nunc non varius enim.</p>\r\n<p>Donec non arcu nec nisl consequat convallis. Nam libero lectus, consequat at sem eu, vehicula rhoncus odio. Phasellus dolor dolor, convallis eu dictum sed, sodales id orci. Vestibulum quis lorem auctor, porta libero in, suscipit erat. Etiam sollicitudin, dui non consectetur pellentesque, tortor metus venenatis leo, id varius eros lorem ac arcu. Nam mollis placerat odio eget scelerisque. Quisque ac tristique elit.&nbsp;</p>\r\n</div>', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ultricies augue nulla, non venenatis diam interdum id. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. In sit amet erat viverra, posuere. ', 'available', 0, '2021-04-29'),
+(9, 'Autoharp', 1, 8, 0, '22220.00', '1.00', '20.00', '', 'no', '<div id=\"lipsum\">\r\n<p>&nbsp;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent faucibus erat id orci suscipit, ut lacinia nunc venenatis. Proin pharetra ac nunc sit amet sollicitudin. Maecenas accumsan vulputate turpis sodales suscipit. Phasellus laoreet posuere tempus. Sed eget est quis arcu elementum lobortis. Ut non egestas arcu. Nunc vitae arcu eget risus semper faucibus. Praesent sed massa volutpat quam imperdiet ultrices at quis lacus. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quis cursus libero. Aliquam erat volutpat. Curabitur vel lorem non magna hendrerit pretium et non lorem. Integer ut odio purus. Sed non mi tincidunt, porta nulla volutpat, malesuada erat.</p>\r\n<p>Fusce consectetur imperdiet risus nec auctor. Donec iaculis diam non laoreet elementum. Ut elementum, nibh vel ultricies hendrerit, sapien libero feugiat velit, ac consectetur eros tellus a massa. Nullam sed sem at urna pretium blandit in imperdiet leo. Sed in ligula tristique, accumsan orci in, sodales massa. Integer nec hendrerit felis. Phasellus tortor mauris, fringilla ac dolor lacinia, accumsan malesuada quam. Donec sed libero interdum, ullamcorper urna eget, cursus lorem. Nulla pretium, nibh at ornare iaculis, justo ipsum porta magna, a sodales enim massa dignissim sem. Phasellus ipsum nulla, consectetur sed ante et, suscipit gravida magna. Donec ac ante tempus, aliquet libero ut, gravida ligula. Phasellus sed quam varius, scelerisque mi et, imperdiet mauris. Vivamus a mattis massa, bibendum suscipit ligula. Phasellus placerat sapien vitae orci tristique iaculis. Sed varius turpis ut porttitor hendrerit. Nunc non varius enim.</p>\r\n<p>Donec non arcu nec nisl consequat convallis. Nam libero lectus, consequat at sem eu, vehicula rhoncus odio. Phasellus dolor dolor, convallis eu dictum sed, sodales id orci. Vestibulum quis lorem auctor, porta libero in, suscipit erat. Etiam sollicitudin, dui non consectetur pellentesque, tortor metus venenatis leo, id varius eros lorem ac arcu. Nam mollis placerat odio eget scelerisque. Quisque ac tristique elit.&nbsp;</p>\r\n</div>', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ultricies augue nulla, non venenatis diam interdum id. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. In sit amet erat viverra, posuere. ', 'available', 0, '2021-04-29'),
+(10, 'Bagpipe', 1, 8, 0, '1500.00', '1.00', '6.00', '', 'no', '<div id=\"lipsum\">\r\n<p>&nbsp;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent faucibus erat id orci suscipit, ut lacinia nunc venenatis. Proin pharetra ac nunc sit amet sollicitudin. Maecenas accumsan vulputate turpis sodales suscipit. Phasellus laoreet posuere tempus. Sed eget est quis arcu elementum lobortis. Ut non egestas arcu. Nunc vitae arcu eget risus semper faucibus. Praesent sed massa volutpat quam imperdiet ultrices at quis lacus. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quis cursus libero. Aliquam erat volutpat. Curabitur vel lorem non magna hendrerit pretium et non lorem. Integer ut odio purus. Sed non mi tincidunt, porta nulla volutpat, malesuada erat.</p>\r\n<p>Fusce consectetur imperdiet risus nec auctor. Donec iaculis diam non laoreet elementum. Ut elementum, nibh vel ultricies hendrerit, sapien libero feugiat velit, ac consectetur eros tellus a massa. Nullam sed sem at urna pretium blandit in imperdiet leo. Sed in ligula tristique, accumsan orci in, sodales massa. Integer nec hendrerit felis. Phasellus tortor mauris, fringilla ac dolor lacinia, accumsan malesuada quam. Donec sed libero interdum, ullamcorper urna eget, cursus lorem. Nulla pretium, nibh at ornare iaculis, justo ipsum porta magna, a sodales enim massa dignissim sem. Phasellus ipsum nulla, consectetur sed ante et, suscipit gravida magna. Donec ac ante tempus, aliquet libero ut, gravida ligula. Phasellus sed quam varius, scelerisque mi et, imperdiet mauris. Vivamus a mattis massa, bibendum suscipit ligula. Phasellus placerat sapien vitae orci tristique iaculis. Sed varius turpis ut porttitor hendrerit. Nunc non varius enim.</p>\r\n<p>Donec non arcu nec nisl consequat convallis. Nam libero lectus, consequat at sem eu, vehicula rhoncus odio. Phasellus dolor dolor, convallis eu dictum sed, sodales id orci. Vestibulum quis lorem auctor, porta libero in, suscipit erat. Etiam sollicitudin, dui non consectetur pellentesque, tortor metus venenatis leo, id varius eros lorem ac arcu. Nam mollis placerat odio eget scelerisque. Quisque ac tristique elit.&nbsp;</p>\r\n</div>', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ultricies augue nulla, non venenatis diam interdum id. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. In sit amet erat viverra, posuere. ', 'available', 0, '2021-04-29'),
+(11, 'One eggplant', 1, 7, 0, '60.00', '1.00', '0.00', '', 'no', 'One eggplantOne eggplantOne eggplantOne eggplantOne eggplantOne eggplantOne eggplantOne eggplantOne eggplantOne eggplantOne eggplantOne eggplant', NULL, 'available', 1, '2021-04-26'),
+(12, 'Poster Biennale', 1, 7, 3, '80.00', '1.00', '5.00', '', 'no', 'Poster BiennalePoster BiennalePoster BiennalePoster BiennalePoster BiennalePoster BiennalePoster BiennalePoster BiennalePoster BiennalePoster BiennalePoster Biennale', NULL, 'available', 1, '2021-04-27'),
+(13, 'New Exclusive Hot Kurti For Stylish', 1, 6, 3, '1400.00', '1.00', '2.00', '', 'no', '<div id=\"lipsum\">\r\n<p>&nbsp;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent faucibus erat id orci suscipit, ut lacinia nunc venenatis. Proin pharetra ac nunc sit amet sollicitudin. Maecenas accumsan vulputate turpis sodales suscipit. Phasellus laoreet posuere tempus. Sed eget est quis arcu elementum lobortis. Ut non egestas arcu. Nunc vitae arcu eget risus semper faucibus. Praesent sed massa volutpat quam imperdiet ultrices at quis lacus. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quis cursus libero. Aliquam erat volutpat. Curabitur vel lorem non magna hendrerit pretium et non lorem. Integer ut odio purus. Sed non mi tincidunt, porta nulla volutpat, malesuada erat.</p>\r\n<p>Fusce consectetur imperdiet risus nec auctor. Donec iaculis diam non laoreet elementum. Ut elementum, nibh vel ultricies hendrerit, sapien libero feugiat velit, ac consectetur eros tellus a massa. Nullam sed sem at urna pretium blandit in imperdiet leo. Sed in ligula tristique, accumsan orci in, sodales massa. Integer nec hendrerit felis. Phasellus tortor mauris, fringilla ac dolor lacinia, accumsan malesuada quam. Donec sed libero interdum, ullamcorper urna eget, cursus lorem. Nulla pretium, nibh at ornare iaculis, justo ipsum porta magna, a sodales enim massa dignissim sem. Phasellus ipsum nulla, consectetur sed ante et, suscipit gravida magna. Donec ac ante tempus, aliquet libero ut, gravida ligula. Phasellus sed quam varius, scelerisque mi et, imperdiet mauris. Vivamus a mattis massa, bibendum suscipit ligula. Phasellus placerat sapien vitae orci tristique iaculis. Sed varius turpis ut porttitor hendrerit. Nunc non varius enim.</p>\r\n<p>Donec non arcu nec nisl consequat convallis. Nam libero lectus, consequat at sem eu, vehicula rhoncus odio. Phasellus dolor dolor, convallis eu dictum sed, sodales id orci. Vestibulum quis lorem auctor, porta libero in, suscipit erat. Etiam sollicitudin, dui non consectetur pellentesque, tortor metus venenatis leo, id varius eros lorem ac arcu. Nam mollis placerat odio eget scelerisque. Quisque ac tristique elit.&nbsp;</p>\r\n</div>', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ultricies augue nulla, non venenatis diam interdum id. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. In sit amet erat viverra, posuere. ', 'available', 0, '2021-04-29'),
+(14, 'Indian Weightless Georgette Salwar Kameez', 1, 6, 0, '1800.00', '1.00', '5.00', '', 'no', '<div id=\"lipsum\">\r\n<p>&nbsp;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent faucibus erat id orci suscipit, ut lacinia nunc venenatis. Proin pharetra ac nunc sit amet sollicitudin. Maecenas accumsan vulputate turpis sodales suscipit. Phasellus laoreet posuere tempus. Sed eget est quis arcu elementum lobortis. Ut non egestas arcu. Nunc vitae arcu eget risus semper faucibus. Praesent sed massa volutpat quam imperdiet ultrices at quis lacus. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quis cursus libero. Aliquam erat volutpat. Curabitur vel lorem non magna hendrerit pretium et non lorem. Integer ut odio purus. Sed non mi tincidunt, porta nulla volutpat, malesuada erat.</p>\r\n<p>Fusce consectetur imperdiet risus nec auctor. Donec iaculis diam non laoreet elementum. Ut elementum, nibh vel ultricies hendrerit, sapien libero feugiat velit, ac consectetur eros tellus a massa. Nullam sed sem at urna pretium blandit in imperdiet leo. Sed in ligula tristique, accumsan orci in, sodales massa. Integer nec hendrerit felis. Phasellus tortor mauris, fringilla ac dolor lacinia, accumsan malesuada quam. Donec sed libero interdum, ullamcorper urna eget, cursus lorem. Nulla pretium, nibh at ornare iaculis, justo ipsum porta magna, a sodales enim massa dignissim sem. Phasellus ipsum nulla, consectetur sed ante et, suscipit gravida magna. Donec ac ante tempus, aliquet libero ut, gravida ligula. Phasellus sed quam varius, scelerisque mi et, imperdiet mauris. Vivamus a mattis massa, bibendum suscipit ligula. Phasellus placerat sapien vitae orci tristique iaculis. Sed varius turpis ut porttitor hendrerit. Nunc non varius enim.</p>\r\n<p>Donec non arcu nec nisl consequat convallis. Nam libero lectus, consequat at sem eu, vehicula rhoncus odio. Phasellus dolor dolor, convallis eu dictum sed, sodales id orci. Vestibulum quis lorem auctor, porta libero in, suscipit erat. Etiam sollicitudin, dui non consectetur pellentesque, tortor metus venenatis leo, id varius eros lorem ac arcu. Nam mollis placerat odio eget scelerisque. Quisque ac tristique elit.&nbsp;</p>\r\n</div>', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ultricies augue nulla, non venenatis diam interdum id. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. In sit amet erat viverra, posuere. ', 'available', 0, '2021-04-29'),
+(15, 'Stainless Steel Multi-function Vegetable Double Peeler Cutter Julienne', 1, 7, 3, '200.00', '1.00', '8.00', '', 'no', '<div id=\"lipsum\">\r\n<p>&nbsp;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent faucibus erat id orci suscipit, ut lacinia nunc venenatis. Proin pharetra ac nunc sit amet sollicitudin. Maecenas accumsan vulputate turpis sodales suscipit. Phasellus laoreet posuere tempus. Sed eget est quis arcu elementum lobortis. Ut non egestas arcu. Nunc vitae arcu eget risus semper faucibus. Praesent sed massa volutpat quam imperdiet ultrices at quis lacus. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quis cursus libero. Aliquam erat volutpat. Curabitur vel lorem non magna hendrerit pretium et non lorem. Integer ut odio purus. Sed non mi tincidunt, porta nulla volutpat, malesuada erat.</p>\r\n<p>Fusce consectetur imperdiet risus nec auctor. Donec iaculis diam non laoreet elementum. Ut elementum, nibh vel ultricies hendrerit, sapien libero feugiat velit, ac consectetur eros tellus a massa. Nullam sed sem at urna pretium blandit in imperdiet leo. Sed in ligula tristique, accumsan orci in, sodales massa. Integer nec hendrerit felis. Phasellus tortor mauris, fringilla ac dolor lacinia, accumsan malesuada quam. Donec sed libero interdum, ullamcorper urna eget, cursus lorem. Nulla pretium, nibh at ornare iaculis, justo ipsum porta magna, a sodales enim massa dignissim sem. Phasellus ipsum nulla, consectetur sed ante et, suscipit gravida magna. Donec ac ante tempus, aliquet libero ut, gravida ligula. Phasellus sed quam varius, scelerisque mi et, imperdiet mauris. Vivamus a mattis massa, bibendum suscipit ligula. Phasellus placerat sapien vitae orci tristique iaculis. Sed varius turpis ut porttitor hendrerit. Nunc non varius enim.</p>\r\n<p>Donec non arcu nec nisl consequat convallis. Nam libero lectus, consequat at sem eu, vehicula rhoncus odio. Phasellus dolor dolor, convallis eu dictum sed, sodales id orci. Vestibulum quis lorem auctor, porta libero in, suscipit erat. Etiam sollicitudin, dui non consectetur pellentesque, tortor metus venenatis leo, id varius eros lorem ac arcu. Nam mollis placerat odio eget scelerisque. Quisque ac tristique elit.&nbsp;</p>\r\n</div>', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ultricies augue nulla, non venenatis diam interdum id. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. In sit amet erat viverra, posuere. ', 'available', 0, '2021-04-29'),
+(16, 'Vegetables Slicer Cutting Aid Holder Guide Slicing Cutter Safe For Kitchen Work', 1, 7, 3, '300.00', '1.00', '4.00', '', 'no', '<div id=\"lipsum\">\r\n<p>&nbsp;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent faucibus erat id orci suscipit, ut lacinia nunc venenatis. Proin pharetra ac nunc sit amet sollicitudin. Maecenas accumsan vulputate turpis sodales suscipit. Phasellus laoreet posuere tempus. Sed eget est quis arcu elementum lobortis. Ut non egestas arcu. Nunc vitae arcu eget risus semper faucibus. Praesent sed massa volutpat quam imperdiet ultrices at quis lacus. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quis cursus libero. Aliquam erat volutpat. Curabitur vel lorem non magna hendrerit pretium et non lorem. Integer ut odio purus. Sed non mi tincidunt, porta nulla volutpat, malesuada erat.</p>\r\n<p>Fusce consectetur imperdiet risus nec auctor. Donec iaculis diam non laoreet elementum. Ut elementum, nibh vel ultricies hendrerit, sapien libero feugiat velit, ac consectetur eros tellus a massa. Nullam sed sem at urna pretium blandit in imperdiet leo. Sed in ligula tristique, accumsan orci in, sodales massa. Integer nec hendrerit felis. Phasellus tortor mauris, fringilla ac dolor lacinia, accumsan malesuada quam. Donec sed libero interdum, ullamcorper urna eget, cursus lorem. Nulla pretium, nibh at ornare iaculis, justo ipsum porta magna, a sodales enim massa dignissim sem. Phasellus ipsum nulla, consectetur sed ante et, suscipit gravida magna. Donec ac ante tempus, aliquet libero ut, gravida ligula. Phasellus sed quam varius, scelerisque mi et, imperdiet mauris. Vivamus a mattis massa, bibendum suscipit ligula. Phasellus placerat sapien vitae orci tristique iaculis. Sed varius turpis ut porttitor hendrerit. Nunc non varius enim.</p>\r\n<p>Donec non arcu nec nisl consequat convallis. Nam libero lectus, consequat at sem eu, vehicula rhoncus odio. Phasellus dolor dolor, convallis eu dictum sed, sodales id orci. Vestibulum quis lorem auctor, porta libero in, suscipit erat. Etiam sollicitudin, dui non consectetur pellentesque, tortor metus venenatis leo, id varius eros lorem ac arcu. Nam mollis placerat odio eget scelerisque. Quisque ac tristique elit.&nbsp;</p>\r\n</div>', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ultricies augue nulla, non venenatis diam interdum id. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. In sit amet erat viverra, posuere. ', 'available', 0, '2021-04-29'),
+(17, 'TOYOTA PREMIO Year: 2017', 1, 5, 0, '2500000.00', '1.00', '5.00', '', 'no', '<div id=\"lipsum\">\r\n<p>&nbsp;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent faucibus erat id orci suscipit, ut lacinia nunc venenatis. Proin pharetra ac nunc sit amet sollicitudin. Maecenas accumsan vulputate turpis sodales suscipit. Phasellus laoreet posuere tempus. Sed eget est quis arcu elementum lobortis. Ut non egestas arcu. Nunc vitae arcu eget risus semper faucibus. Praesent sed massa volutpat quam imperdiet ultrices at quis lacus. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quis cursus libero. Aliquam erat volutpat. Curabitur vel lorem non magna hendrerit pretium et non lorem. Integer ut odio purus. Sed non mi tincidunt, porta nulla volutpat, malesuada erat.</p>\r\n<p>Fusce consectetur imperdiet risus nec auctor. Donec iaculis diam non laoreet elementum. Ut elementum, nibh vel ultricies hendrerit, sapien libero feugiat velit, ac consectetur eros tellus a massa. Nullam sed sem at urna pretium blandit in imperdiet leo. Sed in ligula tristique, accumsan orci in, sodales massa. Integer nec hendrerit felis. Phasellus tortor mauris, fringilla ac dolor lacinia, accumsan malesuada quam. Donec sed libero interdum, ullamcorper urna eget, cursus lorem. Nulla pretium, nibh at ornare iaculis, justo ipsum porta magna, a sodales enim massa dignissim sem. Phasellus ipsum nulla, consectetur sed ante et, suscipit gravida magna. Donec ac ante tempus, aliquet libero ut, gravida ligula. Phasellus sed quam varius, scelerisque mi et, imperdiet mauris. Vivamus a mattis massa, bibendum suscipit ligula. Phasellus placerat sapien vitae orci tristique iaculis. Sed varius turpis ut porttitor hendrerit. Nunc non varius enim.</p>\r\n<p>Donec non arcu nec nisl consequat convallis. Nam libero lectus, consequat at sem eu, vehicula rhoncus odio. Phasellus dolor dolor, convallis eu dictum sed, sodales id orci. Vestibulum quis lorem auctor, porta libero in, suscipit erat. Etiam sollicitudin, dui non consectetur pellentesque, tortor metus venenatis leo, id varius eros lorem ac arcu. Nam mollis placerat odio eget scelerisque. Quisque ac tristique elit.&nbsp;</p>\r\n</div>', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ultricies augue nulla, non venenatis diam interdum id. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. In sit amet erat viverra, posuere. ', 'available', 0, '2021-04-29'),
+(18, 'Toyota Axio Hybrid 2016', 1, 5, 0, '1.00', '1.00', '10.00', '', 'no', '<div id=\"lipsum\">\r\n<p>&nbsp;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent faucibus erat id orci suscipit, ut lacinia nunc venenatis. Proin pharetra ac nunc sit amet sollicitudin. Maecenas accumsan vulputate turpis sodales suscipit. Phasellus laoreet posuere tempus. Sed eget est quis arcu elementum lobortis. Ut non egestas arcu. Nunc vitae arcu eget risus semper faucibus. Praesent sed massa volutpat quam imperdiet ultrices at quis lacus. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quis cursus libero. Aliquam erat volutpat. Curabitur vel lorem non magna hendrerit pretium et non lorem. Integer ut odio purus. Sed non mi tincidunt, porta nulla volutpat, malesuada erat.</p>\r\n<p>Fusce consectetur imperdiet risus nec auctor. Donec iaculis diam non laoreet elementum. Ut elementum, nibh vel ultricies hendrerit, sapien libero feugiat velit, ac consectetur eros tellus a massa. Nullam sed sem at urna pretium blandit in imperdiet leo. Sed in ligula tristique, accumsan orci in, sodales massa. Integer nec hendrerit felis. Phasellus tortor mauris, fringilla ac dolor lacinia, accumsan malesuada quam. Donec sed libero interdum, ullamcorper urna eget, cursus lorem. Nulla pretium, nibh at ornare iaculis, justo ipsum porta magna, a sodales enim massa dignissim sem. Phasellus ipsum nulla, consectetur sed ante et, suscipit gravida magna. Donec ac ante tempus, aliquet libero ut, gravida ligula. Phasellus sed quam varius, scelerisque mi et, imperdiet mauris. Vivamus a mattis massa, bibendum suscipit ligula. Phasellus placerat sapien vitae orci tristique iaculis. Sed varius turpis ut porttitor hendrerit. Nunc non varius enim.</p>\r\n<p>Donec non arcu nec nisl consequat convallis. Nam libero lectus, consequat at sem eu, vehicula rhoncus odio. Phasellus dolor dolor, convallis eu dictum sed, sodales id orci. Vestibulum quis lorem auctor, porta libero in, suscipit erat. Etiam sollicitudin, dui non consectetur pellentesque, tortor metus venenatis leo, id varius eros lorem ac arcu. Nam mollis placerat odio eget scelerisque. Quisque ac tristique elit.&nbsp;</p>\r\n</div>', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ultricies augue nulla, non venenatis diam interdum id. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. In sit amet erat viverra, posuere. ', 'available', 0, '2021-04-29'),
+(19, 'Toyota Premio 2014 FL', 1, 5, 0, '2.00', '1.00', '2.00', '', 'no', '<div id=\"lipsum\">\r\n<p>&nbsp;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent faucibus erat id orci suscipit, ut lacinia nunc venenatis. Proin pharetra ac nunc sit amet sollicitudin. Maecenas accumsan vulputate turpis sodales suscipit. Phasellus laoreet posuere tempus. Sed eget est quis arcu elementum lobortis. Ut non egestas arcu. Nunc vitae arcu eget risus semper faucibus. Praesent sed massa volutpat quam imperdiet ultrices at quis lacus. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quis cursus libero. Aliquam erat volutpat. Curabitur vel lorem non magna hendrerit pretium et non lorem. Integer ut odio purus. Sed non mi tincidunt, porta nulla volutpat, malesuada erat.</p>\r\n<p>Fusce consectetur imperdiet risus nec auctor. Donec iaculis diam non laoreet elementum. Ut elementum, nibh vel ultricies hendrerit, sapien libero feugiat velit, ac consectetur eros tellus a massa. Nullam sed sem at urna pretium blandit in imperdiet leo. Sed in ligula tristique, accumsan orci in, sodales massa. Integer nec hendrerit felis. Phasellus tortor mauris, fringilla ac dolor lacinia, accumsan malesuada quam. Donec sed libero interdum, ullamcorper urna eget, cursus lorem. Nulla pretium, nibh at ornare iaculis, justo ipsum porta magna, a sodales enim massa dignissim sem. Phasellus ipsum nulla, consectetur sed ante et, suscipit gravida magna. Donec ac ante tempus, aliquet libero ut, gravida ligula. Phasellus sed quam varius, scelerisque mi et, imperdiet mauris. Vivamus a mattis massa, bibendum suscipit ligula. Phasellus placerat sapien vitae orci tristique iaculis. Sed varius turpis ut porttitor hendrerit. Nunc non varius enim.</p>\r\n<p>Donec non arcu nec nisl consequat convallis. Nam libero lectus, consequat at sem eu, vehicula rhoncus odio. Phasellus dolor dolor, convallis eu dictum sed, sodales id orci. Vestibulum quis lorem auctor, porta libero in, suscipit erat. Etiam sollicitudin, dui non consectetur pellentesque, tortor metus venenatis leo, id varius eros lorem ac arcu. Nam mollis placerat odio eget scelerisque. Quisque ac tristique elit.&nbsp;</p>\r\n</div>', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ultricies augue nulla, non venenatis diam interdum id. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. In sit amet erat viverra, posuere. ', 'available', 0, '2021-04-29'),
+(20, 'Toyota Noah 2015 Black', 1, 5, 0, '2.00', '1.00', '12.00', '', 'no', '<div id=\"lipsum\">\r\n<p>&nbsp;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent faucibus erat id orci suscipit, ut lacinia nunc venenatis. Proin pharetra ac nunc sit amet sollicitudin. Maecenas accumsan vulputate turpis sodales suscipit. Phasellus laoreet posuere tempus. Sed eget est quis arcu elementum lobortis. Ut non egestas arcu. Nunc vitae arcu eget risus semper faucibus. Praesent sed massa volutpat quam imperdiet ultrices at quis lacus. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quis cursus libero. Aliquam erat volutpat. Curabitur vel lorem non magna hendrerit pretium et non lorem. Integer ut odio purus. Sed non mi tincidunt, porta nulla volutpat, malesuada erat.</p>\r\n<p>Fusce consectetur imperdiet risus nec auctor. Donec iaculis diam non laoreet elementum. Ut elementum, nibh vel ultricies hendrerit, sapien libero feugiat velit, ac consectetur eros tellus a massa. Nullam sed sem at urna pretium blandit in imperdiet leo. Sed in ligula tristique, accumsan orci in, sodales massa. Integer nec hendrerit felis. Phasellus tortor mauris, fringilla ac dolor lacinia, accumsan malesuada quam. Donec sed libero interdum, ullamcorper urna eget, cursus lorem. Nulla pretium, nibh at ornare iaculis, justo ipsum porta magna, a sodales enim massa dignissim sem. Phasellus ipsum nulla, consectetur sed ante et, suscipit gravida magna. Donec ac ante tempus, aliquet libero ut, gravida ligula. Phasellus sed quam varius, scelerisque mi et, imperdiet mauris. Vivamus a mattis massa, bibendum suscipit ligula. Phasellus placerat sapien vitae orci tristique iaculis. Sed varius turpis ut porttitor hendrerit. Nunc non varius enim.</p>\r\n<p>Donec non arcu nec nisl consequat convallis. Nam libero lectus, consequat at sem eu, vehicula rhoncus odio. Phasellus dolor dolor, convallis eu dictum sed, sodales id orci. Vestibulum quis lorem auctor, porta libero in, suscipit erat. Etiam sollicitudin, dui non consectetur pellentesque, tortor metus venenatis leo, id varius eros lorem ac arcu. Nam mollis placerat odio eget scelerisque. Quisque ac tristique elit.&nbsp;</p>\r\n</div>', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ultricies augue nulla, non venenatis diam interdum id. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. In sit amet erat viverra, posuere. ', 'available', 0, '2021-04-29'),
+(21, 'Intel Dual Core RAM 4GB HDD 500GB Monitor 17 inch Intel HD Graphics Built-in for Gaming PC Windows 7 64 Bit Best Desktop Computer in low price', 1, 4, 0, '10.00', '1.00', '2.00', '2', 'no', '<div id=\"lipsum\">\r\n<p>&nbsp;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent faucibus erat id orci suscipit, ut lacinia nunc venenatis. Proin pharetra ac nunc sit amet sollicitudin. Maecenas accumsan vulputate turpis sodales suscipit. Phasellus laoreet posuere tempus. Sed eget est quis arcu elementum lobortis. Ut non egestas arcu. Nunc vitae arcu eget risus semper faucibus. Praesent sed massa volutpat quam imperdiet ultrices at quis lacus. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quis cursus libero. Aliquam erat volutpat. Curabitur vel lorem non magna hendrerit pretium et non lorem. Integer ut odio purus. Sed non mi tincidunt, porta nulla volutpat, malesuada erat.</p>\r\n<p>Fusce consectetur imperdiet risus nec auctor. Donec iaculis diam non laoreet elementum. Ut elementum, nibh vel ultricies hendrerit, sapien libero feugiat velit, ac consectetur eros tellus a massa. Nullam sed sem at urna pretium blandit in imperdiet leo. Sed in ligula tristique, accumsan orci in, sodales massa. Integer nec hendrerit felis. Phasellus tortor mauris, fringilla ac dolor lacinia, accumsan malesuada quam. Donec sed libero interdum, ullamcorper urna eget, cursus lorem. Nulla pretium, nibh at ornare iaculis, justo ipsum porta magna, a sodales enim massa dignissim sem. Phasellus ipsum nulla, consectetur sed ante et, suscipit gravida magna. Donec ac ante tempus, aliquet libero ut, gravida ligula. Phasellus sed quam varius, scelerisque mi et, imperdiet mauris. Vivamus a mattis massa, bibendum suscipit ligula. Phasellus placerat sapien vitae orci tristique iaculis. Sed varius turpis ut porttitor hendrerit. Nunc non varius enim.</p>\r\n<p>Donec non arcu nec nisl consequat convallis. Nam libero lectus, consequat at sem eu, vehicula rhoncus odio. Phasellus dolor dolor, convallis eu dictum sed, sodales id orci. Vestibulum quis lorem auctor, porta libero in, suscipit erat. Etiam sollicitudin, dui non consectetur pellentesque, tortor metus venenatis leo, id varius eros lorem ac arcu. Nam mollis placerat odio eget scelerisque. Quisque ac tristique elit.&nbsp;</p>\r\n</div>', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ultricies augue nulla, non venenatis diam interdum id. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. In sit amet erat viverra, posuere. ', 'available', 0, '2021-04-29');
+INSERT INTO `products` (`id`, `title`, `brand_id`, `cat_id`, `sub_cat_id`, `price`, `min_qty`, `discount`, `warranty`, `feature_product`, `description`, `short_description`, `status`, `trash`, `date`) VALUES
+(22, 'Full Set PC Core-i5-2nd Genaration-8GB DDR3 Ram-500GB HDD-19', 1, 5, 0, '27000.00', '1.00', '3.00', '', 'yes', '<div id=\"lipsum\">\r\n<p>&nbsp;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent faucibus erat id orci suscipit, ut lacinia nunc venenatis. Proin pharetra ac nunc sit amet sollicitudin. Maecenas accumsan vulputate turpis sodales suscipit. Phasellus laoreet posuere tempus. Sed eget est quis arcu elementum lobortis. Ut non egestas arcu. Nunc vitae arcu eget risus semper faucibus. Praesent sed massa volutpat quam imperdiet ultrices at quis lacus. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quis cursus libero. Aliquam erat volutpat. Curabitur vel lorem non magna hendrerit pretium et non lorem. Integer ut odio purus. Sed non mi tincidunt, porta nulla volutpat, malesuada erat.</p>\r\n<p>Fusce consectetur imperdiet risus nec auctor. Donec iaculis diam non laoreet elementum. Ut elementum, nibh vel ultricies hendrerit, sapien libero feugiat velit, ac consectetur eros tellus a massa. Nullam sed sem at urna pretium blandit in imperdiet leo. Sed in ligula tristique, accumsan orci in, sodales massa. Integer nec hendrerit felis. Phasellus tortor mauris, fringilla ac dolor lacinia, accumsan malesuada quam. Donec sed libero interdum, ullamcorper urna eget, cursus lorem. Nulla pretium, nibh at ornare iaculis, justo ipsum porta magna, a sodales enim massa dignissim sem. Phasellus ipsum nulla, consectetur sed ante et, suscipit gravida magna. Donec ac ante tempus, aliquet libero ut, gravida ligula. Phasellus sed quam varius, scelerisque mi et, imperdiet mauris. Vivamus a mattis massa, bibendum suscipit ligula. Phasellus placerat sapien vitae orci tristique iaculis. Sed varius turpis ut porttitor hendrerit. Nunc non varius enim.</p>\r\n<p>Donec non arcu nec nisl consequat convallis. Nam libero lectus, consequat at sem eu, vehicula rhoncus odio. Phasellus dolor dolor, convallis eu dictum sed, sodales id orci. Vestibulum quis lorem auctor, porta libero in, suscipit erat. Etiam sollicitudin, dui non consectetur pellentesque, tortor metus venenatis leo, id varius eros lorem ac arcu. Nam mollis placerat odio eget scelerisque. Quisque ac tristique elit.&nbsp;</p>\r\n</div>', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ultricies augue nulla, non venenatis diam interdum id. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. In sit amet erat viverra, posuere. ', 'available', 0, '2021-04-29'),
+(23, 'Square LED Digital Sports Watch, Waterproof LED Wrist Watch(null)', 1, 3, 0, '3600.00', '1.00', '2.00', '', 'no', '<div id=\"lipsum\">\r\n<p>&nbsp;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent faucibus erat id orci suscipit, ut lacinia nunc venenatis. Proin pharetra ac nunc sit amet sollicitudin. Maecenas accumsan vulputate turpis sodales suscipit. Phasellus laoreet posuere tempus. Sed eget est quis arcu elementum lobortis. Ut non egestas arcu. Nunc vitae arcu eget risus semper faucibus. Praesent sed massa volutpat quam imperdiet ultrices at quis lacus. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quis cursus libero. Aliquam erat volutpat. Curabitur vel lorem non magna hendrerit pretium et non lorem. Integer ut odio purus. Sed non mi tincidunt, porta nulla volutpat, malesuada erat.</p>\r\n<p>Fusce consectetur imperdiet risus nec auctor. Donec iaculis diam non laoreet elementum. Ut elementum, nibh vel ultricies hendrerit, sapien libero feugiat velit, ac consectetur eros tellus a massa. Nullam sed sem at urna pretium blandit in imperdiet leo. Sed in ligula tristique, accumsan orci in, sodales massa. Integer nec hendrerit felis. Phasellus tortor mauris, fringilla ac dolor lacinia, accumsan malesuada quam. Donec sed libero interdum, ullamcorper urna eget, cursus lorem. Nulla pretium, nibh at ornare iaculis, justo ipsum porta magna, a sodales enim massa dignissim sem. Phasellus ipsum nulla, consectetur sed ante et, suscipit gravida magna. Donec ac ante tempus, aliquet libero ut, gravida ligula. Phasellus sed quam varius, scelerisque mi et, imperdiet mauris. Vivamus a mattis massa, bibendum suscipit ligula. Phasellus placerat sapien vitae orci tristique iaculis. Sed varius turpis ut porttitor hendrerit. Nunc non varius enim.</p>\r\n<p>Donec non arcu nec nisl consequat convallis. Nam libero lectus, consequat at sem eu, vehicula rhoncus odio. Phasellus dolor dolor, convallis eu dictum sed, sodales id orci. Vestibulum quis lorem auctor, porta libero in, suscipit erat. Etiam sollicitudin, dui non consectetur pellentesque, tortor metus venenatis leo, id varius eros lorem ac arcu. Nam mollis placerat odio eget scelerisque. Quisque ac tristique elit.&nbsp;</p>\r\n</div>', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ultricies augue nulla, non venenatis diam interdum id. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. In sit amet erat viverra, posuere. ', 'available', 0, '2021-04-29'),
+(24, '40M5 Meters Ranging Tape Measure Surface Pythagorean Smart Steel Ruler Infrared Multi-Function Measuring Instrumen', 1, 8, 0, '450.00', '1.00', '3.00', '', 'no', '<div id=\"lipsum\">\r\n<p>&nbsp;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent faucibus erat id orci suscipit, ut lacinia nunc venenatis. Proin pharetra ac nunc sit amet sollicitudin. Maecenas accumsan vulputate turpis sodales suscipit. Phasellus laoreet posuere tempus. Sed eget est quis arcu elementum lobortis. Ut non egestas arcu. Nunc vitae arcu eget risus semper faucibus. Praesent sed massa volutpat quam imperdiet ultrices at quis lacus. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quis cursus libero. Aliquam erat volutpat. Curabitur vel lorem non magna hendrerit pretium et non lorem. Integer ut odio purus. Sed non mi tincidunt, porta nulla volutpat, malesuada erat.</p>\r\n<p>Fusce consectetur imperdiet risus nec auctor. Donec iaculis diam non laoreet elementum. Ut elementum, nibh vel ultricies hendrerit, sapien libero feugiat velit, ac consectetur eros tellus a massa. Nullam sed sem at urna pretium blandit in imperdiet leo. Sed in ligula tristique, accumsan orci in, sodales massa. Integer nec hendrerit felis. Phasellus tortor mauris, fringilla ac dolor lacinia, accumsan malesuada quam. Donec sed libero interdum, ullamcorper urna eget, cursus lorem. Nulla pretium, nibh at ornare iaculis, justo ipsum porta magna, a sodales enim massa dignissim sem. Phasellus ipsum nulla, consectetur sed ante et, suscipit gravida magna. Donec ac ante tempus, aliquet libero ut, gravida ligula. Phasellus sed quam varius, scelerisque mi et, imperdiet mauris. Vivamus a mattis massa, bibendum suscipit ligula. Phasellus placerat sapien vitae orci tristique iaculis. Sed varius turpis ut porttitor hendrerit. Nunc non varius enim.</p>\r\n<p>Donec non arcu nec nisl consequat convallis. Nam libero lectus, consequat at sem eu, vehicula rhoncus odio. Phasellus dolor dolor, convallis eu dictum sed, sodales id orci. Vestibulum quis lorem auctor, porta libero in, suscipit erat. Etiam sollicitudin, dui non consectetur pellentesque, tortor metus venenatis leo, id varius eros lorem ac arcu. Nam mollis placerat odio eget scelerisque. Quisque ac tristique elit.&nbsp;</p>\r\n</div>', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ultricies augue nulla, non venenatis diam interdum id. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. In sit amet erat viverra, posuere. ', 'available', 0, '2021-04-29'),
+(25, 'Wood Soprano Basswood Ukulele Uke Hawaii Guitar Musical Instrumen Bag Tuner -', 1, 8, 0, '4200.00', '1.00', '2.00', '', 'no', '<div id=\"lipsum\">\r\n<p>&nbsp;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent faucibus erat id orci suscipit, ut lacinia nunc venenatis. Proin pharetra ac nunc sit amet sollicitudin. Maecenas accumsan vulputate turpis sodales suscipit. Phasellus laoreet posuere tempus. Sed eget est quis arcu elementum lobortis. Ut non egestas arcu. Nunc vitae arcu eget risus semper faucibus. Praesent sed massa volutpat quam imperdiet ultrices at quis lacus. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quis cursus libero. Aliquam erat volutpat. Curabitur vel lorem non magna hendrerit pretium et non lorem. Integer ut odio purus. Sed non mi tincidunt, porta nulla volutpat, malesuada erat.</p>\r\n<p>Fusce consectetur imperdiet risus nec auctor. Donec iaculis diam non laoreet elementum. Ut elementum, nibh vel ultricies hendrerit, sapien libero feugiat velit, ac consectetur eros tellus a massa. Nullam sed sem at urna pretium blandit in imperdiet leo. Sed in ligula tristique, accumsan orci in, sodales massa. Integer nec hendrerit felis. Phasellus tortor mauris, fringilla ac dolor lacinia, accumsan malesuada quam. Donec sed libero interdum, ullamcorper urna eget, cursus lorem. Nulla pretium, nibh at ornare iaculis, justo ipsum porta magna, a sodales enim massa dignissim sem. Phasellus ipsum nulla, consectetur sed ante et, suscipit gravida magna. Donec ac ante tempus, aliquet libero ut, gravida ligula. Phasellus sed quam varius, scelerisque mi et, imperdiet mauris. Vivamus a mattis massa, bibendum suscipit ligula. Phasellus placerat sapien vitae orci tristique iaculis. Sed varius turpis ut porttitor hendrerit. Nunc non varius enim.</p>\r\n<p>Donec non arcu nec nisl consequat convallis. Nam libero lectus, consequat at sem eu, vehicula rhoncus odio. Phasellus dolor dolor, convallis eu dictum sed, sodales id orci. Vestibulum quis lorem auctor, porta libero in, suscipit erat. Etiam sollicitudin, dui non consectetur pellentesque, tortor metus venenatis leo, id varius eros lorem ac arcu. Nam mollis placerat odio eget scelerisque. Quisque ac tristique elit.&nbsp;</p>\r\n</div>', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ultricies augue nulla, non venenatis diam interdum id. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. In sit amet erat viverra, posuere. ', 'available', 0, '2021-04-29'),
+(26, 'Vegetable Chopper Handy Quick Cutter for Kitchen, 3 Blade Stainless Steel, Pull String, Green (350ml And 900ml)', 1, 7, 3, '300.00', '1.00', '0.00', '', 'no', '<div id=\"lipsum\">\r\n<p>&nbsp;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent faucibus erat id orci suscipit, ut lacinia nunc venenatis. Proin pharetra ac nunc sit amet sollicitudin. Maecenas accumsan vulputate turpis sodales suscipit. Phasellus laoreet posuere tempus. Sed eget est quis arcu elementum lobortis. Ut non egestas arcu. Nunc vitae arcu eget risus semper faucibus. Praesent sed massa volutpat quam imperdiet ultrices at quis lacus. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quis cursus libero. Aliquam erat volutpat. Curabitur vel lorem non magna hendrerit pretium et non lorem. Integer ut odio purus. Sed non mi tincidunt, porta nulla volutpat, malesuada erat.</p>\r\n<p>Fusce consectetur imperdiet risus nec auctor. Donec iaculis diam non laoreet elementum. Ut elementum, nibh vel ultricies hendrerit, sapien libero feugiat velit, ac consectetur eros tellus a massa. Nullam sed sem at urna pretium blandit in imperdiet leo. Sed in ligula tristique, accumsan orci in, sodales massa. Integer nec hendrerit felis. Phasellus tortor mauris, fringilla ac dolor lacinia, accumsan malesuada quam. Donec sed libero interdum, ullamcorper urna eget, cursus lorem. Nulla pretium, nibh at ornare iaculis, justo ipsum porta magna, a sodales enim massa dignissim sem. Phasellus ipsum nulla, consectetur sed ante et, suscipit gravida magna. Donec ac ante tempus, aliquet libero ut, gravida ligula. Phasellus sed quam varius, scelerisque mi et, imperdiet mauris. Vivamus a mattis massa, bibendum suscipit ligula. Phasellus placerat sapien vitae orci tristique iaculis. Sed varius turpis ut porttitor hendrerit. Nunc non varius enim.</p>\r\n<p>Donec non arcu nec nisl consequat convallis. Nam libero lectus, consequat at sem eu, vehicula rhoncus odio. Phasellus dolor dolor, convallis eu dictum sed, sodales id orci. Vestibulum quis lorem auctor, porta libero in, suscipit erat. Etiam sollicitudin, dui non consectetur pellentesque, tortor metus venenatis leo, id varius eros lorem ac arcu. Nam mollis placerat odio eget scelerisque. Quisque ac tristique elit.&nbsp;</p>\r\n</div>', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ultricies augue nulla, non venenatis diam interdum id. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. In sit amet erat viverra, posuere. ', 'available', 0, '2021-04-29'),
+(27, 'Fruit Slicer Apple Pear Cutter Stainless Steel Knife Corers Remover Vegetable Melon Chopper Peerler Divided Kitchen Tools', 1, 7, 3, '750.00', '1.00', '4.00', '', 'no', '<div id=\"lipsum\">\r\n<p>&nbsp;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent faucibus erat id orci suscipit, ut lacinia nunc venenatis. Proin pharetra ac nunc sit amet sollicitudin. Maecenas accumsan vulputate turpis sodales suscipit. Phasellus laoreet posuere tempus. Sed eget est quis arcu elementum lobortis. Ut non egestas arcu. Nunc vitae arcu eget risus semper faucibus. Praesent sed massa volutpat quam imperdiet ultrices at quis lacus. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quis cursus libero. Aliquam erat volutpat. Curabitur vel lorem non magna hendrerit pretium et non lorem. Integer ut odio purus. Sed non mi tincidunt, porta nulla volutpat, malesuada erat.</p>\r\n<p>Fusce consectetur imperdiet risus nec auctor. Donec iaculis diam non laoreet elementum. Ut elementum, nibh vel ultricies hendrerit, sapien libero feugiat velit, ac consectetur eros tellus a massa. Nullam sed sem at urna pretium blandit in imperdiet leo. Sed in ligula tristique, accumsan orci in, sodales massa. Integer nec hendrerit felis. Phasellus tortor mauris, fringilla ac dolor lacinia, accumsan malesuada quam. Donec sed libero interdum, ullamcorper urna eget, cursus lorem. Nulla pretium, nibh at ornare iaculis, justo ipsum porta magna, a sodales enim massa dignissim sem. Phasellus ipsum nulla, consectetur sed ante et, suscipit gravida magna. Donec ac ante tempus, aliquet libero ut, gravida ligula. Phasellus sed quam varius, scelerisque mi et, imperdiet mauris. Vivamus a mattis massa, bibendum suscipit ligula. Phasellus placerat sapien vitae orci tristique iaculis. Sed varius turpis ut porttitor hendrerit. Nunc non varius enim.</p>\r\n<p>Donec non arcu nec nisl consequat convallis. Nam libero lectus, consequat at sem eu, vehicula rhoncus odio. Phasellus dolor dolor, convallis eu dictum sed, sodales id orci. Vestibulum quis lorem auctor, porta libero in, suscipit erat. Etiam sollicitudin, dui non consectetur pellentesque, tortor metus venenatis leo, id varius eros lorem ac arcu. Nam mollis placerat odio eget scelerisque. Quisque ac tristique elit.&nbsp;</p>\r\n</div>', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ultricies augue nulla, non venenatis diam interdum id. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. In sit amet erat viverra, posuere. ', 'available', 0, '2021-04-29'),
+(28, 'Joypuri Unstitched Skin Print Ari Work Cotton Three Piece Fashionable, Stylish and Comfortable, Salwar Kameez For/ Women', 1, 6, 0, '2500.00', '1.00', '18.00', '', 'no', '<div id=\"lipsum\">\r\n<p>&nbsp;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent faucibus erat id orci suscipit, ut lacinia nunc venenatis. Proin pharetra ac nunc sit amet sollicitudin. Maecenas accumsan vulputate turpis sodales suscipit. Phasellus laoreet posuere tempus. Sed eget est quis arcu elementum lobortis. Ut non egestas arcu. Nunc vitae arcu eget risus semper faucibus. Praesent sed massa volutpat quam imperdiet ultrices at quis lacus. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quis cursus libero. Aliquam erat volutpat. Curabitur vel lorem non magna hendrerit pretium et non lorem. Integer ut odio purus. Sed non mi tincidunt, porta nulla volutpat, malesuada erat.</p>\r\n<p>Fusce consectetur imperdiet risus nec auctor. Donec iaculis diam non laoreet elementum. Ut elementum, nibh vel ultricies hendrerit, sapien libero feugiat velit, ac consectetur eros tellus a massa. Nullam sed sem at urna pretium blandit in imperdiet leo. Sed in ligula tristique, accumsan orci in, sodales massa. Integer nec hendrerit felis. Phasellus tortor mauris, fringilla ac dolor lacinia, accumsan malesuada quam. Donec sed libero interdum, ullamcorper urna eget, cursus lorem. Nulla pretium, nibh at ornare iaculis, justo ipsum porta magna, a sodales enim massa dignissim sem. Phasellus ipsum nulla, consectetur sed ante et, suscipit gravida magna. Donec ac ante tempus, aliquet libero ut, gravida ligula. Phasellus sed quam varius, scelerisque mi et, imperdiet mauris. Vivamus a mattis massa, bibendum suscipit ligula. Phasellus placerat sapien vitae orci tristique iaculis. Sed varius turpis ut porttitor hendrerit. Nunc non varius enim.</p>\r\n<p>Donec non arcu nec nisl consequat convallis. Nam libero lectus, consequat at sem eu, vehicula rhoncus odio. Phasellus dolor dolor, convallis eu dictum sed, sodales id orci. Vestibulum quis lorem auctor, porta libero in, suscipit erat. Etiam sollicitudin, dui non consectetur pellentesque, tortor metus venenatis leo, id varius eros lorem ac arcu. Nam mollis placerat odio eget scelerisque. Quisque ac tristique elit.&nbsp;</p>\r\n</div>', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ultricies augue nulla, non venenatis diam interdum id. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. In sit amet erat viverra, posuere. ', 'available', 0, '2021-04-29'),
+(29, 'Toshor Silk block print Sharee with blouj piece and high Quality Rich Fabrics,Exclusive Fashionable, Stylish Comfortable white colour sharee for Women.', 1, 6, 0, '4500.00', '1.00', '30.00', '', 'no', '<div id=\"lipsum\">\r\n<p>&nbsp;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent faucibus erat id orci suscipit, ut lacinia nunc venenatis. Proin pharetra ac nunc sit amet sollicitudin. Maecenas accumsan vulputate turpis sodales suscipit. Phasellus laoreet posuere tempus. Sed eget est quis arcu elementum lobortis. Ut non egestas arcu. Nunc vitae arcu eget risus semper faucibus. Praesent sed massa volutpat quam imperdiet ultrices at quis lacus. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quis cursus libero. Aliquam erat volutpat. Curabitur vel lorem non magna hendrerit pretium et non lorem. Integer ut odio purus. Sed non mi tincidunt, porta nulla volutpat, malesuada erat.</p>\r\n<p>Fusce consectetur imperdiet risus nec auctor. Donec iaculis diam non laoreet elementum. Ut elementum, nibh vel ultricies hendrerit, sapien libero feugiat velit, ac consectetur eros tellus a massa. Nullam sed sem at urna pretium blandit in imperdiet leo. Sed in ligula tristique, accumsan orci in, sodales massa. Integer nec hendrerit felis. Phasellus tortor mauris, fringilla ac dolor lacinia, accumsan malesuada quam. Donec sed libero interdum, ullamcorper urna eget, cursus lorem. Nulla pretium, nibh at ornare iaculis, justo ipsum porta magna, a sodales enim massa dignissim sem. Phasellus ipsum nulla, consectetur sed ante et, suscipit gravida magna. Donec ac ante tempus, aliquet libero ut, gravida ligula. Phasellus sed quam varius, scelerisque mi et, imperdiet mauris. Vivamus a mattis massa, bibendum suscipit ligula. Phasellus placerat sapien vitae orci tristique iaculis. Sed varius turpis ut porttitor hendrerit. Nunc non varius enim.</p>\r\n<p>Donec non arcu nec nisl consequat convallis. Nam libero lectus, consequat at sem eu, vehicula rhoncus odio. Phasellus dolor dolor, convallis eu dictum sed, sodales id orci. Vestibulum quis lorem auctor, porta libero in, suscipit erat. Etiam sollicitudin, dui non consectetur pellentesque, tortor metus venenatis leo, id varius eros lorem ac arcu. Nam mollis placerat odio eget scelerisque. Quisque ac tristique elit.&nbsp;</p>\r\n</div>', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ultricies augue nulla, non venenatis diam interdum id. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. In sit amet erat viverra, posuere. ', 'available', 0, '2021-04-29'),
+(30, 'Nussan Juke 2015', 1, 5, 0, '2.00', '1.00', '1.00', '', 'no', '<div id=\"lipsum\">\r\n<p>&nbsp;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent faucibus erat id orci suscipit, ut lacinia nunc venenatis. Proin pharetra ac nunc sit amet sollicitudin. Maecenas accumsan vulputate turpis sodales suscipit. Phasellus laoreet posuere tempus. Sed eget est quis arcu elementum lobortis. Ut non egestas arcu. Nunc vitae arcu eget risus semper faucibus. Praesent sed massa volutpat quam imperdiet ultrices at quis lacus. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quis cursus libero. Aliquam erat volutpat. Curabitur vel lorem non magna hendrerit pretium et non lorem. Integer ut odio purus. Sed non mi tincidunt, porta nulla volutpat, malesuada erat.</p>\r\n<p>Fusce consectetur imperdiet risus nec auctor. Donec iaculis diam non laoreet elementum. Ut elementum, nibh vel ultricies hendrerit, sapien libero feugiat velit, ac consectetur eros tellus a massa. Nullam sed sem at urna pretium blandit in imperdiet leo. Sed in ligula tristique, accumsan orci in, sodales massa. Integer nec hendrerit felis. Phasellus tortor mauris, fringilla ac dolor lacinia, accumsan malesuada quam. Donec sed libero interdum, ullamcorper urna eget, cursus lorem. Nulla pretium, nibh at ornare iaculis, justo ipsum porta magna, a sodales enim massa dignissim sem. Phasellus ipsum nulla, consectetur sed ante et, suscipit gravida magna. Donec ac ante tempus, aliquet libero ut, gravida ligula. Phasellus sed quam varius, scelerisque mi et, imperdiet mauris. Vivamus a mattis massa, bibendum suscipit ligula. Phasellus placerat sapien vitae orci tristique iaculis. Sed varius turpis ut porttitor hendrerit. Nunc non varius enim.</p>\r\n<p>Donec non arcu nec nisl consequat convallis. Nam libero lectus, consequat at sem eu, vehicula rhoncus odio. Phasellus dolor dolor, convallis eu dictum sed, sodales id orci. Vestibulum quis lorem auctor, porta libero in, suscipit erat. Etiam sollicitudin, dui non consectetur pellentesque, tortor metus venenatis leo, id varius eros lorem ac arcu. Nam mollis placerat odio eget scelerisque. Quisque ac tristique elit.&nbsp;</p>\r\n</div>', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ultricies augue nulla, non venenatis diam interdum id. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. In sit amet erat viverra, posuere. ', 'available', 0, '2021-04-29'),
+(31, 'Nussan Juke 2015', 1, 5, 0, '2.00', '1.00', '1.00', '', 'no', 'Product details of Nussan Juke 2015\r\nBrand: Nissan\r\nModel: Juke\r\nYear: 2015\r\nColor: Wine red\r\nSpecifications of Nussan Juke 2015\r\nBrandNissanSKU171244245_BD-1107158282', NULL, 'available', 1, '2021-04-27'),
+(32, 'Nussan Juke 2015', 1, 5, 0, '2.00', '1.00', '1.00', '', 'no', 'Product details of Nussan Juke 2015\r\nBrand: Nissan\r\nModel: Juke\r\nYear: 2015\r\nColor: Wine red\r\nSpecifications of Nussan Juke 2015\r\nBrandNissanSKU171244245_BD-1107158282', NULL, 'available', 1, '2021-04-27'),
+(33, 'Toyota Aqua 2014 (TRD Body Kit)', 1, 5, 0, '1.00', '1.00', '0.00', '', 'no', '<div id=\"lipsum\">\r\n<p>&nbsp;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent faucibus erat id orci suscipit, ut lacinia nunc venenatis. Proin pharetra ac nunc sit amet sollicitudin. Maecenas accumsan vulputate turpis sodales suscipit. Phasellus laoreet posuere tempus. Sed eget est quis arcu elementum lobortis. Ut non egestas arcu. Nunc vitae arcu eget risus semper faucibus. Praesent sed massa volutpat quam imperdiet ultrices at quis lacus. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quis cursus libero. Aliquam erat volutpat. Curabitur vel lorem non magna hendrerit pretium et non lorem. Integer ut odio purus. Sed non mi tincidunt, porta nulla volutpat, malesuada erat.</p>\r\n<p>Fusce consectetur imperdiet risus nec auctor. Donec iaculis diam non laoreet elementum. Ut elementum, nibh vel ultricies hendrerit, sapien libero feugiat velit, ac consectetur eros tellus a massa. Nullam sed sem at urna pretium blandit in imperdiet leo. Sed in ligula tristique, accumsan orci in, sodales massa. Integer nec hendrerit felis. Phasellus tortor mauris, fringilla ac dolor lacinia, accumsan malesuada quam. Donec sed libero interdum, ullamcorper urna eget, cursus lorem. Nulla pretium, nibh at ornare iaculis, justo ipsum porta magna, a sodales enim massa dignissim sem. Phasellus ipsum nulla, consectetur sed ante et, suscipit gravida magna. Donec ac ante tempus, aliquet libero ut, gravida ligula. Phasellus sed quam varius, scelerisque mi et, imperdiet mauris. Vivamus a mattis massa, bibendum suscipit ligula. Phasellus placerat sapien vitae orci tristique iaculis. Sed varius turpis ut porttitor hendrerit. Nunc non varius enim.</p>\r\n<p>Donec non arcu nec nisl consequat convallis. Nam libero lectus, consequat at sem eu, vehicula rhoncus odio. Phasellus dolor dolor, convallis eu dictum sed, sodales id orci. Vestibulum quis lorem auctor, porta libero in, suscipit erat. Etiam sollicitudin, dui non consectetur pellentesque, tortor metus venenatis leo, id varius eros lorem ac arcu. Nam mollis placerat odio eget scelerisque. Quisque ac tristique elit.&nbsp;</p>\r\n</div>', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ultricies augue nulla, non venenatis diam interdum id. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. In sit amet erat viverra, posuere. ', 'available', 0, '2021-04-29'),
+(34, 'Walton Laptop Tamarind ZX3701A, 7th Gen Intel Core i3-7020U 2.30GHz, 512GB SATAIII M.2 2280 SSD , 4GB DDR4 RAM, 14 inch HD Display.', 1, 4, 0, '38000.00', '1.00', '8.00', '', 'no', '<div id=\"lipsum\">\r\n<p>&nbsp;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent faucibus erat id orci suscipit, ut lacinia nunc venenatis. Proin pharetra ac nunc sit amet sollicitudin. Maecenas accumsan vulputate turpis sodales suscipit. Phasellus laoreet posuere tempus. Sed eget est quis arcu elementum lobortis. Ut non egestas arcu. Nunc vitae arcu eget risus semper faucibus. Praesent sed massa volutpat quam imperdiet ultrices at quis lacus. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quis cursus libero. Aliquam erat volutpat. Curabitur vel lorem non magna hendrerit pretium et non lorem. Integer ut odio purus. Sed non mi tincidunt, porta nulla volutpat, malesuada erat.</p>\r\n<p>Fusce consectetur imperdiet risus nec auctor. Donec iaculis diam non laoreet elementum. Ut elementum, nibh vel ultricies hendrerit, sapien libero feugiat velit, ac consectetur eros tellus a massa. Nullam sed sem at urna pretium blandit in imperdiet leo. Sed in ligula tristique, accumsan orci in, sodales massa. Integer nec hendrerit felis. Phasellus tortor mauris, fringilla ac dolor lacinia, accumsan malesuada quam. Donec sed libero interdum, ullamcorper urna eget, cursus lorem. Nulla pretium, nibh at ornare iaculis, justo ipsum porta magna, a sodales enim massa dignissim sem. Phasellus ipsum nulla, consectetur sed ante et, suscipit gravida magna. Donec ac ante tempus, aliquet libero ut, gravida ligula. Phasellus sed quam varius, scelerisque mi et, imperdiet mauris. Vivamus a mattis massa, bibendum suscipit ligula. Phasellus placerat sapien vitae orci tristique iaculis. Sed varius turpis ut porttitor hendrerit. Nunc non varius enim.</p>\r\n<p>Donec non arcu nec nisl consequat convallis. Nam libero lectus, consequat at sem eu, vehicula rhoncus odio. Phasellus dolor dolor, convallis eu dictum sed, sodales id orci. Vestibulum quis lorem auctor, porta libero in, suscipit erat. Etiam sollicitudin, dui non consectetur pellentesque, tortor metus venenatis leo, id varius eros lorem ac arcu. Nam mollis placerat odio eget scelerisque. Quisque ac tristique elit.&nbsp;</p>\r\n</div>', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ultricies augue nulla, non venenatis diam interdum id. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. In sit amet erat viverra, posuere. ', 'available', 0, '2021-04-29'),
+(35, 'Walton Walpad 10.5\'\' IPS Display, 4GB LPDDR4 RAM, 7000mah Battery with Flip Cover', 1, 4, 0, '28000.00', '1.00', '0.00', '', 'no', '<div id=\"lipsum\">\r\n<p>&nbsp;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent faucibus erat id orci suscipit, ut lacinia nunc venenatis. Proin pharetra ac nunc sit amet sollicitudin. Maecenas accumsan vulputate turpis sodales suscipit. Phasellus laoreet posuere tempus. Sed eget est quis arcu elementum lobortis. Ut non egestas arcu. Nunc vitae arcu eget risus semper faucibus. Praesent sed massa volutpat quam imperdiet ultrices at quis lacus. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quis cursus libero. Aliquam erat volutpat. Curabitur vel lorem non magna hendrerit pretium et non lorem. Integer ut odio purus. Sed non mi tincidunt, porta nulla volutpat, malesuada erat.</p>\r\n<p>Fusce consectetur imperdiet risus nec auctor. Donec iaculis diam non laoreet elementum. Ut elementum, nibh vel ultricies hendrerit, sapien libero feugiat velit, ac consectetur eros tellus a massa. Nullam sed sem at urna pretium blandit in imperdiet leo. Sed in ligula tristique, accumsan orci in, sodales massa. Integer nec hendrerit felis. Phasellus tortor mauris, fringilla ac dolor lacinia, accumsan malesuada quam. Donec sed libero interdum, ullamcorper urna eget, cursus lorem. Nulla pretium, nibh at ornare iaculis, justo ipsum porta magna, a sodales enim massa dignissim sem. Phasellus ipsum nulla, consectetur sed ante et, suscipit gravida magna. Donec ac ante tempus, aliquet libero ut, gravida ligula. Phasellus sed quam varius, scelerisque mi et, imperdiet mauris. Vivamus a mattis massa, bibendum suscipit ligula. Phasellus placerat sapien vitae orci tristique iaculis. Sed varius turpis ut porttitor hendrerit. Nunc non varius enim.</p>\r\n<p>Donec non arcu nec nisl consequat convallis. Nam libero lectus, consequat at sem eu, vehicula rhoncus odio. Phasellus dolor dolor, convallis eu dictum sed, sodales id orci. Vestibulum quis lorem auctor, porta libero in, suscipit erat. Etiam sollicitudin, dui non consectetur pellentesque, tortor metus venenatis leo, id varius eros lorem ac arcu. Nam mollis placerat odio eget scelerisque. Quisque ac tristique elit.&nbsp;</p>\r\n</div>', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ultricies augue nulla, non venenatis diam interdum id. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. In sit amet erat viverra, posuere. ', 'available', 0, '2021-04-29'),
+(36, 'Walton Ultra Slim Border Less WD238V02 23.8” Full HD 1920x1080 at 75HZ Desktop Monitor with Built in Speaker.', 1, 4, 0, '12.00', '1.00', '1.00', '', 'no', '<div id=\"lipsum\">\r\n<p>&nbsp;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent faucibus erat id orci suscipit, ut lacinia nunc venenatis. Proin pharetra ac nunc sit amet sollicitudin. Maecenas accumsan vulputate turpis sodales suscipit. Phasellus laoreet posuere tempus. Sed eget est quis arcu elementum lobortis. Ut non egestas arcu. Nunc vitae arcu eget risus semper faucibus. Praesent sed massa volutpat quam imperdiet ultrices at quis lacus. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quis cursus libero. Aliquam erat volutpat. Curabitur vel lorem non magna hendrerit pretium et non lorem. Integer ut odio purus. Sed non mi tincidunt, porta nulla volutpat, malesuada erat.</p>\r\n<p>Fusce consectetur imperdiet risus nec auctor. Donec iaculis diam non laoreet elementum. Ut elementum, nibh vel ultricies hendrerit, sapien libero feugiat velit, ac consectetur eros tellus a massa. Nullam sed sem at urna pretium blandit in imperdiet leo. Sed in ligula tristique, accumsan orci in, sodales massa. Integer nec hendrerit felis. Phasellus tortor mauris, fringilla ac dolor lacinia, accumsan malesuada quam. Donec sed libero interdum, ullamcorper urna eget, cursus lorem. Nulla pretium, nibh at ornare iaculis, justo ipsum porta magna, a sodales enim massa dignissim sem. Phasellus ipsum nulla, consectetur sed ante et, suscipit gravida magna. Donec ac ante tempus, aliquet libero ut, gravida ligula. Phasellus sed quam varius, scelerisque mi et, imperdiet mauris. Vivamus a mattis massa, bibendum suscipit ligula. Phasellus placerat sapien vitae orci tristique iaculis. Sed varius turpis ut porttitor hendrerit. Nunc non varius enim.</p>\r\n<p>Donec non arcu nec nisl consequat convallis. Nam libero lectus, consequat at sem eu, vehicula rhoncus odio. Phasellus dolor dolor, convallis eu dictum sed, sodales id orci. Vestibulum quis lorem auctor, porta libero in, suscipit erat. Etiam sollicitudin, dui non consectetur pellentesque, tortor metus venenatis leo, id varius eros lorem ac arcu. Nam mollis placerat odio eget scelerisque. Quisque ac tristique elit.&nbsp;</p>\r\n</div>', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ultricies augue nulla, non venenatis diam interdum id. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. In sit amet erat viverra, posuere. ', 'available', 0, '2021-04-29'),
+(37, 'HP 22fw 21.5 IPS Full HD LED Monitor (White)', 1, 4, 0, '1400.00', '1.00', '4.00', '', 'no', '<div id=\"lipsum\">\r\n<p>&nbsp;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent faucibus erat id orci suscipit, ut lacinia nunc venenatis. Proin pharetra ac nunc sit amet sollicitudin. Maecenas accumsan vulputate turpis sodales suscipit. Phasellus laoreet posuere tempus. Sed eget est quis arcu elementum lobortis. Ut non egestas arcu. Nunc vitae arcu eget risus semper faucibus. Praesent sed massa volutpat quam imperdiet ultrices at quis lacus. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quis cursus libero. Aliquam erat volutpat. Curabitur vel lorem non magna hendrerit pretium et non lorem. Integer ut odio purus. Sed non mi tincidunt, porta nulla volutpat, malesuada erat.</p>\r\n<p>Fusce consectetur imperdiet risus nec auctor. Donec iaculis diam non laoreet elementum. Ut elementum, nibh vel ultricies hendrerit, sapien libero feugiat velit, ac consectetur eros tellus a massa. Nullam sed sem at urna pretium blandit in imperdiet leo. Sed in ligula tristique, accumsan orci in, sodales massa. Integer nec hendrerit felis. Phasellus tortor mauris, fringilla ac dolor lacinia, accumsan malesuada quam. Donec sed libero interdum, ullamcorper urna eget, cursus lorem. Nulla pretium, nibh at ornare iaculis, justo ipsum porta magna, a sodales enim massa dignissim sem. Phasellus ipsum nulla, consectetur sed ante et, suscipit gravida magna. Donec ac ante tempus, aliquet libero ut, gravida ligula. Phasellus sed quam varius, scelerisque mi et, imperdiet mauris. Vivamus a mattis massa, bibendum suscipit ligula. Phasellus placerat sapien vitae orci tristique iaculis. Sed varius turpis ut porttitor hendrerit. Nunc non varius enim.</p>\r\n<p>Donec non arcu nec nisl consequat convallis. Nam libero lectus, consequat at sem eu, vehicula rhoncus odio. Phasellus dolor dolor, convallis eu dictum sed, sodales id orci. Vestibulum quis lorem auctor, porta libero in, suscipit erat. Etiam sollicitudin, dui non consectetur pellentesque, tortor metus venenatis leo, id varius eros lorem ac arcu. Nam mollis placerat odio eget scelerisque. Quisque ac tristique elit.&nbsp;</p>\r\n</div>', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ultricies augue nulla, non venenatis diam interdum id. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. In sit amet erat viverra, posuere. ', 'available', 0, '2021-04-29'),
+(38, 'Gigabyte Aorus 5 Mb I7-10750H 2.6 To 5.0Ghz (6C, 12T) 10Th Gen, 16Gb Ram, 512Gb Pcie, 4Gb Ddr6 1650Ti Graphics, 15.6 Fhd 144Hz Gaming Laptop', 1, 4, 0, '126.00', '1.00', '2.00', '', 'no', '<div id=\"lipsum\">\r\n<p>&nbsp;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent faucibus erat id orci suscipit, ut lacinia nunc venenatis. Proin pharetra ac nunc sit amet sollicitudin. Maecenas accumsan vulputate turpis sodales suscipit. Phasellus laoreet posuere tempus. Sed eget est quis arcu elementum lobortis. Ut non egestas arcu. Nunc vitae arcu eget risus semper faucibus. Praesent sed massa volutpat quam imperdiet ultrices at quis lacus. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quis cursus libero. Aliquam erat volutpat. Curabitur vel lorem non magna hendrerit pretium et non lorem. Integer ut odio purus. Sed non mi tincidunt, porta nulla volutpat, malesuada erat.</p>\r\n<p>Fusce consectetur imperdiet risus nec auctor. Donec iaculis diam non laoreet elementum. Ut elementum, nibh vel ultricies hendrerit, sapien libero feugiat velit, ac consectetur eros tellus a massa. Nullam sed sem at urna pretium blandit in imperdiet leo. Sed in ligula tristique, accumsan orci in, sodales massa. Integer nec hendrerit felis. Phasellus tortor mauris, fringilla ac dolor lacinia, accumsan malesuada quam. Donec sed libero interdum, ullamcorper urna eget, cursus lorem. Nulla pretium, nibh at ornare iaculis, justo ipsum porta magna, a sodales enim massa dignissim sem. Phasellus ipsum nulla, consectetur sed ante et, suscipit gravida magna. Donec ac ante tempus, aliquet libero ut, gravida ligula. Phasellus sed quam varius, scelerisque mi et, imperdiet mauris. Vivamus a mattis massa, bibendum suscipit ligula. Phasellus placerat sapien vitae orci tristique iaculis. Sed varius turpis ut porttitor hendrerit. Nunc non varius enim.</p>\r\n<p>Donec non arcu nec nisl consequat convallis. Nam libero lectus, consequat at sem eu, vehicula rhoncus odio. Phasellus dolor dolor, convallis eu dictum sed, sodales id orci. Vestibulum quis lorem auctor, porta libero in, suscipit erat. Etiam sollicitudin, dui non consectetur pellentesque, tortor metus venenatis leo, id varius eros lorem ac arcu. Nam mollis placerat odio eget scelerisque. Quisque ac tristique elit.&nbsp;</p>\r\n</div>', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ultricies augue nulla, non venenatis diam interdum id. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. In sit amet erat viverra, posuere. ', 'available', 0, '2021-04-29'),
+(39, 'Samsung Galaxy A20S Tempered Glass Protector 6D/9D/11D Black-Transparent', 1, 3, 0, '16000.00', '1.00', '2.00', '', 'no', '<div id=\"lipsum\">\r\n<p>&nbsp;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent faucibus erat id orci suscipit, ut lacinia nunc venenatis. Proin pharetra ac nunc sit amet sollicitudin. Maecenas accumsan vulputate turpis sodales suscipit. Phasellus laoreet posuere tempus. Sed eget est quis arcu elementum lobortis. Ut non egestas arcu. Nunc vitae arcu eget risus semper faucibus. Praesent sed massa volutpat quam imperdiet ultrices at quis lacus. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quis cursus libero. Aliquam erat volutpat. Curabitur vel lorem non magna hendrerit pretium et non lorem. Integer ut odio purus. Sed non mi tincidunt, porta nulla volutpat, malesuada erat.</p>\r\n<p>Fusce consectetur imperdiet risus nec auctor. Donec iaculis diam non laoreet elementum. Ut elementum, nibh vel ultricies hendrerit, sapien libero feugiat velit, ac consectetur eros tellus a massa. Nullam sed sem at urna pretium blandit in imperdiet leo. Sed in ligula tristique, accumsan orci in, sodales massa. Integer nec hendrerit felis. Phasellus tortor mauris, fringilla ac dolor lacinia, accumsan malesuada quam. Donec sed libero interdum, ullamcorper urna eget, cursus lorem. Nulla pretium, nibh at ornare iaculis, justo ipsum porta magna, a sodales enim massa dignissim sem. Phasellus ipsum nulla, consectetur sed ante et, suscipit gravida magna. Donec ac ante tempus, aliquet libero ut, gravida ligula. Phasellus sed quam varius, scelerisque mi et, imperdiet mauris. Vivamus a mattis massa, bibendum suscipit ligula. Phasellus placerat sapien vitae orci tristique iaculis. Sed varius turpis ut porttitor hendrerit. Nunc non varius enim.</p>\r\n<p>Donec non arcu nec nisl consequat convallis. Nam libero lectus, consequat at sem eu, vehicula rhoncus odio. Phasellus dolor dolor, convallis eu dictum sed, sodales id orci. Vestibulum quis lorem auctor, porta libero in, suscipit erat. Etiam sollicitudin, dui non consectetur pellentesque, tortor metus venenatis leo, id varius eros lorem ac arcu. Nam mollis placerat odio eget scelerisque. Quisque ac tristique elit.&nbsp;</p>\r\n</div>', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ultricies augue nulla, non venenatis diam interdum id. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. In sit amet erat viverra, posuere. ', 'available', 0, '2021-04-29'),
+(40, 'Usb Type C Cable 1 Pack (3Ft) Nylon Braided Usb A To Usb C Charger Cable Fast Charg Cord For Samsung Galaxy 8 S8 Plus, Lg G5 G6 V30, Htc 10, Nexus 5X/6P-Blue', 1, 3, 0, '450.00', '1.00', '6.00', '', 'yes', '<div id=\"lipsum\">\r\n<p>&nbsp;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent faucibus erat id orci suscipit, ut lacinia nunc venenatis. Proin pharetra ac nunc sit amet sollicitudin. Maecenas accumsan vulputate turpis sodales suscipit. Phasellus laoreet posuere tempus. Sed eget est quis arcu elementum lobortis. Ut non egestas arcu. Nunc vitae arcu eget risus semper faucibus. Praesent sed massa volutpat quam imperdiet ultrices at quis lacus. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quis cursus libero. Aliquam erat volutpat. Curabitur vel lorem non magna hendrerit pretium et non lorem. Integer ut odio purus. Sed non mi tincidunt, porta nulla volutpat, malesuada erat.</p>\r\n<p>Fusce consectetur imperdiet risus nec auctor. Donec iaculis diam non laoreet elementum. Ut elementum, nibh vel ultricies hendrerit, sapien libero feugiat velit, ac consectetur eros tellus a massa. Nullam sed sem at urna pretium blandit in imperdiet leo. Sed in ligula tristique, accumsan orci in, sodales massa. Integer nec hendrerit felis. Phasellus tortor mauris, fringilla ac dolor lacinia, accumsan malesuada quam. Donec sed libero interdum, ullamcorper urna eget, cursus lorem. Nulla pretium, nibh at ornare iaculis, justo ipsum porta magna, a sodales enim massa dignissim sem. Phasellus ipsum nulla, consectetur sed ante et, suscipit gravida magna. Donec ac ante tempus, aliquet libero ut, gravida ligula. Phasellus sed quam varius, scelerisque mi et, imperdiet mauris. Vivamus a mattis massa, bibendum suscipit ligula. Phasellus placerat sapien vitae orci tristique iaculis. Sed varius turpis ut porttitor hendrerit. Nunc non varius enim.</p>\r\n<p>Donec non arcu nec nisl consequat convallis. Nam libero lectus, consequat at sem eu, vehicula rhoncus odio. Phasellus dolor dolor, convallis eu dictum sed, sodales id orci. Vestibulum quis lorem auctor, porta libero in, suscipit erat. Etiam sollicitudin, dui non consectetur pellentesque, tortor metus venenatis leo, id varius eros lorem ac arcu. Nam mollis placerat odio eget scelerisque. Quisque ac tristique elit.&nbsp;</p>\r\n</div>', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ultricies augue nulla, non venenatis diam interdum id. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. In sit amet erat viverra, posuere. ', 'available', 0, '2021-04-29'),
+(41, 'Tempered Glass for Sony Xperia XZS Gorilla 2.5D-Transparent', 1, 3, 0, '26500.00', '1.00', '4.00', '', 'no', '<p>Product details of Tempered Glass for Sony Xperia XZS Gorilla 2.5D-Transparent High-quality material,Touch Sensitive Lightweight And Ultra-thin，Easy To Carry Protection: The Screen Of Cellphone 100%Brand New Ultra-thin&amp; Rounded Edges 1.Glass ONLY, Other Accessories not included. 2.The real color of the item may be slightly different from the pictures shown on website caused by many factors such as brightness of your monitor and light brightness. SpLorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent faucibus erat id orci suscipit, ut lacinia nunc venenatis. Proin pharetra ac nunc sit amet sollicitudin. Maecenas accumsan vulputate turpis sodales suscipit. Phasellus laoreet posuere tempus. Sed eget est quis arcu elementum lobortis. Ut non egestas arcu. Nunc vitae arcu eget risus semper faucibus. Praesent sed massa volutpat quam imperdiet ultrices at quis lacus. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quis cursus libero. Aliquam erat volutpat. Curabitur vel lorem non magna hendrerit pretium et non lorem. Integer ut odio purus. Sed non mi tincidunt, porta nulla volutpat, malesuada erat.</p>\r\n<div id=\"lipsum\">\r\n<p>Fusce consectetur imperdiet risus nec auctor. Donec iaculis diam non laoreet elementum. Ut elementum, nibh vel ultricies hendrerit, sapien libero feugiat velit, ac consectetur eros tellus a massa. Nullam sed sem at urna pretium blandit in imperdiet leo. Sed in ligula tristique, accumsan orci in, sodales massa. Integer nec hendrerit felis. Phasellus tortor mauris, fringilla ac dolor lacinia, accumsan malesuada quam. Donec sed libero interdum, ullamcorper urna eget, cursus lorem. Nulla pretium, nibh at ornare iaculis, justo ipsum porta magna, a sodales enim massa dignissim sem. Phasellus ipsum nulla, consectetur sed ante et, suscipit gravida magna. Donec ac ante tempus, aliquet libero ut, gravida ligula. Phasellus sed quam varius, scelerisque mi et, imperdiet mauris. Vivamus a mattis massa, bibendum suscipit ligula. Phasellus placerat sapien vitae orci tristique iaculis. Sed varius turpis ut porttitor hendrerit. Nunc non varius enim.</p>\r\n</div>\r\n<p>Donec non arcu nec nisl consequat convallis. Nam libero lectus, consequat at sem eu, vehicula rhoncus odio. Phasellus dolor dolor, convallis eu dictum sed, sodales id orci. Vestibulum quis lorem auctor, porta libero in, suscipit erat. Etiam sollicitudin, dui non consectetur pellentesque, tortor metus venenatis leo, id varius eros lorem ac arcu. Nam mollis placerat odio eget scelerisque. Quisque ac tristique elit.ecifications of Tempered Glass for Sony Xperia XZS Gorilla 2.5D-Transparent</p>', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ultricies augue nulla, non venenatis diam interdum id. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. In sit amet erat viverra, posuere. ', 'available', 0, '2021-04-29');
+INSERT INTO `products` (`id`, `title`, `brand_id`, `cat_id`, `sub_cat_id`, `price`, `min_qty`, `discount`, `warranty`, `feature_product`, `description`, `short_description`, `status`, `trash`, `date`) VALUES
+(42, 'Liquid Silicone Phone Case For New Apple iPhone 7/8 Apple iPhone 7/8 Soft Mobile Back Cover', 1, 3, 0, '48000.00', '1.00', '2.00', '', 'no', '<p>Product details of Liquid Silicone Phone Case For New Apple iPhone 7/8 Apple iPhone 7/8 Soft Mobile Back Cover Vibrant Color Border for naturally enhanced personalized appearance Made of Nano chemical materials Environmentally friendly material Ultra-thin and easy for operation High-precision machine molding Explosion-proof and shock-proof Pressure-resistant and anti-scratch function Protects your device perfectly 0.3mm, precious cuts for your screen, speakers, sensors and other ports Tough and scratch-resistant yet flexible HD ultra-clear with high sensitivity and comfortable touch feeling Specifications of Liquid Silicone Phone Case For New Apple iPhone 7/8 Apple iPhone 7/8 Soft Mobile Back Cover BrandClick GadgetsLorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent faucibus erat id orci suscipit, ut lacinia nunc venenatis. Proin pharetra ac nunc sit amet sollicitudin. Maecenas accumsan vulputate turpis sodales suscipit. Phasellus laoreet posuere tempus. Sed eget est quis arcu elementum lobortis. Ut non egestas arcu. Nunc vitae arcu eget risus semper faucibus. Praesent sed massa volutpat quam imperdiet ultrices at quis lacus. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quis cursus libero. Aliquam erat volutpat. Curabitur vel lorem non magna hendrerit pretium et non lorem. Integer ut odio purus. Sed non mi tincidunt, porta nulla volutpat, malesuada erat.</p>\r\n<div id=\"lipsum\">\r\n<p>Fusce consectetur imperdiet risus nec auctor. Donec iaculis diam non laoreet elementum. Ut elementum, nibh vel ultricies hendrerit, sapien libero feugiat velit, ac consectetur eros tellus a massa. Nullam sed sem at urna pretium blandit in imperdiet leo. Sed in ligula tristique, accumsan orci in, sodales massa. Integer nec hendrerit felis. Phasellus tortor mauris, fringilla ac dolor lacinia, accumsan malesuada quam. Donec sed libero interdum, ullamcorper urna eget, cursus lorem. Nulla pretium, nibh at ornare iaculis, justo ipsum porta magna, a sodales enim massa dignissim sem. Phasellus ipsum nulla, consectetur sed ante et, suscipit gravida magna. Donec ac ante tempus, aliquet libero ut, gravida ligula. Phasellus sed quam varius, scelerisque mi et, imperdiet mauris. Vivamus a mattis massa, bibendum suscipit ligula. Phasellus placerat sapien vitae orci tristique iaculis. Sed varius turpis ut porttitor hendrerit. Nunc non varius enim.</p>\r\n<p>Donec non arcu nec nisl consequat convallis. Nam libero lectus, consequat at sem eu, vehicula rhoncus odio. Phasellus dolor dolor, convallis eu dictum sed, sodales id orci. Vestibulum quis lorem auctor, porta libero in, suscipit erat. Etiam sollicitudin, dui non consectetur pellentesque, tortor metus venenatis leo, id varius eros lorem ac arcu. Nam mollis placerat odio eget scelerisque. Quisque ac tristique elit.&nbsp;</p>\r\n</div>', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ultricies augue nulla, non venenatis diam interdum id. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. In sit amet erat viverra, posuere. ', 'available', 0, '2021-04-29'),
+(43, 'Space Full Clear Shockproof Acrylic Case For iPhone 12 11 Pro XS Max Mini XR X 6 6S 7 8 Plus SE 2020 Transparent Anti-Knock', 1, 3, 0, '120000.00', '1.00', '3.00', '', 'no', '<p>Product details of Space Full Clear Shockproof Acrylic Case For iPhone 12 11 Pro XS Max Mini XR X 6 6S 7 8 Plus SE 2020 Transparent Anti-Knock Space Full Clear Shockproof Acrylic Case For iPhone 12 11 Pro XS Max Mini XR X 6 6S 7 8 Plus SE 2020 Transparent Anti-KnockLorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent faucibus erat id orci suscipit, ut lacinia nunc venenatis. Proin pharetra ac nunc sit amet sollicitudin. Maecenas accumsan vulputate turpis sodales suscipit. Phasellus laoreet posuere tempus. Sed eget est quis arcu elementum lobortis. Ut non egestas arcu. Nunc vitae arcu eget risus semper faucibus. Praesent sed massa volutpat quam imperdiet ultrices at quis lacus. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quis cursus libero. Aliquam erat volutpat. Curabitur vel lorem non magna hendrerit pretium et non lorem. Integer ut odio purus. Sed non mi tincidunt, porta nulla volutpat, malesuada erat.</p>\r\n<div id=\"lipsum\">\r\n<p>Fusce consectetur imperdiet risus nec auctor. Donec iaculis diam non laoreet elementum. Ut elementum, nibh vel ultricies hendrerit, sapien libero feugiat velit, ac consectetur eros tellus a massa. Nullam sed sem at urna pretium blandit in imperdiet leo. Sed in ligula tristique, accumsan orci in, sodales massa. Integer nec hendrerit felis. Phasellus tortor mauris, fringilla ac dolor lacinia, accumsan malesuada quam. Donec sed libero interdum, ullamcorper urna eget, cursus lorem. Nulla pretium, nibh at ornare iaculis, justo ipsum porta magna, a sodales enim massa dignissim sem. Phasellus ipsum nulla, consectetur sed ante et, suscipit gravida magna. Donec ac ante tempus, aliquet libero ut, gravida ligula. Phasellus sed quam varius, scelerisque mi et, imperdiet mauris. Vivamus a mattis massa, bibendum suscipit ligula. Phasellus placerat sapien vitae orci tristique iaculis. Sed varius turpis ut porttitor hendrerit. Nunc non varius enim.</p>\r\n<p>Donec non arcu nec nisl consequat convallis. Nam libero lectus, consequat at sem eu, vehicula rhoncus odio. Phasellus dolor dolor, convallis eu dictum sed, sodales id orci. Vestibulum quis lorem auctor, porta libero in, suscipit erat. Etiam sollicitudin, dui non consectetur pellentesque, tortor metus venenatis leo, id varius eros lorem ac arcu. Nam mollis placerat odio eget scelerisque. Quisque ac tristique elit.&nbsp;</p>\r\n</div>', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ultricies augue nulla, non venenatis diam interdum id. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. In sit amet erat viverra, posuere. ', 'available', 0, '2021-04-29'),
+(44, 'Luxury Brand Clear Case For Apple iPhone 11 Pro Max 12 Mini XR iPhone11 Transparent Shockproof Hybrid Cover Accessories', 1, 3, 0, '95000.00', '1.00', '1.00', '', 'no', '<p>Product details of Luxury Brand Clear Case For Apple iPhone 11 Pro Max 12 Mini XR iPhone11 Transparent Shockproof Hybrid Cover Accessories Original Luxury Brand Clear Case For Apple iPhone 11 Pro Max 12 Mini XR iPhone11 Transparent Shockproof Hybrid Cover Accessories Original Luxury Brand Clear Case For Apple iPhone 11 Pro Max 12 Mini XR iPhone11 Transparent Shockproof Hybrid Cover Accessories For iPhone 11 Pro Max: Perfect Compatible with iPhone 11 Pro Max case For iPhone 11 Pro Max slim cases: Made of premium soft tpu bumper+ hard pc back material offer fingerprints and extra protection from sudden dropping and scratch resistant . For iPhone 11 Pro Max cases: Easy access to all buttons, controls and ports without having to remove your phone.Fits snugly over the buttons, curves of your device. For iPhone 11 Pro Max case: Crystal clear case reveals and enhances the original phone design and colors. For 11 Pro Max case: Raised edges ensure protection for the screen and camera.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent faucibus erat id orci suscipit, ut lacinia nunc venenatis. Proin pharetra ac nunc sit amet sollicitudin. Maecenas accumsan vulputate turpis sodales suscipit. Phasellus laoreet posuere tempus. Sed eget est quis arcu elementum lobortis. Ut non egestas arcu. Nunc vitae arcu eget risus semper faucibus. Praesent sed massa volutpat quam imperdiet ultrices at quis lacus. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quis cursus libero. Aliquam erat volutpat. Curabitur vel lorem non magna hendrerit pretium et non lorem. Integer ut odio purus. Sed non mi tincidunt, porta nulla volutpat, malesuada erat.</p>\r\n<div id=\"lipsum\">\r\n<p>Fusce consectetur imperdiet risus nec auctor. Donec iaculis diam non laoreet elementum. Ut elementum, nibh vel ultricies hendrerit, sapien libero feugiat velit, ac consectetur eros tellus a massa. Nullam sed sem at urna pretium blandit in imperdiet leo. Sed in ligula tristique, accumsan orci in, sodales massa. Integer nec hendrerit felis. Phasellus tortor mauris, fringilla ac dolor lacinia, accumsan malesuada quam. Donec sed libero interdum, ullamcorper urna eget, cursus lorem. Nulla pretium, nibh at ornare iaculis, justo ipsum porta magna, a sodales enim massa dignissim sem. Phasellus ipsum nulla, consectetur sed ante et, suscipit gravida magna. Donec ac ante tempus, aliquet libero ut, gravida ligula. Phasellus sed quam varius, scelerisque mi et, imperdiet mauris. Vivamus a mattis massa, bibendum suscipit ligula. Phasellus placerat sapien vitae orci tristique iaculis. Sed varius turpis ut porttitor hendrerit. Nunc non varius enim.</p>\r\n<p>Donec non arcu nec nisl consequat convallis. Nam libero lectus, consequat at sem eu, vehicula rhoncus odio. Phasellus dolor dolor, convallis eu dictum sed, sodales id orci. Vestibulum quis lorem auctor, porta libero in, suscipit erat. Etiam sollicitudin, dui non consectetur pellentesque, tortor metus venenatis leo, id varius eros lorem ac arcu. Nam mollis placerat odio eget scelerisque. Quisque ac tristique elit.&nbsp;</p>\r\n</div>', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ultricies augue nulla, non venenatis diam interdum id. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. In sit amet erat viverra, posuere. ', 'available', 0, '2021-04-29'),
+(45, 'BlackBerry phones', 1, 3, 0, '94000.00', '1.00', '2.00', '', 'yes', '<p>My old BlackBerry 6220, complete with a track wheel and dorky holster, was built like a tank. I dropped it. I flung it in anger. When I was bored, I tried juggling it (and I\'m a terrible juggler). It still kept tickingLorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent faucibus erat id orci suscipit, ut lacinia nunc venenatis. Proin pharetra ac nunc sit amet sollicitudin. Maecenas accumsan vulputate turpis sodales suscipit. Phasellus laoreet posuere tempus. Sed eget est quis arcu elementum lobortis. Ut non egestas arcu. Nunc vitae arcu eget risus semper faucibus. Praesent sed massa volutpat quam imperdiet ultrices at quis lacus. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quis cursus libero. Aliquam erat volutpat. Curabitur vel lorem non magna hendrerit pretium et non lorem. Integer ut odio purus. Sed non mi tincidunt, porta nulla volutpat, malesuada erat.</p>\r\n<div id=\"lipsum\">\r\n<p>Fusce consectetur imperdiet risus nec auctor. Donec iaculis diam non laoreet elementum. Ut elementum, nibh vel ultricies hendrerit, sapien libero feugiat velit, ac consectetur eros tellus a massa. Nullam sed sem at urna pretium blandit in imperdiet leo. Sed in ligula tristique, accumsan orci in, sodales massa. Integer nec hendrerit felis. Phasellus tortor mauris, fringilla ac dolor lacinia, accumsan malesuada quam. Donec sed libero interdum, ullamcorper urna eget, cursus lorem. Nulla pretium, nibh at ornare iaculis, justo ipsum porta magna, a sodales enim massa dignissim sem. Phasellus ipsum nulla, consectetur sed ante et, suscipit gravida magna. Donec ac ante tempus, aliquet libero ut, gravida ligula. Phasellus sed quam varius, scelerisque mi et, imperdiet mauris. Vivamus a mattis massa, bibendum suscipit ligula. Phasellus placerat sapien vitae orci tristique iaculis. Sed varius turpis ut porttitor hendrerit. Nunc non varius enim.</p>\r\n<p>Donec non arcu nec nisl consequat convallis. Nam libero lectus, consequat at sem eu, vehicula rhoncus odio. Phasellus dolor dolor, convallis eu dictum sed, sodales id orci. Vestibulum quis lorem auctor, porta libero in, suscipit erat. Etiam sollicitudin, dui non consectetur pellentesque, tortor metus venenatis leo, id varius eros lorem ac arcu. Nam mollis placerat odio eget scelerisque. Quisque ac tristique elit.&nbsp;</p>\r\n</div>', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ultricies augue nulla, non venenatis diam interdum id. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. In sit amet erat viverra, posuere. ', 'available', 0, '2021-04-29'),
+(46, 'Pizza Cutter - Silver - Big Size', 1, 2, 0, '230.00', '1.00', '4.00', '', 'no', '<p>Product details of Pizza Cutter - Silver - Big Size Product Type: PiLorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent faucibus erat id orci suscipit, ut lacinia nunc venenatis. Proin pharetra ac nunc sit amet sollicitudin. Maecenas accumsan vulputate turpis sodales suscipit. Phasellus laoreet posuere tempus. Sed eget est quis arcu elementum lobortis. Ut non egestas arcu. Nunc vitae arcu eget risus semper faucibus. Praesent sed massa volutpat quam imperdiet ultrices at quis lacus. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quis cursus libero. Aliquam erat volutpat. Curabitur vel lorem non magna hendrerit pretium et non lorem. Integer ut odio purus. Sed non mi tincidunt, porta nulla volutpat, malesuada erat.</p>\r\n<div id=\"lipsum\">\r\n<p>Fusce consectetur imperdiet risus nec auctor. Donec iaculis diam non laoreet elementum. Ut elementum, nibh vel ultricies hendrerit, sapien libero feugiat velit, ac consectetur eros tellus a massa. Nullam sed sem at urna pretium blandit in imperdiet leo. Sed in ligula tristique, accumsan orci in, sodales massa. Integer nec hendrerit felis. Phasellus tortor mauris, fringilla ac dolor lacinia, accumsan malesuada quam. Donec sed libero interdum, ullamcorper urna eget, cursus lorem. Nulla pretium, nibh at ornare iaculis, justo ipsum porta magna, a sodales enim massa dignissim sem. Phasellus ipsum nulla, consectetur sed ante et, suscipit gravida magna. Donec ac ante tempus, aliquet libero ut, gravida ligula. Phasellus sed quam varius, scelerisque mi et, imperdiet mauris. Vivamus a mattis massa, bibendum suscipit ligula. Phasellus placerat sapien vitae orci tristique iaculis. Sed varius turpis ut porttitor hendrerit. Nunc non varius enim.</p>\r\n</div>\r\n<p>Donec non arcu nec nisl consequat convallis. Nam libero lectus, consequat at sem eu, vehicula rhoncus odio. Phasellus dolor dolor, convallis eu dictum sed, sodales id orci. Vestibulum quis lorem auctor, porta libero in, suscipit erat. Etiam sollicitudin, dui non consectetur pellentesque, tortor metus venenatis leo, id varius eros lorem ac arcu. Nam mollis placerat odio eget scelerisque. Quisque ac tristique elit.zza Cutter Color: Silver Main Material: Stainless Steel Good quality product Easy to use Easy to carry</p>', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ultricies augue nulla, non venenatis diam interdum id. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. In sit amet erat viverra, posuere. ', 'available', 0, '2021-04-29'),
+(47, 'Cookie Cutter 12 Pieces', 1, 2, 0, '120.00', '1.00', '3.00', '', 'no', 'Product details of Cookie Cutter 12 Pieces\r\nMade in China\r\nProduct Type: Cookie Cutter\r\nColor: Silver\r\nMain Material: Stainless Steel\r\nMetal cutters for cookies, biscuits or any type of sugar craft\r\nCould be used as drawing templates\r\nIdeal for making cakes, biscuit, cookies, chocolate, jelly, pie, etc\r\nThese patterns can arouse your children’s appetite easily\r\nUse and clean easily', NULL, 'available', 0, '2021-04-27'),
+(48, 'Ramadan Quarter Chicken Fries', 1, 2, 0, '399.00', '1.00', '4.00', '', 'no', '<p>Get a Perfect Solo meal for iftar. Pair up your Rizo Rice (with gravy) with a juicy Quarter ChickLorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent faucibus erat id orci suscipit, ut lacinia nunc venenatis. Proin pharetra ac nunc sit amet sollicitudin. Maecenas accumsan vulputate turpis sodales suscipit. Phasellus laoreet posuere tempus. Sed eget est quis arcu elementum lobortis. Ut non egestas arcu. Nunc vitae arcu eget risus semper faucibus. Praesent sed massa volutpat quam imperdiet ultrices at quis lacus. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quis cursus libero. Aliquam erat volutpat. Curabitur vel lorem non magna hendrerit pretium et non lorem. Integer ut odio purus. Sed non mi tincidunt, porta nulla volutpat, malesuada erat.</p>\r\n<div id=\"lipsum\">\r\n<p>Fusce consectetur imperdiet risus nec auctor. Donec iaculis diam non laoreet elementum. Ut elementum, nibh vel ultricies hendrerit, sapien libero feugiat velit, ac consectetur eros tellus a massa. Nullam sed sem at urna pretium blandit in imperdiet leo. Sed in ligula tristique, accumsan orci in, sodales massa. Integer nec hendrerit felis. Phasellus tortor mauris, fringilla ac dolor lacinia, accumsan malesuada quam. Donec sed libero interdum, ullamcorper urna eget, cursus lorem. Nulla pretium, nibh at ornare iaculis, justo ipsum porta magna, a sodales enim massa dignissim sem. Phasellus ipsum nulla, consectetur sed ante et, suscipit gravida magna. Donec ac ante tempus, aliquet libero ut, gravida ligula. Phasellus sed quam varius, scelerisque mi et, imperdiet mauris. Vivamus a mattis massa, bibendum suscipit ligula. Phasellus placerat sapien vitae orci tristique iaculis. Sed varius turpis ut porttitor hendrerit. Nunc non varius enim.</p>\r\n</div>\r\n<p>Donec non arcu nec nisl consequat convallis. Nam libero lectus, consequat at sem eu, vehicula rhoncus odio. Phasellus dolor dolor, convallis eu dictum sed, sodales id orci. Vestibulum quis lorem auctor, porta libero in, suscipit erat. Etiam sollicitudin, dui non consectetur pellentesque, tortor metus venenatis leo, id varius eros lorem ac arcu. Nam mollis placerat odio eget scelerisque. Quisque ac tristique elit.en, regular Fries &amp; 200ML bottle of Slice</p>', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ultricies augue nulla, non venenatis diam interdum id. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. In sit amet erat viverra, posuere. ', 'available', 0, '2021-04-29'),
+(49, 'Ramadan Family Meal', 1, 2, 0, '1299.00', '1.00', '3.00', '', 'no', '<p>A meal for your whole family. Enjoy 8pcs Hot &amp; Crispy, 8pcs Hot Wings, 1 Large Fries &amp; 4Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent faucibus erat id orci suscipit, ut lacinia nunc venenatis. Proin pharetra ac nunc sit amet sollicitudin. Maecenas accumsan vulputate turpis sodales suscipit. Phasellus laoreet posuere tempus. Sed eget est quis arcu elementum lobortis. Ut non egestas arcu. Nunc vitae arcu eget risus semper faucibus. Praesent sed massa volutpat quam imperdiet ultrices at quis lacus. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quis cursus libero. Aliquam erat volutpat. Curabitur vel lorem non magna hendrerit pretium et non lorem. Integer ut odio purus. Sed non mi tincidunt, porta nulla volutpat, malesuada erat.</p>\r\n<div id=\"lipsum\">\r\n<p>Fusce consectetur imperdiet risus nec auctor. Donec iaculis diam non laoreet elementum. Ut elementum, nibh vel ultricies hendrerit, sapien libero feugiat velit, ac consectetur eros tellus a massa. Nullam sed sem at urna pretium blandit in imperdiet leo. Sed in ligula tristique, accumsan orci in, sodales massa. Integer nec hendrerit felis. Phasellus tortor mauris, fringilla ac dolor lacinia, accumsan malesuada quam. Donec sed libero interdum, ullamcorper urna eget, cursus lorem. Nulla pretium, nibh at ornare iaculis, justo ipsum porta magna, a sodales enim massa dignissim sem. Phasellus ipsum nulla, consectetur sed ante et, suscipit gravida magna. Donec ac ante tempus, aliquet libero ut, gravida ligula. Phasellus sed quam varius, scelerisque mi et, imperdiet mauris. Vivamus a mattis massa, bibendum suscipit ligula. Phasellus placerat sapien vitae orci tristique iaculis. Sed varius turpis ut porttitor hendrerit. Nunc non varius enim.</p>\r\n</div>\r\n<p>Donec non arcu nec nisl consequat convallis. Nam libero lectus, consequat at sem eu, vehicula rhoncus odio. Phasellus dolor dolor, convallis eu dictum sed, sodales id orci. Vestibulum quis lorem auctor, porta libero in, suscipit erat. Etiam sollicitudin, dui non consectetur pellentesque, tortor metus venenatis leo, id varius eros lorem ac arcu. Nam mollis placerat odio eget scelerisque. Quisque ac tristique elit. 200ML Slice only @Tk.1299</p>', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ultricies augue nulla, non venenatis diam interdum id. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. In sit amet erat viverra, posuere. ', 'available', 0, '2021-04-29'),
+(50, 'Ramadan Zinger Meal', 1, 2, 0, '429.00', '1.00', '2.00', '', 'no', '<p>Break your fast with a classic Zinger, 1 Hot &amp; Crispy Chicken, 2 Hot Wings &amp; a 200ML Bottle of SlicLorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent faucibus erat id orci suscipit, ut lacinia nunc venenatis. Proin pharetra ac nunc sit amet sollicitudin. Maecenas accumsan vulputate turpis sodales suscipit. Phasellus laoreet posuere tempus. Sed eget est quis arcu elementum lobortis. Ut non egestas arcu. Nunc vitae arcu eget risus semper faucibus. Praesent sed massa volutpat quam imperdiet ultrices at quis lacus. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quis cursus libero. Aliquam erat volutpat. Curabitur vel lorem non magna hendrerit pretium et non lorem. Integer ut odio purus. Sed non mi tincidunt, porta nulla volutpat, malesuada erat.</p>\r\n<div id=\"lipsum\">\r\n<p>Fusce consectetur imperdiet risus nec auctor. Donec iaculis diam non laoreet elementum. Ut elementum, nibh vel ultricies hendrerit, sapien libero feugiat velit, ac consectetur eros tellus a massa. Nullam sed sem at urna pretium blandit in imperdiet leo. Sed in ligula tristique, accumsan orci in, sodales massa. Integer nec hendrerit felis. Phasellus tortor mauris, fringilla ac dolor lacinia, accumsan malesuada quam. Donec sed libero interdum, ullamcorper urna eget, cursus lorem. Nulla pretium, nibh at ornare iaculis, justo ipsum porta magna, a sodales enim massa dignissim sem. Phasellus ipsum nulla, consectetur sed ante et, suscipit gravida magna. Donec ac ante tempus, aliquet libero ut, gravida ligula. Phasellus sed quam varius, scelerisque mi et, imperdiet mauris. Vivamus a mattis massa, bibendum suscipit ligula. Phasellus placerat sapien vitae orci tristique iaculis. Sed varius turpis ut porttitor hendrerit. Nunc non varius enim.</p>\r\n</div>\r\n<p>Donec non arcu nec nisl consequat convallis. Nam libero lectus, consequat at sem eu, vehicula rhoncus odio. Phasellus dolor dolor, convallis eu dictum sed, sodales id orci. Vestibulum quis lorem auctor, porta libero in, suscipit erat. Etiam sollicitudin, dui non consectetur pellentesque, tortor metus venenatis leo, id varius eros lorem ac arcu. Nam mollis placerat odio eget scelerisque. Quisque ac tristique elit.e.</p>', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ultricies augue nulla, non venenatis diam interdum id. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. In sit amet erat viverra, posuere. ', 'available', 0, '2021-04-29'),
+(51, 'Smoky Red Rice Bowl', 1, 2, 0, '289.00', '1.00', '1.00', '', 'no', '<p>It&rsquo;s sweet &amp; spice, with everything nice! Rice &amp; gravy with a side of our special <strong>Smoky</strong> Red.<strong></strong>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent faucibus erat id orci suscipit, ut lacinia nunc venenatis. Proin pharetra ac nunc sit amet sollicitudin. Maecenas accumsan vulputate turpis sodales suscipit. Phasellus laoreet posuere tempus. Sed eget est quis arcu elementum lobortis. Ut non egestas arcu. Nunc vitae arcu eget risus semper faucibus. Praesent sed massa volutpat quam imperdiet ultrices at quis lacus. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quis cursus libero. Aliquam erat volutpat. Curabitur vel lorem non magna hendrerit pretium et non lorem. Integer ut odio purus. Sed non mi tincidunt, porta nulla volutpat, malesuada erat.</p>\r\n<div id=\"lipsum\">\r\n<p>Fusce consectetur imperdiet risus nec auctor. Donec iaculis diam non laoreet elementum. Ut elementum, nibh vel ultricies hendrerit, sapien libero feugiat velit, ac consectetur eros tellus a massa. Nullam sed sem at urna pretium blandit in imperdiet leo. Sed in ligula tristique, accumsan orci in, sodales massa. Integer nec hendrerit felis. Phasellus tortor mauris, fringilla ac dolor lacinia, accumsan malesuada quam. Donec sed libero interdum, ullamcorper urna eget, cursus lorem. Nulla pretium, nibh at ornare iaculis, justo ipsum porta magna, a sodales enim massa dignissim sem. Phasellus ipsum nulla, consectetur sed ante et, suscipit gravida magna. Donec ac ante tempus, aliquet libero ut, gravida ligula. Phasellus sed quam varius, scelerisque mi et, imperdiet mauris. Vivamus a mattis massa, bibendum suscipit ligula. Phasellus placerat sapien vitae orci tristique iaculis. Sed varius turpis ut porttitor hendrerit. Nunc non varius enim.</p>\r\n<p>Donec non arcu nec nisl consequat convallis. Nam libero lectus, consequat at sem eu, vehicula rhoncus odio. Phasellus dolor dolor, convallis eu dictum sed, sodales id orci. Vestibulum quis lorem auctor, porta libero in, suscipit erat. Etiam sollicitudin, dui non consectetur pellentesque, tortor metus venenatis leo, id varius eros lorem ac arcu. Nam mollis placerat odio eget scelerisque. Quisque ac tristique elit.&nbsp;</p>\r\n</div>', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ultricies augue nulla, non venenatis diam interdum id. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. In sit amet erat viverra, posuere. ', 'available', 0, '2021-04-29'),
+(52, 'Rizo Rice', 1, 2, 0, '99.00', '1.00', '1.00', '', 'no', '<p>Perfectly cooked KFC signature rice to fill your hunger !<strong></strong>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent faucibus erat id orci suscipit, ut lacinia nunc venenatis. Proin pharetra ac nunc sit amet sollicitudin. Maecenas accumsan vulputate turpis sodales suscipit. Phasellus laoreet posuere tempus. Sed eget est quis arcu elementum lobortis. Ut non egestas arcu. Nunc vitae arcu eget risus semper faucibus. Praesent sed massa volutpat quam imperdiet ultrices at quis lacus. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quis cursus libero. Aliquam erat volutpat. Curabitur vel lorem non magna hendrerit pretium et non lorem. Integer ut odio purus. Sed non mi tincidunt, porta nulla volutpat, malesuada erat.</p>\r\n<div id=\"lipsum\">\r\n<p>Fusce consectetur imperdiet risus nec auctor. Donec iaculis diam non laoreet elementum. Ut elementum, nibh vel ultricies hendrerit, sapien libero feugiat velit, ac consectetur eros tellus a massa. Nullam sed sem at urna pretium blandit in imperdiet leo. Sed in ligula tristique, accumsan orci in, sodales massa. Integer nec hendrerit felis. Phasellus tortor mauris, fringilla ac dolor lacinia, accumsan malesuada quam. Donec sed libero interdum, ullamcorper urna eget, cursus lorem. Nulla pretium, nibh at ornare iaculis, justo ipsum porta magna, a sodales enim massa dignissim sem. Phasellus ipsum nulla, consectetur sed ante et, suscipit gravida magna. Donec ac ante tempus, aliquet libero ut, gravida ligula. Phasellus sed quam varius, scelerisque mi et, imperdiet mauris. Vivamus a mattis massa, bibendum suscipit ligula. Phasellus placerat sapien vitae orci tristique iaculis. Sed varius turpis ut porttitor hendrerit. Nunc non varius enim.</p>\r\n<p>Donec non arcu nec nisl consequat convallis. Nam libero lectus, consequat at sem eu, vehicula rhoncus odio. Phasellus dolor dolor, convallis eu dictum sed, sodales id orci. Vestibulum quis lorem auctor, porta libero in, suscipit erat. Etiam sollicitudin, dui non consectetur pellentesque, tortor metus venenatis leo, id varius eros lorem ac arcu. Nam mollis placerat odio eget scelerisque. Quisque ac tristique elit.&nbsp;</p>\r\n</div>', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ultricies augue nulla, non venenatis diam interdum id. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. In sit amet erat viverra, posuere. ', 'available', 0, '2021-04-29'),
+(53, 'gravy', 1, 2, 0, '40.00', '1.00', '1.00', '', 'no', '<p>Make your meal more deliciouLorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent faucibus erat id orci suscipit, ut lacinia nunc venenatis. Proin pharetra ac nunc sit amet sollicitudin. Maecenas accumsan vulputate turpis sodales suscipit. Phasellus laoreet posuere tempus. Sed eget est quis arcu elementum lobortis. Ut non egestas arcu. Nunc vitae arcu eget risus semper faucibus. Praesent sed massa volutpat quam imperdiet ultrices at quis lacus. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quis cursus libero. Aliquam erat volutpat. Curabitur vel lorem non magna hendrerit pretium et non lorem. Integer ut odio purus. Sed non mi tincidunt, porta nulla volutpat, malesuada erat.</p>\r\n<div id=\"lipsum\">\r\n<p>Fusce consectetur imperdiet risus nec auctor. Donec iaculis diam non laoreet elementum. Ut elementum, nibh vel ultricies hendrerit, sapien libero feugiat velit, ac consectetur eros tellus a massa. Nullam sed sem at urna pretium blandit in imperdiet leo. Sed in ligula tristique, accumsan orci in, sodales massa. Integer nec hendrerit felis. Phasellus tortor mauris, fringilla ac dolor lacinia, accumsan malesuada quam. Donec sed libero interdum, ullamcorper urna eget, cursus lorem. Nulla pretium, nibh at ornare iaculis, justo ipsum porta magna, a sodales enim massa dignissim sem. Phasellus ipsum nulla, consectetur sed ante et, suscipit gravida magna. Donec ac ante tempus, aliquet libero ut, gravida ligula. Phasellus sed quam varius, scelerisque mi et, imperdiet mauris. Vivamus a mattis massa, bibendum suscipit ligula. Phasellus placerat sapien vitae orci tristique iaculis. Sed varius turpis ut porttitor hendrerit. Nunc non varius enim.</p>\r\n</div>\r\n<p>Donec non arcu nec nisl consequat convallis. Nam libero lectus, consequat at sem eu, vehicula rhoncus odio. Phasellus dolor dolor, convallis eu dictum sed, sodales id orci. Vestibulum quis lorem auctor, porta libero in, suscipit erat. Etiam sollicitudin, dui non consectetur pellentesque, tortor metus venenatis leo, id varius eros lorem ac arcu. Nam mollis placerat odio eget scelerisque. Quisque ac tristique elit.s by adding some gravy!</p>', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ultricies augue nulla, non venenatis diam interdum id. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. In sit amet erat viverra, posuere. ', 'available', 0, '2021-04-29');
 
 -- --------------------------------------------------------
 
@@ -905,46 +1143,46 @@ CREATE TABLE `product_colors` (
 --
 
 INSERT INTO `product_colors` (`id`, `product_id`, `color_id`) VALUES
-(25, 5, 4),
-(26, 5, 3),
-(27, 5, 2),
-(28, 6, 4),
-(29, 6, 3),
-(30, 6, 2),
-(47, 4, 4),
-(48, 4, 3),
-(49, 4, 2),
-(57, 2, 3),
-(61, 3, 4),
-(62, 3, 3),
-(63, 3, 2),
-(65, 8, 4),
-(66, 7, 4),
-(67, 9, 4),
-(68, 9, 3),
-(69, 9, 2),
 (71, 11, 3),
-(75, 14, 4),
-(76, 14, 3),
-(77, 14, 2),
-(78, 1, 4),
-(79, 13, 4),
-(80, 13, 3),
-(81, 13, 2),
-(82, 17, 2),
-(83, 19, 2),
-(84, 20, 2),
-(86, 10, 2),
-(87, 23, 3),
-(88, 24, 4),
-(89, 28, 4),
-(90, 28, 3),
-(91, 28, 2),
-(92, 30, 2),
 (93, 31, 2),
 (94, 32, 2),
-(95, 39, 4),
-(96, 39, 3);
+(101, 1, 4),
+(102, 2, 3),
+(103, 3, 4),
+(104, 3, 3),
+(105, 3, 2),
+(106, 4, 4),
+(107, 4, 3),
+(108, 4, 2),
+(109, 5, 4),
+(110, 5, 3),
+(111, 5, 2),
+(112, 6, 4),
+(113, 6, 3),
+(114, 6, 2),
+(115, 7, 4),
+(116, 17, 2),
+(117, 14, 4),
+(118, 14, 3),
+(119, 14, 2),
+(120, 13, 4),
+(121, 13, 3),
+(122, 13, 2),
+(123, 10, 2),
+(124, 9, 4),
+(125, 9, 3),
+(126, 9, 2),
+(127, 8, 4),
+(128, 28, 4),
+(129, 28, 3),
+(130, 28, 2),
+(131, 24, 4),
+(132, 23, 3),
+(133, 20, 2),
+(134, 19, 2),
+(135, 39, 4),
+(136, 39, 3),
+(137, 30, 2);
 
 -- --------------------------------------------------------
 
@@ -1086,35 +1324,35 @@ CREATE TABLE `product_sizes` (
 --
 
 INSERT INTO `product_sizes` (`id`, `product_id`, `size_id`) VALUES
-(25, 5, 4),
-(26, 5, 3),
-(27, 5, 2),
-(28, 6, 4),
-(29, 6, 3),
-(30, 6, 2),
-(47, 4, 4),
-(48, 4, 3),
-(49, 4, 2),
-(57, 2, 2),
-(61, 3, 4),
-(62, 3, 3),
-(63, 3, 2),
-(65, 8, 3),
-(66, 7, 4),
-(67, 9, 2),
 (69, 11, 3),
-(73, 14, 4),
-(74, 14, 3),
-(75, 14, 2),
-(76, 1, 4),
-(77, 13, 4),
-(78, 13, 3),
-(79, 13, 2),
-(81, 10, 3),
-(82, 24, 2),
-(83, 28, 4),
-(84, 28, 3),
-(85, 28, 2);
+(90, 1, 4),
+(91, 2, 2),
+(92, 3, 4),
+(93, 3, 3),
+(94, 3, 2),
+(95, 4, 4),
+(96, 4, 3),
+(97, 4, 2),
+(98, 5, 4),
+(99, 5, 3),
+(100, 5, 2),
+(101, 6, 4),
+(102, 6, 3),
+(103, 6, 2),
+(104, 7, 4),
+(105, 14, 4),
+(106, 14, 3),
+(107, 14, 2),
+(108, 13, 4),
+(109, 13, 3),
+(110, 13, 2),
+(111, 10, 3),
+(112, 9, 2),
+(113, 8, 3),
+(114, 28, 4),
+(115, 28, 3),
+(116, 28, 2),
+(117, 24, 2);
 
 -- --------------------------------------------------------
 
@@ -1167,7 +1405,8 @@ INSERT INTO `sap_items` (`id`, `product_id`, `purchase_price`, `sale_price`, `qu
 (2, 3, '3256.00', '3256.00', '1.00', '3256.00', 2, '2021-04-24'),
 (3, 3, '3256.00', '3256.00', '1.00', '3256.00', 3, '2021-04-24'),
 (4, 3, '3256.00', '3256.00', '1.00', '3256.00', 4, '2021-04-24'),
-(5, 23, '3600.00', '4000.00', '10.00', '40000.00', 5, '2021-04-27');
+(5, 23, '3600.00', '4000.00', '10.00', '40000.00', 5, '2021-04-27'),
+(6, 1, '1230.00', '1230.00', '100.00', '123000.00', 6, '2021-05-05');
 
 -- --------------------------------------------------------
 
@@ -1197,7 +1436,8 @@ INSERT INTO `sap_record` (`id`, `supplier_id`, `supplier_name`, `discount`, `pai
 (2, 0, 'Developer', '0.00', '3256.00', '3256.00', '3256.00', '1.00', '2021-04-24', 0),
 (3, 0, 'Developer', '0.00', '3256.00', '3256.00', '3256.00', '1.00', '2021-04-24', 0),
 (4, 0, 'Developer', '0.00', '3256.00', '3256.00', '3256.00', '1.00', '2021-04-24', 0),
-(5, 0, 'Abdullah al Hasan', '0.00', '40000.00', '40000.00', '40000.00', '10.00', '2021-04-27', 0);
+(5, 0, 'Abdullah al Hasan', '0.00', '40000.00', '40000.00', '40000.00', '10.00', '2021-04-27', 0),
+(6, 0, 'Aminur Islam', '0.00', '123000.00', '123000.00', '123000.00', '100.00', '2021-05-05', 0);
 
 -- --------------------------------------------------------
 
@@ -1393,8 +1633,8 @@ CREATE TABLE `stock` (
 --
 
 INSERT INTO `stock` (`id`, `product_id`, `sale_price`, `purchase_price`, `quantity`) VALUES
-(1, 1, '1230.00', '1230.00', '2.00'),
-(2, 3, '3256.00', '3256.00', '3.00'),
+(1, 1, '1230.00', '1230.00', '96.00'),
+(2, 3, '3256.00', '3256.00', '-6.00'),
 (3, 23, '4000.00', '3600.00', '10.00');
 
 -- --------------------------------------------------------
@@ -1439,6 +1679,7 @@ CREATE TABLE `subscribers` (
   `password` varchar(128) COLLATE utf8mb4_unicode_ci NOT NULL,
   `image` varchar(100) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `mobile` varchar(15) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `address` text COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `status` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT 'active'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
@@ -1446,11 +1687,11 @@ CREATE TABLE `subscribers` (
 -- Dumping data for table `subscribers`
 --
 
-INSERT INTO `subscribers` (`id`, `name`, `gender`, `birthday`, `about`, `website`, `facecbook`, `twitter`, `email`, `username`, `password`, `image`, `mobile`, `status`) VALUES
-(1, 'Developer', NULL, NULL, NULL, NULL, NULL, NULL, 'developer@gmail.com', '01983667657', '6d9c29d93f59a451881750f35cb18dc1', NULL, '01983667657', 'deactive'),
-(2, 'Aminur Islam', NULL, NULL, NULL, NULL, NULL, NULL, 'khetlal20land@gmail.com', '01910217482', '6d9c29d93f59a451881750f35cb18dc1', NULL, '01910217482', 'deactive'),
-(3, 'Abdulaha Islam', NULL, NULL, NULL, NULL, NULL, NULL, NULL, '01715246330', '6d9c29d93f59a451881750f35cb18dc1', NULL, '01715246330', 'active'),
-(4, 'Jolene Tate', NULL, NULL, NULL, NULL, NULL, NULL, NULL, '01969552552', '6d9c29d93f59a451881750f35cb18dc1', NULL, '01969552552', 'active');
+INSERT INTO `subscribers` (`id`, `name`, `gender`, `birthday`, `about`, `website`, `facecbook`, `twitter`, `email`, `username`, `password`, `image`, `mobile`, `address`, `status`) VALUES
+(1, 'Developer', NULL, NULL, NULL, NULL, NULL, NULL, 'developer@gmail.com', '01983667657', '6d9c29d93f59a451881750f35cb18dc1', NULL, '01983667657', NULL, 'deactive'),
+(2, 'Aminur Islam', NULL, NULL, NULL, NULL, NULL, NULL, 'khetlal20land@gmail.com', '01910217482', '6d9c29d93f59a451881750f35cb18dc1', NULL, '01910217482', NULL, 'deactive'),
+(3, 'Abdulaha Islam', NULL, NULL, NULL, NULL, NULL, NULL, NULL, '01715246330', '6d9c29d93f59a451881750f35cb18dc1', NULL, '01715246330', NULL, 'active'),
+(4, 'Jolene Tate', NULL, NULL, NULL, NULL, NULL, NULL, NULL, '01969552552', '6d9c29d93f59a451881750f35cb18dc1', NULL, '01969552552', NULL, 'active');
 
 -- --------------------------------------------------------
 
@@ -1508,7 +1749,8 @@ INSERT INTO `supplier_transaction` (`id`, `supplier_id`, `amount`, `trx_type`, `
 (12, 0, '3256.00', 'paid', 'cash', 'Developer', '2021-04-24', 2, 0),
 (13, 0, '3256.00', 'paid', 'cash', 'Developer', '2021-04-24', 3, 0),
 (14, 0, '3256.00', 'paid', 'cash', 'Developer', '2021-04-24', 4, 0),
-(15, 0, '40000.00', 'paid', 'cash', 'Abdullah al Hasan', '2021-04-27', 5, 0);
+(15, 0, '40000.00', 'paid', 'cash', 'Abdullah al Hasan', '2021-04-27', 5, 0),
+(16, 0, '123000.00', 'paid', 'cash', 'Aminur Islam', '2021-05-05', 6, 0);
 
 -- --------------------------------------------------------
 
@@ -1560,7 +1802,11 @@ INSERT INTO `system_action_menus` (`id`, `parent_id`, `dropdown_id`, `name`, `ty
 (112, 65, 126, 'View', 'info', 'purchase/purchase/view', 0, 'fa fa-eye', 1),
 (113, 65, 126, 'Edit', 'warning', 'purchase/purchase/edit', 0, 'fa fa-pencil-square-o', 1),
 (114, 65, 126, 'Delete', 'danger', 'purchase/purchase/delete', 0, 'fa fa-trash-o', 1),
-(115, 68, 0, 'Deactive', 'danger', 'subscriber/user/deactive', 0, 'fa fa-minus-square-o', 1);
+(115, 68, 0, 'Deactive', 'danger', 'subscriber/user/deactive', 0, 'fa fa-minus-square-o', 1),
+(116, 71, 0, 'edit', 'info', 'payment_method/payment_method/edit', 0, 'fa fa-pencil-square-o', 1),
+(117, 71, 0, 'Delete', 'danger', 'payment_method/payment_method/delete', 0, 'fa fa-trash-o', 1),
+(118, 70, 130, 'View', 'info', 'order/order/view', 0, 'fa fa-eye', 1),
+(119, 70, 130, 'delete', 'danger', 'order/order/trash', 0, 'fa fa-trash-o', 1);
 
 -- --------------------------------------------------------
 
@@ -1601,7 +1847,9 @@ INSERT INTO `system_aside_menus` (`id`, `name`, `controller_path`, `selector`, `
 (66, 'SMS', '', 'sms', 'fa fa-paper-plane', 1, 1, 5, 1),
 (67, 'Stock', 'stock/stock', 'stock', 'fa fa-archive', 0, 0, 3, 1),
 (68, 'User', 'subscriber/user', 'user_menu', 'fa fa-users', 0, 0, 0, 1),
-(69, 'Pages', 'pages/pages', 'pages', 'fa fa-file', 0, 1, 0, 1);
+(69, 'Pages', 'pages/pages', 'pages', 'fa fa-file', 0, 0, 0, 1),
+(70, 'Order', '', 'order', 'fa fa-th-list', 1, 1, 0, 1),
+(71, 'Payment Method', 'payment_method/payment_method', 'payment_method', 'fa fa-money', 0, 0, 0, 1);
 
 -- --------------------------------------------------------
 
@@ -1650,7 +1898,9 @@ INSERT INTO `system_aside_menu_dropdowns` (`id`, `parent_id`, `name`, `selector`
 (126, 65, 'All Purchase', 'all', 'purchase/purchase', 'fa fa-angle-right', 1, 1),
 (127, 66, 'Send SMS', 'send_sms', 'sms/Sms/send_sms', 'fa fa-angle-right', 2, 1),
 (128, 66, 'SMS Report', 'sms_report', 'sms/Sms/sms_report', 'fa fa-angle-right', 1, 1),
-(129, 66, 'Custom SMS', 'custom_sms', 'sms/Sms/custom_sms', 'fa fa-angle-right', 0, 1);
+(129, 66, 'Custom SMS', 'custom_sms', 'sms/Sms/custom_sms', 'fa fa-angle-right', 0, 1),
+(130, 70, 'All Order', 'all_order', 'order/order/all', 'fa fa-angle-right', 0, 1),
+(131, 70, 'Complete Order', 'completed_order', 'order/order/complete', 'fa fa-angle-right', 1, 1);
 
 -- --------------------------------------------------------
 
@@ -1674,6 +1924,523 @@ INSERT INTO `system_privileges` (`id`, `admin_id`, `aside_menu_id`, `aside_menu_
 (13, 10, '[\"5\",\"4\",\"3\",\"1\"]', '[\"11\",\"10\",\"9\",\"8\",\"7\",\"6\",\"5\"]', '[\"6\",\"5\",\"4\",\"3\",\"2\",\"1\"]'),
 (14, 12, '[\"7\",\"6\",\"2\"]', '[\"15\",\"14\",\"13\",\"12\",\"1\"]', '[\"11\",\"10\",\"9\",\"14\",\"13\"]'),
 (15, 13, '[\"69\",\"68\",\"67\",\"66\",\"65\",\"64\",\"63\",\"62\",\"61\",\"60\",\"59\",\"58\",\"42\",\"34\",\"21\"]', '[\"129\",\"128\",\"127\",\"126\",\"125\",\"124\",\"123\",\"122\",\"121\",\"120\",\"119\",\"118\",\"117\",\"116\",\"115\",\"114\",\"113\",\"112\",\"111\",\"82\",\"81\",\"51\",\"50\",\"49\"]', '[\"114\",\"113\",\"112\",\"111\",\"110\",\"104\",\"103\",\"106\",\"105\",\"109\",\"108\",\"107\",\"102\",\"101\",\"100\",\"99\",\"98\",\"97\",\"60\",\"59\",\"58\",\"57\"]');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `upazillas`
+--
+
+CREATE TABLE `upazillas` (
+  `id` int(10) UNSIGNED NOT NULL,
+  `name` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `country` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `district_id` int(10) UNSIGNED DEFAULT NULL,
+  `shipping_cost` double(8,2) DEFAULT NULL,
+  `status` tinyint(3) UNSIGNED NOT NULL DEFAULT 1,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci ROW_FORMAT=DYNAMIC;
+
+--
+-- Dumping data for table `upazillas`
+--
+
+INSERT INTO `upazillas` (`id`, `name`, `country`, `district_id`, `shipping_cost`, `status`, `created_at`, `updated_at`) VALUES
+(1, 'Dhamrai', 'Bangladesh', 1, 75.00, 1, '2019-04-09 00:24:28', '2020-11-11 00:49:20'),
+(2, 'Dohar', 'Bangladesh', 1, 75.00, 1, '2019-04-09 00:24:28', '2020-11-11 00:49:20'),
+(3, 'Keraniganj', 'Bangladesh', 1, 75.00, 1, '2019-04-09 00:24:28', '2020-11-11 00:49:20'),
+(4, 'Nawabganj ', 'Bangladesh', 1, 75.00, 0, '2019-04-09 00:24:28', '2020-11-11 00:49:20'),
+(5, 'Savar ', 'Bangladesh', 1, 75.00, 1, '2019-04-09 00:24:28', '2020-11-11 00:49:20'),
+(6, 'Faridpur Sodar ', 'Bangladesh', 2, 75.00, 1, '2019-04-09 00:24:29', '2020-11-11 00:49:20'),
+(7, 'Boalmari ', 'Bangladesh', 2, 75.00, 1, '2019-04-09 00:24:29', '2020-11-11 00:49:20'),
+(8, 'Alfadanga ', 'Bangladesh', 2, 75.00, 1, '2019-04-09 00:24:29', '2020-11-11 00:49:20'),
+(9, 'Madhukhali ', 'Bangladesh', 2, 75.00, 1, '2019-04-09 00:24:29', '2020-11-11 00:49:20'),
+(10, 'Bhanga ', 'Bangladesh', 2, 75.00, 1, '2019-04-09 00:24:29', '2020-11-11 00:49:20'),
+(11, 'Nagarkanda ', 'Bangladesh', 2, 75.00, 1, '2019-04-09 00:24:29', '2020-11-11 00:49:20'),
+(12, 'Charbhadrasan ', 'Bangladesh', 2, 75.00, 1, '2019-04-09 00:24:29', '2020-11-11 00:49:20'),
+(13, 'Sodarpur ', 'Bangladesh', 2, 75.00, 1, '2019-04-09 00:24:29', '2020-11-11 00:49:20'),
+(14, 'Shaltha ', 'Bangladesh', 2, 75.00, 1, '2019-04-09 00:24:29', '2020-11-11 00:49:20'),
+(15, 'Gazipur Sodar-Joydebpur', 'Bangladesh', 3, 75.00, 1, '2019-04-09 00:24:29', '2020-11-11 00:49:20'),
+(16, 'Kaliakior', 'Bangladesh', 3, 75.00, 1, '2019-04-09 00:24:29', '2020-11-11 00:49:20'),
+(17, 'Kapasia', 'Bangladesh', 3, 75.00, 1, '2019-04-09 00:24:29', '2020-11-11 00:49:20'),
+(18, 'Sripur', 'Bangladesh', 3, 75.00, 1, '2019-04-09 00:24:29', '2020-11-11 00:49:20'),
+(19, 'Kaliganj', 'Bangladesh', 3, 75.00, 1, '2019-04-09 00:24:29', '2020-11-11 00:49:20'),
+(20, 'Tongi', 'Bangladesh', 3, 75.00, 1, '2019-04-09 00:24:29', '2020-11-11 00:49:20'),
+(21, 'Gopalganj Sodar ', 'Bangladesh', 4, 75.00, 1, '2019-04-09 00:24:29', '2020-11-11 00:49:20'),
+(22, 'Kashiani ', 'Bangladesh', 4, 75.00, 1, '2019-04-09 00:24:29', '2020-11-11 00:49:20'),
+(23, 'Kotalipara ', 'Bangladesh', 4, 75.00, 1, '2019-04-09 00:24:29', '2020-11-11 00:49:20'),
+(24, 'Muksudpur ', 'Bangladesh', 4, 75.00, 1, '2019-04-09 00:24:29', '2020-11-11 00:49:20'),
+(25, 'Tungipara ', 'Bangladesh', 4, 75.00, 1, '2019-04-09 00:24:29', '2020-11-11 00:49:20'),
+(26, 'Dewanganj ', 'Bangladesh', 5, 75.00, 1, '2019-04-09 00:24:29', '2020-11-11 00:49:20'),
+(27, 'Baksiganj ', 'Bangladesh', 5, 75.00, 1, '2019-04-09 00:24:29', '2020-11-11 00:49:20'),
+(28, 'Islampur ', 'Bangladesh', 5, 75.00, 1, '2019-04-09 00:24:29', '2020-11-11 00:49:20'),
+(29, 'Jamalpur Sodar ', 'Bangladesh', 5, 75.00, 1, '2019-04-09 00:24:29', '2020-11-11 00:49:20'),
+(30, 'Madarganj ', 'Bangladesh', 5, 75.00, 1, '2019-04-09 00:24:29', '2020-11-11 00:49:20'),
+(31, 'Melandaha ', 'Bangladesh', 5, 75.00, 1, '2019-04-09 00:24:29', '2020-11-11 00:49:20'),
+(32, 'Sarishabari ', 'Bangladesh', 5, 75.00, 1, '2019-04-09 00:24:29', '2020-11-11 00:49:20'),
+(33, 'Narundi Police I.C', 'Bangladesh', 5, 75.00, 1, '2019-04-09 00:24:30', '2020-11-11 00:49:20'),
+(34, 'Astagram ', 'Bangladesh', 6, 75.00, 1, '2019-04-09 00:24:30', '2020-11-11 00:49:20'),
+(35, 'Bajitpur ', 'Bangladesh', 6, 75.00, 1, '2019-04-09 00:24:30', '2020-11-11 00:49:20'),
+(36, 'Bhairab ', 'Bangladesh', 6, 75.00, 1, '2019-04-09 00:24:30', '2020-11-11 00:49:20'),
+(37, 'Hossainpur ', 'Bangladesh', 6, 75.00, 1, '2019-04-09 00:24:30', '2020-11-11 00:49:20'),
+(38, 'Itna ', 'Bangladesh', 6, 75.00, 1, '2019-04-09 00:24:30', '2020-11-11 00:49:20'),
+(39, 'Karimganj ', 'Bangladesh', 6, 75.00, 1, '2019-04-09 00:24:30', '2020-11-11 00:49:20'),
+(40, 'Katiadi ', 'Bangladesh', 6, 75.00, 1, '2019-04-09 00:24:30', '2020-11-11 00:49:20'),
+(41, 'Kishoreganj Sodar ', 'Bangladesh', 6, 75.00, 1, '2019-04-09 00:24:30', '2020-11-11 00:49:20'),
+(42, 'Kuliarchar ', 'Bangladesh', 6, 75.00, 1, '2019-04-09 00:24:30', '2020-11-11 00:49:20'),
+(43, 'Mithamain ', 'Bangladesh', 6, 75.00, 1, '2019-04-09 00:24:30', '2020-11-11 00:49:20'),
+(44, 'Nikli ', 'Bangladesh', 6, 75.00, 1, '2019-04-09 00:24:30', '2020-11-11 00:49:20'),
+(45, 'Pakundia ', 'Bangladesh', 6, 75.00, 1, '2019-04-09 00:24:30', '2020-11-11 00:49:20'),
+(46, 'Tarail ', 'Bangladesh', 6, 75.00, 1, '2019-04-09 00:24:30', '2020-11-11 00:49:20'),
+(47, 'Madaripur Sodar', 'Bangladesh', 7, 75.00, 1, '2019-04-09 00:24:30', '2020-11-11 00:49:20'),
+(48, 'Kalkini', 'Bangladesh', 7, 75.00, 1, '2019-04-09 00:24:30', '2020-11-11 00:49:20'),
+(49, 'Rajoir', 'Bangladesh', 7, 75.00, 1, '2019-04-09 00:24:30', '2020-11-11 00:49:20'),
+(50, 'Shibchar', 'Bangladesh', 7, 75.00, 1, '2019-04-09 00:24:30', '2020-11-11 00:49:20'),
+(51, 'Manikganj Sodar ', 'Bangladesh', 8, 75.00, 1, '2019-04-09 00:24:30', '2020-11-11 00:49:20'),
+(52, 'Singair ', 'Bangladesh', 8, 75.00, 1, '2019-04-09 00:24:30', '2020-11-11 00:49:20'),
+(53, 'Shibalaya ', 'Bangladesh', 8, 75.00, 1, '2019-04-09 00:24:30', '2020-11-11 00:49:20'),
+(54, 'Saturia ', 'Bangladesh', 8, 75.00, 1, '2019-04-09 00:24:31', '2020-11-11 00:49:20'),
+(55, 'Harirampur ', 'Bangladesh', 8, 75.00, 1, '2019-04-09 00:24:31', '2020-11-11 00:49:20'),
+(56, 'Ghior ', 'Bangladesh', 8, 75.00, 1, '2019-04-09 00:24:31', '2020-11-11 00:49:20'),
+(57, 'Daulatpur ', 'Bangladesh', 8, 75.00, 1, '2019-04-09 00:24:31', '2020-11-11 00:49:20'),
+(58, 'Lohajang ', 'Bangladesh', 9, 75.00, 1, '2019-04-09 00:24:31', '2020-11-11 00:49:20'),
+(59, 'Sreenagar ', 'Bangladesh', 9, 75.00, 1, '2019-04-09 00:24:31', '2020-11-11 00:49:20'),
+(60, 'Munshiganj Sodar ', 'Bangladesh', 9, 75.00, 1, '2019-04-09 00:24:31', '2020-11-11 00:49:20'),
+(61, 'Sirajdikhan ', 'Bangladesh', 9, 75.00, 1, '2019-04-09 00:24:31', '2020-11-11 00:49:20'),
+(62, 'Tongibari ', 'Bangladesh', 9, 75.00, 1, '2019-04-09 00:24:31', '2020-11-11 00:49:20'),
+(63, 'Gazaria ', 'Bangladesh', 9, 75.00, 1, '2019-04-09 00:24:31', '2020-11-11 00:49:20'),
+(64, 'Bhaluka', 'Bangladesh', 10, 75.00, 1, '2019-04-09 00:24:31', '2020-11-11 00:49:20'),
+(65, 'Trishal', 'Bangladesh', 10, 75.00, 1, '2019-04-09 00:24:31', '2020-11-11 00:49:20'),
+(66, 'Tarakanda', 'Bangladesh', 10, 75.00, 1, '2019-04-09 00:24:31', '2020-11-11 00:49:20'),
+(67, 'Haluaghat', 'Bangladesh', 10, 75.00, 1, '2019-04-09 00:24:31', '2020-11-11 00:49:20'),
+(68, 'Muktagachha', 'Bangladesh', 10, 75.00, 1, '2019-04-09 00:24:31', '2020-11-11 00:49:20'),
+(69, 'Dhobaura', 'Bangladesh', 10, 75.00, 1, '2019-04-09 00:24:31', '2020-11-11 00:49:20'),
+(70, 'Fulbaria', 'Bangladesh', 10, 75.00, 1, '2019-04-09 00:24:31', '2020-11-11 00:49:20'),
+(71, 'Gaffargaon', 'Bangladesh', 10, 75.00, 1, '2019-04-09 00:24:31', '2020-11-11 00:49:20'),
+(72, 'Gauripur', 'Bangladesh', 10, 75.00, 1, '2019-04-09 00:24:31', '2020-11-11 00:49:20'),
+(73, 'Ishwarganj', 'Bangladesh', 10, 75.00, 1, '2019-04-09 00:24:31', '2020-11-11 00:49:20'),
+(74, 'Mymensingh Sodar', 'Bangladesh', 10, 75.00, 1, '2019-04-09 00:24:31', '2020-11-11 00:49:20'),
+(75, 'Nandail', 'Bangladesh', 10, 75.00, 1, '2019-04-09 00:24:31', '2020-11-11 00:49:20'),
+(76, 'Phulpur', 'Bangladesh', 10, 75.00, 1, '2019-04-09 00:24:31', '2020-11-11 00:49:20'),
+(77, 'Araihazar ', 'Bangladesh', 11, 75.00, 1, '2019-04-09 00:24:31', '2020-11-11 00:49:20'),
+(78, 'Sonargaon ', 'Bangladesh', 11, 75.00, 1, '2019-04-09 00:24:31', '2020-11-11 00:49:20'),
+(79, 'Bandar', 'Bangladesh', 11, 75.00, 1, '2019-04-09 00:24:31', '2020-11-11 00:49:20'),
+(80, 'Naryanganj Sodar ', 'Bangladesh', 11, 75.00, 1, '2019-04-09 00:24:31', '2020-11-11 00:49:20'),
+(81, 'Rupganj ', 'Bangladesh', 11, 75.00, 1, '2019-04-09 00:24:32', '2020-11-11 00:49:20'),
+(82, 'Siddirgonj ', 'Bangladesh', 11, 75.00, 1, '2019-04-09 00:24:32', '2020-11-11 00:49:20'),
+(83, 'Belabo ', 'Bangladesh', 12, 75.00, 1, '2019-04-09 00:24:32', '2020-11-11 00:49:20'),
+(84, 'Monohardi ', 'Bangladesh', 12, 75.00, 1, '2019-04-09 00:24:32', '2020-11-11 00:49:20'),
+(85, 'Narsingdi Sodar ', 'Bangladesh', 12, 75.00, 1, '2019-04-09 00:24:32', '2020-11-11 00:49:20'),
+(86, 'Palash ', 'Bangladesh', 12, 75.00, 1, '2019-04-09 00:24:32', '2020-11-11 00:49:20'),
+(87, 'Raipura , Narsingdi', 'Bangladesh', 12, 75.00, 1, '2019-04-09 00:24:32', '2020-11-11 00:49:20'),
+(88, 'Shibpur ', 'Bangladesh', 12, 75.00, 1, '2019-04-09 00:24:32', '2020-11-11 00:49:20'),
+(89, 'Kendua', 'Bangladesh', 13, 75.00, 1, '2019-04-09 00:24:32', '2020-11-11 00:49:20'),
+(90, 'Atpara', 'Bangladesh', 13, 75.00, 1, '2019-04-09 00:24:32', '2020-11-11 00:49:20'),
+(91, 'Barhatta', 'Bangladesh', 13, 75.00, 1, '2019-04-09 00:24:32', '2020-11-11 00:49:20'),
+(92, 'Durgapur', 'Bangladesh', 13, 75.00, 1, '2019-04-09 00:24:32', '2020-11-11 00:49:20'),
+(93, 'Kalmakanda', 'Bangladesh', 13, 75.00, 1, '2019-04-09 00:24:32', '2020-11-11 00:49:20'),
+(94, 'Madan', 'Bangladesh', 13, 75.00, 1, '2019-04-09 00:24:32', '2020-11-11 00:49:20'),
+(95, 'Mohanganj', 'Bangladesh', 13, 75.00, 1, '2019-04-09 00:24:32', '2020-11-11 00:49:20'),
+(96, 'Netrakona-S', 'Bangladesh', 13, 75.00, 1, '2019-04-09 00:24:32', '2020-11-11 00:49:20'),
+(97, 'Purbadhala', 'Bangladesh', 13, 75.00, 1, '2019-04-09 00:24:32', '2020-11-11 00:49:20'),
+(98, 'Khaliajuri', 'Bangladesh', 13, 75.00, 1, '2019-04-09 00:24:32', '2020-11-11 00:49:20'),
+(99, 'Baliakandi ', 'Bangladesh', 14, 75.00, 1, '2019-04-09 00:24:32', '2020-11-11 00:49:20'),
+(100, 'Goalandaghat ', 'Bangladesh', 14, 75.00, 1, '2019-04-09 00:24:32', '2020-11-11 00:49:20'),
+(101, 'Pangsha ', 'Bangladesh', 14, 75.00, 1, '2019-04-09 00:24:32', '2020-11-11 00:49:20'),
+(102, 'Kalukhali ', 'Bangladesh', 14, 75.00, 1, '2019-04-09 00:24:32', '2020-11-11 00:49:20'),
+(103, 'Rajbari Sodar ', 'Bangladesh', 14, 75.00, 1, '2019-04-09 00:24:32', '2020-11-11 00:49:20'),
+(104, 'Shariatpur Sodar -Palong', 'Bangladesh', 15, 75.00, 1, '2019-04-09 00:24:32', '2020-11-11 00:49:20'),
+(105, 'Damudya ', 'Bangladesh', 15, 75.00, 1, '2019-04-09 00:24:32', '2020-11-11 00:49:20'),
+(106, 'Naria ', 'Bangladesh', 15, 75.00, 1, '2019-04-09 00:24:32', '2020-11-11 00:49:20'),
+(107, 'Jajira ', 'Bangladesh', 15, 75.00, 1, '2019-04-09 00:24:32', '2020-11-11 00:49:20'),
+(108, 'Bhedarganj ', 'Bangladesh', 15, 75.00, 1, '2019-04-09 00:24:32', '2020-11-11 00:49:20'),
+(109, 'Gosairhat ', 'Bangladesh', 15, 75.00, 1, '2019-04-09 00:24:32', '2020-11-11 00:49:20'),
+(110, 'Jhenaigati ', 'Bangladesh', 16, 75.00, 1, '2019-04-09 00:24:32', '2020-11-11 00:49:20'),
+(111, 'Nakla ', 'Bangladesh', 16, 75.00, 1, '2019-04-09 00:24:33', '2020-11-11 00:49:20'),
+(112, 'Nalitabari ', 'Bangladesh', 16, 75.00, 1, '2019-04-09 00:24:33', '2020-11-11 00:49:20'),
+(113, 'Sherpur Sodar ', 'Bangladesh', 16, 75.00, 1, '2019-04-09 00:24:33', '2020-11-11 00:49:20'),
+(114, 'Sreebardi ', 'Bangladesh', 16, 75.00, 1, '2019-04-09 00:24:33', '2020-11-11 00:49:20'),
+(115, 'Tangail Sodar ', 'Bangladesh', 17, 75.00, 1, '2019-04-09 00:24:33', '2020-11-11 00:49:20'),
+(116, 'Sakhipur ', 'Bangladesh', 17, 75.00, 1, '2019-04-09 00:24:33', '2020-11-11 00:49:20'),
+(117, 'Basail ', 'Bangladesh', 17, 75.00, 1, '2019-04-09 00:24:33', '2020-11-11 00:49:20'),
+(118, 'Madhupur ', 'Bangladesh', 17, 75.00, 1, '2019-04-09 00:24:33', '2020-11-11 00:49:20'),
+(119, 'Ghatail ', 'Bangladesh', 17, 75.00, 1, '2019-04-09 00:24:33', '2020-11-11 00:49:20'),
+(120, 'Kalihati ', 'Bangladesh', 17, 75.00, 1, '2019-04-09 00:24:33', '2020-11-11 00:49:20'),
+(121, 'Nagarpur ', 'Bangladesh', 17, 75.00, 1, '2019-04-09 00:24:33', '2020-11-11 00:49:20'),
+(122, 'Mirzapur ', 'Bangladesh', 17, 75.00, 1, '2019-04-09 00:24:33', '2020-11-11 00:49:20'),
+(123, 'Gopalpur ', 'Bangladesh', 17, 75.00, 1, '2019-04-09 00:24:33', '2020-11-11 00:49:20'),
+(124, 'Delduar ', 'Bangladesh', 17, 75.00, 1, '2019-04-09 00:24:33', '2020-11-11 00:49:20'),
+(125, 'Bhuapur ', 'Bangladesh', 17, 75.00, 1, '2019-04-09 00:24:33', '2020-11-11 00:49:20'),
+(126, 'Dhanbari ', 'Bangladesh', 17, 75.00, 1, '2019-04-09 00:24:33', '2020-11-11 00:49:20'),
+(127, 'Adamdighi', 'Bangladesh', 18, 75.00, 1, '2019-04-09 00:24:33', '2020-11-11 00:49:20'),
+(128, 'Bogra Sodar', 'Bangladesh', 18, 75.00, 1, '2019-04-09 00:24:33', '2020-11-11 00:49:20'),
+(129, 'Sherpur', 'Bangladesh', 18, 75.00, 1, '2019-04-09 00:24:33', '2020-11-11 00:49:20'),
+(130, 'Dhunat', 'Bangladesh', 18, 75.00, 1, '2019-04-09 00:24:33', '2020-11-11 00:49:20'),
+(131, 'Dhupchanchia', 'Bangladesh', 18, 75.00, 1, '2019-04-09 00:24:33', '2020-11-11 00:49:20'),
+(132, 'Gabtali', 'Bangladesh', 18, 75.00, 1, '2019-04-09 00:24:33', '2020-11-11 00:49:20'),
+(133, 'Kahaloo', 'Bangladesh', 18, 75.00, 1, '2019-04-09 00:24:33', '2020-11-11 00:49:20'),
+(134, 'Nandigram', 'Bangladesh', 18, 75.00, 1, '2019-04-09 00:24:33', '2020-11-11 00:49:20'),
+(135, 'Sahajanpur', 'Bangladesh', 18, 75.00, 1, '2019-04-09 00:24:33', '2020-11-11 00:49:20'),
+(136, 'Sariakandi', 'Bangladesh', 18, 75.00, 1, '2019-04-09 00:24:33', '2020-11-11 00:49:20'),
+(137, 'Shibganj', 'Bangladesh', 18, 75.00, 1, '2019-04-09 00:24:33', '2020-11-11 00:49:20'),
+(138, 'Sonatala', 'Bangladesh', 18, 75.00, 1, '2019-04-09 00:24:33', '2020-11-11 00:49:20'),
+(139, 'Joypurhat S', 'Bangladesh', 19, 75.00, 1, '2019-04-09 00:24:33', '2020-11-11 00:49:20'),
+(140, 'Akkelpur', 'Bangladesh', 19, 75.00, 1, '2019-04-09 00:24:33', '2020-11-11 00:49:20'),
+(141, 'Kalai', 'Bangladesh', 19, 75.00, 1, '2019-04-09 00:24:33', '2020-11-11 00:49:20'),
+(142, 'Khetlal', 'Bangladesh', 19, 75.00, 1, '2019-04-09 00:24:33', '2020-11-11 00:49:20'),
+(143, 'Panchbibi', 'Bangladesh', 19, 75.00, 1, '2019-04-09 00:24:33', '2020-11-11 00:49:20'),
+(144, 'Naogaon Sodar ', 'Bangladesh', 20, 75.00, 1, '2019-04-09 00:24:33', '2020-11-11 00:49:20'),
+(145, 'Mohadevpur ', 'Bangladesh', 20, 75.00, 1, '2019-04-09 00:24:33', '2020-11-11 00:49:20'),
+(146, 'Manda ', 'Bangladesh', 20, 75.00, 1, '2019-04-09 00:24:33', '2020-11-11 00:49:20'),
+(147, 'Niamatpur ', 'Bangladesh', 20, 75.00, 1, '2019-04-09 00:24:33', '2020-11-11 00:49:20'),
+(148, 'Atrai ', 'Bangladesh', 20, 75.00, 1, '2019-04-09 00:24:34', '2020-11-11 00:49:20'),
+(149, 'Raninagar ', 'Bangladesh', 20, 75.00, 1, '2019-04-09 00:24:34', '2020-11-11 00:49:20'),
+(150, 'Patnitala ', 'Bangladesh', 20, 75.00, 1, '2019-04-09 00:24:34', '2020-11-11 00:49:20'),
+(151, 'Dhamoirhat ', 'Bangladesh', 20, 75.00, 1, '2019-04-09 00:24:34', '2020-11-11 00:49:20'),
+(152, 'Sapahar ', 'Bangladesh', 20, 75.00, 1, '2019-04-09 00:24:34', '2020-11-11 00:49:20'),
+(153, 'Porsha ', 'Bangladesh', 20, 75.00, 1, '2019-04-09 00:24:34', '2020-11-11 00:49:20'),
+(154, 'Badalgachhi ', 'Bangladesh', 20, 75.00, 1, '2019-04-09 00:24:34', '2020-11-11 00:49:20'),
+(155, 'Natore Sodar ', 'Bangladesh', 21, 75.00, 1, '2019-04-09 00:24:34', '2020-11-11 00:49:20'),
+(156, 'Baraigram ', 'Bangladesh', 21, 75.00, 1, '2019-04-09 00:24:34', '2020-11-11 00:49:20'),
+(157, 'Bagatipara ', 'Bangladesh', 21, 75.00, 1, '2019-04-09 00:24:34', '2020-11-11 00:49:20'),
+(158, 'Lalpur ', 'Bangladesh', 21, 75.00, 1, '2019-04-09 00:24:34', '2020-11-11 00:49:20'),
+(159, 'Natore Sodar ', 'Bangladesh', 21, 75.00, 1, '2019-04-09 00:24:34', '2020-11-11 00:49:20'),
+(160, 'Baraigram ', 'Bangladesh', 21, 75.00, 1, '2019-04-09 00:24:34', '2020-11-11 00:49:20'),
+(161, 'Bholahat ', 'Bangladesh', 22, 75.00, 1, '2019-04-09 00:24:34', '2020-11-11 00:49:20'),
+(162, 'Gomastapur ', 'Bangladesh', 22, 75.00, 1, '2019-04-09 00:24:34', '2020-11-11 00:49:20'),
+(163, 'Nachole ', 'Bangladesh', 22, 75.00, 1, '2019-04-09 00:24:34', '2020-11-11 00:49:20'),
+(164, 'Nawabganj Sodar ', 'Bangladesh', 22, 75.00, 1, '2019-04-09 00:24:34', '2020-11-11 00:49:20'),
+(165, 'Shibganj ', 'Bangladesh', 22, 75.00, 1, '2019-04-09 00:24:34', '2020-11-11 00:49:20'),
+(166, 'Atgharia ', 'Bangladesh', 23, 75.00, 1, '2019-04-09 00:24:34', '2020-11-11 00:49:20'),
+(167, 'Bera ', 'Bangladesh', 23, 75.00, 1, '2019-04-09 00:24:35', '2020-11-11 00:49:20'),
+(168, 'Bhangura ', 'Bangladesh', 23, 75.00, 1, '2019-04-09 00:24:35', '2020-11-11 00:49:20'),
+(169, 'Chatmohar ', 'Bangladesh', 23, 75.00, 1, '2019-04-09 00:24:35', '2020-11-11 00:49:20'),
+(170, 'Faridpur ', 'Bangladesh', 23, 75.00, 1, '2019-04-09 00:24:35', '2020-11-11 00:49:20'),
+(171, 'Ishwardi ', 'Bangladesh', 23, 75.00, 1, '2019-04-09 00:24:35', '2020-11-11 00:49:20'),
+(172, 'Pabna Sodar ', 'Bangladesh', 23, 75.00, 1, '2019-04-09 00:24:35', '2020-11-11 00:49:20'),
+(173, 'Santhia ', 'Bangladesh', 23, 75.00, 1, '2019-04-09 00:24:35', '2020-11-11 00:49:20'),
+(174, 'Sujanagar ', 'Bangladesh', 23, 75.00, 1, '2019-04-09 00:24:35', '2020-11-11 00:49:20'),
+(175, 'Bagha', 'Bangladesh', 24, 75.00, 1, '2019-04-09 00:24:35', '2020-11-11 00:49:20'),
+(176, 'Bagmara', 'Bangladesh', 24, 75.00, 1, '2019-04-09 00:24:35', '2020-11-11 00:49:20'),
+(177, 'Charghat', 'Bangladesh', 24, 75.00, 1, '2019-04-09 00:24:35', '2020-11-11 00:49:20'),
+(178, 'Durgapur', 'Bangladesh', 24, 75.00, 1, '2019-04-09 00:24:35', '2020-11-11 00:49:20'),
+(179, 'Godagari', 'Bangladesh', 24, 75.00, 1, '2019-04-09 00:24:35', '2020-11-11 00:49:20'),
+(180, 'Mohanpur', 'Bangladesh', 24, 75.00, 1, '2019-04-09 00:24:35', '2020-11-11 00:49:20'),
+(181, 'Paba', 'Bangladesh', 24, 75.00, 1, '2019-04-09 00:24:35', '2020-11-11 00:49:20'),
+(182, 'Puthia', 'Bangladesh', 24, 75.00, 1, '2019-04-09 00:24:35', '2020-11-11 00:49:20'),
+(183, 'Tanore', 'Bangladesh', 24, 75.00, 1, '2019-04-09 00:24:35', '2020-11-11 00:49:20'),
+(184, 'Sirajganj Sodar ', 'Bangladesh', 25, 75.00, 1, '2019-04-09 00:24:35', '2020-11-11 00:49:20'),
+(185, 'Belkuchi ', 'Bangladesh', 25, 75.00, 1, '2019-04-09 00:24:35', '2020-11-11 00:49:20'),
+(186, 'Chauhali ', 'Bangladesh', 25, 75.00, 1, '2019-04-09 00:24:35', '2020-11-11 00:49:20'),
+(187, 'Kamarkhanda ', 'Bangladesh', 25, 75.00, 1, '2019-04-09 00:24:35', '2020-11-11 00:49:20'),
+(188, 'Kazipur ', 'Bangladesh', 25, 75.00, 1, '2019-04-09 00:24:35', '2020-11-11 00:49:20'),
+(189, 'Raiganj ', 'Bangladesh', 25, 75.00, 1, '2019-04-09 00:24:35', '2020-11-11 00:49:20'),
+(190, 'Shahjadpur ', 'Bangladesh', 25, 75.00, 1, '2019-04-09 00:24:35', '2020-11-11 00:49:20'),
+(191, 'Tarash ', 'Bangladesh', 25, 75.00, 1, '2019-04-09 00:24:35', '2020-11-11 00:49:20'),
+(192, 'Ullahpara ', 'Bangladesh', 25, 75.00, 1, '2019-04-09 00:24:35', '2020-11-11 00:49:20'),
+(193, 'Birampur ', 'Bangladesh', 26, 75.00, 1, '2019-04-09 00:24:36', '2020-11-11 00:49:20'),
+(194, 'Birganj', 'Bangladesh', 26, 75.00, 1, '2019-04-09 00:24:36', '2020-11-11 00:49:20'),
+(195, 'Biral ', 'Bangladesh', 26, 75.00, 1, '2019-04-09 00:24:36', '2020-11-11 00:49:20'),
+(196, 'Bochaganj ', 'Bangladesh', 26, 75.00, 1, '2019-04-09 00:24:36', '2020-11-11 00:49:20'),
+(197, 'Chirirbandar ', 'Bangladesh', 26, 75.00, 1, '2019-04-09 00:24:36', '2020-11-11 00:49:20'),
+(198, 'Phulbari ', 'Bangladesh', 26, 75.00, 1, '2019-04-09 00:24:36', '2020-11-11 00:49:20'),
+(199, 'Ghoraghat ', 'Bangladesh', 26, 75.00, 1, '2019-04-09 00:24:36', '2020-11-11 00:49:20'),
+(200, 'Hakimpur ', 'Bangladesh', 26, 75.00, 1, '2019-04-09 00:24:36', '2020-11-11 00:49:20'),
+(201, 'Kaharole ', 'Bangladesh', 26, 75.00, 1, '2019-04-09 00:24:36', '2020-11-11 00:49:20'),
+(202, 'Khansama ', 'Bangladesh', 26, 75.00, 1, '2019-04-09 00:24:36', '2020-11-11 00:49:20'),
+(203, 'Dinajpur Sodar ', 'Bangladesh', 26, 75.00, 1, '2019-04-09 00:24:36', '2020-11-11 00:49:20'),
+(204, 'Nawabganj', 'Bangladesh', 26, 75.00, 1, '2019-04-09 00:24:36', '2020-11-11 00:49:20'),
+(205, 'Parbatipur ', 'Bangladesh', 26, 75.00, 1, '2019-04-09 00:24:36', '2020-11-11 00:49:20'),
+(206, 'Fulchhari', 'Bangladesh', 27, 75.00, 1, '2019-04-09 00:24:36', '2020-11-11 00:49:20'),
+(207, 'Gaibandha Sodar', 'Bangladesh', 27, 75.00, 1, '2019-04-09 00:24:36', '2020-11-11 00:49:20'),
+(208, 'Gobindaganj', 'Bangladesh', 27, 75.00, 1, '2019-04-09 00:24:36', '2020-11-11 00:49:20'),
+(209, 'Palashbari', 'Bangladesh', 27, 75.00, 1, '2019-04-09 00:24:36', '2020-11-11 00:49:20'),
+(210, 'Sadullapur', 'Bangladesh', 27, 75.00, 1, '2019-04-09 00:24:36', '2020-11-11 00:49:20'),
+(211, 'Saghata', 'Bangladesh', 27, 75.00, 1, '2019-04-09 00:24:36', '2020-11-11 00:49:20'),
+(212, 'Sundarganj', 'Bangladesh', 27, 75.00, 1, '2019-04-09 00:24:36', '2020-11-11 00:49:20'),
+(213, 'Kurigram Sodar', 'Bangladesh', 28, 75.00, 1, '2019-04-09 00:24:36', '2020-11-11 00:49:20'),
+(214, 'Nageshwari', 'Bangladesh', 28, 75.00, 1, '2019-04-09 00:24:36', '2020-11-11 00:49:20'),
+(215, 'Bhurungamari', 'Bangladesh', 28, 75.00, 1, '2019-04-09 00:24:36', '2020-11-11 00:49:20'),
+(216, 'Phulbari', 'Bangladesh', 28, 75.00, 1, '2019-04-09 00:24:36', '2020-11-11 00:49:20'),
+(217, 'Rajarhat', 'Bangladesh', 28, 75.00, 1, '2019-04-09 00:24:36', '2020-11-11 00:49:20'),
+(218, 'Ulipur', 'Bangladesh', 28, 75.00, 1, '2019-04-09 00:24:36', '2020-11-11 00:49:20'),
+(219, 'Chilmari', 'Bangladesh', 28, 75.00, 1, '2019-04-09 00:24:36', '2020-11-11 00:49:20'),
+(220, 'Rowmari', 'Bangladesh', 28, 75.00, 1, '2019-04-09 00:24:36', '2020-11-11 00:49:20'),
+(221, 'Char Rajibpur', 'Bangladesh', 28, 75.00, 1, '2019-04-09 00:24:36', '2020-11-11 00:49:20'),
+(222, 'Lalmanirhat Sodar', 'Bangladesh', 29, 75.00, 1, '2019-04-09 00:24:36', '2020-11-11 00:49:20'),
+(223, 'Aditmari', 'Bangladesh', 29, 75.00, 1, '2019-04-09 00:24:36', '2020-11-11 00:49:20'),
+(224, 'Kaliganj', 'Bangladesh', 29, 75.00, 1, '2019-04-09 00:24:36', '2020-11-11 00:49:20'),
+(225, 'Hatibandha', 'Bangladesh', 29, 75.00, 1, '2019-04-09 00:24:37', '2020-11-11 00:49:20'),
+(226, 'Patgram', 'Bangladesh', 29, 75.00, 1, '2019-04-09 00:24:37', '2020-11-11 00:49:20'),
+(227, 'Nilphamari Sodar', 'Bangladesh', 30, 75.00, 1, '2019-04-09 00:24:37', '2020-11-11 00:49:20'),
+(228, 'Saidpur', 'Bangladesh', 30, 75.00, 1, '2019-04-09 00:24:37', '2020-11-11 00:49:20'),
+(229, 'Jaldhaka', 'Bangladesh', 30, 75.00, 1, '2019-04-09 00:24:37', '2020-11-11 00:49:20'),
+(230, 'Kishoreganj', 'Bangladesh', 30, 75.00, 1, '2019-04-09 00:24:37', '2020-11-11 00:49:20'),
+(231, 'Domar', 'Bangladesh', 30, 75.00, 1, '2019-04-09 00:24:37', '2020-11-11 00:49:20'),
+(232, 'Dimla', 'Bangladesh', 30, 75.00, 1, '2019-04-09 00:24:37', '2020-11-11 00:49:20'),
+(233, 'Panchagarh Sodar', 'Bangladesh', 31, 75.00, 1, '2019-04-09 00:24:37', '2020-11-11 00:49:20'),
+(234, 'Debiganj', 'Bangladesh', 31, 75.00, 1, '2019-04-09 00:24:37', '2020-11-11 00:49:20'),
+(235, 'Boda', 'Bangladesh', 31, 75.00, 1, '2019-04-09 00:24:37', '2020-11-11 00:49:20'),
+(236, 'Atwari', 'Bangladesh', 31, 75.00, 1, '2019-04-09 00:24:37', '2020-11-11 00:49:20'),
+(237, 'Tetulia', 'Bangladesh', 31, 75.00, 1, '2019-04-09 00:24:37', '2020-11-11 00:49:20'),
+(238, 'Badarganj', 'Bangladesh', 32, 75.00, 1, '2019-04-09 00:24:37', '2020-11-11 00:49:20'),
+(239, 'Mithapukur', 'Bangladesh', 32, 75.00, 1, '2019-04-09 00:24:37', '2020-11-11 00:49:20'),
+(240, 'Gangachara', 'Bangladesh', 32, 75.00, 1, '2019-04-09 00:24:37', '2020-11-11 00:49:20'),
+(241, 'Kaunia', 'Bangladesh', 32, 75.00, 1, '2019-04-09 00:24:37', '2020-11-11 00:49:20'),
+(242, 'Rangpur Sodar', 'Bangladesh', 32, 75.00, 1, '2019-04-09 00:24:37', '2020-11-11 00:49:20'),
+(243, 'Pirgachha', 'Bangladesh', 32, 75.00, 1, '2019-04-09 00:24:37', '2020-11-11 00:49:20'),
+(244, 'Pirganj', 'Bangladesh', 32, 75.00, 1, '2019-04-09 00:24:37', '2020-11-11 00:49:20'),
+(245, 'Taraganj', 'Bangladesh', 32, 75.00, 1, '2019-04-09 00:24:37', '2020-11-11 00:49:20'),
+(246, 'Thakurgaon Sodar ', 'Bangladesh', 33, 75.00, 1, '2019-04-09 00:24:37', '2020-11-11 00:49:20'),
+(247, 'Pirganj ', 'Bangladesh', 33, 75.00, 1, '2019-04-09 00:24:37', '2020-11-11 00:49:20'),
+(248, 'Baliadangi ', 'Bangladesh', 33, 75.00, 1, '2019-04-09 00:24:37', '2020-11-11 00:49:20'),
+(249, 'Haripur ', 'Bangladesh', 33, 75.00, 1, '2019-04-09 00:24:37', '2020-11-11 00:49:20'),
+(250, 'Ranisankail ', 'Bangladesh', 33, 75.00, 1, '2019-04-09 00:24:37', '2020-11-11 00:49:20'),
+(251, 'Amtali', 'Bangladesh', 34, 75.00, 1, '2019-04-09 00:24:37', '2020-11-11 00:49:20'),
+(252, 'Bamna ', 'Bangladesh', 34, 75.00, 1, '2019-04-09 00:24:37', '2020-11-11 00:49:20'),
+(253, 'Barguna Sodar ', 'Bangladesh', 34, 75.00, 1, '2019-04-09 00:24:38', '2020-11-11 00:49:20'),
+(254, 'Betagi ', 'Bangladesh', 34, 75.00, 1, '2019-04-09 00:24:38', '2020-11-11 00:49:20'),
+(255, 'Patharghata ', 'Bangladesh', 34, 75.00, 1, '2019-04-09 00:24:38', '2020-11-11 00:49:20'),
+(256, 'Taltali ', 'Bangladesh', 34, 75.00, 1, '2019-04-09 00:24:38', '2020-11-11 00:49:20'),
+(257, 'Muladi ', 'Bangladesh', 35, 75.00, 1, '2019-04-09 00:24:38', '2020-11-11 00:49:20'),
+(258, 'Babuganj ', 'Bangladesh', 35, 75.00, 1, '2019-04-09 00:24:38', '2020-11-11 00:49:20'),
+(259, 'Agailjhara ', 'Bangladesh', 35, 75.00, 1, '2019-04-09 00:24:38', '2020-11-11 00:49:20'),
+(260, 'Barisal Sodar ', 'Bangladesh', 35, 75.00, 1, '2019-04-09 00:24:38', '2020-11-11 00:49:20'),
+(261, 'Bakerganj ', 'Bangladesh', 35, 75.00, 1, '2019-04-09 00:24:38', '2020-11-11 00:49:20'),
+(262, 'Banaripara ', 'Bangladesh', 35, 75.00, 1, '2019-04-09 00:24:38', '2020-11-11 00:49:20'),
+(263, 'Gaurnadi ', 'Bangladesh', 35, 75.00, 1, '2019-04-09 00:24:38', '2020-11-11 00:49:20'),
+(264, 'Hizla ', 'Bangladesh', 35, 75.00, 1, '2019-04-09 00:24:38', '2020-11-11 00:49:20'),
+(265, 'Mehendiganj ', 'Bangladesh', 35, 75.00, 1, '2019-04-09 00:24:38', '2020-11-11 00:49:20'),
+(266, 'Wazirpur ', 'Bangladesh', 35, 75.00, 1, '2019-04-09 00:24:38', '2020-11-11 00:49:20'),
+(267, 'Bhola Sodar ', 'Bangladesh', 36, 75.00, 1, '2019-04-09 00:24:38', '2020-11-11 00:49:20'),
+(268, 'Burhanuddin ', 'Bangladesh', 36, 75.00, 1, '2019-04-09 00:24:38', '2020-11-11 00:49:20'),
+(269, 'Char Fasson ', 'Bangladesh', 36, 75.00, 1, '2019-04-09 00:24:38', '2020-11-11 00:49:20'),
+(270, 'Daulatkhan ', 'Bangladesh', 36, 75.00, 1, '2019-04-09 00:24:38', '2020-11-11 00:49:20'),
+(271, 'Lalmohan ', 'Bangladesh', 36, 75.00, 1, '2019-04-09 00:24:38', '2020-11-11 00:49:20'),
+(272, 'Manpura ', 'Bangladesh', 36, 75.00, 1, '2019-04-09 00:24:38', '2020-11-11 00:49:20'),
+(273, 'Tazumuddin ', 'Bangladesh', 36, 75.00, 1, '2019-04-09 00:24:38', '2020-11-11 00:49:20'),
+(274, 'Jhalokati Sodar ', 'Bangladesh', 37, 75.00, 1, '2019-04-09 00:24:38', '2020-11-11 00:49:20'),
+(275, 'Kathalia ', 'Bangladesh', 37, 75.00, 1, '2019-04-09 00:24:38', '2020-11-11 00:49:20'),
+(276, 'Nalchity ', 'Bangladesh', 37, 75.00, 1, '2019-04-09 00:24:38', '2020-11-11 00:49:20'),
+(277, 'Rajapur ', 'Bangladesh', 37, 75.00, 1, '2019-04-09 00:24:38', '2020-11-11 00:49:20'),
+(278, 'Bauphal ', 'Bangladesh', 38, 75.00, 1, '2019-04-09 00:24:38', '2020-11-11 00:49:20'),
+(279, 'Dashmina ', 'Bangladesh', 38, 75.00, 1, '2019-04-09 00:24:38', '2020-11-11 00:49:20'),
+(280, 'Galachipa ', 'Bangladesh', 38, 75.00, 1, '2019-04-09 00:24:38', '2020-11-11 00:49:20'),
+(281, 'Kalapara ', 'Bangladesh', 38, 75.00, 1, '2019-04-09 00:24:38', '2020-11-11 00:49:20'),
+(282, 'Mirzaganj ', 'Bangladesh', 38, 75.00, 1, '2019-04-09 00:24:38', '2020-11-11 00:49:20'),
+(283, 'Patuakhali Sodar ', 'Bangladesh', 38, 75.00, 1, '2019-04-09 00:24:38', '2020-11-11 00:49:20'),
+(284, 'Dumki ', 'Bangladesh', 38, 75.00, 1, '2019-04-09 00:24:38', '2020-11-11 00:49:20'),
+(285, 'Rangabali ', 'Bangladesh', 38, 75.00, 1, '2019-04-09 00:24:38', '2020-11-11 00:49:20'),
+(286, 'Bhandaria', 'Bangladesh', 39, 75.00, 1, '2019-04-09 00:24:38', '2020-11-11 00:49:20'),
+(287, 'Kaukhali', 'Bangladesh', 39, 75.00, 1, '2019-04-09 00:24:38', '2020-11-11 00:49:20'),
+(288, 'Mathbaria', 'Bangladesh', 39, 75.00, 1, '2019-04-09 00:24:39', '2020-11-11 00:49:20'),
+(289, 'Nazirpur', 'Bangladesh', 39, 75.00, 1, '2019-04-09 00:24:39', '2020-11-11 00:49:20'),
+(290, 'Nesarabad', 'Bangladesh', 39, 75.00, 1, '2019-04-09 00:24:39', '2020-11-11 00:49:20'),
+(291, 'Pirojpur Sodar', 'Bangladesh', 39, 75.00, 1, '2019-04-09 00:24:39', '2020-11-11 00:49:20'),
+(292, 'Zianagar', 'Bangladesh', 39, 75.00, 1, '2019-04-09 00:24:39', '2020-11-11 00:49:20'),
+(293, 'Bandarban Sodar', 'Bangladesh', 40, 75.00, 1, '2019-04-09 00:24:39', '2020-11-11 00:49:20'),
+(294, 'Thanchi', 'Bangladesh', 40, 75.00, 1, '2019-04-09 00:24:39', '2020-11-11 00:49:20'),
+(295, 'Lama', 'Bangladesh', 40, 75.00, 1, '2019-04-09 00:24:39', '2020-11-11 00:49:20'),
+(296, 'Naikhongchhari', 'Bangladesh', 40, 75.00, 1, '2019-04-09 00:24:39', '2020-11-11 00:49:20'),
+(297, 'Ali kadam', 'Bangladesh', 40, 75.00, 1, '2019-04-09 00:24:39', '2020-11-11 00:49:20'),
+(298, 'Rowangchhari', 'Bangladesh', 40, 75.00, 1, '2019-04-09 00:24:39', '2020-11-11 00:49:20'),
+(299, 'Ruma', 'Bangladesh', 40, 75.00, 1, '2019-04-09 00:24:39', '2020-11-11 00:49:20'),
+(300, 'Brahmanbaria Sodar ', 'Bangladesh', 41, 75.00, 1, '2019-04-09 00:24:39', '2020-11-11 00:49:20'),
+(301, 'Ashuganj ', 'Bangladesh', 41, 75.00, 1, '2019-04-09 00:24:39', '2020-11-11 00:49:20'),
+(302, 'Nasirnagar ', 'Bangladesh', 41, 75.00, 1, '2019-04-09 00:24:39', '2020-11-11 00:49:20'),
+(303, 'Nabinagar ', 'Bangladesh', 41, 75.00, 1, '2019-04-09 00:24:39', '2020-11-11 00:49:20'),
+(304, 'Sarail ', 'Bangladesh', 41, 75.00, 1, '2019-04-09 00:24:39', '2020-11-11 00:49:20'),
+(305, 'Shahbazpur Town', 'Bangladesh', 41, 75.00, 1, '2019-04-09 00:24:39', '2020-11-11 00:49:20'),
+(306, 'Kasba ', 'Bangladesh', 41, 75.00, 1, '2019-04-09 00:24:39', '2020-11-11 00:49:20'),
+(307, 'Akhaura ', 'Bangladesh', 41, 75.00, 1, '2019-04-09 00:24:39', '2020-11-11 00:49:20'),
+(308, 'Bancharampur ', 'Bangladesh', 41, 75.00, 1, '2019-04-09 00:24:39', '2020-11-11 00:49:20'),
+(309, 'Bijoynagar ', 'Bangladesh', 41, 75.00, 1, '2019-04-09 00:24:39', '2020-11-11 00:49:20'),
+(310, 'Chandpur Sodar', 'Bangladesh', 42, 75.00, 1, '2019-04-09 00:24:39', '2020-11-11 00:49:20'),
+(311, 'Faridganj', 'Bangladesh', 42, 75.00, 1, '2019-04-09 00:24:39', '2020-11-11 00:49:20'),
+(312, 'Haimchar', 'Bangladesh', 42, 75.00, 1, '2019-04-09 00:24:39', '2020-11-11 00:49:20'),
+(313, 'Haziganj', 'Bangladesh', 42, 75.00, 1, '2019-04-09 00:24:39', '2020-11-11 00:49:20'),
+(314, 'Kachua', 'Bangladesh', 42, 75.00, 1, '2019-04-09 00:24:40', '2020-11-11 00:49:20'),
+(315, 'Matlab Uttar', 'Bangladesh', 42, 75.00, 1, '2019-04-09 00:24:40', '2020-11-11 00:49:20'),
+(316, 'Matlab Dakkhin', 'Bangladesh', 42, 75.00, 1, '2019-04-09 00:24:40', '2020-11-11 00:49:20'),
+(317, 'Shahrasti', 'Bangladesh', 42, 75.00, 1, '2019-04-09 00:24:40', '2020-11-11 00:49:20'),
+(318, 'Anwara ', 'Bangladesh', 43, 75.00, 1, '2019-04-09 00:24:40', '2020-11-11 00:49:20'),
+(319, 'Banshkhali ', 'Bangladesh', 43, 75.00, 1, '2019-04-09 00:24:40', '2020-11-11 00:49:20'),
+(320, 'Boalkhali ', 'Bangladesh', 43, 75.00, 1, '2019-04-09 00:24:40', '2020-11-11 00:49:20'),
+(321, 'Chandanaish ', 'Bangladesh', 43, 75.00, 1, '2019-04-09 00:24:40', '2020-11-11 00:49:20'),
+(322, 'Fatikchhari ', 'Bangladesh', 43, 75.00, 1, '2019-04-09 00:24:40', '2020-11-11 00:49:20'),
+(323, 'Hathazari ', 'Bangladesh', 43, 75.00, 1, '2019-04-09 00:24:40', '2020-11-11 00:49:20'),
+(324, 'Lohagara ', 'Bangladesh', 43, 75.00, 1, '2019-04-09 00:24:40', '2020-11-11 00:49:20'),
+(325, 'Mirsharai ', 'Bangladesh', 43, 75.00, 1, '2019-04-09 00:24:40', '2020-11-11 00:49:20'),
+(326, 'Patiya ', 'Bangladesh', 43, 75.00, 1, '2019-04-09 00:24:40', '2020-11-11 00:49:20'),
+(327, 'Rangunia ', 'Bangladesh', 43, 75.00, 1, '2019-04-09 00:24:40', '2020-11-11 00:49:20'),
+(328, 'Raozan ', 'Bangladesh', 43, 75.00, 1, '2019-04-09 00:24:40', '2020-11-11 00:49:20'),
+(329, 'Sandwip ', 'Bangladesh', 43, 75.00, 1, '2019-04-09 00:24:40', '2020-11-11 00:49:20'),
+(330, 'Satkania ', 'Bangladesh', 43, 75.00, 1, '2019-04-09 00:24:40', '2020-11-11 00:49:20'),
+(331, 'Sitakunda ', 'Bangladesh', 43, 75.00, 1, '2019-04-09 00:24:40', '2020-11-11 00:49:20'),
+(332, 'Barura ', 'Bangladesh', 44, 75.00, 1, '2019-04-09 00:24:40', '2020-11-11 00:49:20'),
+(333, 'Brahmanpara ', 'Bangladesh', 44, 75.00, 1, '2019-04-09 00:24:40', '2020-11-11 00:49:20'),
+(334, 'Burichong ', 'Bangladesh', 44, 75.00, 1, '2019-04-09 00:24:40', '2020-11-11 00:49:20'),
+(335, 'Chandina ', 'Bangladesh', 44, 75.00, 1, '2019-04-09 00:24:40', '2020-11-11 00:49:20'),
+(336, 'Chauddagram ', 'Bangladesh', 44, 75.00, 1, '2019-04-09 00:24:40', '2020-11-11 00:49:20'),
+(337, 'Daudkandi ', 'Bangladesh', 44, 75.00, 1, '2019-04-09 00:24:40', '2020-11-11 00:49:20'),
+(338, 'Debidwar ', 'Bangladesh', 44, 75.00, 1, '2019-04-09 00:24:40', '2020-11-11 00:49:20'),
+(339, 'Homna ', 'Bangladesh', 44, 75.00, 1, '2019-04-09 00:24:40', '2020-11-11 00:49:20'),
+(340, 'Comilla Sodar ', 'Bangladesh', 44, 75.00, 1, '2019-04-09 00:24:40', '2020-11-11 00:49:20'),
+(341, 'Laksam ', 'Bangladesh', 44, 75.00, 1, '2019-04-09 00:24:40', '2020-11-11 00:49:20'),
+(342, 'Monohorgonj ', 'Bangladesh', 44, 75.00, 1, '2019-04-09 00:24:40', '2020-11-11 00:49:20'),
+(343, 'Meghna ', 'Bangladesh', 44, 75.00, 1, '2019-04-09 00:24:40', '2020-11-11 00:49:20'),
+(344, 'Muradnagar ', 'Bangladesh', 44, 75.00, 1, '2019-04-09 00:24:40', '2020-11-11 00:49:20'),
+(345, 'Nangalkot ', 'Bangladesh', 44, 75.00, 1, '2019-04-09 00:24:40', '2020-11-11 00:49:20'),
+(346, 'Comilla Sodar South ', 'Bangladesh', 44, 75.00, 1, '2019-04-09 00:24:40', '2020-11-11 00:49:20'),
+(347, 'Titas ', 'Bangladesh', 44, 75.00, 1, '2019-04-09 00:24:40', '2020-11-11 00:49:20'),
+(348, 'Chakaria', 'Bangladesh', 45, 75.00, 1, '2019-04-09 00:24:40', '2020-11-11 00:49:20'),
+(349, 'Coxs Bazar Sodar', 'Bangladesh', 45, 75.00, 1, '2019-04-09 00:24:40', '2020-11-11 00:49:20'),
+(350, 'Kutubdia', 'Bangladesh', 45, 75.00, 1, '2019-04-09 00:24:40', '2020-11-11 00:49:20'),
+(351, 'Maheshkhali', 'Bangladesh', 45, 75.00, 1, '2019-04-09 00:24:41', '2020-11-11 00:49:20'),
+(352, 'Ramu', 'Bangladesh', 45, 75.00, 1, '2019-04-09 00:24:41', '2020-11-11 00:49:20'),
+(353, 'Teknaf', 'Bangladesh', 45, 75.00, 1, '2019-04-09 00:24:41', '2020-11-11 00:49:20'),
+(354, 'Ukhia', 'Bangladesh', 45, 75.00, 1, '2019-04-09 00:24:41', '2020-11-11 00:49:20'),
+(355, 'Pekua', 'Bangladesh', 45, 75.00, 1, '2019-04-09 00:24:41', '2020-11-11 00:49:20'),
+(356, 'Feni Sodar', 'Bangladesh', 46, 75.00, 1, '2019-04-09 00:24:41', '2020-11-11 00:49:20'),
+(357, 'Chagalnaiya', 'Bangladesh', 46, 75.00, 1, '2019-04-09 00:24:41', '2020-11-11 00:49:20'),
+(358, 'Daganbhyan', 'Bangladesh', 46, 75.00, 1, '2019-04-09 00:24:41', '2020-11-11 00:49:20'),
+(359, 'Parshuram', 'Bangladesh', 46, 75.00, 1, '2019-04-09 00:24:41', '2020-11-11 00:49:20'),
+(360, 'Fhulgazi', 'Bangladesh', 46, 75.00, 1, '2019-04-09 00:24:41', '2020-11-11 00:49:20'),
+(361, 'Sonagazi', 'Bangladesh', 46, 75.00, 1, '2019-04-09 00:24:41', '2020-11-11 00:49:20'),
+(362, 'Dighinala', 'Bangladesh', 47, 75.00, 1, '2019-04-09 00:24:41', '2020-11-11 00:49:20'),
+(363, 'Khagrachhari', 'Bangladesh', 47, 75.00, 1, '2019-04-09 00:24:41', '2020-11-11 00:49:20'),
+(364, 'Lakshmichhari', 'Bangladesh', 47, 75.00, 1, '2019-04-09 00:24:41', '2020-11-11 00:49:20'),
+(365, 'Mahalchhari', 'Bangladesh', 47, 75.00, 1, '2019-04-09 00:24:41', '2020-11-11 00:49:20'),
+(366, 'Manikchhari', 'Bangladesh', 47, 75.00, 1, '2019-04-09 00:24:41', '2020-11-11 00:49:20'),
+(367, 'Matiranga', 'Bangladesh', 47, 75.00, 1, '2019-04-09 00:24:41', '2020-11-11 00:49:20'),
+(368, 'Panchhari', 'Bangladesh', 47, 75.00, 1, '2019-04-09 00:24:41', '2020-11-11 00:49:20'),
+(369, 'Ramgarh', 'Bangladesh', 47, 75.00, 1, '2019-04-09 00:24:41', '2020-11-11 00:49:20'),
+(370, 'Lakshmipur Sodar', 'Bangladesh', 48, 75.00, 1, '2019-04-09 00:24:41', '2020-11-11 00:49:20'),
+(371, 'Raipur', 'Bangladesh', 48, 75.00, 1, '2019-04-09 00:24:41', '2020-11-11 00:49:20'),
+(372, 'Ramganj', 'Bangladesh', 48, 75.00, 1, '2019-04-09 00:24:41', '2020-11-11 00:49:20'),
+(373, 'Ramgati', 'Bangladesh', 48, 75.00, 1, '2019-04-09 00:24:41', '2020-11-11 00:49:20'),
+(374, 'Komol Nagar', 'Bangladesh', 48, 75.00, 1, '2019-04-09 00:24:41', '2020-11-11 00:49:20'),
+(375, 'Noakhali Sodar', 'Bangladesh', 49, 75.00, 1, '2019-04-09 00:24:41', '2020-11-11 00:49:20'),
+(376, 'Begumganj', 'Bangladesh', 49, 75.00, 1, '2019-04-09 00:24:41', '2020-11-11 00:49:20'),
+(377, 'Chatkhil', 'Bangladesh', 49, 75.00, 1, '2019-04-09 00:24:41', '2020-11-11 00:49:20'),
+(378, 'Companyganj', 'Bangladesh', 49, 75.00, 1, '2019-04-09 00:24:41', '2020-11-11 00:49:20'),
+(379, 'Shenbag', 'Bangladesh', 49, 75.00, 1, '2019-04-09 00:24:41', '2020-11-11 00:49:20'),
+(380, 'Hatia', 'Bangladesh', 49, 75.00, 1, '2019-04-09 00:24:41', '2020-11-11 00:49:20'),
+(381, 'Kobirhat', 'Bangladesh', 49, 75.00, 1, '2019-04-09 00:24:41', '2020-11-11 00:49:20'),
+(382, 'Sonaimuri', 'Bangladesh', 49, 75.00, 1, '2019-04-09 00:24:42', '2020-11-11 00:49:20'),
+(383, 'Suborno Char', 'Bangladesh', 49, 75.00, 1, '2019-04-09 00:24:42', '2020-11-11 00:49:20'),
+(384, 'Rangamati Sodar', 'Bangladesh', 50, 75.00, 1, '2019-04-09 00:24:42', '2020-11-11 00:49:20'),
+(385, 'Belaichhari', 'Bangladesh', 50, 75.00, 1, '2019-04-09 00:24:42', '2020-11-11 00:49:20'),
+(386, 'Bagaichhari', 'Bangladesh', 50, 75.00, 1, '2019-04-09 00:24:42', '2020-11-11 00:49:20'),
+(387, 'Barkal', 'Bangladesh', 50, 75.00, 1, '2019-04-09 00:24:42', '2020-11-11 00:49:20'),
+(388, 'Juraichhari', 'Bangladesh', 50, 75.00, 1, '2019-04-09 00:24:42', '2020-11-11 00:49:20'),
+(389, 'Rajasthali', 'Bangladesh', 50, 75.00, 1, '2019-04-09 00:24:42', '2020-11-11 00:49:20'),
+(390, 'Kaptai', 'Bangladesh', 50, 75.00, 1, '2019-04-09 00:24:42', '2020-11-11 00:49:20'),
+(391, 'Langadu', 'Bangladesh', 50, 75.00, 1, '2019-04-09 00:24:42', '2020-11-11 00:49:20'),
+(392, 'Nannerchar', 'Bangladesh', 50, 75.00, 1, '2019-04-09 00:24:42', '2020-11-11 00:49:20'),
+(393, 'Kaukhali', 'Bangladesh', 50, 75.00, 1, '2019-04-09 00:24:42', '2020-11-11 00:49:20'),
+(394, 'Ajmiriganj', 'Bangladesh', 51, 75.00, 1, '2019-04-09 00:24:42', '2020-11-11 00:49:20'),
+(395, 'Baniachang', 'Bangladesh', 51, 75.00, 1, '2019-04-09 00:24:42', '2020-11-11 00:49:20'),
+(396, 'Bahubal', 'Bangladesh', 51, 75.00, 1, '2019-04-09 00:24:42', '2020-11-11 00:49:20'),
+(397, 'Chunarughat', 'Bangladesh', 51, 75.00, 1, '2019-04-09 00:24:42', '2020-11-11 00:49:20'),
+(398, 'Habiganj Sodar', 'Bangladesh', 51, 75.00, 1, '2019-04-09 00:24:42', '2020-11-11 00:49:20'),
+(399, 'Lakhai', 'Bangladesh', 51, 75.00, 1, '2019-04-09 00:24:42', '2020-11-11 00:49:20'),
+(400, 'Madhabpur', 'Bangladesh', 51, 75.00, 1, '2019-04-09 00:24:42', '2020-11-11 00:49:20'),
+(401, 'Nabiganj', 'Bangladesh', 51, 75.00, 1, '2019-04-09 00:24:42', '2020-11-11 00:49:20'),
+(402, 'Shaistagonj Upazila', 'Bangladesh', 51, 75.00, 1, '2019-04-09 00:24:42', '2020-11-11 00:49:20'),
+(403, 'Moulvibazar Sodar', 'Bangladesh', 52, 75.00, 1, '2019-04-09 00:24:42', '2020-11-11 00:49:20'),
+(404, 'Barlekha', 'Bangladesh', 52, 75.00, 1, '2019-04-09 00:24:42', '2020-11-11 00:49:20'),
+(405, 'Juri', 'Bangladesh', 52, 75.00, 1, '2019-04-09 00:24:42', '2020-11-11 00:49:20'),
+(406, 'Kamalganj', 'Bangladesh', 52, 75.00, 1, '2019-04-09 00:24:42', '2020-11-11 00:49:20'),
+(407, 'Kulaura', 'Bangladesh', 52, 75.00, 1, '2019-04-09 00:24:42', '2020-11-11 00:49:20'),
+(408, 'Rajnagar', 'Bangladesh', 52, 75.00, 1, '2019-04-09 00:24:42', '2020-11-11 00:49:20'),
+(409, 'Sreemangal', 'Bangladesh', 52, 75.00, 1, '2019-04-09 00:24:42', '2020-11-11 00:49:20'),
+(410, 'Bishwamvarpur', 'Bangladesh', 53, 75.00, 1, '2019-04-09 00:24:43', '2020-11-11 00:49:20'),
+(411, 'Chhatak', 'Bangladesh', 53, 75.00, 1, '2019-04-09 00:24:43', '2020-11-11 00:49:20'),
+(412, 'Derai', 'Bangladesh', 53, 75.00, 1, '2019-04-09 00:24:43', '2020-11-11 00:49:20'),
+(413, 'Dharampasha', 'Bangladesh', 53, 75.00, 1, '2019-04-09 00:24:43', '2020-11-11 00:49:20'),
+(414, 'Dowarabazar', 'Bangladesh', 53, 75.00, 1, '2019-04-09 00:24:43', '2020-11-11 00:49:20'),
+(415, 'Jagannathpur', 'Bangladesh', 53, 75.00, 1, '2019-04-09 00:24:43', '2020-11-11 00:49:20'),
+(416, 'Jamalganj', 'Bangladesh', 53, 75.00, 1, '2019-04-09 00:24:43', '2020-11-11 00:49:20'),
+(417, 'Sulla', 'Bangladesh', 53, 75.00, 1, '2019-04-09 00:24:43', '2020-11-11 00:49:20'),
+(418, 'Sunamganj Sodar', 'Bangladesh', 53, 75.00, 1, '2019-04-09 00:24:43', '2020-11-11 00:49:20'),
+(419, 'Shanthiganj', 'Bangladesh', 53, 75.00, 1, '2019-04-09 00:24:43', '2020-11-11 00:49:20'),
+(420, 'Tahirpur', 'Bangladesh', 53, 75.00, 1, '2019-04-09 00:24:43', '2020-11-11 00:49:20'),
+(421, 'Sylhet Sodar', 'Bangladesh', 54, 75.00, 1, '2019-04-09 00:24:43', '2020-11-11 00:49:20'),
+(422, 'Beanibazar', 'Bangladesh', 54, 75.00, 1, '2019-04-09 00:24:43', '2020-11-11 00:49:20'),
+(423, 'Bishwanath', 'Bangladesh', 54, 75.00, 1, '2019-04-09 00:24:43', '2020-11-11 00:49:20'),
+(424, 'Dakshin Surma Upazila', 'Bangladesh', 54, 75.00, 1, '2019-04-09 00:24:43', '2020-11-11 00:49:20'),
+(425, 'Balaganj', 'Bangladesh', 54, 75.00, 1, '2019-04-09 00:24:43', '2020-11-11 00:49:20'),
+(426, 'Companiganj', 'Bangladesh', 54, 75.00, 1, '2019-04-09 00:24:43', '2020-11-11 00:49:20'),
+(427, 'Fenchuganj', 'Bangladesh', 54, 75.00, 1, '2019-04-09 00:24:43', '2020-11-11 00:49:20'),
+(428, 'Golapganj', 'Bangladesh', 54, 75.00, 1, '2019-04-09 00:24:43', '2020-11-11 00:49:20'),
+(429, 'Gowainghat', 'Bangladesh', 54, 75.00, 1, '2019-04-09 00:24:43', '2020-11-11 00:49:20'),
+(430, 'Jaintiapur', 'Bangladesh', 54, 75.00, 1, '2019-04-09 00:24:43', '2020-11-11 00:49:20'),
+(431, 'Kanaighat', 'Bangladesh', 54, 75.00, 1, '2019-04-09 00:24:43', '2020-11-11 00:49:20'),
+(432, 'Zakiganj', 'Bangladesh', 54, 75.00, 1, '2019-04-09 00:24:43', '2020-11-11 00:49:20'),
+(433, 'Nobigonj', 'Bangladesh', 54, 75.00, 1, '2019-04-09 00:24:43', '2020-11-11 00:49:20'),
+(434, 'Bagerhat Sodar', 'Bangladesh', 55, 75.00, 1, '2019-04-09 00:24:43', '2020-11-11 00:49:20'),
+(435, 'Chitalmari', 'Bangladesh', 55, 75.00, 1, '2019-04-09 00:24:43', '2020-11-11 00:49:20'),
+(436, 'Fakirhat', 'Bangladesh', 55, 75.00, 1, '2019-04-09 00:24:43', '2020-11-11 00:49:20'),
+(437, 'Kachua', 'Bangladesh', 55, 75.00, 0, '2019-04-09 00:24:43', '2020-11-11 00:49:20'),
+(438, 'Mollahat', 'Bangladesh', 55, 75.00, 1, '2019-04-09 00:24:43', '2020-11-11 00:49:20'),
+(439, 'Mongla', 'Bangladesh', 55, 75.00, 1, '2019-04-09 00:24:43', '2020-11-11 00:49:20'),
+(440, 'Morrelganj', 'Bangladesh', 55, 75.00, 1, '2019-04-09 00:24:43', '2020-11-11 00:49:20'),
+(441, 'Rampal', 'Bangladesh', 55, 75.00, 1, '2019-04-09 00:24:44', '2020-11-11 00:49:20'),
+(442, 'Sarankhola', 'Bangladesh', 55, 75.00, 1, '2019-04-09 00:24:44', '2020-11-11 00:49:20'),
+(443, 'Damurhuda', 'Bangladesh', 56, 75.00, 1, '2019-04-09 00:24:44', '2020-11-11 00:49:20'),
+(444, 'Chuadanga-S', 'Bangladesh', 56, 75.00, 1, '2019-04-09 00:24:44', '2020-11-11 00:49:20'),
+(445, 'Jibannagar', 'Bangladesh', 56, 75.00, 1, '2019-04-09 00:24:44', '2020-11-11 00:49:20'),
+(446, 'Alamdanga', 'Bangladesh', 56, 75.00, 1, '2019-04-09 00:24:44', '2020-11-11 00:49:20'),
+(447, 'Abhaynagar', 'Bangladesh', 57, 75.00, 1, '2019-04-09 00:24:44', '2020-11-11 00:49:20'),
+(448, 'Keshabpur', 'Bangladesh', 57, 75.00, 1, '2019-04-09 00:24:44', '2020-11-11 00:49:20'),
+(449, 'Bagherpara', 'Bangladesh', 57, 75.00, 1, '2019-04-09 00:24:44', '2020-11-11 00:49:20'),
+(450, 'Jessore Sodar', 'Bangladesh', 57, 75.00, 1, '2019-04-09 00:24:44', '2020-11-11 00:49:20'),
+(451, 'Chaugachha', 'Bangladesh', 57, 75.00, 1, '2019-04-09 00:24:44', '2020-11-11 00:49:20'),
+(452, 'Manirampur', 'Bangladesh', 57, 75.00, 1, '2019-04-09 00:24:44', '2020-11-11 00:49:20'),
+(453, 'Jhikargachha', 'Bangladesh', 57, 75.00, 1, '2019-04-09 00:24:44', '2020-11-11 00:49:20'),
+(454, 'Sharsha', 'Bangladesh', 57, 75.00, 1, '2019-04-09 00:24:44', '2020-11-11 00:49:20'),
+(455, 'Jhenaidah Sodar', 'Bangladesh', 58, 75.00, 1, '2019-04-09 00:24:44', '2020-11-11 00:49:20'),
+(456, 'Maheshpur', 'Bangladesh', 58, 75.00, 1, '2019-04-09 00:24:44', '2020-11-11 00:49:20'),
+(457, 'Kaliganj', 'Bangladesh', 58, 75.00, 1, '2019-04-09 00:24:44', '2020-11-11 00:49:20'),
+(458, 'Kotchandpur', 'Bangladesh', 58, 75.00, 1, '2019-04-09 00:24:44', '2020-11-11 00:49:20'),
+(459, 'Shailkupa', 'Bangladesh', 58, 75.00, 1, '2019-04-09 00:24:44', '2020-11-11 00:49:20'),
+(460, 'Harinakunda', 'Bangladesh', 58, 75.00, 1, '2019-04-09 00:24:44', '2020-11-11 00:49:20'),
+(461, 'Terokhada', 'Bangladesh', 59, 75.00, 1, '2019-04-09 00:24:44', '2020-11-11 00:49:20'),
+(462, 'Batiaghata', 'Bangladesh', 59, 75.00, 1, '2019-04-09 00:24:44', '2020-11-11 00:49:20'),
+(463, 'Dacope', 'Bangladesh', 59, 75.00, 1, '2019-04-09 00:24:44', '2020-11-11 00:49:20'),
+(464, 'Dumuria', 'Bangladesh', 59, 75.00, 1, '2019-04-09 00:24:44', '2020-11-11 00:49:20'),
+(465, 'Dighalia', 'Bangladesh', 59, 75.00, 1, '2019-04-09 00:24:44', '2020-11-11 00:49:20'),
+(466, 'Koyra', 'Bangladesh', 59, 75.00, 1, '2019-04-09 00:24:44', '2020-11-11 00:49:20'),
+(467, 'Paikgachha', 'Bangladesh', 59, 75.00, 1, '2019-04-09 00:24:44', '2020-11-11 00:49:20'),
+(468, 'Phultala', 'Bangladesh', 59, 75.00, 1, '2019-04-09 00:24:44', '2020-11-11 00:49:20'),
+(469, 'Rupsa', 'Bangladesh', 59, 75.00, 1, '2019-04-09 00:24:44', '2020-11-11 00:49:20'),
+(470, 'Kushtia Sodar', 'Bangladesh', 60, 75.00, 1, '2019-04-09 00:24:44', '2020-11-11 00:49:20'),
+(471, 'Kumarkhali', 'Bangladesh', 60, 75.00, 1, '2019-04-09 00:24:44', '2020-11-11 00:49:20'),
+(472, 'Daulatpur', 'Bangladesh', 60, 75.00, 1, '2019-04-09 00:24:44', '2020-11-11 00:49:20'),
+(473, 'Mirpur', 'Bangladesh', 60, 75.00, 1, '2019-04-09 00:24:44', '2020-11-11 00:49:20'),
+(474, 'Bheramara', 'Bangladesh', 60, 75.00, 1, '2019-04-09 00:24:44', '2020-11-11 00:49:20'),
+(475, 'Khoksa', 'Bangladesh', 60, 75.00, 1, '2019-04-09 00:24:45', '2020-11-11 00:49:20'),
+(476, 'Magura Sodar', 'Bangladesh', 61, 75.00, 1, '2019-04-09 00:24:45', '2020-11-11 00:49:20'),
+(477, 'Mohammadpur', 'Bangladesh', 61, 75.00, 1, '2019-04-09 00:24:45', '2020-11-11 00:49:20'),
+(478, 'Shalikha', 'Bangladesh', 61, 75.00, 1, '2019-04-09 00:24:45', '2020-11-11 00:49:20'),
+(479, 'Sreepur', 'Bangladesh', 61, 75.00, 1, '2019-04-09 00:24:45', '2020-11-11 00:49:20'),
+(480, 'angni', 'Bangladesh', 62, 75.00, 1, '2019-04-09 00:24:45', '2020-11-11 00:49:20'),
+(481, 'Mujib Nagar', 'Bangladesh', 62, 75.00, 1, '2019-04-09 00:24:45', '2020-11-11 00:49:20'),
+(482, 'Meherpur-S', 'Bangladesh', 62, 75.00, 1, '2019-04-09 00:24:45', '2020-11-11 00:49:20'),
+(483, 'Narail-S', 'Bangladesh', 63, 75.00, 1, '2019-04-09 00:24:45', '2020-11-11 00:49:20'),
+(484, 'Lohagara', 'Bangladesh', 63, 75.00, 1, '2019-04-09 00:24:45', '2020-11-11 00:49:20'),
+(485, 'Kalia', 'Bangladesh', 63, 75.00, 1, '2019-04-09 00:24:45', '2020-11-11 00:49:20'),
+(486, 'Satkhira Sodar', 'Bangladesh', 64, 75.00, 1, '2019-04-09 00:24:45', '2020-11-11 00:49:20'),
+(487, 'Assasuni', 'Bangladesh', 64, 75.00, 1, '2019-04-09 00:24:45', '2020-11-11 00:49:20'),
+(488, 'Debhata', 'Bangladesh', 64, 75.00, 1, '2019-04-09 00:24:45', '2020-11-11 00:49:20'),
+(489, 'Tala', 'Bangladesh', 64, 75.00, 1, '2019-04-09 00:24:45', '2020-11-11 00:49:20'),
+(490, 'Kalaroa', 'Bangladesh', 64, 75.00, 1, '2019-04-09 00:24:45', '2020-11-11 00:49:20'),
+(491, 'Kaliganj', 'Bangladesh', 64, 75.00, 1, '2019-04-09 00:24:45', '2020-11-11 00:49:20'),
+(492, 'Shyamnagar', 'Bangladesh', 64, 75.00, 1, '2019-04-09 00:24:45', '2020-11-11 00:49:20'),
+(493, 'Test', 'Afghanistan', 39, 75.00, 0, '2020-11-05 16:37:16', '2020-11-11 00:49:20'),
+(494, 'app', 'Bangladesh', 64, 75.00, 1, '2020-11-05 16:54:17', '2020-11-11 00:49:20');
 
 -- --------------------------------------------------------
 
@@ -1733,6 +2500,25 @@ CREATE TABLE `video_gallery` (
 INSERT INTO `video_gallery` (`id`, `vdo_name`, `vdo_path`, `vdo_img_path`, `trash`) VALUES
 (20, 'electronics product', 'https://www.youtube.com/watch?v=VjTzu-KZDEM', 'backend/images/video_gallery/gallery16171652820.jpg', '');
 
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `wish_list`
+--
+
+CREATE TABLE `wish_list` (
+  `id` int(11) NOT NULL,
+  `user_id` int(11) NOT NULL,
+  `product_id` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `wish_list`
+--
+
+INSERT INTO `wish_list` (`id`, `user_id`, `product_id`) VALUES
+(6, 1, 13);
+
 --
 -- Indexes for dumped tables
 --
@@ -1762,6 +2548,12 @@ ALTER TABLE `colors`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `districts`
+--
+ALTER TABLE `districts`
+  ADD PRIMARY KEY (`id`) USING BTREE;
+
+--
 -- Indexes for table `footer`
 --
 ALTER TABLE `footer`
@@ -1783,6 +2575,24 @@ ALTER TABLE `header`
 -- Indexes for table `image_gallery`
 --
 ALTER TABLE `image_gallery`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `orders`
+--
+ALTER TABLE `orders`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `order_items`
+--
+ALTER TABLE `order_items`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `payment_method`
+--
+ALTER TABLE `payment_method`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -1920,6 +2730,12 @@ ALTER TABLE `system_privileges`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `upazillas`
+--
+ALTER TABLE `upazillas`
+  ADD PRIMARY KEY (`id`) USING BTREE;
+
+--
 -- Indexes for table `users`
 --
 ALTER TABLE `users`
@@ -1929,6 +2745,12 @@ ALTER TABLE `users`
 -- Indexes for table `video_gallery`
 --
 ALTER TABLE `video_gallery`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `wish_list`
+--
+ALTER TABLE `wish_list`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -1960,6 +2782,12 @@ ALTER TABLE `colors`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
+-- AUTO_INCREMENT for table `districts`
+--
+ALTER TABLE `districts`
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=67;
+
+--
 -- AUTO_INCREMENT for table `footer`
 --
 ALTER TABLE `footer`
@@ -1984,6 +2812,24 @@ ALTER TABLE `image_gallery`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=100;
 
 --
+-- AUTO_INCREMENT for table `orders`
+--
+ALTER TABLE `orders`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+
+--
+-- AUTO_INCREMENT for table `order_items`
+--
+ALTER TABLE `order_items`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+
+--
+-- AUTO_INCREMENT for table `payment_method`
+--
+ALTER TABLE `payment_method`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+
+--
 -- AUTO_INCREMENT for table `products`
 --
 ALTER TABLE `products`
@@ -1993,7 +2839,7 @@ ALTER TABLE `products`
 -- AUTO_INCREMENT for table `product_colors`
 --
 ALTER TABLE `product_colors`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=97;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=138;
 
 --
 -- AUTO_INCREMENT for table `product_images`
@@ -2005,7 +2851,7 @@ ALTER TABLE `product_images`
 -- AUTO_INCREMENT for table `product_sizes`
 --
 ALTER TABLE `product_sizes`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=86;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=118;
 
 --
 -- AUTO_INCREMENT for table `profiles`
@@ -2017,13 +2863,13 @@ ALTER TABLE `profiles`
 -- AUTO_INCREMENT for table `sap_items`
 --
 ALTER TABLE `sap_items`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT for table `sap_record`
 --
 ALTER TABLE `sap_record`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT for table `site_meta`
@@ -2077,31 +2923,37 @@ ALTER TABLE `suppliers`
 -- AUTO_INCREMENT for table `supplier_transaction`
 --
 ALTER TABLE `supplier_transaction`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
 
 --
 -- AUTO_INCREMENT for table `system_action_menus`
 --
 ALTER TABLE `system_action_menus`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=116;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=120;
 
 --
 -- AUTO_INCREMENT for table `system_aside_menus`
 --
 ALTER TABLE `system_aside_menus`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=70;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=72;
 
 --
 -- AUTO_INCREMENT for table `system_aside_menu_dropdowns`
 --
 ALTER TABLE `system_aside_menu_dropdowns`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=130;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=132;
 
 --
 -- AUTO_INCREMENT for table `system_privileges`
 --
 ALTER TABLE `system_privileges`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
+
+--
+-- AUTO_INCREMENT for table `upazillas`
+--
+ALTER TABLE `upazillas`
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=495;
 
 --
 -- AUTO_INCREMENT for table `users`
@@ -2114,6 +2966,12 @@ ALTER TABLE `users`
 --
 ALTER TABLE `video_gallery`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
+
+--
+-- AUTO_INCREMENT for table `wish_list`
+--
+ALTER TABLE `wish_list`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

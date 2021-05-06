@@ -24,7 +24,7 @@ class User_m extends Lab_Model {
         if(!empty($userInfo)) {
             // log in user
             $data = array(
-                'user_id'       => $userInfo[0]->id,
+                'subscriber_id' => $userInfo[0]->id,
                 'login_period'  => date('Y-m-d H:i:s a'),
                 'name'          => $userInfo[0]->name,
                 'email'         => $userInfo[0]->email,

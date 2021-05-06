@@ -22,8 +22,9 @@ if (!function_exists('getProducts')) {
     	$CI 	= & get_instance();
     	$result = $CI->db->query("
     		SELECT 
-    			products.*,
     			stock.*,
+    			products.*,
+                products.id AS product_id,
     			brands.brand,
     			categories.category,
     			subcategories.subcategory,
@@ -74,7 +75,8 @@ function user(){
 
     if($CI->session->userdata('subscriber'))
     {
-        return (Object)$CI->session->userdata;
+        $user = readTable('subscribers', ['id'=>$CI->session->userdata('subscriber_id')]);
+        return ($user ? $user[0] : false);
     }
     else{
         return false;

@@ -57,6 +57,14 @@ class Cart {
 	}
 
 	// 
+	static function destroy()
+	{
+		$_SESSION['cart'] = "";
+		return true;
+
+	}
+
+	// 
 	static function updateCartQuantity($data)
 	{
 		$cart = new Cart();

@@ -46,9 +46,45 @@ class Api extends Frontend_Controller{
         }
     }
 
-    function cartItems()
-    {
+    function cartItems(){
         echo json_encode(Cart::getItems());
+    }
+
+    function wishList()
+    {
+        $user_id = $this->session->userdata('subscriber_id');
+        if($user_id){
+            $wishList = readTable('wish_list', ['user_id'=>$user_id]);
+            $ids = [];
+            foreach($wishList as $item){
+                $ids[] = $item->product_id;
+            }
+            echo json_encode($ids);
+        }
+        else echo json_encode([]);
+    }
+
+
+    function setWishList($product_id)
+    {
+        $user_id = $this->session->userdata('subscriber_id');
+        if($user_id){
+            $data = [
+                'product_id' => $product_id,
+                'user_id'    => $user_id
+            ];
+            if(!readTable('wish_list', $data)) { 
+                save('wish_list', $data, ['user_id'=>$user_id]);
+            }
+        }
+
+        $wishList = readTable('wish_list', ['user_id'=>$user_id]);
+
+        $ids = [];
+        foreach($wishList as $item){
+            $ids[] = $item->product_id;
+        }
+        echo json_encode($ids);
     }
 
     function removeCartItem()
@@ -63,5 +99,61 @@ class Api extends Frontend_Controller{
     function updateCartQuantity()
     {   
         echo json_encode(Cart::updateCartQuantity($_POST));
+    }
+
+    //
+    function getDistricts(){
+        echo json_encode(readTable('districts'));
+    }
+
+    //
+    function getUpazillas(){
+        if(isset($_POST['where'])){
+            echo json_encode(readTable('upazillas', json_decode($_POST['where'], true)));
+        }
+        else {
+            echo json_encode([]);
+        }
+    }
+
+    //
+    function getPaymentMethod(){
+        echo json_encode(readTable('payment_method'));
+    }
+
+
+    function checkout(){
+        if($_POST && count(Cart::getItems()) > 0){
+            $order          = $_POST;
+            $order['date']  = date('Y-m-d');
+            // Generate A New Code
+            $code = rand(1111111, 9999999);
+            // Check is code available
+            while(!empty(readTable('orders', ['code'=>$code]))){
+                $code = rand(1111111, 9999999);                
+            }
+            // Assign a new code
+            $order['code']=$code;
+            // Processing order Data
+            $order_id = save('orders', $order);
+            // Processing order items
+            foreach (Cart::getItems() as $key => $item){
+
+                $stock = readTable('stock', ['product_id'=>$item['product_id']]);
+                if($stock){
+                    $current_stock = ($stock[0]->quantity - $item['quantity']);
+                    update('stock', ['quantity'=>$current_stock], ['product_id'=>$item['product_id']]);
+                }
+
+                $item['order_id'] = $order_id;
+                unset($item['code']);
+                save('order_items', $item);            
+            }
+            Cart::destroy();
+            echo $order_id;
+        }
+        else{
+            echo 0;
+        }
     }
 }

@@ -6,15 +6,19 @@
     <title><?=(isset($title) ? $title : '😢')?> | <?=($header?$header->web_title:'')?></title>
     <!-- favicon -->
     <link rel="shortcut icon" href="<?=site_url($header?$header->fev_icon:'')?>">
+    <!-- font-awesome cdn -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <!-- ionicons -->
     <link rel="stylesheet" href="https://unpkg.com/ionicons@4.5.10-0/dist/css/ionicons.min.css">
     <!-- owl carousel -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+    <!-- bootstrap-select -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.14/dist/css/bootstrap-select.min.css">
     <!-- bootstrap css -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css">
     <!-- zoom images -->
     <link rel="stylesheet" href="<?=site_url('public/vendors/elevatezoom/css/jquery.ez-plus.css')?>">
-    <!-- include css -->
+    <!-- include css-->
     <link rel="stylesheet" href="<?=site_url('public/style/master.css')?>">
     <!-- axios -->
     <script src="<?=site_url('node_modules/axios/dist/axios.js')?>"></script>
@@ -22,7 +26,9 @@
     <script src="<?=site_url('node_modules/vuex/dist/vuex.js')?>"></script>
     <!-- Helper -->
     <script src="<?=site_url('public/js/helper.js')?>"></script>
+
 </head>
+
 <body>
     <div id="app">
     <section class="nav_section">
@@ -48,8 +54,8 @@
                         <div class="dropdown">
                             <div class="user_menu" data-toggle="dropdown">
                                 <i class="icon ion-md-contact"></i>
+                                <span class="user_name"><?=(user()->name)?></span>
                             </div>
-                            <span class="user_name"><?=(user()->name)?></span>
                             <ul class="dropdown-menu">
                                 <li><a href="<?=site_url('user-panel/dashboard')?>"><i class="icon ion-ios-speedometer"></i> Dashboard</a></li>
                                 <li><a href="<?=site_url('user-panel/profile')?>"><i class="icon ion-md-person-add"></i> Profile</a></li>

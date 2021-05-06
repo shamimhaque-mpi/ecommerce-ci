@@ -271,6 +271,7 @@
     color: #001E32;
     font-size: 20px;
 }
+.product_section .product_gallery figcaption a.active,
 .product_section .product_gallery figcaption a:hover {
     background: #EA232A;
     color: #FFF;

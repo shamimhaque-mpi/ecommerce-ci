@@ -52,6 +52,7 @@
     padding: 25px 20px 10px;
     background: #fff;
     width: 100%;
+    min-height: 390px;
 }
 .user_section .user_content input[type=email],
 .user_section .user_content input[type=text],
@@ -70,3 +71,87 @@
     box-shadow: none;
 }
 /* user section end */
+
+
+/* order style start */
+.user_content .order-btn {
+    border: 1px solid transparent;
+    border-radius: 25px;
+    padding: 4px 12px;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.user_content .product_view {background: #000;}
+.user_content .product_view:hover {
+    background: transparent;
+    border: 1px solid #ddd;
+    color: #000;
+}
+
+.user_content .product_cancle {background: #ff0000;}
+.user_content .product_cancle:hover {
+    border: 1px solid #ddd;
+    background: none;
+    color: #000;
+}
+.user_content td span {
+    color: #000000;
+    opacity: 0.5;
+}
+.user_content p.order-notice {
+    font-size: 16px;
+    color: #585858;
+}
+.user_content p.order-notice span {
+    display: inline-block;
+    background: #F9F9F9;
+    padding: 0 7px;
+    color: #000000;
+    font-weight: 600;
+}
+.user_content .order-view h3 {
+    text-transform: uppercase;
+    font-weight: 600;
+    margin-top: 35px;
+}
+.user_content td span.stock {color: #669900;}
+.user_content .table img {width: 70px;}
+.user_content .rating a {color: #EA232A;}
+
+
+/* dashboard style start */
+.user_content .deshboard_title {
+    border-bottom: 1px solid #e0e0e0;
+    margin-top: 8px;
+    padding-bottom: 8px;
+}
+.user_content .deshboard_title a {color: #EA232A;}
+.user_content .deshboard_title a:hover {color: #005CC8 !important;}
+.user_content .dash_box {
+    text-align: center;
+    position: relative;
+    padding: 30px 0;
+    color: #000;
+    overflow: hidden;
+    transition: 0.3s;
+    margin: 0 0 15px;
+    box-shadow: 0 0 3px #ddd;
+}
+.user_content .dash_box:hover {background: #F7F7F7;}
+.user_content .profile_dashbosrd {
+    grid-template-columns: auto auto auto auto;
+    display: grid;
+    grid-column-gap: 15px;
+}
+.user_content .dash_box i {
+    transition: 0.3s;
+    font-size: 28px;
+}
+.user_content .dash_box h3 {
+    font-size: 18px;
+    font-weight: 400;
+    margin-top: 5px;
+}
+.user_content .dash_box:hover i {color: #EA232A;}

@@ -98,7 +98,6 @@
 
     public function shop($slug=null) {
         $this->data['title'] = "Shop";
-
         $where = [ 'products.feature_product'=>'no'];
 
         if(json_decode(base64_decode($slug), true)){
@@ -110,12 +109,11 @@
                 }
             }
         }
+
         $this->data['products'] = getProducts($where);
 
         return view('frontend.pages.shop');
     }
-
-
 
 
     public function get_products(){

@@ -6,7 +6,8 @@ const store = new Vuex.Store({
     state: {
         url  	  : '',
         isLogin   : false,
-        cart 	  : []
+        cart 	  : [],
+        wishList  : []
     },
     getters: {
 

@@ -22,8 +22,11 @@ $route['forgot']   			    = "Frontend/Auth/AuthController/forgot";
 $route['registration']   		= "Frontend/Auth/AuthController/registration";
 
 
-$route['user-panel/dashboard']  = "Frontend/Upanel/UpanelController";
-$route['user-panel/profile']  = "Frontend/Upanel/UpanelController/profile";
-$route['user-panel/settings']  = "Frontend/Upanel/UpanelController/settings";
+$route['user-panel/dashboard']  		= "Frontend/Upanel/UpanelController";
+$route['user-panel/profile']    		= "Frontend/Upanel/UpanelController/profile";
+$route['user-panel/settings']   		= "Frontend/Upanel/UpanelController/settings";
+$route['user-panel/order']      		= "Frontend/Upanel/UpanelController/order";
+$route['user-panel/order_view/(:any)']  = "Frontend/Upanel/UpanelController/order_view/$1";
+$route['user-panel/wishlist']   		= "Frontend/Upanel/UpanelController/wishlist";
 
 $route['404_override'] = '';

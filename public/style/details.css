@@ -77,6 +77,7 @@
 .details_section .tabs_product a {
     display: inline-block;
     height: 65px;
+    width: 100%;
 }
 .details_section .tabs_product a img {
     object-fit: cover;
@@ -104,21 +105,37 @@
 }
 .details_section .product_details .color_box,
 .details_section .product_details .size_box {margin: 25px 0;}
+.details_section .product_details .size_list {display: flex;}
 .details_section .product_details .size_box .size {
     border: 1px solid #EA232A;
-    display: inline-block;
-    line-height: 32px;
-    min-height: 32px;
-    min-width: 32px;
-    max-width: 65px;
+    justify-content: center;
+    align-items: center;
+    line-height: 28px;
+    display: flex;
+    height: 30px;
+    width: 30px;
     color: #EA232A;
     cursor: pointer;
+    font-size: 14px;
     background: #fff;
+    margin-right: 5px;
+    border-radius: 50%;
     text-align: center;
     transition: all 0.2s;
 }
-.details_section .product_details .size_box .size:hover,
-.details_section .product_details .size_box .size.active {
+.details_section .product_details .size_box label {
+    border-radius: 50%;
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    cursor: pointer;
+}
+.details_section .product_details .size_box input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+}
+.details_section .product_details .size_box .size input:checked + label {
     background: #EA232A;
     color: #fff;
 }
@@ -128,52 +145,56 @@
 }
 .details_section .color_list li {
     display: inline-block;
-    width: 40px;
-    height: 40px;
     margin: 0 !important;
-    margin-right: 6px;
     margin-bottom: 10px;
+    margin-right: 6px;
     background: #fff;
-    padding: 6px;
-    border: 1px solid #e8e8e8;
-    border-radius: 50%;
+    height: 35px;
+    width: 35px;
+    padding: 4px;
     cursor: pointer;
+    border-radius: 50%;
     position: relative;
+    border: 1px solid #e8e8e8;
 }
-.details_section .color_list .black span {
-    background: #000000;
-    color: #000000;
-}
-.details_section .color_list .red span {
-    background: #ff0000;
-    color: #ff0000;
-}
-.details_section .color_list .green span {
-    background: #008000;
-    color: #008000;
-}
-.details_section .color_list .blue span {
-    background: #0000ff;
-    color: #0000ff;
-}
-.details_section .color_list .maroon span {
-    background: #92180D;
-    color: #92180D;
-}
-.details_section .color_list li span {
+.details_section .color_list .black input[type="radio"]::after {background: #000000;}
+.details_section .color_list .red input[type="radio"]::after {background: #ff0000;}
+.details_section .color_list .green input[type="radio"]::after {background: #008000;}
+.details_section .color_list .blue input[type="radio"]::after {background: #0000ff;}
+.details_section .color_list .maroon input[type="radio"]::after {background: #92180D;}
+.details_section .color_list input[type="radio"]::after {
     position: absolute;
     border-radius: 50%;
-    height: 80%;
-    width: 80%;
-    top: 4px;
-    left: 4px;
+    content: '';
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
     z-index: 5;
     cursor: pointer;
 }
 .details_section .color_list input[type="radio"] {
+    position: relative;
     height: 100%;
-    opacity: 0;
     width: 100%;
+}
+.details_section .color_list .black input[type="radio"]::before {border: 1px solid #000000;}
+.details_section .color_list .red input[type="radio"]::before {border: 1px solid #ff0000;}
+.details_section .color_list .green input[type="radio"]::before {border: 1px solid #008000;}
+.details_section .color_list .blue input[type="radio"]::before {border: 1px solid #0000ff;}
+.details_section .color_list .maroon input[type="radio"]::before {border: 1px solid #92180D;}
+.details_section .color_list input[type="radio"]:checked::before {opacity: 1;}
+.details_section .color_list input[type="radio"]::before {
+    height: calc(100% + 8px);
+    display: inline-block;
+    transition: all .2s;
+    border-radius: 50%;
+    position: absolute;
+    opacity: 0;
+    top: -4px;
+    left: -4px;
+    content: '';
+    width: calc(100% + 8px);
 }
 .details_section .color_list input[type='radio']:after.black {
     background: #000000;
@@ -322,6 +343,7 @@
     color: #001E32;
     font-size: 20px;
 }
+.similar_product .product_gallery figcaption a.active,
 .similar_product .product_gallery figcaption a:hover {
     background: #EA232A;
     color: #FFF;

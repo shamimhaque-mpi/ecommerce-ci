@@ -10,15 +10,42 @@
                     <h3><?=(user()->name)?></h3>
                     <ul class="user_menu">
                         <li><a href="<?=site_url('user-panel/dashboard')?>" class="nav-link">Dashboard</a></li>
-                        <li><a href="<?=site_url('user-panel/settings')?>" class="nav-link">Settings</a></li>
-                        <li><a href="" class="nav-link active">Profile</a></li>
+                        <li><a href="<?=site_url('user-panel/order')?>" class="nav-link">Order</a></li>
+                        <li><a href="<?=site_url('user-panel/wishlist')?>" class="nav-link">Wishlist</a></li>
+                        <li><a href="<?=site_url('user-panel/profile')?>" class="nav-link active">Profile</a></li>
                     </ul>
                     <a href="" class="btn logout_btn">Logout</a>
                 </div>
             </div>
             <div class="col-md-8">
                 <div class="user_content">
-
+                    <form action="" method="post">
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <label class="form-label">Full Name</label>
+                                <div class="form-group">
+                                    <input type="text" name="name" class="form-control">
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <label class="form-label">Email</label>
+                                <div class="form-group">
+                                    <input type="email" name="email" class="form-control">
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <label class="form-label">Phone Number</label>
+                                <div class="form-group">
+                                    <input type="text" name="name" class="form-control">
+                                </div>
+                            </div>
+                            <div class="col-sm-12">
+                                <div class="form-group">
+                                    <button type="submit" class="btn submit_btn">Update</button>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
                 </div>
             </div>
         </div>
