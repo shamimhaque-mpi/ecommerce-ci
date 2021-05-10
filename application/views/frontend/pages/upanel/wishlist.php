@@ -19,8 +19,8 @@
             </div>
             <div class="col-md-8">
                 <div class="user_content">
+                    <h5 class="user_title">Wish-List</h5>
                     <div class="table-responsive">
-                        <h5>Wish-List</h5>
                         <?php if(!empty($wishlist)){ ?>
                         <table class="table">
                             <tr>
@@ -36,14 +36,14 @@
                                 <td><?=(++$key)?></td>
                                 <td><img src="<?=site_url($row->feature_photo)?>" alt=""></td>
                                 <td>
-                                    <a href="<?=site_url("products/".base64_encode($row->id)."/".(str_replace(' ', '-', $row->title)))?>"><?=($row->title)?></a>
-                                    <div class="wishlist_rating">
+                                    <a class="list_title" href="<?=site_url("products/".base64_encode($row->id)."/".(str_replace(' ', '-', $row->title)))?>"><?=($row->title)?></a>
+                                    <div class="rating">
                                         <i class="icon ion-md-star"></i>
                                         <i class="icon ion-md-star"></i>
                                         <i class="icon ion-md-star"></i>
                                         <i class="icon ion-md-star"></i>
                                         <i class="icon ion-md-star-outline"></i>
-                                        <span>46</span>
+                                        <span> (46)</span>
                                     </div>
                                 </td>
                                 <td>৳<?=($row->sale_price ? $row->sale_price : 0)?></td>
@@ -55,7 +55,12 @@
                             <?php } ?>
                         </table>
                         <?php } else{ ?>
-                            <h3>Products Not Found, <a href="<?=site_url('')?>">Back To Shop</a></h3>
+                            <div class="not_found">
+                                <div class="found_content">
+                                    <img src="<?=site_url('private/images/not_found.png')?>" alt="">
+                                    <h5>Products Not Found, <a href="<?=site_url('')?>">Back To Shop</a></h5>
+                                </div>
+                            </div>
                         <?php } ?>
                     </div>
                 </div>

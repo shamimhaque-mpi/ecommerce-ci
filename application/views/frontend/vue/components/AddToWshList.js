@@ -19,8 +19,7 @@ export default {
 				})
 				.catch(err=>console.log(err));
 				}
-			else
-			{
+			else {
 				window.location.href=this.url+'login';
 			}
 		}

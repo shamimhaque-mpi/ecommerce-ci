@@ -1,5 +1,6 @@
 <!-- include css -->
 <link rel="stylesheet" href="<?=site_url('public/style/shop.css')?>">
+
 <!-- shop section start -->
 <section class="shop_section">
 	<div class="container">

@@ -19,7 +19,7 @@ export default {
                     <p v-if="item.color">Color: {{item.color}}</p>
 
                     <a :href="details(item.product_id, item.title)" v-if="item.is_color==1 && !item.color" class="warnig">Color is available, Please Select One</a>
-                    <a :href="details(item.product_id, item.title)" v-if="item.is_size==1 && !item.size" class="warnig">Color is available, Please Select One</a>
+                    <a :href="details(item.product_id, item.title)" v-if="item.is_size==1 && !item.size" class="warnig">Size is available, Please Select One</a>
                 </div>
                 <div class="product_sum">
                     <div class="action">

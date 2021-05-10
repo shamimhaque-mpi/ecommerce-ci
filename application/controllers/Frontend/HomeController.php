@@ -61,16 +61,33 @@
 
         $product_id = base64_decode($btoa);
         $product    = getProducts(['products.id'=>$product_id]);
+        
+        // VISIT COUNT AND SAVE 
+        if($product){
+            update('products', [
+                'total_visit' => ($product[0]->total_visit+1)
+            ],
+            ['id'=>$product[0]->product_id]);
+        }
+
+        // FETCH POPULAR PRODUCT WITH LIMIT
+        $this->data['popular_products'] = getProducts([], [
+            'limit'     => 3,
+            'orderBy'   => ['total_visit', 'DESC']
+        ]);
+
         //
         $this->data['product'] = $product = ($product ? $product[0] : false);
         /*
-         * ***********************
-         *  Featch Similar 
-         *  Products
-         * *****************
+         * *****************************
+         *  Featch Similar Products
+         * *************************
         */
         $where_semilar = ($product ? ['products.cat_id'=>$product->cat_id]:[]);
         $this->data['similar_products'] = getProducts($where_semilar, ['limit'=>4]);
+
+        // FETCH BEST SALE PRODUCTS
+        $this->data['best_sale_product'] = getBestSaleProducts([], ['limit'=>3]);
 
         return view('frontend.pages.details');
     }
@@ -78,6 +95,13 @@
     /* ViewCart Page Controller */
     public function view_cart() {
         $this->data['title'] = "ViewCart";
+
+        // FETCH POPULAR PRODUCT WITH LIMIT
+        $this->data['popular_products'] = getProducts([], [
+            'limit'     => 5,
+            'orderBy'   => ['total_visit', 'DESC']
+        ]);
+
 
         return view('frontend.pages.view_cart');
     }

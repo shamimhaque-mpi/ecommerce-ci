@@ -20,8 +20,13 @@
         $this->data['title'] = 'Login';
 
         if($_POST){
-            $this->User_m->login();
-            redirect('user-panel/dashboard', 'refresh');
+            if($this->User_m->validation()){
+                redirect('verification', 'refresh');                
+            }
+            else {
+                $this->session->set_flashdata('err', 1);
+                redirect('login?user='.$_POST['mobile'], 'refresh'); 
+            }
         }
 
         return view('frontend.auth.login');
@@ -74,5 +79,110 @@
         }
         return view('frontend.auth.registration');
     }
+
+
+
+    /*
+     * *************************
+     *  Code Verification
+     * *********************
+    */
+    public function code_verification(){
+        if(isset($_SESSION['_token'])){
+            $where  = json_decode(base64_decode($_SESSION['_token']), true);
+            $this->data['mobile'] = $where['username'];
+            if(isset($_POST['code']) && $this->User_m->login(array_merge(['verify_code'=>$_POST['code']], $where))) 
+            {
+                update('subscribers', ['is_use'=>1], $where);
+                redirect('user-panel/dashboard', 'refresh');
+            }
+            else if(isset($_POST['code'])) {
+                $this->session->set_flashdata('err', 1);
+            }
+        }
+        else{
+            $this->session->set_flashdata('err', 1);
+            redirect('login', 'refresh'); 
+        }
+        return view('frontend.auth.code_verification');
+    }
+
+    /*
+     * ****************************
+     *  Resend verification code
+     * **************************
+    */
+    public function resend_verification_code(){
+        if(isset($_SESSION['_token']))
+        {
+            $where       = json_decode(base64_decode($_SESSION['_token']), true);
+            $subscribers = readTable('subscribers', $where);
+            $mobile      = $where['username'];
+
+            if($subscribers && $subscribers[0]->is_use==0){
+                $code = $subscribers[0]->verify_code;
+            }
+            else{
+                $code = rand(1111, 9999);
+                update('subscribers', ['verify_code'=>$code, 'is_use'=>0], $where);
+            }
+
+            $text = "Your Verification Code Is {$code}";
+            send_sms($mobile, $text);
+            redirect('verification', 'refresh');
+        }
+    }
+
+    /*
+     * *********************
+     *  Forgot Password
+     * *******************
+    */
+    public function forgot_password()
+    {
+
+        if($_POST && isset($_POST['mobile']) && isset($_POST['code']) && isset($_POST['password']))
+        {
+            $subscriber = readTable('subscribers', ['mobile'=>$_POST['mobile'], 'verify_code'=>$_POST['code']]);
+            if($subscriber){
+                update('subscribers', ['is_use'=>1, 'password'=> $this->hash($_POST['password'])], ['id'=>$subscriber[0]->id]);
+                echo 1;
+                die;
+            }
+            else {echo 0;}
+        }
+
+        else if($_POST && isset($_POST['mobile']) && isset($_POST['code']))
+        {
+            $subscriber = readTable('subscribers', ['mobile'=>$_POST['mobile'], 'verify_code'=>$_POST['code']]);
+            if($subscriber){
+                echo 1;
+                die;
+            }else {echo 0;}
+        }
+        else if($_POST && isset($_POST['mobile'])){
+            $subscriber = readTable('subscribers', ['mobile'=>$_POST['mobile']]);
+            if($subscriber)
+            {
+                if($subscriber[0]->is_use==0){
+                    $code = $subscriber[0]->verify_code;
+                }
+                else{ $code = rand(1111, 9999); }
+
+                $text = "Your Verification Code Is {$code}";
+                send_sms($_POST['mobile'], $text);
+                update('subscribers', ['verify_code'=>$code, 'is_use'=>0], ['id'=>$subscriber[0]->id]);
+                echo 1;
+            }
+            else { echo 0; }
+            die;
+        }
+        return view('frontend.auth.forgot_password');
+    }
+    
+    public function hash($string) {
+        return hash('md5', $string . config_item('encryption_key'));
+    }
+
 
 }

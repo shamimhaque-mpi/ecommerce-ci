@@ -39,7 +39,10 @@ class UserController extends Lab_Controller {
         // Authenticate Urls
         $exception_uris = [
             'login',
-            'registration'
+            'registration',
+            'verification',
+            'resend_verification_code', 
+            'forgot'
         ];
 
         // CHECKING AUTHENTICATION URI

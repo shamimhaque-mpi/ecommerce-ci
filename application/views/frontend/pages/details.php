@@ -34,9 +34,9 @@
                                     <?php } else{ echo "৳".$product->sale_price; } } ?>
                                 </h5>
                                 <p><?=($product->short_description)?></p>
-
                                 <product-details
                                     product_id="<?=($product->id)?>"
+                                    available_quantity="<?=($product->quantity)?>"
                                 ></product-details>
                             </div>
                         </div>
@@ -71,7 +71,7 @@
                                     <?php }?>
 
                                     <a href="<?=site_url("products/".base64_encode($row->id)."/".(str_replace(' ', '-', $row->title)))?>" class="cover"></a>
-                                    
+
                                     <figcaption>
                                         <?php if($row->quantity>0){ ?>
                                         <add-to-cart
@@ -125,67 +125,51 @@
                     </div>
                 </div>
 
-                <!-- similar product -->
+                <!-- Popular product -->
                 <div class="suggest_product">
                    <div class="title">
-                       <h5>Best Sale product</h5>
+                       <h5>Best Sale</h5>
                    </div>
+                   <?php if(!empty($best_sale_product)) foreach ($best_sale_product as $row) { ?>
                     <div class="items">
-                        <img src="<?=site_url('public/images/product/item-1.jpg')?>" alt="">
+                        <img src="<?=site_url($row->feature_photo)?>" alt="">
                         <div class="items-content">
-                            <h5>Product title name</h5>
-                            <small>720 Tk <del>930.00 Tk</del></small>
+                            <h5><?=($row->title)?></h5>
+                            <?php if($row->discount>0 && $row->quantity){ ?>
+                            <small><?=($row->sale_price - ($row->sale_price/100)*$row->discount)?>Tk <del><?=($row->sale_price)?>Tk</del></small>
+                            <?php } else if($row->quantity){ ?>
+                            <small><?=($row->sale_price)?>Tk</small>
+                            <?php } else { ?>
+                                <small>Out Of Stock</small>
+                            <?php } ?>
                         </div>
                         <a href="<?=site_url('details')?>" class="items-cover"></a>
                     </div>
-                    <div class="items">
-                        <img src="<?=site_url('public/images/product/item-2.jpg')?>" alt="">
-                        <div class="items-content">
-                            <h5>Product title name</h5>
-                            <small>720 Tk <del>930.00 Tk</del></small>
-                        </div>
-                        <a href="<?=site_url('details')?>" class="items-cover"></a>
-                    </div>
-                    <div class="items">
-                        <img src="<?=site_url('public/images/product/item-3.jpg')?>" alt="">
-                        <div class="items-content">
-                            <h5>Product title name</h5>
-                            <small>720 Tk <del>930.00 Tk</del></small>
-                        </div>
-                        <a href="<?=site_url('details')?>" class="items-cover"></a>
-                    </div>
+                    <?php } ?>
                 </div>
 
 
-                <!-- related product -->
+                <!-- Popular product -->
                 <div class="suggest_product">
                    <div class="title">
-                       <h5>Related product</h5>
+                       <h5>Popular Products</h5>
                    </div>
+                   <?php if(!empty($popular_products)) foreach ($popular_products as $row) { ?>
                     <div class="items">
-                        <img src="<?=site_url('public/images/product/item-1.jpg')?>" alt="">
+                        <img src="<?=site_url($row->feature_photo)?>" alt="">
                         <div class="items-content">
-                            <h5>Product title name</h5>
-                            <small>720 Tk <del>930.00 Tk</del></small>
+                            <h5><?=($row->title)?></h5>
+                            <?php if($row->discount>0 && $row->quantity){ ?>
+                            <small><?=($row->sale_price - ($row->sale_price/100)*$row->discount)?>Tk <del><?=($row->sale_price)?>Tk</del></small>
+                            <?php } else if($row->quantity){ ?>
+                            <small><?=($row->sale_price)?>Tk</small>
+                            <?php } else { ?>
+                                <small>Out Of Stock</small>
+                            <?php } ?>
                         </div>
                         <a href="<?=site_url('details')?>" class="items-cover"></a>
                     </div>
-                    <div class="items">
-                        <img src="<?=site_url('public/images/product/item-4.jpg')?>" alt="">
-                        <div class="items-content">
-                            <h5>Product title name</h5>
-                            <small>720 Tk <del>930.00 Tk</del></small>
-                        </div>
-                        <a href="<?=site_url('details')?>" class="items-cover"></a>
-                    </div>
-                    <div class="items">
-                        <img src="<?=site_url('public/images/product/item-5.jpg')?>" alt="">
-                        <div class="items-content">
-                            <h5>Product title name</h5>
-                            <small>720 Tk <del>930.00 Tk</del></small>
-                        </div>
-                        <a href="<?=site_url('details')?>" class="items-cover"></a>
-                    </div>
+                    <?php } ?>
                 </div>
             </div>
         </div>

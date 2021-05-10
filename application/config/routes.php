@@ -17,10 +17,13 @@ $route['products/(:any)/(:any)']= "Frontend/HomeController/details/$1/$2";
 
 // User Authentication
 $route['login']   			    = "Frontend/Auth/AuthController/login";
+$route['verification']		    = "Frontend/Auth/AuthController/code_verification";
 $route['logout']   			    = "Frontend/Auth/AuthController/logout";
 $route['forgot']   			    = "Frontend/Auth/AuthController/forgot";
 $route['registration']   		= "Frontend/Auth/AuthController/registration";
 
+$route['resend_verification_code']		= "Frontend/Auth/AuthController/resend_verification_code";
+$route['forgot']						= "Frontend/Auth/AuthController/forgot_password";
 
 $route['user-panel/dashboard']  		= "Frontend/Upanel/UpanelController";
 $route['user-panel/profile']    		= "Frontend/Upanel/UpanelController/profile";

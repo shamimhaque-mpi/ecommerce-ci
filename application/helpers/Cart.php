@@ -28,7 +28,8 @@ class Cart {
 	}
 
 	// 
-	static function setItem($item){
+	static function setItem($item)
+	{
 		$cart = new Cart();
 		$code = $cart->key();
 		while(array_key_exists($code, $cart->items)) {
@@ -44,7 +45,7 @@ class Cart {
 		return $cart->items;
 	}
 
-	// 
+	// Remove Item From Cart
 	static function removeItem($code)
 	{
 		$cart = new Cart();
@@ -57,6 +58,34 @@ class Cart {
 	}
 
 	// 
+	static function setItemColor($data){
+		if(isset($data['code']) && isset($data['color_id'])){
+			$color = readTable('colors', ['id'=>$data['color_id']]);
+			if($color){
+				$cart = new Cart();
+				$cart->items[$data['code']]['color_id'] 	= $data['color_id'];
+				$cart->items[$data['code']]['color']		= $color[0]->color;
+				$cart->items[$data['code']]['color_code']	= $color[0]->color_code;
+				$_SESSION['cart'] = json_encode($cart->items);
+			}
+		}
+	}
+
+	// 
+	static function setItemSize($data){
+		if(isset($data['code']) && isset($data['size_id'])){
+			$color = readTable('sizes', ['id'=>$data['size_id']]);
+			if($color){
+				$cart = new Cart();
+				$cart->items[$data['code']]['size_id'] 	= $data['size_id'];
+				$cart->items[$data['code']]['size']		= $color[0]->size;
+				$_SESSION['cart'] = json_encode($cart->items);
+			}
+		}
+	}
+
+
+	// Destroy All Cart Data
 	static function destroy()
 	{
 		$_SESSION['cart'] = "";

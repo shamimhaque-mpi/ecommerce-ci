@@ -1,48 +1,48 @@
 <script type="text/javaScript" src="<?php echo site_url('private/js/ng-controller/editProductFn.js'); ?>"></script>
 <style>
-.feature_photo {
-    width: 236px;
-    height: 236px;
-}
-.feature_photo img{
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-.set-photo-wrapper {
-    position: relative;
-    margin-bottom: 15px;
-}
-.set-photo-wrapper label {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    opacity: 0;
-    cursor: pointer;
-    z-index: 1;
-}
-.set-photo-wrapper span {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background: #00000052;
-    font-size: 18px;
-    font-weight: 800;
-    color: #ffffff;
-}
-.photo-action {
-    position: absolute;
-    top: 0;
-    right: 0;
-    z-index: 2;
-}
+    .feature_photo {
+        width: 236px;
+        height: 236px;
+    }
+    .feature_photo img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    .set-photo-wrapper {
+        position: relative;
+        margin-bottom: 15px;
+    }
+    .set-photo-wrapper label {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        opacity: 0;
+        cursor: pointer;
+        z-index: 1;
+    }
+    .set-photo-wrapper span {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: #00000052;
+        font-size: 18px;
+        font-weight: 800;
+        color: #ffffff;
+    }
+    .photo-action {
+        position: absolute;
+        top: 0;
+        right: 0;
+        z-index: 2;
+    }
 </style>
 <div class="container-fluid" ng-controller="editProductFn">
     <div class="row">
@@ -177,9 +177,8 @@
 
                         <div class="col-md-12">
                             <div class="form-group">
-                                <label class="control-label">Explain <span class="req">*</span></label>
-                                <!-- <textarea name="description" class="form-control" rows="10" required><?=($edit->description)?></textarea> -->
-                                <textarea id="mytextarea" name="description"><?=($edit->description)?></textarea>
+                                <label class="control-label">Full Description <span class="req">*</span></label>
+                                <textarea id="mytextarea" name="description" required><?=($edit->description)?></textarea>
                             </div>
                         </div>
                     </div>
@@ -237,7 +236,6 @@
                             </div>
                         </div>
                         <?php } ?>
-
                     </div>
                     <div class="row">
                         <div class="col-md-12">
@@ -252,9 +250,10 @@
         </div>
     </div>
 </div>
+
 <script>
   tinymce.init({
-    selector: '#mytextarea',
-    height : "480"
-  });
+        selector: '#mytextarea',
+        height : "480"
+    });
 </script>

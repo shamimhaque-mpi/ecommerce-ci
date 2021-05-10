@@ -247,33 +247,21 @@
 	    $ci =& get_instance();
 	    $ci->load->library('session');
 
-	    $icon = "";
+	    $msg = "";
 	    switch ($type) {
 	        case 'success':
-	            $icon = "<i class='fa fa-check-square'></i>";
+	            $msg = "<script>toastr.success('{$title}')</script>";
 	            break;
 
 	        case 'warning':
-	            $icon = "<i class='fa fa-exclamation-triangle'></i>";
+	            $msg = "<script>toastr.warning('{$title}')</script>";
 	            break;
 
 	        case 'danger':
-	            $icon = "<i class='fa fa-close'></i>";
+	            $msg = "<script>toastr.error('{$title}')</script>";
 	            break;
 	    }
 
-	    $btn = ($btn) ? "<button class='close' onclick='console.log(this.parentElement.parentElement.removeChild(this.parentElement))'><i class='fa fa-close'></i></button>" : '';
-
-	    $msg = "<div class='man_alert man_alert_".$type."'>"
-	    			.$btn.
-	                "<div class='icon'>".$icon."</div>
-	                <div class='content'>
-	                    <div>
-	                        <strong>".ucwords($title)."!</strong> <br>
-	                    </div>
-	                    <div>".ucwords($msg)."</div>
-	                </div>
-	            </div>";
 
 	    $ci->session->set_flashdata($name, $msg);
 	}

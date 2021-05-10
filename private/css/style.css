@@ -52,7 +52,7 @@ body {background: #ECEFF4;}
 	background: #fff;
 	position: fixed;
 	height: 65px;
-	z-index: 9999;
+	z-index: 999;
 	top: 0;
 	padding-left: 0;
 }

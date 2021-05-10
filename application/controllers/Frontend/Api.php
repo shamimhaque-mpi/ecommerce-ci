@@ -23,15 +23,25 @@ class Api extends Frontend_Controller{
             $colors  = readTable('product_colors', ['product_id'=>$_POST['product_id']]);
             // PRODUCT SIZES
             $sizes  = readTable('product_sizes', ['product_id'=>$_POST['product_id']]);
+            //SELECT COLOR
+            if(!empty($_POST['color_id']))
+            $color  = readTable('colors', ['id'=>$_POST['color_id']]);
+            //SELECT SIZE
+            if(!empty($_POST['size_id']))
+            $size  = readTable('sizes', ['id'=>$_POST['size_id']]);
             // DATA FOR ASSIGN IN THE CART
             $data = [
                 'product_id' => $item->id,
-                'color_id'   => (!empty($item->color_id)?$item->color_id : null),
-                'size_id'    => (!empty($item->size_id)?$item->size_id : null),
-                'color'      => '',
-                'size'       => '',
+
                 'is_color'   => (count($colors)> 0 ? 1:0),
+                'color_id'   => (!empty($color) ? $color[0]->id : null),
+                'color_code' => (!empty($color) ? $color[0]->color_code : null),
+                'color'      => (!empty($color) ? $color[0]->color : null),
+
                 'is_size'    => (count($sizes)> 0 ? 1:0),
+                'size_id'    => (!empty($size) ? $size[0]->id : null),
+                'size'       => (!empty($size) ? $size[0]->size : null),
+
                 'title'      => $item->title,
                 'price'      => ($item->price ? $item->price : 0),
                 'quantity'   => $item->min_qty,
@@ -46,9 +56,7 @@ class Api extends Frontend_Controller{
         }
     }
 
-    function cartItems(){
-        echo json_encode(Cart::getItems());
-    }
+    function cartItems(){ echo json_encode(Cart::getItems());}
 
     function wishList()
     {
@@ -77,7 +85,6 @@ class Api extends Frontend_Controller{
                 save('wish_list', $data, ['user_id'=>$user_id]);
             }
         }
-
         $wishList = readTable('wish_list', ['user_id'=>$user_id]);
 
         $ids = [];
@@ -95,6 +102,23 @@ class Api extends Frontend_Controller{
         else
             echo json_encode(Cart::getItems());
     }
+
+    function setItemColor(){
+        if(!empty($_POST['code']) && !empty($_POST['color_id']))
+        {
+            Cart::setItemColor(['code'=>$_POST['code'], 'color_id'=>$_POST['color_id']]);
+        }
+        echo json_encode(Cart::getItems());
+    }
+
+    function setItemSize(){
+        if(!empty($_POST['code']) && !empty($_POST['size_id']))
+        {
+            Cart::setItemSize(['code'=>$_POST['code'], 'size_id'=>$_POST['size_id']]);
+        }
+        echo json_encode(Cart::getItems());
+    }
+
 
     function updateCartQuantity()
     {   
@@ -121,7 +145,7 @@ class Api extends Frontend_Controller{
         echo json_encode(readTable('payment_method'));
     }
 
-
+    //
     function checkout(){
         if($_POST && count(Cart::getItems()) > 0){
             $order          = $_POST;
@@ -155,5 +179,15 @@ class Api extends Frontend_Controller{
         else{
             echo 0;
         }
+    }
+
+    // 
+    function getProductColors($product_id){
+        echo json_encode(getProductColors($product_id));
+    }
+
+    // 
+    function getProductSizes($product_id){
+        echo json_encode(getProductSizes($product_id));
     }
 }

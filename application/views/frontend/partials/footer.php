@@ -116,7 +116,7 @@
 	<script type="module" src="<?=site_url('application/views/frontend/vue/app.js')?>"></script>
 
 	<!-- price fange js -->
-	<!-- <script src="<?=site_url('public/vendors/pricerange/pricerange-script.js')?>"></script> -->
+	<script src="<?=site_url('public/vendors/pricerange/pricerange-script.js')?>"></script>
 
 
 	<script>

@@ -118,4 +118,13 @@ class Ajax extends Admin_Controller {
         
     }
 
+    function orderStatus(){
+        if($_POST && $_POST['status'] && $_POST['order_id']){
+            update('orders', ['status'=>$_POST['status']], ['id'=>$_POST['order_id']]);
+            echo 1;
+        }
+        else echo 0;
+
+    }
+
 }

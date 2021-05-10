@@ -10,17 +10,33 @@ class User_m extends Lab_Model {
         parent::__construct();
     }
 
-    public function login() {
-    	$holder    = config_item('privilege');
-        $developer = config_item('developer');
-
+    public function validation(){
         $where = [
             'username' => input_data('mobile'),
             'password' => $this->hash(input_data('password'))
         ];
-        
-		$userInfo = readTable('subscribers', $where);
-        
+
+        $userInfo = readTable('subscribers', $where);
+        if($userInfo){
+            $_SESSION['_token'] = base64_encode(json_encode($where));
+
+            $code = rand(1111, 9999);
+            $text = "Your Verification Code Is {$code}";
+            update('subscribers', ['verify_code'=>$code, 'is_use'=>0], $where);
+            send_sms(input_data('mobile'), $text); 
+
+            return true;
+        }
+        else{
+            if(isset($_SESSION['_token'])){
+                unset($_SESSION['_token']);
+            }
+            return false;
+        }
+    }
+
+    public function login($token) {
+		$userInfo = readTable('subscribers', $token);
         if(!empty($userInfo)) {
             // log in user
             $data = array(
@@ -43,6 +59,7 @@ class User_m extends Lab_Model {
             save("access_info", $info);
             return true;
         }
+        else return false;
     }
     
     public function logout() {

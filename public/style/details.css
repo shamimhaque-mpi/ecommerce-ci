@@ -139,67 +139,61 @@
     background: #EA232A;
     color: #fff;
 }
-.details_section .color_list {
-    padding: 0 !important;
-    margin: 0 !important;
+
+.details_section .color_box_ {
+    padding: 5px 5px 5px 0;
+    display: flex;
 }
-.details_section .color_list li {
-    display: inline-block;
-    margin: 0 !important;
-    margin-bottom: 10px;
-    margin-right: 6px;
-    background: #fff;
-    height: 35px;
-    width: 35px;
-    padding: 4px;
-    cursor: pointer;
-    border-radius: 50%;
+.details_section .color_box_ .color_ {
+    transition: all .5s linear;
     position: relative;
-    border: 1px solid #e8e8e8;
-}
-.details_section .color_list .black input[type="radio"]::after {background: #000000;}
-.details_section .color_list .red input[type="radio"]::after {background: #ff0000;}
-.details_section .color_list .green input[type="radio"]::after {background: #008000;}
-.details_section .color_list .blue input[type="radio"]::after {background: #0000ff;}
-.details_section .color_list .maroon input[type="radio"]::after {background: #92180D;}
-.details_section .color_list input[type="radio"]::after {
-    position: absolute;
+    overflow: hidden;
+    height: 34px;
+    width: 34px;
+    margin-right: 5px;
     border-radius: 50%;
-    content: '';
-    height: 100%;
+    border: 1px solid #ddd;
+}
+.details_section .color_box_ .color_ input[type='radio']{
+    position: absolute;
     width: 100%;
+    padding: 0;
+    margin: 0;
     top: 0;
     left: 0;
-    z-index: 5;
+    z-index: 2;
+    opacity: 0;
+    height: 100%;
     cursor: pointer;
 }
-.details_section .color_list input[type="radio"] {
-    position: relative;
-    height: 100%;
-    width: 100%;
-}
-.details_section .color_list .black input[type="radio"]::before {border: 1px solid #000000;}
-.details_section .color_list .red input[type="radio"]::before {border: 1px solid #ff0000;}
-.details_section .color_list .green input[type="radio"]::before {border: 1px solid #008000;}
-.details_section .color_list .blue input[type="radio"]::before {border: 1px solid #0000ff;}
-.details_section .color_list .maroon input[type="radio"]::before {border: 1px solid #92180D;}
-.details_section .color_list input[type="radio"]:checked::before {opacity: 1;}
-.details_section .color_list input[type="radio"]::before {
-    height: calc(100% + 8px);
-    display: inline-block;
-    transition: all .2s;
-    border-radius: 50%;
+.details_section .color_box_ .color_ div {
     position: absolute;
-    opacity: 0;
-    top: -4px;
-    left: -4px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background: #808080;
+    transition: all .5s linear;
+}
+.details_section .color_box_ .color_ div:after {
+    height: calc(100% - 0px);
+    width: calc(100% - 0px);
+    position: absolute;
     content: '';
-    width: calc(100% + 8px);
+    left: 50%;
+    top: 50%;
+    z-index: 1;
+    border-radius: 50%;
+    border: 4px solid #fff;
+    transform: translate(-50%, -50%);
 }
-.details_section .color_list input[type='radio']:after.black {
-    background: #000000;
-    color: #000000;
+.details_section .color_box_ .color_ input[type='radio']:checked ~ div:after {
+    height: calc(100% - 4px);
+    width: calc(100% - 4px);
+    border: 4px solid #fff;
 }
+
 .details_section .product_details .quantity {margin: 25px 0;}
 .details_section .product_details .quantity .qty_form {
     max-width: 220px;

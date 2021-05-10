@@ -36,7 +36,7 @@
             </div>
             <div class="panel-body">
                 <?php msg(); ?>
-                <form action="<?php echo get_url("pages/pages/add_process"); ?>" class="form-horizontal" method="post" enctype="multipart/form-data">
+                <form action="" class="form-horizontal" method="post" enctype="multipart/form-data">
                     <div class="form-group">
                         <label class="col-md-2 control-label">Pages <span class="req">*</span></label>
                         <div class="col-md-7">
@@ -80,66 +80,3 @@
     </div>
 </div>
 
-
-<script>
-    tinymce.init({
-        selector: '#mytextarea'
-    });
-
-    /* get data */
-    $(document).ready(function(){
-        $(document).on("change","#page",function(){
-            var pageName=$(this).val();
-            $(".img_show").addClass('hide');
-             $(".pdf_show").addClass('hide');
-            $.ajax({
-                type: "POST",
-                url: "<?php echo site_url('pages/pages/readData'); ?>",
-                data: { pageName:pageName }
-            }).success(function(response){
-
-                var data=JSON.parse(response);
-
-                if(data != '') {
-                data.forEach(function(item) {
-                    console.log(item.title);
-                    $("#title").val(item.title);
-                    $("#page_id").val(item.id);
-
-                    if(item.img_path != '') {
-                        $(".img_path").attr("src","<?php echo base_url();?>"+item.img_path);
-                        $(".img_delete").attr("href","<?php echo site_url('pages/pages/delete_img');?>"+"/"+item.id);
-                        $(".img_show").removeClass('hide');
-                    }
-                    if(item.pdf_path != '') {
-                        $(".pdf_path").attr("src","<?php echo base_url();?>"+item.pdf_path);
-                        $(".pdf_delete").attr("href","<?php echo site_url('pages/pages/delete_pdf');?>"+"/"+item.id);
-                        $(".pdf_show").removeClass('hide');
-                    }
-                    $("#page_image").attr("src","<?php echo base_url();?>"+item.img_path);
-                    $("#hidden_image_url").val(item.img_path);
-                    $("#hidden_id").val(item.id);
-
-                    tinymce.activeEditor.setContent(item.description);
-
-                    $("#submit_btn").attr("name","update_page");
-                    $("#submit_btn").attr("value","Update");
-                    $("#submit_btn").removeClass('btn-primary');
-                    $("#submit_btn").addClass('btn-success');
-                })
-                } else {
-                    $("#title").val("");
-                    $("#page_id").val(0);
-
-                    tinymce.activeEditor.setContent(" ");
-
-                    $("#submit_btn").attr("name","add_page");
-                    $("#submit_btn").attr("value","Save");
-                    $("#submit_btn").removeClass('btn-success');
-                    $("#submit_btn").addClass('btn-primary');
-                }
-
-            });
-        });
-    });
-</script>

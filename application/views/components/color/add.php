@@ -10,12 +10,17 @@
                 <?php msg(); ?>
                 <form action="" class="form-horizontal" method="post" enctype="multipart/form-data">
                     <div class="form-group">
-                        <label class="col-md-2 control-label">Name <span class="req">*</span></label>
+                        <label class="col-md-2 control-label">Color Name <span class="req">*</span></label>
                         <div class="col-md-7">
-                            <input type="text" name="color" placeholder="Enter Color Name..." class="form-control" required>
+                            <input type="text" name="color" placeholder="Enter Color Name" class="form-control" required>
                         </div>
                     </div>
-
+                    <div class="form-group">
+                        <label class="col-md-2 control-label">Color Code <span class="req">*</span></label>
+                        <div class="col-md-7">
+                            <input type="text" name="color_code" placeholder="Enter Hex Color Code (#e20606)" class="form-control" required>
+                        </div>
+                    </div>
                     <div class="row">
                         <div class="col-md-9">
                             <div class="pull-right">

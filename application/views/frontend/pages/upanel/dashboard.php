@@ -1,7 +1,8 @@
 <!-- include css -->
 <link rel="stylesheet" href="<?=site_url('public/style/user.css')?>">
+
 <!-- dashboard section start -->
-<section class="user_section">
+<section class="user_section pt-4">
     <div class="container">
         <div class="row">
             <div class="col-md-4">

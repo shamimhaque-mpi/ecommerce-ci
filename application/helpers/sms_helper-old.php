@@ -26,7 +26,6 @@ function send_sms($gsm, $txt, $mask=NULL) {
     	$fileContents = trim(str_replace('"', "'", $fileContents));
 	$simpleXml = simplexml_load_string($fileContents);
 	$json = json_encode($simpleXml);
-
     	return $json;
     } else {
         return FALSE;

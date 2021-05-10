@@ -29,6 +29,10 @@
     margin: 5px 0;
 }
 .user_section .user_aside .nav-link:hover:hover {background: #C71319;}
+.user_section .user_content .user_title {
+    margin-bottom: 17px;
+    font-weight: 600;
+}
 .user_section .user_content .submit_btn,
 .user_section .user_aside .logout_btn {
     display: inline-block;
@@ -52,7 +56,7 @@
     padding: 25px 20px 10px;
     background: #fff;
     width: 100%;
-    min-height: 390px;
+    min-height: 420px;
 }
 .user_section .user_content input[type=email],
 .user_section .user_content input[type=text],
@@ -79,7 +83,7 @@
     border-radius: 25px;
     padding: 4px 12px;
     color: #fff;
-    font-size: 16px;
+    font-size: 15px;
     cursor: pointer;
     transition: 0.3s;
 }
@@ -96,36 +100,58 @@
     background: none;
     color: #000;
 }
-.user_content td span {
+.user_content .rating span {
     color: #000000;
     opacity: 0.5;
+    font-size: 14px;
 }
-.user_content p.order-notice {
+.user_content p.order_notice {
     font-size: 16px;
     color: #585858;
+    margin-top: 6px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid #e0e0e0;
 }
-.user_content p.order-notice span {
-    display: inline-block;
-    background: #F9F9F9;
-    padding: 0 7px;
+.user_content p.order_notice span {
+    padding: 0 5px;
+    font-size: 14px;
     color: #000000;
     font-weight: 600;
 }
-.user_content .order-view h3 {
+.user_content .order_view h3 {
     text-transform: uppercase;
     font-weight: 600;
-    margin-top: 35px;
+    margin-top: 15px;
 }
-.user_content td span.stock {color: #669900;}
+.user_content  tr:hover .list_title {font-weight: 600;}
+.user_content .list_title {
+    text-transform: capitalize;
+    transition: all .2s;
+    white-space: nowrap;
+    font-size: 17px;
+    color: #001E32;
+    width: 100%;
+    overflow: hidden;
+    max-width: 245px;
+    display: inline-block;
+    text-overflow: ellipsis;
+}
+.user_content td span.stock {
+    white-space: nowrap;
+    color: #669900;
+}
 .user_content .table img {width: 70px;}
-.user_content .rating a {color: #EA232A;}
+.user_content .rating {
+    font-size: 17px;
+    color: #EA232A;
+}
 
 
 /* dashboard style start */
 .user_content .deshboard_title {
     border-bottom: 1px solid #e0e0e0;
     margin-top: 8px;
-    padding-bottom: 8px;
+    padding-bottom: 12px;
 }
 .user_content .deshboard_title a {color: #EA232A;}
 .user_content .deshboard_title a:hover {color: #005CC8 !important;}
@@ -155,3 +181,20 @@
     margin-top: 5px;
 }
 .user_content .dash_box:hover i {color: #EA232A;}
+.user_content .not_found {
+    justify-content: center;
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    min-height: 265px;
+    align-items: center;
+}
+.user_content .found_content {
+    text-align: center;
+    opacity: .5;
+}
+.user_content .not_found img {max-width: 80px;}
+.user_content .not_found h5 {
+    font-size: 16px;
+    margin-top: 15px;
+}

@@ -70,7 +70,7 @@ window.addEventListener('load', ()=>{
 			    <img src="${url+item.feature_photo}" alt="">
 			    <span class="title">
 			        <h5>${item.title}</h5>
-			        <p>${item.description}</p>
+			        <p></p>
 			    </span>
 			    <h6>${(!item.quantity || item.quantity==0)?'Sold Out':''}</h6>
 			    <span class="offer">(-${item.discount}% Off)</span>

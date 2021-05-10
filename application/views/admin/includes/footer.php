@@ -18,46 +18,24 @@
         <!-- custom Core JavaScript -->
         <script src="<?php echo site_url('private/js/script.js'); ?>"></script>
 
-        <!-- // Allert Message Set -->
-        <script>
-            <?php  if($this->session->flashdata('data_message')=="update"){ ?>
-                Swal.fire({
-                    icon: 'success',
-                    title: 'Marks Successfully Updated!',
-                    text: '',
-                    //timer: 1500
-                });
-            <?php } ?>
+    <!-- Menu Toggle Script -->
+    <script type="text/javaScript">
+        $("#menu-toggle").click(function(e) {
+            e.preventDefault();
+            $("#wrapper").toggleClass("toggled");
+            $(this).toggleClass("icon-change");
+        });
 
-            <?php if($this->session->flashdata('data_message')=="save"){ ?>
-                Swal.fire({
-                    icon: 'success',
-                    title: 'Marks Successfully Saved!',
-                    text: '',
-                    //timer: 1500
-                });
-            <?php } ?>
+        $('.selectpicker').selectpicker();
 
-        </script>
-        
-        <!-- Menu Toggle Script -->
-        <script type="text/javaScript">
-            $("#menu-toggle").click(function(e) {
-                e.preventDefault();
-                $("#wrapper").toggleClass("toggled");
-                $(this).toggleClass("icon-change");
+        $(function () {
+            $('#datetimepicker1').datetimepicker({
+                format: 'YYYY-MM-DD'
             });
 
-            $('.selectpicker').selectpicker();
+            // charte
 
-            $(function () {
-                $('#datetimepicker1').datetimepicker({
-                    format: 'YYYY-MM-DD'
-                });
-
-                // charte
-
-                var updatingChart = $(".bar").peity("bar", {
+            var updatingChart = $(".bar").peity("bar", {
                 width: 200,
                 height: 100
             });
@@ -88,7 +66,7 @@
                     $('#datetimepickerFrom').data("DateTimePicker").maxDate(e.date);
                 });
             });
-            
+        
             // file upload with plugin options
             $("input#input").fileinput({
                 browseLabel: "Pick Image",
@@ -99,8 +77,7 @@
             $(document).on('ready', function() {
                 $("#input-4").fileinput({showCaption: false});
             });
-        </script>
-
+    </script>
 
     </body>
 </html>

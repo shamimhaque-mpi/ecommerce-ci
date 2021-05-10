@@ -24,6 +24,7 @@ import ShoppingCart   from './components/ShoppingCart.js';
 import ViewCart       from './components/ViewCart.js';
 import Checkout       from './components/Checkout.js';
 import ProductDetails from './components/ProductDetails.js';
+import ForgotPassword from './components/ForgotPassword.js';
 
 // Components Registration
 Vue.component('collect-list', CollectList);
@@ -33,6 +34,7 @@ Vue.component('shopping-cart', ShoppingCart);
 Vue.component('view-cart', ViewCart);
 Vue.component('checkout', Checkout);
 Vue.component('product-details', ProductDetails);
+Vue.component('forgot-password', ForgotPassword);
 
 const app = new Vue({
     el: '#app',

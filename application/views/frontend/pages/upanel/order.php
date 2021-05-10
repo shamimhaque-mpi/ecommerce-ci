@@ -2,7 +2,7 @@
 <link rel="stylesheet" href="<?=site_url('public/style/user.css')?>">
 
 <!-- dashboard section start -->
-<section class="user_section">
+<section class="user_section pt-4">
     <div class="container">
         <div class="row">
             <div class="col-md-4">
@@ -19,9 +19,9 @@
             </div>
             <div class="col-md-8">
                 <div class="user_content">
+                    <h5 class="user_title">Order List</h5>
                     <div class="table-responsive">
                         <?php if(!empty($order_list)){ ?>
-                            <h5>Order List</h5>
                         <table class="table">
                             <tr>
                                 <th>Order No</th>
@@ -35,7 +35,7 @@
                                 <td>#<?=($item->code)?></td>
                                 <td><?=date('M d, Y', strtotime($item->date))?></td>
                                 <td>৳<?=number_format(($item->amount + $item->shipping_cost), 2)?> <span>for <?=($item->items)?> item</span></td>
-                                <td><?=ucfirst($item->status)?></td>
+                                <td><?=ucfirst(str_replace('_', ' ', $item->status))?></td>
                                 <td class="text-right">
                                     <a href="<?=site_url('user-panel/order_view/'.$item->id)?>" class="order-btn product_view">View</a>
                                     <a href="#" class="order-btn product_cancle">Cancle</a>

@@ -48,7 +48,8 @@
                             <select name="search[status]" class="form-control selectpicker" data-live-search="true">
                                 <option value="" selected disabled>Select A Staus</option>
                                 <option value="pending">Pending</option>
-                                <option value="complete">Complete</option>
+                                <option value="processing">Processing</option>
+                                <option value="on_the_way">On The Way</option>
                             </select>
                         </div>
 
@@ -95,7 +96,7 @@
                         <td><?=($row->address)?></td>
                         <td class="text-center"><?=($row->items)?></td>
                         <td class="text-right">৳<?=number_format($amount, 2)?></td>
-                        <td><?=ucfirst($row->status)?></td>
+                        <td><?=ucfirst(str_replace("_", " ", $row->status))?></td>
                         <td class="text-right">
                             <?php
                                 if($action_menus){

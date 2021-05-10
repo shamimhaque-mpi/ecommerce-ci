@@ -10,7 +10,7 @@
 
         $this->data['users'] = readTable('subscribers');
 
-        $where = ['orders.status'=>'pending'];
+        $where = ['orders.status!'=>'shipped'];
         if($_POST){
             foreach ($_POST['search'] as $key => $value) {
                 if($value!=''){
@@ -34,7 +34,16 @@
         $this->data['meta_title']       = '';
         $this->data['meta_description'] = '';
 
-        $this->data['orders'] = $this->allOrders(['orders.status'=>'complete']);
+        $where = ['orders.status'=>'shipped'];
+        if($_POST){
+            foreach ($_POST['search'] as $key => $value) {
+                if($value!=''){
+                    $where[$key] = $value;
+                }
+            }
+        }
+        
+        $this->data['orders'] = $this->allOrders($where);
 
         $this->load->view('admin/includes/header', $this->data);
         $this->load->view('admin/includes/aside', $this->data);
