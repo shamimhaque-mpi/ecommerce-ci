@@ -9,7 +9,14 @@
         $this->data['meta_title'] = '';
         $this->data['meta_description'] = '';
         
-        $this->data['categories'] = readTable('categories', ['trash'=>0]);
+        $where = ['trash'=>0];
+        if($_POST && !empty($_POST['id'])){
+            $where['id'] = $_POST['id'];
+        }
+
+        $this->data['categories'] = readTable('categories', $where);
+
+        $this->data['all_categories'] = readTable('categories', ['trash'=>0]);
 
         $this->load->view('admin/includes/header', $this->data);
         $this->load->view('admin/includes/aside', $this->data);

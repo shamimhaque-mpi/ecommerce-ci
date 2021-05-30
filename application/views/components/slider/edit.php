@@ -83,14 +83,14 @@
     }
     input[type=checkbox] {
         vertical-align: middle;
-        margin: 0px 0 0 4px;
+        margin: 0;
         display: inline-block;
     }
     .edit_img {
         position: absolute;
         object-fit: cover;
-        width: 100%;
         height: 100%;
+        width: 100%;
         left: 0;
         top: 0;
     }
@@ -110,7 +110,11 @@
                 <form action="<?php echo get_url("slider/slider_controller/edit_process/$id"); ?>" method="post" enctype="multipart/form-data">
                     <div class="row">
                         <div class="col-md-offset-3 col-md-6">
-                            <label class="control-label">Photos <span class="req">*</span></label>
+                            <div class="form-group">
+                                <label class="control-label" for="is_offer" style="cursor: pointer; user-select: none;">Is Offer Image <span class="req">*</span></label>
+                                <input type="checkbox" name="is_offer" id="is_offer" value="1" style="cursor: pointer;" <?=($slider[0]->is_offer==1 ? 'checked' : ''); ?>>
+                            </div>
+                            <label class="control-label">Photos <span class="req">*</span> Image Size (1660X720)</label>
                             <div class="form-group">
                                 <div class="file-upload">
                                     <div class="image-upload-wrap">
@@ -130,10 +134,6 @@
                                     </div>
                                     <button class="file-upload-btn" type="button">Click here</button>
                                 </div>
-                            </div>
-                            <div class="form-group">
-                                <label class="control-label">Is Offer <span class="req">*</span></label>
-                                <input type="checkbox" name="is_offer" value="1" <?=($slider[0]->is_offer==1 ? 'checked' : ''); ?>>
                             </div>
                             <div class="form-group text-right">
                                 <input type="submit" value="Update" class="btn btn-primary">

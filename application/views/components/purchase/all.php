@@ -10,7 +10,7 @@
             <div class="panel-body" ng-controller="allProductsController">
                 <form action="" method="POST">
                     <div class="row">
-                        <div class="col-md-2">
+                        <div class="col-md-3">
                             <div class="form-group">
                                 <div class="input-group date" id="datetimepickerSMSFrom">
                                     <input type="text" name="search[from]" class="form-control" placeholder="From" autocomplete="off">
@@ -20,7 +20,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-md-2">
+                        <div class="col-md-3">
                             <div class="form-group">
                                 <div class="input-group date" id="datetimepickerSMSTo">
                                     <input type="text" name="search[to]" class="form-control" placeholder="To" autocomplete="off">
@@ -35,7 +35,7 @@
                                 <select name="search[supplier_id]" id="supplier_id" class="form-control selectpicker" data-live-search="true">
                                     <option value="" selected disabled>Select A Supplier</option>
                                     <?php if(!empty($suppliers)) foreach($suppliers as $row) { ?>
-                                        <option value="<?=($row->id)?>"><?=($row->name)?></option>
+                                        <option value="<?=($row->id)?>"><?=($row->name)?> - <?=($row->mobile)?></option>
                                     <?php } ?>
                                 </select>
                             </div>
@@ -62,9 +62,9 @@
                         <th>Paid</th>
                         <th width="160" class="text-right">Action</th>
                     </tr>
-                    <?php 
+                    <?php
                         $total_qty = $grand_total = $total_paid = 0;
-                        if(!empty($records)) foreach($records as $key=>$row){ 
+                        if(!empty($records)) foreach($records as $key=>$row){
                             $total_qty   += $row->total_qty;
                             $grand_total += $row->grand_total;
                             $total_paid  += $row->paid;
@@ -82,22 +82,21 @@
                                 if($action_menus){
                                     foreach($action_menus as $action_menu){
                                         if($user_data['privilege']=='president' xor (!empty($aside_action_menu_array) && in_array($action_menu->id,$aside_action_menu_array) && $user_data['privilege']!=='president')){
-                                        // -----------------------------------------------------------
                                         if(strtolower($action_menu->name) == "delete" ){?>
                                             <a class="btn btn-<?php echo $action_menu->type;?>" onclick="return confirm('Are your sure to proccess this action ?')"  href="<?php echo get_url($action_menu->controller_path."/".$row->id); ?>"><i class="<?php echo $action_menu->icon;?>" aria-hidden="true"></i></a>
                                         <?php }else{ ?>
                                             <a class="btn btn-<?php echo $action_menu->type;?>"  href="<?php echo get_url($action_menu->controller_path."/".$row->id) ;?>"><i class="<?php echo $action_menu->icon;?>" aria-hidden="true"></i></a>
-                                        <!---------------------------------------->
-                            <?php }}}} ?>
+                                    <?php }}}
+                                }?>
                         </td>
                     </tr>
                     <?php } ?>
                     <tr>
                         <th colspan="4" class="text-right">Total</th>
-                        <td><?=($total_qty)?></td>
-                        <td><?=($grand_total)?>TK</td>
-                        <td><?=($total_paid)?>TK</td>
-                        <td></td>
+                        <th><?=($total_qty)?></th>
+                        <th><?=($grand_total)?>TK</th>
+                        <th><?=($total_paid)?>TK</th>
+                        <th></th>
                     </tr>
                 </table>
             </div>

@@ -14,7 +14,6 @@ window.addEventListener('load', ()=>{
 			}
 		});
 
-		
 		search.addEventListener('keyup', ()=>{
 			searchProduct();
 		});
@@ -64,9 +63,9 @@ window.addEventListener('load', ()=>{
 	}
 
 	function rendarItem(item){
-		var parameter = btoa(JSON.stringify({'product.id':item.id}));
+		var parameter = btoa(item.id);
 		var text = `
-			<a href="${url+'products/'+parameter+'/'+(item.title).replaceAll(' ', '-')}" class="search_product">
+			<a href="${url+'products/'+parameter+'/'+(item.title).replaceAll(' ', '-').replaceAll('/', '-')}" class="search_product">
 			    <img src="${url+item.feature_photo}" alt="">
 			    <span class="title">
 			        <h5>${item.title}</h5>

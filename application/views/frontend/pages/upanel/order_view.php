@@ -30,7 +30,7 @@
                                         <th>Product</th>
                                         <th>Discount</th>
                                         <th>Price</th>
-                                        <th>Quantity</th>
+                                        <th class="pl-0">Quantity</th>
                                         <th class="text-right">Total</th>
                                     </tr>
                                 </thead>
@@ -47,18 +47,18 @@
                                         <td><?=($item->title)?></td>
                                         <td><?=($item->discount)?></td>
                                         <td><?=($item->price)?></td>
-                                        <td><?=($item->quantity)?></td>
+                                        <td class="pl-0"><?=($item->quantity)?></td>
                                         <td class="text-right">৳<?=number_format($price, 2)?></td>
                                     </tr>
                                     <?php } ?>
                                     <tr>
                                         <td colspan="3"></td>
-                                        <td class="border-bottom">Subtotal</td>
+                                        <td class="border-bottom pl-0">Subtotal</td>
                                         <td class="border-bottom text-right">৳<?=number_format($total_amount, 2)?></td>
                                     </tr>
                                     <tr class="border-0">
                                         <td colspan="3" rowspan="3"></td>
-                                        <td class="border-bottom">Shipping</td>
+                                        <td class="border-bottom pl-0">Shipping</td>
                                         <td class="border-bottom text-right">৳<?=($order->shipping_cost)?></td>
                                     </tr>
                                     <tr class="border-0">

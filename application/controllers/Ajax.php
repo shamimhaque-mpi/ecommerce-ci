@@ -127,4 +127,16 @@ class Ajax extends Admin_Controller {
 
     }
 
+    function save_theme(){
+        if($_POST && $_POST['theme']){
+            $theme = readTable('site_meta', ['meta_key'=>'theme']);
+            if($theme){
+                update('site_meta', ['meta_value'=>$_POST['theme']], ['meta_key'=>'theme']);
+            }else{
+                save('site_meta', ['meta_key'=>'theme', 'meta_value'=>$_POST['theme']]);
+            }
+            echo 1;
+        }
+    }
+
 }

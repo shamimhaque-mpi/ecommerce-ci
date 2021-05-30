@@ -18,14 +18,24 @@ class User_m extends Lab_Model {
 
         $userInfo = readTable('subscribers', $where);
         if($userInfo){
+
             $_SESSION['_token'] = base64_encode(json_encode($where));
 
-            $code = rand(1111, 9999);
-            $text = "Your Verification Code Is {$code}";
-            update('subscribers', ['verify_code'=>$code, 'is_use'=>0], $where);
-            send_sms(input_data('mobile'), $text); 
-
-            return true;
+            $header = readTable('header');
+            if($header && $header[0]->is_verification!=1){
+                if($this->login($where)){
+                    return true;
+                }else{
+                    return false;
+                }
+            }
+            else {
+                $code = rand(1111, 9999);
+                $text = "Your Verification Code Is {$code}";
+                update('subscribers', ['verify_code'=>$code, 'is_use'=>0], $where);
+                send_sms(input_data('mobile'), $text); 
+                return true;
+            }
         }
         else{
             if(isset($_SESSION['_token'])){

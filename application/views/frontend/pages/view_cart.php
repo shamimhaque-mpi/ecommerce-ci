@@ -25,7 +25,7 @@
                                 <small>Out Of Stock</small>
                             <?php } ?>
                         </div>
-                        <a href="<?=site_url('details')?>" class="items-cover"></a>
+                        <a href="<?=site_url("products/".base64_encode($row->id)."/".(str_replace(' ', '-', $row->title)))?>" class="items-cover"></a>
                     </div>
                     <?php } ?>
                 </div>

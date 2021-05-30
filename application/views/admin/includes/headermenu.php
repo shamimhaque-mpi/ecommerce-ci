@@ -1,6 +1,5 @@
 <?php
     $where=array('status'=>'unread');
-
     $latest_msg = [];
     $info       = read("users",array('username'=>$username));
 ?>
@@ -12,7 +11,6 @@
 
 <!-- Page Content -->
 <div id="page-content-wrapper">
-
     <!-- top navigation start -->
     <div class="row">
         <nav class="col-xs-12 content-fixed-nav">

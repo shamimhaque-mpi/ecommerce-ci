@@ -34,28 +34,36 @@ if (!function_exists('readTable')) {
         // get group by
         if (isset($nidle['groupBy'])) {
             $ci->db->group_by($nidle['groupBy']);
+        } 
+        
+        if (isset($nidle['notIn']) && count($nidle['notIn'])>1) 
+        {
+            $ci->db->where_not_in($nidle['notIn'][0], $nidle['notIn'][1]);
         }
         
         // get limit
-        if (isset($nidle['limit']) && isset($nidle['offset'])) {
+        if (isset($nidle['limit']) && isset($nidle['offset'])) 
+        {
             $ci->db->limit($nidle['offset'], $nidle['limit']);
-        } elseif (isset($nidle['limit'])) {
+        } 
+        else if(isset($nidle['limit'])) 
+        {
             $ci->db->limit($nidle['limit']);
-        }  
+        }   
         
         // OrderBy
         if(isset($nidle['orderBy'])){
             if(is_array($nidle['orderBy']) && count($nidle['orderBy'])==2){
                 $ci->db->order_by($nidle['orderBy'][0], $nidle['orderBy'][1]);
-            }else{
+            }
+            else{
                 $ci->db->order_by('id', $nidle['orderBy']);
             }
         }
-        
+
         $query = $ci->db->where($where)->get($table);
 
         return $query->result();
-        
     }
 }
 
@@ -191,5 +199,16 @@ if (!function_exists('uploadToWebp')) {
         }
 
         return false;
+    }
+}
+
+// Title to Slug
+if (!function_exists('titleToSlug')) {
+    function titleToSlug($title){
+       $title = str_replace('null', '..', $title);
+       $title = str_replace('&', 'and', $title);
+       $title = str_replace(',', ' ', $title);
+       $title = str_replace('@', 'at', $title);
+       return $title;
     }
 }

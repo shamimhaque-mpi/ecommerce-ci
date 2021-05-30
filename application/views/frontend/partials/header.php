@@ -26,7 +26,6 @@
     <script src="<?=site_url('node_modules/vuex/dist/vuex.js')?>"></script>
     <!-- Helper -->
     <script src="<?=site_url('public/js/helper.js')?>"></script>
-
 </head>
 
 <body>
@@ -43,11 +42,10 @@
                     <a href="<?=site_url('/')?>" class="top_brand">
                         <img src="<?=site_url($header?$header->web_logo:'')?>" alt="">
                     </a>
-
                     <div class="user_path">
                         <?php if(!user()){ ?>
                         <div class="acces_log">
-                            <a href="<?=site_url('login')?>"><i class="icon ion-md-person"></i> <span>Sign In</span></a>
+                            <a href="<?=site_url('login')?>"><i class="icon ion-md-person"></i> <span>Log In</span></a>
                             <a href="<?=site_url('registration')?>"><i class="icon ion-md-person-add"></i> <span>Register</span></a>
                         </div>
                         <?php } else if(user()) {?>
@@ -100,6 +98,7 @@
                         </form>
 
                         <collect-list is_login="<?php echo (user()?true:false)?>"
+                            apk="<?=($header ? $header->apk : '')?>"
                             url="<?=base_url('/');?>">
                         </collect-list>
                     </div>

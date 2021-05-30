@@ -1,4 +1,4 @@
-<?php class user extends Admin_controller{
+<?php class User extends Admin_controller{
     function __construct() {
         parent::__construct();
     }

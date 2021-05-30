@@ -37,14 +37,6 @@
                                 <td><img src="<?=site_url($row->feature_photo)?>" alt=""></td>
                                 <td>
                                     <a class="list_title" href="<?=site_url("products/".base64_encode($row->id)."/".(str_replace(' ', '-', $row->title)))?>"><?=($row->title)?></a>
-                                    <div class="rating">
-                                        <i class="icon ion-md-star"></i>
-                                        <i class="icon ion-md-star"></i>
-                                        <i class="icon ion-md-star"></i>
-                                        <i class="icon ion-md-star"></i>
-                                        <i class="icon ion-md-star-outline"></i>
-                                        <span> (46)</span>
-                                    </div>
                                 </td>
                                 <td>৳<?=($row->sale_price ? $row->sale_price : 0)?></td>
                                 <td><span class="stock"><?=($row->quantity > 0 ? "In Stock":"Out In Stock")?></span></td>

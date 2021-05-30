@@ -27,6 +27,15 @@
     public function profile() {
         $this->data['title'] = "Profile";
 
+        if($_POST){
+            update('subscribers', $_POST, ['id'=>$_POST['id']]);
+            set_msg('success', 'Profile Successfully Updated');
+            redirect_back();
+        }
+
+
+
+
         return view('frontend.pages.upanel.profile');
     }
 
@@ -202,5 +211,22 @@
         $record["order_items"] = $order_items;
 
         return (Object)$record;
+    }
+
+
+
+
+    public function order_cancelation($order_id){
+        $order = readTable('orders', ['id'=>$order_id, 'status'=>'pending']); 
+
+        if($order)
+        {
+            update('orders', ['status'=>'cancel'], ['id'=>$order_id]);
+            set_msg('success', 'Canceling process is successful');
+        }
+        else{
+            set_msg('warning', 'Something is wrong! Please Try Again');
+        }
+        redirect_back();
     }
 }

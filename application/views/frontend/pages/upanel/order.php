@@ -37,8 +37,10 @@
                                 <td>৳<?=number_format(($item->amount + $item->shipping_cost), 2)?> <span>for <?=($item->items)?> item</span></td>
                                 <td><?=ucfirst(str_replace('_', ' ', $item->status))?></td>
                                 <td class="text-right">
+                                    <?php if($item->status=='pending'){ ?>
+                                    <a href="<?=site_url('user-panel/order_cancelation/'.$item->id)?>" onclick="return confirm('Are You sure??')" class="order-btn product_cancle">Cancle</a>
+                                    <?php } ?>
                                     <a href="<?=site_url('user-panel/order_view/'.$item->id)?>" class="order-btn product_view">View</a>
-                                    <a href="#" class="order-btn product_cancle">Cancle</a>
                                 </td>
                             </tr>
                             <?php } ?>

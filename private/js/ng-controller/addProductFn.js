@@ -11,7 +11,7 @@ app.controller("addProductFn", ["$scope", "$log", function ($scope, $log)
 	$('#sub_cat_id').selectpicker();
 	$scope.$watch('cat_id', ()=>{
 		if($scope.cat_id){
-			var option = `<option value="" selected disabled> --Select A Sub-Category -- </option>`;
+			var option = `<option value="" selected disabled> Select A Sub-Category </option>`;
 			var data  = {
 				table : 'subcategories',
 				where : {

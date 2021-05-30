@@ -8,8 +8,14 @@
         $this->data['meta_keyword'] = '';
         $this->data['meta_title'] = '';
         $this->data['meta_description'] = '';
-        
-        $this->data['brands'] = readTable('brands', ['trash'=>0]);
+
+        $where = ['trash'=>0];
+        if($_POST && !empty($_POST['brand_id'])){
+            $where['id'] = $_POST['brand_id'];
+        }
+
+        $this->data['brands']     = readTable('brands', $where);
+        $this->data['all_brands'] = readTable('brands',['trash'=>0]);
 
         $this->load->view('admin/includes/header', $this->data);
         $this->load->view('admin/includes/aside', $this->data);

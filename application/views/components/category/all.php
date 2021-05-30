@@ -7,6 +7,26 @@
                 </div>
             </div>
             <div class="panel-body">
+                <form action="" method="POST">
+                    <div class="row">
+                        <div class="col-md-3">
+                            <div class="form-group">
+                                <select name="id" id="" class="form-control selectpicker" data-live-search="true">
+                                    <option value="" selected disabled>Select A Category</option>
+                                    <?php if(!empty($all_categories)) foreach($all_categories as $row){ ?>
+                                    <option value="<?=($row->id)?>"><?=($row->category)?></option>
+                                    <?php } ?>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-md-1">
+                            <div class="form-group">
+                                <input type="submit" class="btn btn-info" value="Filter">
+                            </div>
+                        </div>
+                    </div>
+                </form>
+
                 <?php msg(); ?>
                 <table class="table table-bordered">
                     <tr>

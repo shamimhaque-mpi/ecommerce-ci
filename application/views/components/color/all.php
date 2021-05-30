@@ -1,3 +1,10 @@
+<style>
+    .color_img {
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+    }
+</style>
 <div class="container-fluid">
     <div class="row">
         <div class="panel panel-default">
@@ -12,6 +19,8 @@
                     <tr>
                         <th width="50">SL</th>
                         <th>Name</th>
+                        <th>Color Code</th>
+                        <th>Color</th>
                         <th width="120" class="text-right">Action</th>
                     </tr>
 
@@ -19,6 +28,10 @@
                     <tr>
                         <td><?=(++$key)?></td>
                         <td><?=($row->color)?></td>
+                        <td><?=($row->color_code)?></td>
+                        <td>
+                            <div class="color_img" style="background:<?=($row->color_code)?>"></div>
+                        </td>
                         <td class="text-right">
                             <?php
                                 if($action_menus){

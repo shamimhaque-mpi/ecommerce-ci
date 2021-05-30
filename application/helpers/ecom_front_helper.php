@@ -4,12 +4,23 @@
 if (!function_exists('getProducts')) {
     function getProducts($condition=[], $niddle=[])
     {	
-    	$where="products.trash=0 AND products.status='available'";
+    	$where  = "products.trash=0 AND products.status='available'";
+        $limit  = null;
+        $offset = null;
     	if(is_array($condition)){
     		foreach ($condition as $key => $value) {
-    			if($value!=''){
+    			if($value!='' && $key!='limit' && $key!='offset' && $key!='product_ratings.rate'){
     				$where .= " AND {$key}='{$value}'";
     			}
+                else if($value!='' && $key=='product_ratings.rate'){
+                    $where .= " AND {$key} <= '{$value}'";
+                }
+                else if($value!='' && $key=='limit'){
+                    $limit = " LIMIT {$value}";
+                }
+                else if($value!='' && $key=='offset'){
+                    $offset = " OFFSET {$value}";
+                }
     		}
     	}
 
@@ -34,6 +45,7 @@ if (!function_exists('getProducts')) {
     			categories.category,
     			subcategories.subcategory,
     			products.id,
+                (SELECT AVG(rate) FROM product_ratings WHERE product_id=products.id ORDER BY product_id LIMIT 1) AS rating,
     			(SELECT medium FROM product_images WHERE product_id=products.id AND type='general_photo' ORDER BY id DESC LIMIT 1) AS general_photo,
                 (SELECT medium FROM product_images WHERE product_id=products.id AND type='feature_photo' LIMIT 1) AS feature_photo
     		FROM 
@@ -46,13 +58,17 @@ if (!function_exists('getProducts')) {
     			categories ON categories.id=products.cat_id
     		LEFT JOIN 
     			subcategories ON subcategories.id=products.sub_cat_id
+            LEFT JOIN 
+                product_ratings ON product_ratings.product_id=products.id
     		WHERE 
     			{$where}
     		GROUP BY
     			products.id
-            {$niddle_cond}
-
-    	")->result();
+    	"
+        .($niddle_cond ? $niddle_cond : 'ORDER BY product_ratings.rate DESC')
+        .($limit  ? $limit  : '')
+        .($offset ? $offset : '')
+        )->result();
     	return $result;
     }
 }
@@ -61,6 +77,7 @@ if (!function_exists('getProducts')) {
 if (!function_exists('getBestSaleProducts')) {
     function getBestSaleProducts($condition=[], $niddle=[])
     {   
+
         $where="products.trash=0 AND products.status='available'";
         if(is_array($condition)){
             foreach ($condition as $key => $value) {
@@ -71,9 +88,13 @@ if (!function_exists('getBestSaleProducts')) {
         }
 
         $niddle_cond = "";
+        $group_by    = "order_items.product_id";
         if(is_array($niddle)){
             if(isset($niddle['limit'])) {
                 $niddle_cond .= " LIMIT {$niddle['limit']}";
+            }
+            if(isset($niddle['groupBy'])) {
+                $group_by = $niddle['groupBy'];
             }
         }
 
@@ -84,9 +105,11 @@ if (!function_exists('getBestSaleProducts')) {
                 AVG(quantity) AS avg_qty,
                 product_id
             FROM 
-                order_items 
+                order_items
+            LEFT JOIN
+                products ON products.id = order_items.product_id
             GROUP BY 
-                order_items.product_id 
+                {$group_by}
             ORDER BY avg_qty DESC
 
             {$niddle_cond}
@@ -177,9 +200,9 @@ function getProductColors($product_id){
         colors.*
         FROM 
             products
-        LEFT JOIN 
+        JOIN 
             product_colors ON products.id=product_colors.product_id
-        LEFT JOIN 
+        JOIN 
             colors ON colors.id=product_colors.color_id
         WHERE
             products.id={$product_id}
@@ -190,21 +213,22 @@ function getProductColors($product_id){
 
 function getProductSizes($product_id){
     $ci =& get_instance();
-
-    return $ci->db->query("
+    $sizes = $ci->db->query("
         SELECT 
         sizes.*
         FROM 
             products
-        LEFT JOIN 
+        JOIN 
             product_sizes ON products.id=product_sizes.product_id
-        LEFT JOIN 
+        JOIN 
             sizes ON sizes.id=product_sizes.size_id
         WHERE
             products.id={$product_id}
         GROUP BY
             sizes.id
     ")->result();
+
+    return ($sizes ? $sizes : []);
 }
 
 
@@ -243,7 +267,92 @@ if (!function_exists('getImages')) {
     }
 }
 
+// Get All images Id As Array
+if (!function_exists('slug')) {
+    function slug($title){   
+        //
+        return str_replace(' ', '-', str_replace('/', '-', $title));
+    }
+}
 
+// Get All images Id As Array
+if (!function_exists('showRating')) {
+    function showRating($rate=null){
+        switch (round($rate)) {
+            case 1:
+                echo "
+                    <div class='raring'>
+                        <i class='icon ion-md-star'></i>
+                        <i class='icon ion-md-star-outline'></i>
+                        <i class='icon ion-md-star-outline'></i>
+                        <i class='icon ion-md-star-outline'></i>
+                        <i class='icon ion-md-star-outline'></i>
+                    </div>
+                ";
+                break;
+            
+            case 2:
+                echo "
+                    <div class='raring'>
+                        <i class='icon ion-md-star'></i>
+                        <i class='icon ion-md-star'></i>
+                        <i class='icon ion-md-star-outline'></i>
+                        <i class='icon ion-md-star-outline'></i>
+                        <i class='icon ion-md-star-outline'></i>
+                    </div>
+                ";
+                break;
+            
+            case 3:
+                echo "
+                    <div class='raring'>
+                        <i class='icon ion-md-star'></i>
+                        <i class='icon ion-md-star'></i>
+                        <i class='icon ion-md-star'></i>
+                        <i class='icon ion-md-star-outline'></i>
+                        <i class='icon ion-md-star-outline'></i>
+                    </div>
+                ";
+                break;
+            
+            case 4:
+                echo "
+                    <div class='raring'>
+                        <i class='icon ion-md-star'></i>
+                        <i class='icon ion-md-star'></i>
+                        <i class='icon ion-md-star'></i>
+                        <i class='icon ion-md-star'></i>
+                        <i class='icon ion-md-star-outline'></i>
+                    </div>
+                ";
+                break;
+            
+            case 5:
+                echo "
+                    <div class='raring'>
+                        <i class='icon ion-md-star'></i>
+                        <i class='icon ion-md-star'></i>
+                        <i class='icon ion-md-star'></i>
+                        <i class='icon ion-md-star'></i>
+                        <i class='icon ion-md-star'></i>
+                    </div>
+                ";
+                break;
+            
+            default:
+                echo "
+                    <div class='raring'>
+                        <i class='icon ion-md-star-outline'></i>
+                        <i class='icon ion-md-star-outline'></i>
+                        <i class='icon ion-md-star-outline'></i>
+                        <i class='icon ion-md-star-outline'></i>
+                        <i class='icon ion-md-star-outline'></i>
+                    </div>
+                ";
+                break;
+        }
+    }
+}
 
 
 

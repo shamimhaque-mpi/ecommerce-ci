@@ -102,7 +102,6 @@
             'orderBy'   => ['total_visit', 'DESC']
         ]);
 
-
         return view('frontend.pages.view_cart');
     }
 
@@ -116,26 +115,50 @@
     public function about_us() {
         $this->data['title'] = "About Us";
 
+        $about = readTable('about');
+        $this->data['about'] = ($about ? $about[0] : null);
+
         return view('frontend.pages.about_us');
     }
 
 
     public function shop($slug=null) {
         $this->data['title'] = "Shop";
-        $where = [ 'products.feature_product'=>'no'];
+        $this->data['slug']  = $slug;
 
+        $where = [ 'products.feature_product'=>'no', 'products.trash'=>0];
         if(json_decode(base64_decode($slug), true)){
             $slug  = json_decode(base64_decode($slug), true);
             if(is_array($slug)) {
                 foreach ($slug as $key => $value) {
-                    if($value!='')
+                    if($value!='' && $key!='offset')
+                        $where[$key] = $value;
+                    else if($key=='offset')
                         $where[$key] = $value;
                 }
+                if(!array_key_exists('limit', $slug)){
+                    $base = [
+                        'limit'  => 24,
+                        'offset' => 0
+                    ];
+                    redirect("shop/".base64_encode(json_encode(array_merge($base, $slug)))."/".time());
+                }
             }
+        }else{
+            $base = [
+                'limit'  => 24,
+                'offset' => 0
+            ];
+            redirect("shop/".base64_encode(json_encode($base))."/".time());
         }
-
+        //
         $this->data['products'] = getProducts($where);
-
+        //
+        unset($where['limit']);
+        unset($where['offset']);
+        //
+        $this->data['total_product'] = count(get_left_join('products', 'product_ratings', 'products.id=product_ratings.product_id', $where, 'products.id'));
+        //
         return view('frontend.pages.shop');
     }
 
@@ -188,5 +211,29 @@
             }
 
         }
+    }
+
+    // Subscriber For Updates 
+    public function subscriber()
+    {
+        if(isset($_POST['email']) && $_POST['email']!=''){
+            if(empty(readTable('subscriber', ['email'=>$_POST['email']]))){
+                save('subscriber', [
+                    'email' => $_POST['email'],
+                    'date'  => date('Y-m-d')
+                ]);
+            }
+        }
+        set_msg('success', 'Successfully Subscribed');
+        redirect_back();
+    }
+
+    // 
+    public function pages($title)
+    {
+        $page = readTable('pages', ['title'=>$title]);
+        $this->data['page_content'] = ($page ? $page[0] : null);
+
+        return view('frontend.pages.pages');
     }
 }

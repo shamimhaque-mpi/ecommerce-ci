@@ -24,21 +24,30 @@
                             <div class="col-sm-6">
                                 <label class="form-label">Full Name</label>
                                 <div class="form-group">
-                                    <input type="text" name="name" class="form-control">
+                                    <input type="text" value="<?=(user()->name)?>" name="name" class="form-control">
+                                    <input type="hidden" name="id" value="<?=(user()->id)?>">
                                 </div>
                             </div>
                             <div class="col-sm-6">
                                 <label class="form-label">Email</label>
                                 <div class="form-group">
-                                    <input type="email" name="email" class="form-control">
+                                    <input type="email" value="<?=(user()->email)?>" name="email" class="form-control">
                                 </div>
                             </div>
                             <div class="col-sm-6">
                                 <label class="form-label">Phone Number</label>
                                 <div class="form-group">
-                                    <input type="text" name="name" class="form-control">
+                                    <input type="text" value="<?=(user()->mobile)?>" name="mobile" class="form-control">
                                 </div>
                             </div>
+
+                            <div class="col-sm-12">
+                                <label class="form-label">Address</label>
+                                <div class="form-group">
+                                    <textarea name="address" class="form-control"><?=(user()->address)?></textarea>
+                                </div>
+                            </div>
+
                             <div class="col-sm-12">
                                 <div class="form-group">
                                     <button type="submit" class="btn submit_btn">Update</button>

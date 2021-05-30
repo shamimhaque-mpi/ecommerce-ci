@@ -1,7 +1,7 @@
 var app = angular.module("MainApp", ['angularUtils.directives.dirPagination', 'ngSanitize']);
 
 var url = window.location.origin+'/';
-if(window.location.host=='localhost' || (window.location.host.match('192.168')>-1)){
+if(window.location.host=='localhost' || (window.location.host.match('192.168'))){
     var pathname = window.location.pathname;
     url += pathname.substr(1, pathname.indexOf('/', 1));
 }

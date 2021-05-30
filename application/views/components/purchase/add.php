@@ -1,6 +1,11 @@
 <script type="text/javaScript" src="<?php echo site_url('private/js/ng-controller/addPurchaseController.js'); ?>"></script>
 <style>
-	table .btn {padding: 3px 22px!important;}
+	.bootstrap-select.btn-group .dropdown-menu li {max-width: 420px;}
+	table .btn {
+		padding: 3px 16px!important;
+		font-size: 22px;
+		line-height: 22px;
+	}
 	tr > td {
 		vertical-align: middle!important;
 		padding: 0 3px!important;
@@ -27,9 +32,7 @@
 		display: inline-block;
 		min-width: 70px;
 	}
-    .custom-border {
-        border-left: 1px solid #dddddd;
-    }
+    .custom-border {border-left: 1px solid #dddddd;}
 </style>
 <div class="panel panel-default">
     <div class="panel-heading panal-header">
@@ -145,12 +148,12 @@
                             </tr>
                             <tr ng-show="supplier_id">
                                 <th>C. Balance</th>
-                                <td><input type="text" ng-model="credential.balance" class="form-control"></td>
+                                <td><input type="text" ng-model="credential.balance" class="form-control" readonly></td>
                             </tr>
                         </table>
                     </div>
                     <div class="text-right" ng-show="(credential.due==0 || supplier_id!='')">
-                        <input type="submit" class="btn btn-success">
+                        <input type="submit" value="Save" class="btn btn-success">
                     </div>
                 </div>
             </div>

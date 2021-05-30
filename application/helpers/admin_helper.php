@@ -484,18 +484,6 @@ if (!function_exists('input_data')) {
     }
 }
 
-// create slug
-if (!function_exists('slug')) {
-    function slug($input_data = null, $replace = '-')
-    {
-        if (!empty($input_data)) {
-            return str_replace(' ', $replace, strtolower($input_data));
-        } else {
-            return false;
-        }
-    }
-}
-
 
 // check exists
 if (!function_exists('check_exists')) {

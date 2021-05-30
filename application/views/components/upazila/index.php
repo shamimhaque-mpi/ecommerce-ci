@@ -32,9 +32,9 @@
                                     <div class="col-md-10 col-md-offset-1">
                                         <div class="row">
                                             <div class="form-group">
-                                                <label class="col-xs-4 control-label">District Name <span class="req">*</span></label>
+                                                <label class="col-xs-4 control-label">Upazila Name <span class="req">*</span></label>
                                                 <div class="col-xs-8">
-                                                    <input class="form-control" type="text" name="name" value="<?=((!empty($edit) ? $edit->name : ''))?>" placeholder="District Name" required>
+                                                    <input class="form-control" type="text" name="name" value="<?=((!empty($edit) ? $edit->name : ''))?>" placeholder="Upazila Name" required>
                                                 </div>
                                             </div>
                                         </div>

@@ -1,10 +1,10 @@
 export default {
 	name  : 'Collection',
-    props : ['is_login', 'url'],
+    props : ['is_login', 'url', 'apk'],
 	template : `
 		<ul class="collect_list">
             <li class="android">
-                <a href="#"><i class="icon ion-logo-android"></i></a>
+                <a :href="url+apk" download><i class="icon ion-logo-android"></i></a>
             </li>
             <li class="cartBtn">
                 <a href="javascript:void(0)"><i class="icon ion-ios-cart"></i></a>

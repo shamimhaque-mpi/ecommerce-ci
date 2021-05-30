@@ -8,7 +8,27 @@
             $this->data['meta_title'] = '';
             $this->data['meta_description'] = '';
 
-            $this->data['about_us'] = read('about', ['status'=>1]);
+            $about = readTable('about');
+            $this->data['about'] = ($about ? $about[0] : null);
+
+            if($_POST)
+            {
+                $data = ['description' => $_POST['description']];
+                if($_FILES && $_FILES['img']['name']!=''){
+                    if($about && file_exists($about[0]->path)){
+                        unlink($about[0]->path);
+                    }
+                    $data['path'] = uploadFile('public/images', 'img');                        
+                }
+                if($about) {
+                    update('about', $data, ['id'=>$about[0]->id]);
+                }
+                else {
+                    save('about', $data);
+                }
+                set_msg('success', 'Successfully Saved');
+                redirect('about_us/About_controller/add?system_id=MjY=', 'refresh');
+            }
 
             $this->load->view('admin/includes/header', $this->data);
             $this->load->view('admin/includes/aside', $this->data);
@@ -18,41 +38,5 @@
             $this->load->view('admin/includes/footer', $this->data);
         }
 
-        public function add_process() {
-            $old_image = read('about');
-            if($old_image != null){
-                if(file_exists($old_image[0]->path)){
-                    unlink($old_image[0]->path);
-                }
-                delete('about', ['id >'=>0]);
-            }
-
-            $data = [
-                'title' => $_POST['name'],
-                'description' => ($this->input->post('description'))
-            ];
-
-
-            $types = array('jpg','JPG','png','PNG','gif','GIF');
-            $path  = "backend/images/about_us/";
-            $name  = 'about_us'.(strtotime(date('Y-m-d h:i:s'))*10);
-            $size  = '1024';
-
-            if($path = upload_img("img", $types, $size, $path, $name)){
-                $data['path'] = $path;
-            }
-
-
-            if(exist('about', (['title'=>$this->input->post('name')]))==false){
-                if(save('about', $data)){
-                    set_msg('success', 'success', 'About Us  Successfully Created !');
-                }else{
-                    set_msg('warning', 'warning', 'About Us  Not Created !');
-                }
-            }else{
-                set_msg('warning', 'warning', 'About Us  Already Exists !');
-            }
-            redirect_back();
-        }
     }
 ?>

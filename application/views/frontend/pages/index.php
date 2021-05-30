@@ -88,7 +88,7 @@
                     <?php } else { ?>
                         <img src="<?=site_url($row->feature_photo)?>" alt="">
                     <?php }?>
-                    <a href="<?=site_url("products/".base64_encode($row->id)."/".(str_replace(' ', '-', $row->title)))?>" class="cover"></a>
+                    <a href="<?=site_url("products/".base64_encode($row->id)."/".slug($row->title))?>" class="cover"></a>
                     <figcaption>
                         <add-to-wish-list
                             product_id="<?=($row->id)?>"
@@ -96,7 +96,7 @@
                     </figcaption>
                 </figure>
                 <div class="product_title">
-                    <h5><a href="<?=site_url("products/".base64_encode($row->id)."/".(str_replace(' ', '-', $row->title)))?>"><?=($row->title)?></a></h5>
+                    <h5><a href="<?=site_url("products/".base64_encode($row->id)."/".slug($row->title))?>"><?=($row->title)?></a></h5>
                 </div>
             </div>
             <?php }} ?>
@@ -139,7 +139,7 @@
                         <img src="<?=site_url($row->feature_photo)?>" alt="">
                     <?php }?>
 
-                    <a href="<?=site_url("products/".base64_encode($row->id)."/".(str_replace(' ', '-', $row->title)))?>" class="cover"></a>
+                    <a href="<?=site_url("products/".base64_encode($row->id)."/".slug($row->title))?>" class="cover"></a>
                     <figcaption>
                         <?php if($row->quantity>0){ ?>
                         <add-to-cart
@@ -152,23 +152,16 @@
                     </figcaption>
                 </figure>
                 <div class="product_title">
-                    <h5><a href="<?=site_url("products/".base64_encode($row->id)."/".(str_replace(' ', '-', $row->title)))?>"><?=($row->title)?></a></h5>
-                    <?php if($row->sale_price){ ?>
+                    <h5><a href="<?=site_url("products/".base64_encode($row->id)."/".slug($row->title))?>"><?=($row->title)?></a></h5>
+                    <?php $row->sale_price = ($row->sale_price ? $row->sale_price : $row->price) ?>
                     <div class="footer_price">
                         <h4>
                             <?php if($row->sale_price){ if($row->discount > 0){ ?>
-                                ৳<?=($row->sale_price - (($row->sale_price/100)*$row->discount))?><del>৳<?=($row->sale_price)?></del>
-                            <?php } else{ echo "৳".$row->sale_price; } } ?>
+                                <?=($row->sale_price - (($row->sale_price/100)*$row->discount))?> Tk <del><?=($row->sale_price)?> Tk</del>
+                            <?php } else{ echo $row->sale_price." Tk";} } ?>
                         </h4>
-                        <div class="raring">
-                            <i class="icon ion-md-star"></i>
-                            <i class="icon ion-md-star"></i>
-                            <i class="icon ion-md-star"></i>
-                            <i class="icon ion-md-star-half"></i>
-                            <i class="icon ion-md-star-outline"></i>
-                        </div>
+                        <?=(showRating($row->rating))?>
                     </div>
-                    <?php } ?>
                 </div>
             </div>
             <?php }} ?>

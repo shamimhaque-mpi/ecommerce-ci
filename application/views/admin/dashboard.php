@@ -16,67 +16,47 @@
    	    <div class="dashboard_box_wrapper">
            <div class="dash-box dash-box-1">
               <span>Today Order</span>
-              <h1>00 </h1>
+              <h1><?=number_format($today_total_order, 2)?></h1>
            </div>
 
            <div class="dash-box dash-box-2">
               <span>Total Order</span>
-              <h1>00 </h1>
+              <h1><?=number_format($total_order, 2)?></h1>
            </div>
 
            <div class="dash-box dash-box-3">
-              <span>Today Pending Order</span>
-              <h1>00 </h1>
-           </div>
-
-           <div class="dash-box dash-box-4">
-              <span>Total Pending Order</span>
-              <h1>00 TK</h1>
-           </div>
-
-           <div class="dash-box dash-box-5">
-              <span>Today Delivered Order</span>
-              <h1>00 </h1>
+              <span>Pending Order</span>
+              <h1><?=number_format($total_pending_order, 2)?></h1>
            </div>
 
            <div class="dash-box dash-box-6">
               <span>Total Delivered Order</span>
-              <h1>00 </h1>
+              <h1><?=number_format($total_delivered_order, 2)?></h1>
            </div>
 
            <div class="dash-box dash-box-7">
-              <span>Today Sale Amount</span>
-              <h1>00 Tk</h1>
-           </div>
-
-           <div class="dash-box dash-box-8">
-              <span>Total Sale Amount</span>
-              <h1>00 Tk</h1>
-           </div>
-           
-           <div class="dash-box dash-box-9">
-              <span>Today Customer</span>
-              <h1>00 </h1>
+              <span>Sale Amount</span>
+              <h1><?=number_format($total_sale, 2)?></h1>
            </div>
 
            <div class="dash-box dash-box-10">
               <span>Total Customer</span>
-              <h1>00 </h1>
+              <h1><?=number_format($total_user, 2)?></h1>
            </div>
 
            <div class="dash-box dash-box-11">
               <span>Feature Products</span>
-              <h1>00 </h1>
+              <h1><?=number_format($total_feature_product, 2)?></h1>
            </div>
-           
+
            <div class="dash-box dash-box-12">
               <span>Total Products</span>
-              <h1>00 </h1>
+              <h1><?=number_format($total_product, 2)?></h1>
            </div>
 
            <div class="dash-box dash-box-1">
               <span>Sold Out Product</span>
-              <h1>00 </h1>
+              <h1><?=number_format($total_sold_out, 2)?></h1>
            </div>
 
         </div>

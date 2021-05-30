@@ -12,8 +12,9 @@
         object-fit: cover;
     }
     .set-photo-wrapper {
-        position: relative;
         margin-bottom: 15px;
+        overflow: hidden;
+        position: relative;
     }
     .set-photo-wrapper label {
         position: absolute;
@@ -26,19 +27,23 @@
         z-index: 1;
     }
     .set-photo-wrapper span {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        display: flex;
         justify-content: center;
-        align-items: center;
         background: #00000052;
+        position: absolute;
         font-size: 18px;
-        font-weight: 800;
+        height: 100%;
+        width: 100%;
+        left: 0;
+        top: 0;
+        display: flex;
         color: #ffffff;
+        flex-wrap: wrap;
+        font-weight: 800;
+        text-align: center;
+        align-items: center;
+        align-content: center;
     }
+    .set-photo-wrapper span small {width: 100%;}
     .photo-action {
         position: absolute;
         top: 0;
@@ -91,7 +96,7 @@
 
                         <div class="col-md-4">
                             <div class="form-group">
-                                <label class="control-label">Sub-Category <small>(<span id="total_cat">0</span>)</small></label>
+                                <label class="control-label">Sub-Category <small style="display: none">(<span id="total_cat">0</span>)</small></label>
                                 <select name="sub_cat_id" class="form-control" id="sub_cat_id" data-live-search="true">
                                     <option value="" selected disabled>Select Sub-Category</option>
                                 </select>
@@ -124,8 +129,15 @@
 
                         <div class="col-md-4">
                             <div class="form-group">
-                                <label class="control-label">Price <span class="req">*</span></label>
-                                <input type="text" name="price" value="0.00" placeholder="Price" class="form-control" required>
+                                <label class="control-label">Purchase Price <span class="req">*</span></label>
+                                <input type="text" name="purchase_price" value="0.00" placeholder="Purchase Price" class="form-control" required>
+                            </div>
+                        </div>
+
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                <label class="control-label">Sale Price <span class="req">*</span></label>
+                                <input type="text" name="price" value="0.00" placeholder="Sale Price" class="form-control" required>
                             </div>
                         </div>
 
@@ -173,14 +185,14 @@
                         <div class="col-md-12">
                             <div class="form-group">
                                 <label class="control-label">Short Description <span class="req">*</span></label>
-                                <textarea name="short_description" class="form-control" rows="10" required></textarea>
+                                <textarea id="mytextarea2" name="short_description" class="form-control" rows="10"></textarea>
                             </div>
                         </div>
 
                         <div class="col-md-12">
                             <div class="form-group">
                                 <label class="control-label">Full Description <span class="req">*</span></label>
-                                <textarea id="mytextarea" name="description" required></textarea>
+                                <textarea id="mytextarea" name="description"></textarea>
                             </div>
                         </div>
                     </div>
@@ -194,7 +206,7 @@
                                 <label for="feature_photo">
                                     <input type="file" id="feature_photo" onchange="fileLoadFn(this)" name="feature_photo" required>
                                 </label>
-                                <span>Feature Photo</span>
+                                <span>Feature Photo <br> <small>(820X720)</small></span>
                             </div>
                         </div>
 
@@ -204,7 +216,7 @@
                                     <img src="{{photo.src}}" alt="">
                                 </div>
                                 <label><input type="file" name="photos[]" onchange="fileLoadFn(this)" data-index="{{$index}}" required></label>
-                                <span>Choise A Photo</span>
+                                <span>Gallery Photo <br> <small>(820X720)</small></span>
                                 <div class="photo-action">
                                     <div class="btn-group">
                                         <a href="javascript:void(0)" ng-click="addFn($index)" class="btn btn-info"><i class="fa fa-plus"></i></a>
@@ -233,5 +245,8 @@
     tinymce.init({
         selector: '#mytextarea',
         height : "480"
+    });
+    tinymce.init({
+        selector: '#mytextarea2'
     });
 </script>

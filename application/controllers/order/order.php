@@ -33,6 +33,9 @@
         $this->data['meta_keyword']     = '';
         $this->data['meta_title']       = '';
         $this->data['meta_description'] = '';
+        
+
+        $this->data['users'] = readTable('subscribers');
 
         $where = ['orders.status'=>'shipped'];
         if($_POST){

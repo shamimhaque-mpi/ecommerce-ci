@@ -190,4 +190,36 @@ class Api extends Frontend_Controller{
     function getProductSizes($product_id){
         echo json_encode(getProductSizes($product_id));
     }
+
+    // 
+    function setProductRating(){
+        if($_POST){
+            //
+            $validation = $_POST;
+            unset($validation['rate']);
+            //
+            $is_available = readTable('product_ratings', $validation);
+            if($is_available) {
+                update('product_ratings', $_POST, $validation);
+            }
+            else {
+                save('product_ratings', $_POST);                
+            }
+            echo 1;          
+        }
+    }
+
+    // 
+    function getProductRate(){
+        if($_POST){
+            //
+            $is_available = readTable('product_ratings', $_POST);
+            if($is_available){
+                echo $is_available[0]->rate;
+            }
+            else {
+                echo '';
+            }
+        }
+    }
 }

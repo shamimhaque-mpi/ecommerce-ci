@@ -16,6 +16,7 @@ export default {
 				axios.post(this.url+'Frontend/Api/setWishList/'+this.product_id)
 				.then(response=>{
 					this.$store.state.wishList = response.data;
+					toastr.success('Successfully Add To Wishlist');
 				})
 				.catch(err=>console.log(err));
 				}

@@ -3,11 +3,11 @@
 // Get All Colors Id As Array
 if (!function_exists('getColorIds')) {
     function getColorIds($product_id)
-    {	
-    	$ids  = [];
+    {   
+        $ids  = [];
         $data = readTable('product_colors', ['product_id'=>$product_id]);
         foreach ($data as $key => $row) {
-        	$ids[] = $row->color_id;
+            $ids[] = $row->color_id;
         }
         return $ids;
     }
@@ -16,11 +16,11 @@ if (!function_exists('getColorIds')) {
 // Get All Size Id As Array
 if (!function_exists('getSizeIds')) {
     function getSizeIds($product_id)
-    {	
-    	$ids  = [];
+    {   
+        $ids  = [];
         $data = readTable('product_sizes', ['product_id'=>$product_id]);
         foreach ($data as $key => $row) {
-        	$ids[] = $row->size_id;
+            $ids[] = $row->size_id;
         }
         return $ids;
     }
@@ -29,24 +29,25 @@ if (!function_exists('getSizeIds')) {
 // Get All images Id As Array
 if (!function_exists('getImages')) {
     function getImages($product_id)
-    {	
-    	return readTable('product_images', ['product_id'=>$product_id]);
+    {   
+        return readTable('product_images', ['product_id'=>$product_id]);
     }
 }
 
 
 // FEATCH ALL PRODUCT
 function getProducts($where=[]){
-	$ci =& get_instance();
+    $ci =& get_instance();
 
-	$condition = "";
-	foreach ($where as $key => $value) {
-		$condition .= " AND {$key}='{$value}'";
-	}
-	return $ci->db->query("
+    $condition = "";
+    foreach ($where as $key => $value) {
+        $condition .= " AND {$key}='{$value}'";
+    }
+    return $ci->db->query("
         SELECT 
             *,
             products.id,
+            products.purchase_price as d_purchase_price,
             categories.category,
             subcategories.subcategory,
             brands.brand,
@@ -69,46 +70,48 @@ function getProducts($where=[]){
         $condition
         GROUP BY 
             products.id
+        ORDER BY 
+            products.id DESC
     ")->result();
 }
 
 
 function getProductColors($product_id){
-	$ci =& get_instance();
+    $ci =& get_instance();
 
-	return $ci->db->query("
-		SELECT 
-		colors.*
-		FROM 
+    return $ci->db->query("
+        SELECT 
+        colors.*
+        FROM 
             products
         LEFT JOIN 
-        	product_colors ON products.id=product_colors.product_id
+            product_colors ON products.id=product_colors.product_id
         LEFT JOIN 
-        	colors ON colors.id=product_colors.color_id
+            colors ON colors.id=product_colors.color_id
         WHERE
-        	products.id={$product_id}
+            products.id={$product_id}
         GROUP BY
-        	colors.id
-	")->result();
+            colors.id
+    ")->result();
 }
 
 function getProductSizes($product_id){
-	$ci =& get_instance();
+    $ci =& get_instance();
 
-	return $ci->db->query("
-		SELECT 
-		sizes.*
-		FROM 
+    return $ci->db->query("
+        SELECT 
+        sizes.*
+        FROM 
             products
         LEFT JOIN 
-        	product_sizes ON products.id=product_sizes.product_id
+            product_sizes ON products.id=product_sizes.product_id
         LEFT JOIN 
-        	sizes ON sizes.id=product_sizes.size_id
+            sizes ON sizes.id=product_sizes.size_id
         WHERE
-        	products.id={$product_id}
+            products.id={$product_id}
         GROUP BY
-        	sizes.id
-	")->result();
+            sizes.id
+    ")->result();
 }
 
 

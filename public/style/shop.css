@@ -8,11 +8,11 @@
 	background: #FFFFFF;
     margin-bottom: 15px;
 }
-.shop_section .price_filter {padding: 8px 15px 12px;}
 .shop_section .price_filter #slider-range {margin: 10px 0 25px;}
+.shop_section .price_filter {padding: 8px 15px 12px;}
 .shop_section .price_filter .noUi-base {
-    position: relative;
-    width: 100%;
+    width: calc(100% - 15px);
+	position: relative;
     height: 100%;
     z-index: 1;
 }
@@ -20,7 +20,6 @@
     position: absolute;
     right: 0;
     top: 0;
-    left: 0;
     bottom: 0;
 }
 .shop_section .price_filter .noUi-handle {
@@ -42,7 +41,7 @@
     border-radius: 50%;
     height: 18px;
     width: 18px;
-    left: -7px;
+    left: -2px;
     top: -7px;
     background-color: #EA232A;
 }
@@ -63,7 +62,7 @@
     border: 5px solid rgba(234, 35, 42, 0.28);
     -webkit-background-clip: padding-box;
     background-clip: padding-box;
-    left: -12px;
+    left: -7px;
     top: -12px;
 }
 .shop_section [disabled].noUi-connect,
@@ -75,7 +74,21 @@
     display: flex;
 }
 .shop_section .price_filter .price_value .price {font-size: 15px;}
-
+.shop_section .price_filter .price_btn {
+    text-align: right;
+    margin-bottom: 20px;
+}
+.shop_section .price_filter .price_btn .srh_btn {
+    background: #EA232A;
+    box-shadow: none;
+    outline: none;
+    border: none;
+    color: #fff;
+    font-size: 13px;
+    padding: 4px 12px;
+    transition: all .2s;
+    text-transform: uppercase;
+}
 .shop_section .rating_value {padding: 5px 15px;}
 .shop_section .rating_value a {
     line-height: 28px;
@@ -99,7 +112,9 @@
     color: #fff;
     white-space: nowrap;
     overflow: hidden;
-    font-size: 20px;
+    font-size: 17px;
+    font-weight: 600;
+    letter-spacing: .5px;
     text-overflow: ellipsis;
 }
 .shop_section .product_menu {
@@ -130,7 +145,7 @@
 .shop_section .product_heading {
     margin-bottom: 20px;
     background: #FFF;
-    padding: 25px;
+    padding: 15px 20px;
 }
 .shop_section .breadcrumb_list {
     display: flex;
@@ -274,6 +289,9 @@
     font-size: 16px;
     color: #EA232A;
     margin: 0;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
 }
 .shop_section .product_title h4 del {
     font-weight: 300;

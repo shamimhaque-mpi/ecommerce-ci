@@ -22,7 +22,7 @@
                 }
             }
 
-            $this->data['records'] = get_left_join('sap_record', 'suppliers', 'sap_record.supplier_id=suppliers.id', $where, 'sap_record.*, suppliers.name');
+            $this->data['records'] = get_left_join('sap_record', 'suppliers', 'sap_record.supplier_id=suppliers.id', $where, 'sap_record.*, suppliers.name', null, 'sap_record.id', 'DESC');
 
             $this->load->view('admin/includes/header', $this->data);
             $this->load->view('admin/includes/aside', $this->data);
@@ -43,7 +43,7 @@
                 $this->manageTrx($sap_record_id);
                 $this->stockManage();
                 set_msg('success', 'Successfully Submited');
-                redirect('purchase/purchase?system_id=NjVfMTI2', 'refresh');
+                redirect("purchase/purchase/view/{$sap_record_id}?system_id=NjVfMTI2", 'refresh');
             }
 
 
@@ -56,7 +56,18 @@
         }
 
 
-        public function view($id){
+        public function view($record_id){
+
+            $where  = ['sap_record.id'=>$record_id];
+
+            $record = get_left_join('sap_record', 'suppliers', 'sap_record.supplier_id=suppliers.id', $where, 'sap_record.*, suppliers.name, suppliers.mobile, suppliers.address');
+
+            $this->data['record'] = $record = ($record ? $record[0] : null);
+
+            if($record){
+                $this->data['items'] = get_left_join('sap_items', 'products', 'sap_items.product_id=products.id', ['sap_items.sap_record_id'=>$record_id], 'sap_items.*, products.title');
+            }
+
 
             $this->load->view('admin/includes/header', $this->data);
             $this->load->view('admin/includes/aside', $this->data);

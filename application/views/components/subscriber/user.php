@@ -36,6 +36,7 @@
                         <th>Username</th>
                         <th>Mobile</th>
                         <th>E-mail</th>
+                        <th>Address</th>
                         <th width="60" class="text-right">Action</th>
                     </tr>
                     <?php if(!empty($subscribers)) foreach($subscribers as $key=>$row){ ?>
@@ -45,6 +46,7 @@
                         <td><?=($row->username)?></td>
                         <td><?=($row->mobile)?></td>
                         <td><?=($row->email)?></td>
+                        <td><?=($row->address)?></td>
                         <td class="text-right">
                             <?php
                                 if($action_menus){

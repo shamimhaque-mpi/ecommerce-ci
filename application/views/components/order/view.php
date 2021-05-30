@@ -258,6 +258,7 @@
                             });
                             btn.classList.add('btn-primary');
                             top_status.innerHTML = (btn.dataset.status).replaceAll('_', ' ');
+                            toastr.success('Order Status Updated');
                             }
                         }, 500);
                     })

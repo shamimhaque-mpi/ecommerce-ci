@@ -1,18 +1,15 @@
-*,*::before,*::after{
+*,*::before,*::after {
 	box-sizing: border-box;
 	padding: 0;
 	margin: 0;
 }
-* {transition: background .25s, color .25s;}
 body,.lock-border {
 	background: url('../images/background.jpg');
-	-webkit-background-attachment: fixed;
-	-webkit-background-size: cover;
 	background-attachment: fixed;
 	background-repeat: no-repeat;
 	background-size: cover;
 }
-.no-border{border: 0 !important;}
+.no-border {border: 0 !important;}
 @media (min-width: 768px) {
     body, .lock-border {
         background-position-y: -58px;
@@ -79,7 +76,6 @@ body,.lock-border {
 	float: left;
 	margin: 0;
 }
-
 .lock-border {
 	border-bottom: 1px solid #fff;
 	display: inline-block;

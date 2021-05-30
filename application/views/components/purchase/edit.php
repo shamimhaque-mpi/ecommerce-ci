@@ -1,6 +1,11 @@
 <script type="text/javaScript" src="<?php echo site_url('private/js/ng-controller/editPurchaseController.js'); ?>"></script>
 <style>
-	table .btn {padding: 3px 22px!important;}
+	.bootstrap-select.btn-group .dropdown-menu li {max-width: 420px;}
+	table .btn {
+		padding: 3px 16px!important;
+		font-size: 22px;
+		line-height: 22px;
+	}
 	tr > td {
 		vertical-align: middle!important;
 		padding: 0 3px!important;
@@ -140,7 +145,7 @@
                         </table>
                     </div>
                     <div class="text-right" ng-show="(credential.due==0 || supplier_id!='')">
-                        <input type="submit" class="btn btn-success">
+                        <input type="submit" value="Update" class="btn btn-success">
                     </div>
                 </div>
             </div>

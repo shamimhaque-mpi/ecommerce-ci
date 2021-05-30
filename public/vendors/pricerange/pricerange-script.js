@@ -1,33 +1,59 @@
-// Initialize slider:
-$(document).ready(function() {
-    $(".noUi-handle").on("click", function() {
-        $(this).width(50);
-    });
-    var rangeSlider = document.getElementById("slider-range");
-    var moneyFormat = wNumb({
-        decimals: 0,
-        thousand: ",",
-        prefix: " "
-    });
-    noUiSlider.create(rangeSlider, {
-        start: [125, 2500],
-        step: 1,
-        range: {
-            min: [1],
-            max: [3000]
-        },
-        format: moneyFormat,
-        connect: true
-    });
+if(read('.price_filter')){
 
-    // Set visual min and max values and also update value hidden form inputs
-    rangeSlider.noUiSlider.on("update", function(values, handle) {
-        document.getElementById("slider-range-value1").innerHTML = values[0];
-        document.getElementById("slider-range-value2").innerHTML = values[1];
-        document.getElementsByName("min-value").value = moneyFormat.from(values[0]);
-        document.getElementsByName("max-value").value = moneyFormat.from(values[1]);
+    var from_rang = document.getElementById("from_rang");
+    var to_rang   = document.getElementById("to_rang");
+
+    var min = 0;
+    var max = 3000;
+
+    var start = 200;
+    var end   = 500;
+
+    if(from_rang){
+        min   = +from_rang.dataset.min;
+        start = +from_rang.dataset.start;
+    }
+    if(to_rang){
+        max = +(to_rang.dataset.max > 0 ? to_rang.dataset.max : min);
+        end = +(to_rang.dataset.end > 0 ? to_rang.dataset.end : max);
+    }
+
+
+    // Initialize slider:
+    $(document).ready(function() {
+        $(".noUi-handle").on("click", function() {
+            $(this).width(50);
+        });
+        var rangeSlider = document.getElementById("slider-range");
+        var moneyFormat = wNumb({
+            decimals: 0,
+            thousand: ",",
+            prefix: " "
+        });
+        noUiSlider.create(rangeSlider, {
+            start: [start, end],
+            step: 1,
+            range: {
+                min: [min],
+                max: [max]
+            },
+            format: moneyFormat,
+            connect: true
+        });
+
+        // Set visual min and max values and also update value hidden form inputs
+        rangeSlider.noUiSlider.on("update", function(values, handle) {
+            document.getElementById("slider-range-value1").innerHTML = values[0];
+            document.getElementById("slider-range-value2").innerHTML = values[1];
+
+            document.getElementById("from_rang").value = values[0].replaceAll(', ', '');
+            document.getElementById("to_rang").value   = values[1].replaceAll(',', '');
+
+            document.getElementsByName("min-value").value = moneyFormat.from(values[0]);
+            document.getElementsByName("max-value").value = moneyFormat.from(values[1]);
+        });
     });
-});
+}
 
 // https://refreshless.com/nouislider/
 /*! nouislider - 8.3.0 - 2016-02-14 17:37:19 */

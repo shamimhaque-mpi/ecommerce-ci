@@ -1,27 +1,5 @@
-<style>
-    @media print{
-        aside, nav, .none, .panel-heading, .panel-footer{
-            display: none !important;
-        }
-        .panel{
-            border: 1px solid transparent;
-            left: 0px;
-            position: absolute;
-            top: 0px;
-            width: 100%;
-        }
-        .hide{
-            display: block !important;
-        }
-    }
-    .table tr td{
-        vertical-align: middle !important;
-    }
-</style>
-
 <div class="container-fluid">
     <div class="row">
-
         <div class="panel panel-default">
             <div class="panel-heading">
                 <?php msg(); ?>
@@ -32,64 +10,48 @@
 
             <div class="panel-body">
                 <style>
-                    .main_items{
-                        margin-bottom: 25px;
-                        -webkit-column-break-inside: avoid;
-                        page-break-inside: avoid;
+                    .coloumn_list {
+                        margin-right: -15px;
+                        margin-left: -15px;
+                        flex-wrap: wrap;
+                        display: flex;
                     }
-                    .align_items_wraper{
-                        -webkit-column-break-inside: avoid;
-                        page-break-inside: avoid;
+                    .main_items {
+                        padding: 0 15px 10px;
+                        width: 50%;
                     }
-                    .align_items_wraper .items{
+                    .align_items_wraper .items {
                         border: 1px solid #ccc;
                         margin-bottom: -1px;
+                        min-width: 100%;
+                        cursor: move;
                         padding: 10px;
                         display: flex;
                         align-items: center;
                         align-content: center;
                         justify-content: flex-start;
-                        min-width: 100%;
-                        cursor: move;
                     }
-                    .align_items_wraper .items .dropdown_name{
+                    .align_items_wraper .items .dropdown_name {
                         margin-left: 17px;
                         color: #ff3b3b;
                         font-weight: bold;
                     }
-                     @media all and (min-width: 768px){
-                        .align_items_wraper .items{
-                            -webkit-column-break-inside: avoid;
-                            page-break-inside: avoid;
-                        }
-                     }
-                    .align_items_wraper .items .icon{
-                        padding: 0 15px;
-                    }
-                    
-                    
+                    .align_items_wraper .items .icon {padding: 0 15px;}
                     div.drag-sort-active {
-                      background: transparent;
-                      color: transparent;
-                    }
-                    
-                    @media all and (min-width: 768px){
-                        .coloumn{
-                            column-count: 2;
-                        }
+                        background: transparent;
+                        color: transparent;
                     }
                 </style>
-                
-                <div class="coloumn">
+
+                <div class="coloumn_list">
                     <?php if($aside_menus){ foreach($aside_menus as $menu_key => $menu_value){ ?>
                         <div class="main_items">
                             <h4><?php echo $menu_value->name; ?></h4>
                             <div class="align_items_wraper">
-                            <?php 
+                            <?php
                                 $action_menus = read('system_action_menus', ['parent_id'=>$menu_value->id,'status'=>1], 'position ASC');
-                                if ($action_menus) { 
+                                if ($action_menus) {
                                     foreach ($action_menus as $key => $value) {
-                                //---------------------------------------------
                             ?>
                                 <div class="items" data-id="<?php echo $value->id; ?>">
                                     <div><?php echo $key+1; ?></div>
@@ -116,29 +78,28 @@
 </div>
 
 
-
 <script>
     function enableDragSort(listClass) {
       const sortableLists = document.getElementsByClassName(listClass);
       Array.prototype.map.call(sortableLists, (list) => {enableDragList(list)});
     }
-    
+
     function enableDragList(list) {
       Array.prototype.map.call(list.children, (item) => {enableDragItem(item)});
     }
-    
+
     function enableDragItem(item) {
       item.setAttribute('draggable', true)
       item.ondrag = handleDrag;
       item.ondragend = handleDrop;
     }
-    
+
     function handleDrag(item) {
       const selectedItem = item.target,
             list = selectedItem.parentNode,
             x = event.clientX,
             y = event.clientY;
-      
+
       selectedItem.classList.add('drag-sort-active');
       let swapItem = document.elementFromPoint(x, y) === null ? selectedItem : document.elementFromPoint(x, y);
 
@@ -149,22 +110,22 @@
     }
     function handleDrop(item) {
         let dragSortEnable = document.querySelectorAll(".align_items_wraper");
-        
+
         dragSortEnable.forEach((value)=>{
             var dragSortEnableChildren = value.children,
                 i                      = 0;
-                
+
             item.target.classList.remove('drag-sort-active');
             for(i; i<dragSortEnableChildren.length; i++){
               dragSortEnableChildren[i].setAttribute('data-position', i);
             }
         });
-        
+
       updatePosition();
     }
     (()=> {enableDragSort('align_items_wraper')})();
-    
-    
+
+
     // update position in db by ajax start
     function updatePosition() {
         var getPosition = document.querySelectorAll(".align_items_wraper>.items"),
@@ -174,7 +135,7 @@
             positionObj[value.dataset.id]=value.dataset.position;
         });
         positionStr = JSON.stringify(positionObj);
-        
+
         var xhttp = new XMLHttpRequest();
         xhttp.onreadystatechange = function() {
             if (this.readyState == 4 && this.status == 200) {
@@ -187,5 +148,4 @@
         xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
         xhttp.send(`positionStr=${positionStr}`);
     }
-    // update position in db by ajax end
 </script>

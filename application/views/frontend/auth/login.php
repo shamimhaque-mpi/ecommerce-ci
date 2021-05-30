@@ -32,8 +32,8 @@
                             </div>
                             <div class="form-group forgot-div">
                                 <div class="form-check">
-                                    <input type="checkbox" class="form-check-input" id="check">
-                                    <label class="form-check-label" for="check">Check me out</label>
+                                    <input style="margin-top: 5px;" type="checkbox" class="form-check-input" id="check">
+                                    <label class="form-check-label" for="check">Remember Me</label>
                                 </div>
                                 <a href="<?=site_url('forgot')?>">Forgot password</a>
                             </div>

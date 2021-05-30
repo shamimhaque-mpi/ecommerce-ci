@@ -38,11 +38,14 @@
                 <?php msg(); ?>
                 <form action="" class="form-horizontal" method="post" enctype="multipart/form-data">
                     <div class="form-group">
-                        <label class="col-md-2 control-label">Pages <span class="req">*</span></label>
-                        <div class="col-md-7">
-                            <select name="page" id="page" class="form-control">
-                                <option value="privacy_policy">Privacy Policy</option>
-                                <option value="trams">Trams</option>
+                        <div class="col-md-offset-2 col-md-8">
+                            <label class="control-label mb-1">Pages <span class="req">*</span></label>
+                            <select name="title" id="page" class="form-control">
+                                <option value="">Select A Option</option>
+                                <option value="Security_Policy">Security Policy</option>
+                                <option value="Refund_Policy">Refund Policy</option>
+                                <option value="Privacy_Policy">Privacy Policy</option>
+                                <option value="Terms_Of_Use">Terms Of Use</option>
                             </select>
                         </div>
                         <div class="col-md-3">
@@ -50,7 +53,7 @@
                                 <div class="gallery_content">
                                     <div class="hide img_show">
                                         <div class="image_box">
-                                            <img class=" img_path" src="" alt="">
+                                            <img class="img_path" src="" alt="">
                                             <div class="img_cover">
                                                 <a class="btn btn-danger img_delete"><i class="fa fa-trash"></i></a>
                                             </div>
@@ -62,14 +65,14 @@
                     </div>
 
                     <div class="form-group">
-                        <label class="col-md-2 control-label">Description <span class="req">*</span></label>
-                        <div class="col-md-7">
-                            <textarea  name="description" rows="15"  placeholder="Enter Description..." class="form-control description" id="mytextarea"></textarea>
+                        <div class="col-md-offset-2 col-md-8">
+                            <label class="control-label mb-1">Description <span class="req">*</span></label>
+                            <textarea id="mytextarea" name="description"></textarea>
                         </div>
                     </div>
                     <input type="hidden" name="id" value="0" id="page_id" >
                     <div class="row">
-                        <div class="col-md-9 text-right">
+                        <div class="col-md-10 text-right">
                             <input type="submit" id="submit_btn"  class="btn btn-primary">
                         </div>
                     </div>
@@ -80,3 +83,29 @@
     </div>
 </div>
 
+<script>
+    tinymce.init({
+        selector: '#mytextarea',
+        height : "300"
+    });
+
+    (()=>{
+        var page = read('#page');
+        page.addEventListener('change', ()=>{
+            axios.post(url+'pages/Pages/getContent', makeFormData({title:page.value}))
+            .then(response=>{
+                if((response.data).length){
+                    console.log(response.data);
+                    tinymce.get('mytextarea').setContent(response.data[0].description);
+                }
+                else {
+                   tinymce.get('mytextarea').setContent(''); 
+                }
+            })
+            .catch(err=>console.log(err));
+        });
+    })()
+
+
+
+</script>

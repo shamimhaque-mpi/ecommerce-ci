@@ -1,6 +1,6 @@
 <style>
     ul li a span.icon {
-        margin-right: 20px;
+        margin-right: 10px;
         float: right;
     }
     .aside-head {
@@ -9,7 +9,6 @@
         width: 150px;
     }
     .sidebar-brand {
-        transition: all 0.4s ease-in-out;
         position: fixed;
         width: 250px;
         z-index: 2;
@@ -280,56 +279,5 @@
                 }
             });
         });
-    }
-</script>
-
-
-<script>
-    /*var menu_active     = "<?php echo $menu_selector; ?>";
-    if(menu_active !== '' && document.querySelector("."+menu_active)){
-        document.querySelector("."+menu_active).classList.add('active');
-
-        // this script activate the nav and aside dropdown menu
-        var nav_active = "<?php echo (!isset($menu_dropdown_selector) ? $menu_dropdown_selector : ''); ?>";
-        if(nav_active !== ''){
-            nav_active     = document.querySelector('.'+menu_active+".active>ul>."+nav_active);
-            nav_active.classList.add('active');
-        }
-    }*/
-</script>
-
-
-<style>
-    .warning {
-        background: rgba(255, 255, 255, 0.85);
-        justify-content: center;
-        align-items: center;
-        position: fixed;
-        z-index: 99999;
-        height: 100vh;
-        display: flex;
-        width: 100%;
-        left: 0;
-        top: 0;
-        color: red;
-        display: none;
-        user-select: none;
-        font-family: serif;
-    }
-</style>
-
-<div class="warning">
-    <div>
-        <h1>YOU'R OFFLINE</h1>
-    </div>
-</div>
-<script>
-    navigator.connection.onchange = function () {
-        var warning = document.querySelector('.warning');
-        if (navigator.onLine) {
-            warning.style.display = 'none';
-        } else {
-            warning.style.display = 'flex';
-        }
     }
 </script>

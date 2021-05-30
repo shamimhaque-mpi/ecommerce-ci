@@ -13,6 +13,7 @@ $route['about']   			    = "Frontend/HomeController/about_us";
 $route['shop']   				= "Frontend/HomeController/shop";
 $route['shop/(:any)/(:any)']   	= "Frontend/HomeController/shop/$1/$2";
 $route['products/(:any)/(:any)']= "Frontend/HomeController/details/$1/$2";
+$route['page/(:any)']			= "Frontend/HomeController/pages/$1";
 
 
 // User Authentication
@@ -31,5 +32,7 @@ $route['user-panel/settings']   		= "Frontend/Upanel/UpanelController/settings";
 $route['user-panel/order']      		= "Frontend/Upanel/UpanelController/order";
 $route['user-panel/order_view/(:any)']  = "Frontend/Upanel/UpanelController/order_view/$1";
 $route['user-panel/wishlist']   		= "Frontend/Upanel/UpanelController/wishlist";
+
+$route['user-panel/order_cancelation/(:any)']  = "Frontend/Upanel/UpanelController/order_cancelation/$1";
 
 $route['404_override'] = '';

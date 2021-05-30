@@ -5,11 +5,17 @@
     }
 
     public function index() {
-        $this->data['meta_keyword'] = '';
-        $this->data['meta_title'] = '';
+        $this->data['meta_keyword']     = '';
+        $this->data['meta_title']       = '';
         $this->data['meta_description'] = '';
         
-        $this->data['subcategories'] = readTable('subcategories', ['trash'=>0], ['orderBy'=>['id', 'DESC']]);
+        $where = ['trash'=>0];
+        if($_POST && !empty($_POST['id'])){
+            $where['id'] = $_POST['id'];
+        }
+
+        $this->data['subcategories']     = readTable('subcategories', $where, ['orderBy'=>['id', 'DESC']]);
+        $this->data['all_subcategories'] = readTable('subcategories', ['trash'=>0], ['orderBy'=>['id', 'DESC']]);
 
         $this->load->view('admin/includes/header', $this->data);
         $this->load->view('admin/includes/aside', $this->data);

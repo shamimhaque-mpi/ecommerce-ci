@@ -304,6 +304,9 @@
     font-size: 16px;
     color: #EA232A;
     margin: 0;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
 }
 .product_section .product_title h4 del {
     font-weight: 300;

@@ -18,7 +18,8 @@
            }
         }
 
-        $this->data['products'] = getProducts($where);
+        $this->data['all_product'] = readTable('products', ['trash'=>0]); 
+        $this->data['products']    = getProducts($where);
 
         $this->load->view('admin/includes/header', $this->data);
         $this->load->view('admin/includes/aside', $this->data);

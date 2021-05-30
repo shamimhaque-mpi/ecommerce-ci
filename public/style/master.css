@@ -542,13 +542,13 @@ body {padding-top: 176px;}
     text-transform: uppercase;
     margin: 0 10px 20px 0;
     font-weight: 700;
-    color: #001E32;
+    color: #EA232A;
     font-size: 24px;
 }
 .section_title a {
     text-transform: uppercase;
     display: inline-block;
-    background: #001E32;
+    background: #EA232A;
     padding: 6px 15px;
     font-weight: 600;
     font-size: 14px;
@@ -558,7 +558,7 @@ body {padding-top: 176px;}
     letter-spacing: 1px;
     transition: all .2s;
 }
-.section_title a:hover {background: #EA232A;}
+.section_title a:hover {background: #001E32;}
 /* section title end */
 
 
@@ -826,7 +826,7 @@ body {padding-top: 176px;}
 .footer_section .contact_area p i {
     display: inline-block;
     font-size: 16px;
-    width: 20px;
+    width: 18px;
 }
 .footer_section .contact_area a {color: rgba(255, 255, 255, 0.9);}
 .footer_section .important_link li a {
@@ -836,7 +836,15 @@ body {padding-top: 176px;}
     font-size: 15px;
     margin-bottom: 7px;
 }
+.footer_section .important_link li a:hover i {margin: -3px 5px 0 0;}
 .footer_section .important_link li a:hover {color: #EA232A;}
+.footer_section .important_link li a i {
+    vertical-align: middle;
+    transition: all .2s;
+    font-size: 16px;
+    margin: -3px 3px 0 0;
+    display: inline-block;
+}
 
 .footer_banner {
     border-top: 1px solid rgba(255, 255, 255, 0.04);
@@ -868,13 +876,15 @@ body {padding-top: 176px;}
 .footer_banner .payment_card img {
     margin: 5px 0 5px 5px;
     background: #FFF;
+    width: 65px;
     padding: 2px 5px;
-    width: 62px;
 }
 .footer_banner .payment_card img:first-child {margin-left: 0;}
 .secound_footer {
     border: 1px solid rgba(255, 255, 255, 0.04);
-    background: #1F2D3D;
+    /*background: #1F2D3D;*/
+    /*background: #1b2838;*/
+    background: #001E32;
 }
 .secound_footer .content {
     justify-content: space-between;
@@ -891,7 +901,8 @@ body {padding-top: 176px;}
     height: 28px;
     margin: 0;
 }
-.secound_footer p a {color: #fff;}
+/*.secound_footer p a {color: #fff;}*/
+.secound_footer p a {color: #59aadc;}
 .secound_footer p a:hover {color: #EA232A;}
 /* footer section end */
 

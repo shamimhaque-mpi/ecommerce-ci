@@ -2,7 +2,7 @@ export default {
 	name 	 : 'ForgotPassword',
 	template : `
 <div class="form_div">
-    <h2>Password assistance</h2>
+    <h2>Password Reset</h2>
     <p>{{msg}}</p>
     <form action="#" @submit.prevent="submit()" method="post">
         <div class="form-group" v-if="is_mobile">
@@ -34,7 +34,7 @@ export default {
 	data() {
 		return {
 			url 	: '',
-			msg     : 'Enter the mobile or phone number associated with your Amazon account.',
+			msg     : 'Enter the mobile or phone number associated with your account.',
 			mobile 	: '',
 			code    : '',
 			is_code : false,
@@ -51,7 +51,7 @@ export default {
 	},
 	methods:{
 		submit:function(){
-			
+
 		},
 		sendCode:function(){
 			if(this.mobile!=''){
@@ -101,5 +101,5 @@ export default {
 			}
 		}
 	}
-	
+
 }
