@@ -882,9 +882,7 @@ body {padding-top: 176px;}
 .footer_banner .payment_card img:first-child {margin-left: 0;}
 .secound_footer {
     border: 1px solid rgba(255, 255, 255, 0.04);
-    /*background: #1F2D3D;*/
-    /*background: #1b2838;*/
-    background: #001E32;
+    background: #1F2D3D;
 }
 .secound_footer .content {
     justify-content: space-between;
@@ -905,8 +903,3 @@ body {padding-top: 176px;}
 .secound_footer p a {color: #59aadc;}
 .secound_footer p a:hover {color: #EA232A;}
 /* footer section end */
-
-
-
-
-.details_section .suggest_product .items .items-content small del {color: #6d6d6d;}
